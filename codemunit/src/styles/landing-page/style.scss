@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import '../variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: $secondaryColor;
+}
+
+@import './components/header';
+@import './components/service';
+@import './components/footer';
+
+.btn-primary {
+    margin: 0 !important;
+    padding: 7px 20px;
+    background: rgba(67, 137, 118, .8);
+    border: 5px solid $fancyColor;
+    transition: .25s;
+    color: $secondaryColor !important;
+    text-decoration: none;
+    &:hover {
+        color: $secondaryColor !important;
+        background: rgba(67, 137, 118, .2); 
+    }
+}

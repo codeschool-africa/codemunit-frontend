@@ -1,0 +1,99 @@
+header {
+    background: url(../../images/bg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    color: $secondaryColor;
+    position: relative;
+    .bg-color {
+        min-height: 85vh;
+        background-color: rgba(26, 46, 63, .8);
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100px;
+                a {
+                    color: $secondaryColor;
+                    text-decoration: none;
+                    &:hover {
+                        color: $fancyColor;
+                    }
+                }
+                .logo {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    h1 {
+                        font-size: 48px;
+                    }
+                }
+                .dropdown {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    list-style: none;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    li {
+                        margin: 0 10px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .hero {
+                width: 60%;
+                height: calc(85vh - 100px);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                h1 {
+                    font-size: 70px;
+                    line-height: 4.2rem;
+                    font-weight: 100;
+                }
+                .intro {
+                    font-size: 1.125rem;
+                    line-height: 1.625rem;
+                    margin: 35px 0;
+                }
+                .btn {
+                    a {
+                        margin-right: 20px !important;
+                        padding: 7px 25px !important;
+                        width: 200px; 
+                        font-size: 1.2rem;
+                        font-weight: lighter;
+                        &:hover {
+                            padding-right: 50px !important;
+                        }
+                    }
+                }
+                .menu {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    background: $secondaryColor;
+                    height: 25px;
+                    width: 50px;
+                    // border-radius: 50%;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    cursor: pointer;
+                    // span {
+                    //     color: $primaryColor;
+                    //     transform: rotateZ(45deg);
+                    //     font-size: 30px;
+                    // }
+                }
+            }
+        }
+    }
+}

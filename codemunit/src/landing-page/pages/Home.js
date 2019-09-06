@@ -1,10 +1,17 @@
-import React from 'react';
+import React from 'react'
+
+import Header from '../components/Header'
+import Service from '../components/Service'
+import Footer from '../components/Footer'
+import '../../styles/landing-page/style.css'
 
 const Home = () => {
     return (
-        <div>
-            Hello from home page
-        </div>
+        <>
+            <Header/>
+            <Service/>
+            <Footer/>
+        </>
     );
 }
 
