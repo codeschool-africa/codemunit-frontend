@@ -9,27 +9,34 @@ export default function Footer() {
                 <div className="container">
                     <div className="col1 col">
                         <h1>Codemunit logo</h1>
+                        <p>Do you have a project?</p>
+                        <div className="btn">
+                            <Link to='/' className='btn-primary'>Hire the Team</Link>
+                            <Link to='/' className='btn-primary'>Join Now</Link>
+                        </div>
                     </div>
                     <div className="col2 col">
                         <Link to='/'>about us</Link>
                         <Link to='/'>help and support</Link>
                         <Link to='/'>contact us</Link>
+                        <Link to='/'>blog</Link>
                         <Link to='/signup'>register</Link>
                         <Link to='/login'>login</Link>
-                        <Link to='/'>blog</Link>
+                        <h4>Partner with us</h4>
                         <Link to='/'>sponsors</Link>
+                        <a href="mailto:partner@codemunit.com">partner@codemunit.com</a>
                     </div>
                     <div className="col3 col">
                     <h3>follow us on</h3>
                         <div className="follow">
-                            <a href="#"><FaFacebookF className='icon'/></a>
-                            <a href="#"><FaTwitter className='icon'/></a>
-                            <a href="#"><FaInstagram className='icon'/></a>
+                            <a href="https://www.facebook.com"><FaFacebookF className='icon'/></a>
+                            <a href="https://www.twitter.com"><FaTwitter className='icon'/></a>
+                            <a href="https://www.instagram.com"><FaInstagram className='icon'/></a>
                         </div>
                         <h3>subscribe to our newsletter</h3>
                         <form>
                             <input type="text" placeholder="example@email.com"/>
-                            <button type="submit">subscribe</button>
+                            <button type="submit">Subscribe</button>
                         </form>
                     </div>
                 </div>

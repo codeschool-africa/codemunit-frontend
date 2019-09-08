@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+export default class Nav extends Component  {
+    state={
+        isOpen:false
+    }
+    handleToggle = () =>{
+        this.setState({isOpen:!this.state.isOpen});
+    }
+
+    render() {
     return (
-        <nav>
+        <nav className={this.state.isOpen?"nav-bg":""}>
             <div className="logo">
                 <h1>
                     <Link to='/'>
@@ -13,11 +21,12 @@ const Nav = () => {
             </div>
             <div></div>
             <div className="dropdown">
-                Menu
+                <input class="burger-check" id="burger-check" type="checkbox" />
+                <label for="burger-check" class="burger" onClick={this.handleToggle}></label>
             </div>
-            <ul>
+            <ul className={this.state.isOpen?"show-nav":""}>
                 <li><Link to='/about'>About</Link></li>
-                <li><Link to='/'>Curriculum</Link></li>
+                <li><Link to='/curriculum'>Curriculum</Link></li>
                 <li><Link to='/'>Mentorship</Link></li>
                 <li><Link to='/'>Blog</Link></li>
                 <li><Link to='/'>FAQ</Link></li>
@@ -25,6 +34,7 @@ const Nav = () => {
             </ul>
         </nav>
     );
+ }
 }
 
-export default Nav;
+
