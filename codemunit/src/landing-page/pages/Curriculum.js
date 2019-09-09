@@ -1,8 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Header from '../components/Header'
 import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
 import Service from '../components/Service'
 import Footer from '../components/Footer'
 import '../../styles/landing-page/style.css'

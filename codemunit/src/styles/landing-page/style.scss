@@ -21,7 +21,6 @@ input:focus, button:focus, a:focus {
 ::-webkit-scrollbar {
     width: 15px;
     background: $secondaryColor !important;
-    border-radius: 7.5px !important;
 }
   
 ::-webkit-scrollbar-track {
@@ -50,7 +49,6 @@ input:focus, button:focus, a:focus {
     a {
         margin-right: 20px !important;
         padding: 7px 25px !important;
-        width: 200px; 
         font-size: 1.2rem;
         font-weight: lighter;
         &:hover {
