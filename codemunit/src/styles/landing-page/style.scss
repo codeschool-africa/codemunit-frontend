@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body, html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background: $secondaryColor;
@@ -19,7 +23,7 @@ input:focus, button:focus, a:focus {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 12px;
     background: $secondaryColor !important;
 }
   
@@ -59,5 +63,8 @@ input:focus, button:focus, a:focus {
 
 @import './components/header';
 @import './components/service';
+@import './components/carrier';
+@import './components/news';
+@import './components/sponsors';
 @import './components/footer';
-
+@import './components//arrows';

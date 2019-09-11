@@ -1,5 +1,281 @@
 .service {
-    height: 20vh;
-    margin: 30px 0;
-    font-size: 20px;
+    margin: 100px 0;
+    .container {
+        width: 75%;
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+            display: inline-block;
+            padding: 10px;
+            border-bottom: 4px solid $fancyColor;
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+        p {
+            line-height: 1.625rem;
+            font-size: 1.125em;
+            width: 80%;
+            margin: 15px auto;
+        }
+        .services-showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            article {
+                position: relative;
+                width: calc(25% - 8px);
+                margin: 4px;
+                box-shadow: 2px 3px 4px rgba(2, 2, 2, .2);
+                .front-face {
+                    width: 100%;
+                    padding: 20px;
+                    min-height: 274px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    background: #fefefe;
+                }
+                .hovered-face {
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    transition: all .25s;
+                    overflow: hidden;
+                    color: $secondaryColor;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    padding: 20px;
+                    p {
+                        text-align: left;
+                        width: 100%;
+                        margin: 0;
+                        line-height: 1em;
+                        font-size: 15px;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                    a {
+                        color: $secondaryColor;
+                        &:hover {
+                            opacity: .8;
+                        }
+                    }
+                }
+                &:nth-child(1) .front-face {
+                    border-bottom: 9px solid #F99E22;
+                    .service-icon {
+                        font-size: 100px;
+                        color: #F99E22;
+                    }
+                    h2 {
+                        color: $fancyColor;
+                    }
+                }
+                &:nth-child(2) .front-face {
+                    border-bottom: 9px solid $primaryColor;
+                    .service-icon {
+                        font-size: 100px;
+                        color: $primaryColor;
+                    }
+                    h2 {
+                        color: $fancyColor;
+                    }
+                }
+                &:nth-child(3) .front-face {
+                    border-bottom: 9px solid $fancyColor;
+                    .service-icon {
+                        font-size: 100px;
+                        color: $fancyColor;
+                    }
+                    h2 {
+                        color: $fancyColor;
+                    }
+                }
+                &:nth-child(4) .front-face {
+                    border-bottom: 9px solid $tertiaryColor;
+                    .service-icon {
+                        font-size: 100px;
+                        color: $tertiaryColor;
+                    }
+                    h2 {
+                        color: $fancyColor;
+                    }
+                }
+                &:nth-child(5) .front-face {
+                    border-bottom: 9px solid #F99E22;
+                    .service-icon {
+                        font-size: 100px;
+                        color: $tertiaryColor;
+                    }
+                    h2 {
+                        color: $fancyColor;
+                    }
+                }
+                &:nth-child(1) .hovered-face {
+                   background: #F99E22;
+                   color: #fff;
+                }
+                &:nth-child(2) .hovered-face {
+                    background: $primaryColor;
+                 }
+                 &:nth-child(3) .hovered-face {
+                    background: $fancyColor;
+                 }
+                 &:nth-child(4) .hovered-face {
+                    background: $tertiaryColor;
+                 }
+                 &:nth-child(5) .hovered-face {
+                    background: #F99E22;
+                 }
+                 &:hover .hovered-face {
+                     opacity: 1;
+                     transform: scale(1.1);
+                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .service {
+        margin: 100px 0;
+        .container {
+            width: 75%;
+            h1 {
+                border-bottom: 4px solid $fancyColor;
+            }
+            p {
+                line-height: 1.625rem;
+                font-size: 1.125em;
+                width: 80%;
+                margin: 10px auto;
+            }
+            .services-showcase {
+                margin: 50px 0;
+                article {
+                    width: calc(33.33% - 8px);
+                    .front-face {
+                        padding: 20px;
+                        min-height: 274px;
+                    }
+                    .hovered-face {
+                        padding: 20px;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .service {
+        margin: 100px 0;
+        .container {
+            width: 75%;
+            h1 {
+                border-bottom: 4px solid $fancyColor;
+            }
+            p {
+                line-height: 1.625rem;
+                font-size: 1.125em;
+                width: 80%;
+                margin: 10px auto;
+            }
+            .services-showcase {
+                margin: 50px 0;
+                article {
+                    width: calc(50% - 8px);
+                    .front-face {
+                        padding: 20px;
+                        min-height: 274px;
+                    }
+                    .hovered-face {
+                        padding: 20px;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        margin: 100px 0;
+        .container {
+            width: 60%;
+            h1 {
+                border-bottom: 4px solid $fancyColor;
+            }
+            p {
+                line-height: 1.625rem;
+                font-size: 1.125em;
+                width: 100%;
+                margin: 10px auto;
+            }
+            .services-showcase {
+                margin: 50px 0;
+                article {
+                    width: calc(100% - 8px);
+                    .front-face {
+                        padding: 20px;
+                        min-height: 274px;
+                    }
+                    .hovered-face {
+                        padding: 20px;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .service {
+        margin: 100px 0;
+        .container {
+            width: 80%;
+            h1 {
+                border-bottom: 4px solid $fancyColor;
+            }
+            p {
+                line-height: 1.625rem;
+                font-size: 1.125em;
+                width: 100%;
+                margin: 10px auto;
+            }
+            .services-showcase {
+                margin: 50px 0;
+                article {
+                    width: calc(100% - 8px);
+                    .front-face {
+                        padding: 20px;
+                        min-height: 274px;
+                    }
+                    .hovered-face {
+                        padding: 20px;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

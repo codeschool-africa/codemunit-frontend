@@ -1,9 +1,14 @@
 import React from 'react'
+import { FaAngleDown } from 'react-icons/all'
+import { Link } from 'react-router-dom'
 
 import Header from '../components/Header'
 import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
+import Sponsors from '../components/Sponsors'
+import News from '../components/News'
 import Service from '../components/Service'
+import CarrierPath from '../components/CarrierPath'
+import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 import '../../styles/landing-page/style.css'
 
@@ -16,14 +21,20 @@ const Home = () => {
                     <Link to='/' className='btn-primary'>Hire the Team</Link>
                     <Link to='/' className='btn-primary'>Join Now</Link>
                 </div>
-                <div className="menu">
-                    {/* <span>&gt;</span>
-                    <div className="nav-links">
-                    </div> */}
-                </div>
+                <a href="#service" className="menu">
+                    <FaAngleDown style={{ color: '#1a2e3f',
+                        fontSize: '35px',
+                        marginTop: '7px'
+                    }}/>
+                </a>
             </Banner>
             </Header>
             <Service/>
+            {/* <Intro/> */}
+            {/* <CarrierPath/> */}
+            <News/>
+            <Sponsors/>
+            {/* <Testimonials/> */}
             <Footer/>
         </>
     );

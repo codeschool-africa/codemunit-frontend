@@ -1,0 +1,23 @@
+.arrows {
+    .circle {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 2px 3px 4px rgba(2, 2, 2, .2);
+        top: calc(50% - 25px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        pointer-events: all;
+        z-index: 100;
+    }
+    .circle-left {
+        left: 2%;
+    }
+    .circle-right {
+        right: 2%;
+    }
+}

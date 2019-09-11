@@ -1,0 +1,130 @@
+.blog-news {
+    padding: 50px 0;
+    background: #fefefe;
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+            display: inline-block;
+            padding: 10px;
+            border-bottom: 4px solid $fancyColor;
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+        p {
+            line-height: 1.625rem;
+            font-size: 1.125em;
+            width: 70%;
+            margin: 15px auto;
+        }
+        a {
+            color: $fancyColor;
+            &:hover {
+                color: $tertiaryColor;
+            }
+        }
+        input {
+            display: none;
+        }
+        .news-header {
+            width: 70%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            label {
+                height: 100%;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: lighter;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                position: relative;
+                border-bottom:15px solid $tertiaryColor;
+                color: $tertiaryColor;
+                transition: .25s;
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50px;
+                    right: 50%;
+                    height: 0px;
+                    width: 0px;
+                    border-bottom: none;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 15px solid $fancyColor;
+                    display: none;
+                    transition: .25s;
+                }
+                &:hover {
+                    color: $fancyColor;
+                }
+            }
+        }
+
+        #n1:checked ~ .news-header .carrier-news {
+            color: $fancyColor !important;
+            border-bottom:15px solid $fancyColor !important;
+        }
+        #n2:checked ~ .news-header .technology-news {
+            color: $fancyColor !important;
+            border-bottom:15px solid $fancyColor !important;
+        }
+        #n1:checked ~ .news-header .carrier-news::before {
+            display: block;
+        }
+        #n2:checked ~ .news-header .technology-news::before {
+            display: block;
+        }
+
+        .news-container {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            overflow: hidden;
+            border: none;
+            .news {
+                position: relative;
+                min-width: 80vw !important;
+                transition: .5s;
+                border: none;
+                padding: 20px 50px;
+                article {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    .post-description {
+                        width: calc(80vw - 600px);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0 100px;
+                        p {
+                            text-align: left;
+                            margin: 20px 0;
+                        }
+                    }
+                    .post-image {
+                        width: 500px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        #n1:checked ~ .news-container .carrier-news-showcase {
+            margin-left: 0;
+        }
+        #n2:checked ~ .news-container .carrier-news-showcase {
+            margin-left: -80vw;
+        }
+        
+    }
+}

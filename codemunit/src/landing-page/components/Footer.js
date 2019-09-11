@@ -14,9 +14,6 @@ export default function Footer() {
                             <Link to='/' className='btn-primary'>Hire the Team</Link>
                             <Link to='/' className='btn-primary'>Join Now</Link>
                         </div>
-                        <div className="btn">
-                            App coming soon!!!
-                        </div>
                     </div>
                     <div className="col2 col">
                         <Link to='/'>become a mentor</Link>
@@ -28,7 +25,6 @@ export default function Footer() {
                         <Link to='/signup'>register</Link>
                         <Link to='/login'>login</Link>
                         <h4>Sponsor us</h4>
-                        <Link to='/'>sponsors</Link>
                         <a href="mailto:sponsor@codemunit.com">sponsor@codemunit.com</a>
                         <h4>Partner with us</h4>
                         <a href="mailto:partner@codemunit.com">partner@codemunit.com</a>

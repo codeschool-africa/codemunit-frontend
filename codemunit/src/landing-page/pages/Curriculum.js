@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FaAngleDown } from 'react-icons/all'
 
 import Header from '../components/Header'
 import Banner from '../components/Banner'
@@ -16,11 +17,12 @@ const Curriculum = () => {
                     <Link to='/' className='btn-primary'>Hire the Team</Link>
                     <Link to='/' className='btn-primary'>Join Now</Link>
                 </div>
-                <div className="menu">
-                    {/* <span>&gt;</span>
-                    <div className="nav-links">
-                    </div> */}
-                </div>
+                <a href="#service" className="menu">
+                    <FaAngleDown style={{ color: '#1a2e3f',
+                        fontSize: '35px',
+                        marginTop: '7px'
+                    }}/>
+                </a>
             </Banner>
             </Header>
             <Service/>
