@@ -10,7 +10,10 @@
         width: 70%;
         margin: auto;
         text-align: center;
+        position: relative;
         .wrapper {
+            width: 80%;
+            margin: 0 auto;
             .sponsor-showcase {
                 .slider-wrapper {
                     display: flex;

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import {FaAngleLeft,FaAngleRight} from "react-icons/all"
+// import {FaAngleLeft,FaAngleRight} from "react-icons/all"
 import data from '../../data/sponsorData'
 import Card from '../components/Card'
 import Arrows from './Arrows'

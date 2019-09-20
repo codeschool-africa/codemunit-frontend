@@ -64,6 +64,7 @@ input:focus, button:focus, a:focus {
 header {
   background: url(../../images/bg-image.jpg);
   background-position: center top;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   height: 672px;
@@ -1069,6 +1070,10 @@ header .bg-color .container .hero .menu {
   transition: .5s;
   border: none;
   padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
 }
 
 .blog-news .container .news-container .news article {
@@ -1083,10 +1088,11 @@ header .bg-color .container .hero .menu {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-width: 70vw !important;
 }
 
 .blog-news .container .news-container .news article .post-description {
-  width: calc(80vw - 600px);
+  width: calc(70vw - 600px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,6 +1143,12 @@ header .bg-color .container .hero .menu {
   width: 70%;
   margin: auto;
   text-align: center;
+  position: relative;
+}
+
+.sponsors .container .wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .sponsors .container .wrapper .sponsor-showcase .slider-wrapper {
@@ -1631,12 +1643,12 @@ footer .footer-bottom .container {
 
 .arrows .circle {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   background: #fff;
-  -webkit-box-shadow: 2px 3px 4px rgba(2, 2, 2, 0.2);
-          box-shadow: 2px 3px 4px rgba(2, 2, 2, 0.2);
+  -webkit-box-shadow: 1px 1px 2px rgba(2, 2, 2, 0.2);
+          box-shadow: 1px 1px 2px rgba(2, 2, 2, 0.2);
   top: calc(50% - 25px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1647,9 +1659,15 @@ footer .footer-bottom .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 25px;
+  font-size: 30px;
   pointer-events: all;
   z-index: 100;
+}
+
+.arrows .circle:hover {
+  -webkit-box-shadow: 4px 5px 6px rgba(2, 2, 2, 0.2);
+          box-shadow: 4px 5px 6px rgba(2, 2, 2, 0.2);
+  font-size: 32px;
 }
 
 .arrows .circle-left {

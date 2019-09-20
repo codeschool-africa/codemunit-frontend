@@ -1,18 +1,23 @@
 .arrows {
     .circle {
         position: absolute;
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        width: 60px;
         border-radius: 50%;
         background: #fff;
-        box-shadow: 2px 3px 4px rgba(2, 2, 2, .2);
+        box-shadow: 1px 1px 2px rgba(2, 2, 2, .2);
         top: calc(50% - 25px);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 25px;
+        font-size: 30px;
         pointer-events: all;
         z-index: 100;
+        &:hover {
+            box-shadow: 4px 5px 6px rgba(2, 2, 2, .2);
+            // transform: scale(1.1);
+            font-size: 32px;
+        }
     }
     .circle-left {
         left: 2%;

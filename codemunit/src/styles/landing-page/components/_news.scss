@@ -94,13 +94,16 @@
                 transition: .5s;
                 border: none;
                 padding: 20px 50px;
+                display: flex;
+                overflow: hidden;
                 article {
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
                     flex-wrap: wrap;
+                    min-width: 70vw !important;
                     .post-description {
-                        width: calc(80vw - 600px);
+                        width: calc(70vw - 600px);
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
