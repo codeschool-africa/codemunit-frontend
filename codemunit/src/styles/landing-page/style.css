@@ -1273,10 +1273,15 @@ footer .footer-nav-links .container .col3 .follow a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: .25s;
+  transition: .25s;
+  background: #1a2e3f;
 }
 
 footer .footer-nav-links .container .col3 .follow a:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background: white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 footer .footer-nav-links .container .col3 .follow a:nth-child(1) {
