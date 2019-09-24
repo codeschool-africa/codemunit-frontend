@@ -41,7 +41,7 @@ export default class TechNews extends Component {
 
     render() {
         const {properties,
-            //  property
+             property
             } = this.state;
         return (
             <div className="technology-news-showcase news"
@@ -54,9 +54,9 @@ export default class TechNews extends Component {
                     <div className="circle circle-right" onClick={() => this.nextBtn()}><FaAngleRight/></div>
                 </div>
                 <div className="showcase"
-                    // style={{
-                    //     "transform":`translateX(-${property.id*(100/properties.length)}%)`
-                    // }}
+                    style={{
+                        "transform":`translateX(-${property.id*(100/properties.length)}%)`
+                    }}
                 >
                     {properties.map( property =>
                             <Post

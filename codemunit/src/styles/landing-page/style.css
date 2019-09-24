@@ -1071,21 +1071,23 @@ header .bg-color .container .hero .menu {
 .blog-news .container .news-container .news {
   position: relative;
   min-width: 100% !important;
-  width: 100% !important;
   -webkit-transition: .5s linear;
   transition: .5s linear;
   padding: 20px 100px;
+  overflow-x: hidden;
+  height: 400px;
 }
 
 .blog-news .container .news-container .news .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   min-width: 100%;
-  max-width: 100%;
   background: #fff;
   z-index: 2;
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .blog-news .container .news-container .news .showcase article {
@@ -1101,7 +1103,9 @@ header .bg-color .container .hero .menu {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 100%;
+  min-width: 69vw;
+  max-width: 69vw;
+  margin-bottom: 15px;
 }
 
 .blog-news .container .news-container .news .showcase article .post-description {

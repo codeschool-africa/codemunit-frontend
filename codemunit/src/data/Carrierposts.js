@@ -5,7 +5,7 @@ const Carrierposts = {
     properties: [
         {
             "id": 0,
-            "title": "Carrier post title one",
+            "title": "Introducing Community Hub",
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
@@ -13,7 +13,7 @@ const Carrierposts = {
         },
         {
             "id": 1,
-            "title": "carrier post title two",
+            "title": "Carrier post title two",
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
@@ -21,7 +21,7 @@ const Carrierposts = {
         },
         {
             "id": 2,
-            "title": "carrier post title three",
+            "title": "Carrier post title three",
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",

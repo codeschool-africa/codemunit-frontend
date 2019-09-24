@@ -49,9 +49,9 @@ export default class CarrierNews extends Component {
                     <div className="circle circle-right" onClick={() => this.nextBtn()}><FaAngleRight/></div>
                 </div>
                 <div className="showcase"
-                style={{
-                    "transform":`translateX(-${property.id*(100/properties.length)}%)`
-                }}
+                    style={{
+                        "transform":`translateX(-${property.id*(100/properties.length)}%)`
+                    }}
                 >
                     {properties.map( property =>
                             <Post

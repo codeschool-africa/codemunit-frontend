@@ -92,24 +92,31 @@
             .news {
                 position: relative;
                 min-width: 100% !important;
-                width: 100% !important;
+                // width: 100% !important;
                 transition: .5s linear;
                 // border: dashed;
                 padding: 20px 100px;
+                overflow-x: hidden;
+                height: 400px;
                 .showcase {
                     display: flex;
-                    overflow: hidden;
+                    // flex-direction: column;
+                    // overflow: hidden;
                     min-width: 100%;
-                    max-width: 100%;
+                    // max-width: 240vw;
                     background: #fff;
                     z-index: 2;
+                    position: absolute;
+                    transition: .5s;
                     article {
                         display: flex;
                         margin-right: 100px;
                         justify-content: space-between;
                         align-items: flex-start;
                         flex-wrap: wrap;
-                        min-width: 100%;
+                        min-width: 69vw;
+                        max-width: 69vw;
+                        margin-bottom: 15px;
                         .post-description {
                             width: calc(100% - 600px);
                             display: flex;
