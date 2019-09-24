@@ -85,49 +85,70 @@
         .news-container {
             display: flex;
             align-items: center;
-            margin: 50px 0;
+            margin: 50px auto;
             overflow: hidden;
             border: none;
+            width: 80vw !important;
             .news {
                 position: relative;
-                min-width: 80vw !important;
-                transition: .5s;
-                border: none;
-                padding: 20px 50px;
-                display: flex;
-                overflow: hidden;
-                article {
+                min-width: 100% !important;
+                width: 100% !important;
+                transition: .5s linear;
+                // border: dashed;
+                padding: 20px 100px;
+                .showcase {
                     display: flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    flex-wrap: wrap;
-                    min-width: 70vw !important;
-                    .post-description {
-                        width: calc(70vw - 600px);
+                    overflow: hidden;
+                    min-width: 100%;
+                    max-width: 100%;
+                    background: #fff;
+                    z-index: 2;
+                    article {
                         display: flex;
-                        flex-direction: column;
+                        margin-right: 100px;
+                        justify-content: space-between;
                         align-items: flex-start;
-                        padding: 0 100px;
-                        p {
-                            text-align: left;
-                            margin: 20px 0;
+                        flex-wrap: wrap;
+                        min-width: 100%;
+                        .post-description {
+                            width: calc(100% - 600px);
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 0 px;
+                            h2 {
+                                text-align: left;
+                            }
+                            p {
+                                text-align: left;
+                                margin: 20px 0;
+                            }
+                        }
+                        .post-image {
+                            width: 500px;
+                            img {
+                                width: 100%;
+                            }
                         }
                     }
-                    .post-image {
-                        width: 500px;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
+            }
             }
         }
         #n1:checked ~ .news-container .carrier-news-showcase {
             margin-left: 0;
+            z-index: 2;
+        }
+        #n1:checked ~ .news-container .tech-news-showcase {
+            margin-left: 0;
+            z-index: 1;
         }
         #n2:checked ~ .news-container .carrier-news-showcase {
-            margin-left: -80vw;
+            margin-left: -100%;
+            z-index: 1;
         }
-        
+        #n2:checked ~ .news-container .tech-news-showcase {
+            margin-left: -100%;
+            z-index: 2;
+        }
     }
 }

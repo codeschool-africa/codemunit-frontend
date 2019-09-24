@@ -8,15 +8,15 @@ export default class Service extends Component {
             {
                 // index:0,
                 icon:<FaNetworkWired className="service-icon"/>,
-                title: "service 1",
-                subtitle: "subservice 1",
-                description: "description for service 1... a whole bunch of paragraph",
+                title: "Courses",
+                subtitle: "Learn anywhere, anytime, at your own pace",
+                description: "We offer free courses but one can opt to join premium membership to get more resources on the course.",
                 link: "/service1"
             },
             {
                 // index:1,
                 icon:<FaProjectDiagram className="service-icon"/>,
-                title: "service 2",
+                title: "Projects",
                 subtitle: "subservice 2",
                 description: "description for service 2... a whole bunch of paragraph",
                 link: "/service1"
@@ -24,7 +24,7 @@ export default class Service extends Component {
             {
                 // index:0,
                 icon:<FaServicestack className="service-icon"/>,
-                title: "service 3",
+                title: "Mentorship",
                 subtitle: "subservice 3",
                 description: "description for service 3... a whole bunch of paragraph",
                 link: "/service1"
@@ -32,7 +32,7 @@ export default class Service extends Component {
             {
                 // index:3,
                 icon:<GoProject className="service-icon"/>,
-                title: "service 4",
+                title: "Community hub",
                 subtitle: "subservice 4",
                 description: "description for service 4... a whole bunch of paragraph",
                 link: "/service1"
@@ -45,7 +45,7 @@ export default class Service extends Component {
                <div className="container">
                    <h1>Services</h1>
                    <p>
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ipsum maxime debitis non 
+                   We provide learning resources, guidance and mentorship to software development learners and help them secure remote software development jobs.
                    </p>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
                        return <article key={index}>
@@ -60,7 +60,7 @@ export default class Service extends Component {
                                 <p>
                                     {item.description}
                                 </p>
-                                <Link to="">Learn more</Link>
+                                <Link to="/">Learn more</Link>
                             </div>
                        </article>
                        })}

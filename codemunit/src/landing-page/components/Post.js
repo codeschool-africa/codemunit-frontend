@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Post = ({property}) => {
     const { picture} = property;
     return (
-        <article >
+        <article>
             <div className="post-description">
                 <h2>{property.title}</h2>
                 <small>by {property.author}, {property.author_title}</small>

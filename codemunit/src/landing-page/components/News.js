@@ -10,15 +10,17 @@ export default class News extends Component {
             <div className="blog-news">
                 <div className="container">
                     <h1>News and resources</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ullam ratione neque aperiam officiis quis incidunt omnis dolores cupiditate beatae, voluptatum voluptate nihil eum iusto, reprehenderit nostrum sint cumque quasi.</p>
+                    <p>
+                        Some bunch of paragraph
+                    </p>
                     <Link to="/">View all posts</Link>
-                    <input type="radio" name="n" id="n1" checked />
+                    <input type="radio" name="n" id="n1" defaultChecked />
                     <input type="radio" name="n" id="n2" />
                     <div className="news-header">
-                        <label for="n1" className="carrier-news">
+                        <label htmlFor="n1" className="carrier-news">
                             Carriers News
                         </label>
-                        <label for="n2" className="technology-news">
+                        <label htmlFor="n2" className="technology-news">
                             Technology News
                         </label>
                     </div>

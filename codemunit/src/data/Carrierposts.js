@@ -1,18 +1,18 @@
-import TechImg from "../images/tech.jpeg"
+// import TechImg from "../images/tech.jpeg"
 import CarrierImg from "../images/intro.jpg"
 
 const Carrierposts = {
     properties: [
         {
-            "id": 1,
-            "title": "carrier post title one",
+            "id": 0,
+            "title": "Carrier post title one",
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
             "picture": CarrierImg
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "carrier post title two",
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
@@ -20,7 +20,7 @@ const Carrierposts = {
             "picture": CarrierImg
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "carrier post title three",
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",

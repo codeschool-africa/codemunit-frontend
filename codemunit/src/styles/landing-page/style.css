@@ -690,11 +690,15 @@ header .bg-color .container .hero .menu {
   padding: 20px;
 }
 
+.service .container .services-showcase article .hovered-face h3 {
+  text-align: left;
+}
+
 .service .container .services-showcase article .hovered-face p {
   text-align: left;
   width: 100%;
   margin: 0;
-  line-height: 1em;
+  line-height: 1.675em;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
 }
@@ -1058,28 +1062,37 @@ header .bg-color .container .hero .menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 50px 0;
+  margin: 50px auto;
   overflow: hidden;
   border: none;
+  width: 80vw !important;
 }
 
 .blog-news .container .news-container .news {
   position: relative;
-  min-width: 80vw !important;
-  -webkit-transition: .5s;
-  transition: .5s;
-  border: none;
-  padding: 20px 50px;
+  min-width: 100% !important;
+  width: 100% !important;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  padding: 20px 100px;
+}
+
+.blog-news .container .news-container .news .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  min-width: 100%;
+  max-width: 100%;
+  background: #fff;
+  z-index: 2;
 }
 
-.blog-news .container .news-container .news article {
+.blog-news .container .news-container .news .showcase article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1088,11 +1101,11 @@ header .bg-color .container .hero .menu {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 70vw !important;
+  min-width: 100%;
 }
 
-.blog-news .container .news-container .news article .post-description {
-  width: calc(70vw - 600px);
+.blog-news .container .news-container .news .showcase article .post-description {
+  width: calc(100% - 600px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1103,28 +1116,44 @@ header .bg-color .container .hero .menu {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 100px;
+  padding: 0 px;
 }
 
-.blog-news .container .news-container .news article .post-description p {
+.blog-news .container .news-container .news .showcase article .post-description h2 {
+  text-align: left;
+}
+
+.blog-news .container .news-container .news .showcase article .post-description p {
   text-align: left;
   margin: 20px 0;
 }
 
-.blog-news .container .news-container .news article .post-image {
+.blog-news .container .news-container .news .showcase article .post-image {
   width: 500px;
 }
 
-.blog-news .container .news-container .news article .post-image img {
+.blog-news .container .news-container .news .showcase article .post-image img {
   width: 100%;
 }
 
 .blog-news .container #n1:checked ~ .news-container .carrier-news-showcase {
   margin-left: 0;
+  z-index: 2;
+}
+
+.blog-news .container #n1:checked ~ .news-container .tech-news-showcase {
+  margin-left: 0;
+  z-index: 1;
 }
 
 .blog-news .container #n2:checked ~ .news-container .carrier-news-showcase {
-  margin-left: -80vw;
+  margin-left: -100%;
+  z-index: 1;
+}
+
+.blog-news .container #n2:checked ~ .news-container .tech-news-showcase {
+  margin-left: -100%;
+  z-index: 2;
 }
 
 .sponsors {
@@ -1168,7 +1197,7 @@ header .bg-color .container .hero .menu {
 }
 
 footer {
-  background: url(../../images/footer.png);
+  background: #1a2e3f;
   background-size: cover;
   background-repeat: no-repeat;
   color: #eee;
@@ -1648,8 +1677,8 @@ footer .footer-bottom .container {
 
 .arrows .circle {
   position: absolute;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background: #fff;
   -webkit-box-shadow: 1px 1px 2px rgba(2, 2, 2, 0.2);
@@ -1667,19 +1696,23 @@ footer .footer-bottom .container {
   font-size: 30px;
   pointer-events: all;
   z-index: 100;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 .arrows .circle:hover {
   -webkit-box-shadow: 4px 5px 6px rgba(2, 2, 2, 0.2);
           box-shadow: 4px 5px 6px rgba(2, 2, 2, 0.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   font-size: 32px;
 }
 
 .arrows .circle-left {
-  left: 2%;
+  left: .5%;
 }
 
 .arrows .circle-right {
-  right: 2%;
+  right: .5%;
 }
 /*# sourceMappingURL=style.css.map */

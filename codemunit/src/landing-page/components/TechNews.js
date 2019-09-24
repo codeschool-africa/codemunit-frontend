@@ -9,7 +9,7 @@ export default class TechNews extends Component {
         super(props);
         this.state = {
             properties: Techposts.properties,
-            property: Techposts.properties[1]
+            property: Techposts.properties[2]
         }
     }
 
@@ -37,13 +37,14 @@ export default class TechNews extends Component {
                 property: Techposts.properties[0]
             })
         }
-        
     }
 
     render() {
-        const {properties, property} = this.state;
+        const {properties,
+            //  property
+            } = this.state;
         return (
-            <div className="technology-news-showcase news" 
+            <div className="technology-news-showcase news"
                 // style={{
                 //     "transform":`translateX(-${property.id*(100/properties.length)}%)`
                 // }}
@@ -52,9 +53,17 @@ export default class TechNews extends Component {
                     <div className="circle circle-left" onClick={() => this.prevBtn()}><FaAngleLeft/></div>
                     <div className="circle circle-right" onClick={() => this.nextBtn()}><FaAngleRight/></div>
                 </div>
-                {properties.map( property => 
-                        <Post key = {property.id} property={property}/>
-                )}
+                <div className="showcase"
+                    // style={{
+                    //     "transform":`translateX(-${property.id*(100/properties.length)}%)`
+                    // }}
+                >
+                    {properties.map( property =>
+                            <Post
+                            key = {property.id}
+                            property={property}/>
+                    )}
+                </div>
             </div>
         )
     }

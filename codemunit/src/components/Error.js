@@ -1,11 +1,27 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import Header from "../landing-page/components/Header"
+import Banner from "../landing-page/components/Banner"
 
-export default function Error() {
+class Error extends React.Component {
+  componentDidMount() {
+    document.title = "Error 404 - Page Not Found";
+  }
+  render() {
     return (
-        <div>
-            error 404 page not found
-            <Link to='/'>Back to home</Link>
-        </div>
-    )
+        <Header>
+          <Banner
+            title="Error 404 - Page Not Found"
+          >
+            <div className="btn">
+              <Link to="/" className="btn-primary">
+                Go back to home page
+              </Link>
+            </div>
+          </Banner>
+        </Header>
+    );
+  }
 }
+
+export default Error;

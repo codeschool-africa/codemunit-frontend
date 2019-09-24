@@ -17,13 +17,13 @@ export default function Footer() {
                     </div>
                     <div className="col2 col">
                         <Link to='/'>become a mentor</Link>
-                        <Link to='/'>study hub</Link>
-                        <Link to='/'>about us</Link>
+                        <Link to='/'>community hub</Link>
+                        <Link to='/about'>about us</Link>
                         <Link to='/'>help and support</Link>
                         <Link to='/'>contact us</Link>
                         <Link to='/'>blog</Link>
-                        <Link to='/signup'>register</Link>
-                        <Link to='/login'>login</Link>
+                        <Link to='/'>register</Link>
+                        <Link to='/'>login</Link>
                         <h4>Sponsor us</h4>
                         <a href="mailto:sponsor@codemunit.com">sponsor@codemunit.com</a>
                         <h4>Partner with us</h4>

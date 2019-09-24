@@ -6,7 +6,11 @@ import Banner from '../components/Banner'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
-const About = () => {
+class About extends React.Component{
+    componentDidMount(){
+        document.title = "Codemunit - The Team"
+      }
+      render() {
     return (
         <div>
             <Header hero='about-header'>
@@ -31,6 +35,7 @@ const About = () => {
             <Footer/>
         </div>
     );
+                }
 }
 
 export default About;
