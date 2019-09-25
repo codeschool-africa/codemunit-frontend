@@ -9,7 +9,7 @@ export default class TechNews extends Component {
         super(props);
         this.state = {
             properties: Techposts.properties,
-            property: Techposts.properties[2]
+            property: Techposts.properties[0]
         }
     }
 

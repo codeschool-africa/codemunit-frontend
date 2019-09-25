@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 // import Sponsors from '../components/Sponsors'
 import News from "../components/News";
 import Service from "../components/Service";
-// import CarrierPath from '../components/CarrierPath'
+import CarrierPath from '../components/CarrierPath'
 // import Testimonials from '../components/Testimonials'
 import Footer from "../components/Footer";
 import "../../styles/landing-page/style.css";

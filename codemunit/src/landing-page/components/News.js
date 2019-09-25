@@ -18,10 +18,10 @@ export default class News extends Component {
                     <input type="radio" name="n" id="n2" />
                     <div className="news-header">
                         <label htmlFor="n1" className="carrier-news">
-                            Carriers News
+                            Carrier
                         </label>
                         <label htmlFor="n2" className="technology-news">
-                            Technology News
+                            Technology
                         </label>
                     </div>
                     <div className="news-container">

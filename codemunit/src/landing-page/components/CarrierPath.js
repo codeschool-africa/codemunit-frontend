@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Brain from "../../images/brain.png"
 import { Link } from 'react-router-dom'
 
 export default class CarrierPath extends Component {
@@ -15,6 +16,9 @@ export default class CarrierPath extends Component {
                             <h2>Choose your language</h2>
                         </div>
                     </div>
+                    <article>
+                        <img src={Brain} alt="brain"/>
+                    </article>
                     <article>
                         <div className="description">
                             {/* <h2>
