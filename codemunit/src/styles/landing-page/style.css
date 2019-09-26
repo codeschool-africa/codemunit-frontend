@@ -1263,7 +1263,7 @@ header .bg-color .container .hero .menu {
   }
   .blog-news .container .news-header {
     width: 80%;
-    height: 70px !important;
+    height: 90px !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1276,7 +1276,7 @@ header .bg-color .container .hero .menu {
     border-bottom: 7px solid #295c88;
   }
   .blog-news .container .news-header label::before {
-    top: 25px;
+    top: 35px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid #438976;

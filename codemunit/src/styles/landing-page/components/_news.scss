@@ -310,7 +310,7 @@
             }
             .news-header {
                 width: 80%;
-                height: 70px !important;
+                height: 90px !important;
                 flex-direction: column;
                 label {
                     height: 50%;
@@ -318,7 +318,7 @@
                     width: 100%;
                     border-bottom:7px solid $tertiaryColor;
                     &::before {
-                        top: 25px;
+                        top: 35px;
                         border-left: 15px solid transparent;
                         border-right: 15px solid transparent;
                         border-top: 15px solid $fancyColor;

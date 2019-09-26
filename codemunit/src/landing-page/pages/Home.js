@@ -1,13 +1,14 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/all";
 import { Link } from "react-router-dom";
+// import ScrollAnimation from 'react-animate-on-scroll'
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 // import Sponsors from '../components/Sponsors'
 import News from "../components/News";
 import Service from "../components/Service";
-import CarrierPath from '../components/CarrierPath'
+// import CarrierPath from '../components/CarrierPath'
 // import Testimonials from '../components/Testimonials'
 import Footer from "../components/Footer";
 import "../../styles/landing-page/style.css";
