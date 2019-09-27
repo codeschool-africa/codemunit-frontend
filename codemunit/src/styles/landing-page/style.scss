@@ -14,7 +14,7 @@ body, html {
 
 body {
     font-family: 'Nunito', sans-serif;
-    background: $secondaryColor;
+    background: #fff;
     overflow-x: hidden;
 }
 
@@ -64,7 +64,6 @@ input:focus, button:focus, a:focus {
 @import "./components/carrierpath";
 @import './components/header';
 @import './components/service';
-@import './components/carrier';
 @import './components/news';
 @import './components/sponsors';
 @import './components/footer';

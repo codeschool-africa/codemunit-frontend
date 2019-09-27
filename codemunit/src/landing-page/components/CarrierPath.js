@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Brain from "../../images/brain.png"
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export default class CarrierPath extends Component {
     render() {
@@ -8,28 +8,18 @@ export default class CarrierPath extends Component {
             <div className="carrier-path">
                 <div className="container">
                     <div className="carrier-header">
-                        {/* This is a header nav where users can click to choose if they choose carrier like web dev or specific language  */}
-                        <div className="carriers">
-                            <h2>Choose your carrier</h2>
-                        </div>
-                        <div className="languages">
-                            <h2>Choose your language</h2>
-                        </div>
+                        <h1>Codemunit Curriculum</h1>
+                        <p>
+                            World class curriculum
+                        </p>
                     </div>
                     <article>
-                        <img src={Brain} alt="brain"/>
-                    </article>
-                    <article>
-                        <div className="description">
-                            {/* <h2>
-                                carrier title
-                            </h2>
-                            <p>
-                                carrier description... a whole bunch of paragraph
-                            </p>
-                            <Link to="/">Take this path</Link> */}
-                        </div>
-                        <div className="img"></div>
+                        <section className="image">
+                            <img src={Brain} alt="brain network"/>
+                        </section>
+                        <section className="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet enim nihil at repellat. Architecto a laborum adipisci, impedit placeat, pariatur repellendus corrupti, soluta mollitia et ea tenetur dolore saepe minus?
+                        </section>
                     </article>
                     {/* toDO list
                           i) create a slider for different carrier paths with different colors etc
@@ -41,6 +31,7 @@ export default class CarrierPath extends Component {
                         vii) i gotta work hard on everything i've wanted to do tomorrow
                     */}
                 </div>
+                <div className="after"></div>
             </div>
         )
     }
