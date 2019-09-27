@@ -85,9 +85,12 @@ router.post('/signup', (req, res) => {
             bcrypt.hash(newUser.password, salt, (err, hash) => {
                 if(err) return err;
                 newUser.password = hash;
-                // Save the User
+               
+            //saving user               
                 newUser.save(function(err){
-                    if(err) return err
+                    if(err){
+                        return res.status(400).send(err.errmsg);
+                    }
                     res.json({ success: 'success' });
                 });
             });

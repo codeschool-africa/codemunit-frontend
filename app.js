@@ -8,7 +8,7 @@ require('dotenv').config();
 const users = require('./routes/usersRoute.js');
 const config = require('./config.js');
 
-const MONGODB_URI = 'mongodb://localhost:27017/codemunit';
+const MONGODB_URI = process.env.DB_CONNECT;
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(MONGODB_URI, { useCreateIndex: true,useNewUrlParser: true ,useUnifiedTopology: true });
