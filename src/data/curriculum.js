@@ -5,14 +5,13 @@ const curriculum = {
             "title": "Full Stack Web Development",
             "link": "",
             "sections": {
-                "index": 0,
                 "topics": [
                 "HTML & CSS",
                 "JavaScript",
                 "ReactJs & AngularJs",
                 "NodeJs",
                 "PHP & Laravel",
-                "Database technology"
+                "Database Technologies"
                 ]
             }
         },
@@ -21,9 +20,8 @@ const curriculum = {
             "title": "UI/UX Design",
             "link": "",
             "sections": {
-                "index": 1,
                 "topics": [
-                    "coming soon"
+                    "Coming Soon!!!"
                     ]
             }
         },
@@ -32,19 +30,17 @@ const curriculum = {
             "title": "Mobile App Development",
             "link": "",
             "sections": {
-                "index": 2,
                 "topics": [
-                    "android development",
-                    "iOS development"
+                    "Android Development",
+                    "iOS Development"
                     ]
             }
         },
         {
             "index": 3,
-            "title": "Data science",
+            "title": "Data Science",
             "link": "",
             "sections": {
-                "index": 3,
                 "topics": [
                     "coming soon"
                     ]
@@ -55,7 +51,6 @@ const curriculum = {
             "title": "Artificial Intelligence (AI)",
             "link": "",
             "sections": {
-                "index": 4,
                 "topics": [
                     "machine learning",
                     "deep learning"

@@ -12,7 +12,7 @@ export default function Footer() {
                         <p>Do you have a project?</p>
                         <div className="btn">
                             <Link to='/' className='btn-primary'>Hire the Team</Link>
-                            <Link to='/' className='btn-primary'>Join Now</Link>
+                            <Link to='/user' className='btn-primary'>Join Now</Link>
                         </div>
                     </div>
                     <div className="col2 col">
@@ -21,9 +21,8 @@ export default function Footer() {
                         <Link to='/about'>about us</Link>
                         <Link to='/'>help and support</Link>
                         <Link to='/'>contact us</Link>
-                        <Link to='/'>blog</Link>
-                        <Link to='/'>register</Link>
-                        <Link to='/'>login</Link>
+                        <Link to='/blog'>blog</Link>
+                        <Link to='/user'>register/login</Link>
                         <h4>Sponsor us</h4>
                         <a href="mailto:sponsor@codemunit.com">sponsor@codemunit.com</a>
                         <h4>Partner with us</h4>

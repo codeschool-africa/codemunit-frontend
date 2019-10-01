@@ -125,7 +125,10 @@
                 }
                 &:nth-child(1) .hovered-face {
                    background: #F99E22;
-                   color: #fff;
+                   color: $primaryColor;
+                   a {
+                       color: $tertiaryColor;
+                   }
                 }
                 &:nth-child(2) .hovered-face {
                     background: $primaryColor;

@@ -8,9 +8,7 @@
         display: inline-block;
         height: 100px;
         width: 100%;
-        // transform: skew(45deg);
         border-bottom-left-radius: 100%;
-        // border-top-right-radius: 50%;
         left: 0;
         bottom: 100px;
         background: #fff;
@@ -109,12 +107,18 @@
                             align-items: center;
                             background: #fefefe;
                             font-size: 1.1em;
+                            transition: .25s;
                             .icon {
                                 margin-right: 20px;
+                                transition: .25s;
+                                color: $primaryColor;
                             }
                             &:hover {
                                 background: $tertiaryColor;
                                 border-left: 15px $fancyColor solid;
+                                color: $secondaryColor;
+                            }
+                            &:hover .icon {
                                 color: $secondaryColor;
                             }
                         }
@@ -122,6 +126,10 @@
                             background: $tertiaryColor;
                             border-left: 15px $fancyColor solid;
                             color: $secondaryColor;
+                            .icon {
+                                transform: rotateZ(90deg);
+                                color: $secondaryColor;
+                            }
                         }
                     }
                 }

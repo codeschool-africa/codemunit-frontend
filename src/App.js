@@ -5,6 +5,8 @@ import { Route, Switch } from 'react-router-dom'
 
 import Home from './landing-page/pages/Home'
 import About from './landing-page/pages/About'
+import User from "./Users/User"
+import Blog from "./blog/Blog"
 import Curriculum from './landing-page/pages/Curriculum'
 import Error from './components/Error'
 
@@ -15,6 +17,8 @@ const App = () => {
         <Switch >
             <Route exact path="/" component={Home} key="home"/>
             <Route exact path="/about" component={About} key="about"/>
+            <Route exact path="/user" component={User} key="user"/>
+            <Route exact path="/blog" component={Blog} key="blog"/>
             <Route exact path="/curriculum" component={Curriculum} key="curriculum"/>
             <Route component={Error} />
           </Switch>

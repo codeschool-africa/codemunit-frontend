@@ -209,10 +209,14 @@ input:focus, button:focus, a:focus {
           align-items: center;
   background: #fefefe;
   font-size: 1.1em;
+  transition: .25s;
 }
 
 .carrier-path .container article section.description .syllabuses ul li .icon {
   margin-right: 20px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  color: #1a2e3f;
 }
 
 .carrier-path .container article section.description .syllabuses ul li:hover {
@@ -221,9 +225,19 @@ input:focus, button:focus, a:focus {
   color: #eee;
 }
 
+.carrier-path .container article section.description .syllabuses ul li:hover .icon {
+  color: #eee;
+}
+
 .carrier-path .container article section.description .syllabuses ul li.active {
   background: #295c88;
   border-left: 15px #438976 solid;
+  color: #eee;
+}
+
+.carrier-path .container article section.description .syllabuses ul li.active .icon {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
   color: #eee;
 }
 
@@ -1002,7 +1016,11 @@ header .bg-color .container .hero .menu {
 
 .service .container .services-showcase article:nth-child(1) .hovered-face {
   background: #F99E22;
-  color: #fff;
+  color: #1a2e3f;
+}
+
+.service .container .services-showcase article:nth-child(1) .hovered-face a {
+  color: #295c88;
 }
 
 .service .container .services-showcase article:nth-child(2) .hovered-face {

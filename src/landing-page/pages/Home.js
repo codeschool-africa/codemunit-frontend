@@ -30,7 +30,7 @@ class Home extends React.Component {
               <Link to="/" className="btn-primary">
                 Hire the Team
               </Link>
-              <Link to="/" className="btn-primary">
+              <Link to="/user" className="btn-primary">
                 Join Now
               </Link>
             </div>
