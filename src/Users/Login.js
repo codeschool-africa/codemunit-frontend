@@ -36,7 +36,7 @@ export default class Login extends Component {
                     <Modal open={open} onClose={this.onCloseModal} center>
                         <div className="modal">
                             <label htmlFor="email">Enter you email</label>
-                            <input type="email" name="email" placeholder="Email"/>
+                            <input type="email" name="email"/>
                             <button className="btn-primary">Submit</button>
                         </div>
                     </Modal>
