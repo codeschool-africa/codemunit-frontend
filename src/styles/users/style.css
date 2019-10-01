@@ -1,5 +1,285 @@
 .user-registration {
   min-height: 100vh;
   background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-registration h1 {
+  font-weight: bold;
+}
+
+.user-registration p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: .5px;
+  margin: 20px 0 30px;
+}
+
+.user-registration span {
+  font-size: 12px;
+}
+
+.user-registration a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.user-registration .container {
+  position: relative;
+  background: #fff;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 800px;
+  max-width: 900%;
+  margin: 50px auto;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.user-registration .container button.ghost {
+  border: 1px solid #fff;
+  color: #fff;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: transparent;
+  text-transform: uppercase;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+
+.user-registration .container button.ghost:hover {
+  opacity: .9;
+}
+
+.user-registration .container .form-container form {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.user-registration .container .form-container form .social-container {
+  margin: 20px 0;
+}
+
+.user-registration .container .form-container form .social-container a {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.user-registration .container .form-container form .social-container a:hover {
+  border: 1px solid #ddd;
+  opacity: .9;
+}
+
+.user-registration .container .form-container form span {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.user-registration .container .form-container form .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user-registration .container .form-container form .name .name-name {
+  margin-right: 2px;
+}
+
+.user-registration .container .form-container form .name .name-username {
+  margin-left: 2px;
+}
+
+.user-registration .container .form-container form label {
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.user-registration .container .form-container form input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.user-registration .container .form-container form button.btn-primary {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-transform 80ms ease-in;
+  transition: -webkit-transform 80ms ease-in;
+  transition: transform 80ms ease-in;
+  transition: transform 80ms ease-in, -webkit-transform 80ms ease-in;
+  margin: 8px 0 !important;
+}
+
+.user-registration .container .form-container form button.btn-primary:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.user-registration .container .form-container form button.btn-primary:hover {
+  color: #eee !important;
+  background: rgba(67, 137, 118, 0.2);
+  color: #438976 !important;
+}
+
+.user-registration .container .form-container form button.btn-primary:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.user-registration .container .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.user-registration .container .sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.user-registration .container .sign-up-container {
+  left: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+.user-registration .container .overlay-container {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.user-registration .container .overlay-container .overlay {
+  background: -webkit-gradient(linear, left top, right top, from(#1a2e3f), to(#438976)), no-repeat 0 0/cover;
+  background: linear-gradient(to right, #1a2e3f, #438976), no-repeat 0 0/cover;
+  color: #eee;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.user-registration .container .overlay-container .overlay .overlay-panel {
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  width: 50%;
+  padding: 0 40px;
+  text-align: center;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.user-registration .container .overlay-container .overlay .overlay-right {
+  right: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.user-registration .container.right-panel-active .sign-in-container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.user-registration .container.right-panel-active .overlay-container {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.user-registration .container.right-panel-active .sign-up-container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: 5;
+  opacity: 1;
+}
+
+.user-registration .container.right-panel-active .overlay {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 /*# sourceMappingURL=style.css.map */
