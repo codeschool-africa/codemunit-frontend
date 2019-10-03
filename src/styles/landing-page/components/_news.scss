@@ -1,17 +1,12 @@
 .blog-news {
     position: relative;
-    // padding-bottom: 50px;
     padding-top: 30px;
     background: $secondaryColor;
-    // margin-top: 50px;
     .after {
         position: absolute;
         display: inline-block;
         height: 100px;
         width: 100%;
-        // transform: skew(45deg);
-        // border-top-left-radius: 100%;
-        // border-top-right-radius: 50%;
         left: 0;
         top: -100px;
         background: $secondaryColor;
