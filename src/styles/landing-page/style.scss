@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import '../variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+input:focus, button:focus, a:focus {
+    outline: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: $secondaryColor !important;
+}
+  
+::-webkit-scrollbar-track {
+    border: 1px solid $fancyColor;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+}
+
+.btn-primary {
+    margin: 0 !important;
+    padding: 7px 20px;
+    background: rgba(67, 137, 118, .8);
+    border: 5px solid $fancyColor;
+    transition: .25s;
+    color: $secondaryColor !important;
+    text-decoration: none;
+    &:hover {
+        color: $secondaryColor !important;
+        background: rgba(67, 137, 118, .2);
+    }
+}
+
+.btn {
+    a {
+        margin-right: 20px !important;
+        padding: 7px 25px !important;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        &:hover {
+            padding-right: 50px !important;
+        }
+    }
+}
+
+@import "./components/carrierpath";
+@import './components/header';
+@import './components/service';
+@import './components/news';
+@import './components/sponsors';
+@import './components/footer';
+@import './components//arrows';

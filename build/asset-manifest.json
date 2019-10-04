@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d7d0629.chunk.css",
+    "main.js": "/static/js/main.72e56980.chunk.js",
+    "main.js.map": "/static/js/main.72e56980.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.3bf7f257.js",
+    "runtime~main.js.map": "/static/js/runtime~main.3bf7f257.js.map",
+    "static/js/2.07b774b8.chunk.js": "/static/js/2.07b774b8.chunk.js",
+    "static/js/2.07b774b8.chunk.js.map": "/static/js/2.07b774b8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2ec9040539cbaba1a3e96966dcd91219.js": "/precache-manifest.2ec9040539cbaba1a3e96966dcd91219.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5d7d0629.chunk.css.map": "/static/css/main.5d7d0629.chunk.css.map",
+    "static/media/style.css": "/static/media/bg-image.41c8c8f4.jpg",
+    "static/media/brain.png": "/static/media/brain.8e3ffd03.png",
+    "static/media/intro.jpg": "/static/media/intro.768a903c.jpg",
+    "static/media/tech.jpeg": "/static/media/tech.fee09062.jpeg"
+  }
+}
