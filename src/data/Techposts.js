@@ -11,7 +11,8 @@ const Technposts = {
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the technology post \nSub description of the technology post",
-            "picture": TechImg
+            "picture": TechImg,
+            "link": "/blog/post"
         },
         {
             "id": 1,
@@ -19,7 +20,8 @@ const Technposts = {
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the technology post \nSub description of the technology post",
-            "picture": CarrierImg
+            "picture": CarrierImg,
+            "link": "/blog/post"
         },
         {
             "id": 2,
@@ -27,7 +29,8 @@ const Technposts = {
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the technology post \nSub description of the technology post",
-            "picture": CarrierImg
+            "picture": CarrierImg,
+            "link": "/blog/post"
         }
     ]
 }

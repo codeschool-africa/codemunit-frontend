@@ -11,7 +11,7 @@ const Post = ({property}) => {
                 <p>
                     {property.subdescription}
                 </p>
-                <Link to="/blog/`${}`">View Post</Link>
+                <Link to="/blog/post">Read the story</Link>
             </div>
             <div className="post-image">
                 <img src={picture} alt="post"/>

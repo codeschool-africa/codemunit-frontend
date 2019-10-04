@@ -73,9 +73,9 @@ class Signup extends Component {
             case 'password':
                 formErrors.password = !passwordReg.test(value) ? "Your password isn't strong":"";
             break;
-            // case 'confirmPassword':
-            //     formErrors.confirmPassword = (!passwordMatch) ? "Passwords must match":"";
-            // break;
+            case 'confirmPassword':
+                formErrors.confirmPassword = (!passwordMatch) ? "Passwords must match":"";
+            break;
             default:
              break;
         }

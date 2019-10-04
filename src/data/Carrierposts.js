@@ -9,7 +9,8 @@ const Carrierposts = {
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
-            "picture": CarrierImg
+            "picture": CarrierImg,
+            "link": "/blog/post"
         },
         {
             "id": 1,
@@ -17,7 +18,8 @@ const Carrierposts = {
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
-            "picture": CarrierImg
+            "picture": CarrierImg,
+            "link": "/blog/post"
         },
         {
             "id": 2,
@@ -25,7 +27,8 @@ const Carrierposts = {
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
             "subdescription": "Sub description of the carrier post \nSub description of the carrier post",
-            "picture": CarrierImg
+            "picture": CarrierImg,
+            "link": "/blog/post"
         }
     ]
 }

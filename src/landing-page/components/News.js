@@ -12,7 +12,7 @@ export default class News extends Component {
           <div className="container">
             <h1>News and resources</h1>
             <p>Some bunch of paragraph</p>
-            <Link to="/">View all posts</Link>
+            <Link to="/">View all stories</Link>
             <input type="radio" name="n" id="n1" defaultChecked />
             <input type="radio" name="n" id="n2" />
             <div className="news-header">
