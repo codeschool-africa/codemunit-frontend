@@ -37,7 +37,7 @@ export default function Footer() {
                         </div>
                         <h3>subscribe to our newsletter</h3>
                         <form>
-                            <input type="text" placeholder="example@email.com"/>
+                            <input type="text" placeholder="example@email.com" netlify/>
                             <button type="submit">Subscribe</button>
                         </form>
                     </div>
