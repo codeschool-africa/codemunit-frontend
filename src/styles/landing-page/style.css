@@ -128,7 +128,7 @@ input:focus, button:focus, a:focus {
           box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.2);
   border: 1px solid #eee;
   color: #fff;
-  background: #fff;
+  background: #1a2e3f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +158,7 @@ input:focus, button:focus, a:focus {
   position: absolute;
   width: 50%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.05);
+  background: #eee;
   left: 0;
   top: 0;
 }
@@ -199,8 +199,8 @@ input:focus, button:focus, a:focus {
   transition: .25s;
   border-left: solid 15px #295c88;
   margin: 4px auto;
-  -webkit-box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.3);
-          box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.3);
+  -webkit-box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.2);
+          box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,6 +296,188 @@ input:focus, button:focus, a:focus {
 .carrier-path .container article section.description .sections ul a.btn-primary:hover {
   background: rgba(67, 137, 118, 0.5);
   color: #295c88 !important;
+}
+
+@media (max-width: 1080px) {
+  .carrier-path .container {
+    width: 95%;
+  }
+  .carrier-path .container .carrier-header h1 {
+    padding: 10px;
+  }
+  .carrier-path .container .carrier-header p {
+    line-height: 1.625rem;
+    font-size: 1.125em;
+    width: 80%;
+  }
+  .carrier-path .container article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.6fr;
+        grid-template-columns: 1fr 1.6fr;
+    grid-gap: 0 40px;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .carrier-path .container article section.image {
+    padding: 10px;
+  }
+  .carrier-path .container article section.image img {
+    width: 100%;
+  }
+  .carrier-path .container article section.description .syllabuses ul {
+    padding: 50px 0;
+  }
+  .carrier-path .container article section.description .syllabuses ul li {
+    padding: 20px 0;
+    padding-left: 8px;
+    border-left: solid 10px #295c88;
+    font-size: 1em;
+  }
+  .carrier-path .container article section.description .syllabuses ul li .icon {
+    margin-right: 10px;
+  }
+  .carrier-path .container article section.description .syllabuses ul li:hover {
+    border-left: 10px #438976 solid;
+  }
+  .carrier-path .container article section.description .syllabuses ul li.active {
+    border-left: 10px #438976 solid;
+  }
+  .carrier-path .container article section.description .sections {
+    padding: 40px 0;
+  }
+  .carrier-path .container article section.description .sections ul {
+    padding: 10px;
+  }
+  .carrier-path .container article section.description .sections ul li {
+    padding: 20px 0;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 940px) {
+  .carrier-path .container {
+    width: 70%;
+  }
+  .carrier-path .container .carrier-header h1 {
+    padding: 10px;
+  }
+  .carrier-path .container .carrier-header p {
+    line-height: 1.625rem;
+    font-size: 1.125em;
+    width: 100%;
+  }
+  .carrier-path .container article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .carrier-path .container article section.image {
+    padding: 10px;
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .carrier-path .container article section.image img {
+    width: 100%;
+  }
+  .carrier-path .container article section.description .syllabuses ul {
+    padding: 50px 0;
+  }
+  .carrier-path .container article section.description .syllabuses ul li {
+    padding: 20px 0;
+    padding-left: 4px;
+    border-left: solid 8px #295c88;
+    font-size: 1em;
+  }
+  .carrier-path .container article section.description .syllabuses ul li .icon {
+    margin-right: 8px;
+  }
+  .carrier-path .container article section.description .syllabuses ul li:hover {
+    border-left: 8px #438976 solid;
+  }
+  .carrier-path .container article section.description .syllabuses ul li.active {
+    border-left: 8px #438976 solid;
+  }
+  .carrier-path .container article section.description .sections {
+    padding: 40px 0;
+  }
+  .carrier-path .container article section.description .sections ul {
+    padding: 10px;
+  }
+  .carrier-path .container article section.description .sections ul li {
+    padding: 20px 0;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrier-path .container {
+    width: 95%;
+  }
+  .carrier-path .container .carrier-header h1 {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .carrier-path .container .carrier-header p {
+    line-height: 1.625rem;
+    font-size: 1.125em;
+    width: 100%;
+  }
+  .carrier-path .container article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .carrier-path .container article section.image {
+    padding: 10px;
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .carrier-path .container article section.image img {
+    width: 100%;
+  }
+  .carrier-path .container article section.description .syllabuses ul {
+    padding: 50px 0;
+  }
+  .carrier-path .container article section.description .syllabuses ul li {
+    padding: 20px 0;
+    padding-left: 4px;
+    border-left: solid 8px #295c88;
+    font-size: 1em;
+  }
+  .carrier-path .container article section.description .syllabuses ul li .icon {
+    margin-right: 8px;
+  }
+  .carrier-path .container article section.description .syllabuses ul li:hover {
+    border-left: 8px #438976 solid;
+  }
+  .carrier-path .container article section.description .syllabuses ul li.active {
+    border-left: 8px #438976 solid;
+  }
+  .carrier-path .container article section.description .sections {
+    padding: 40px 0;
+  }
+  .carrier-path .container article section.description .sections ul {
+    padding: 10px;
+  }
+  .carrier-path .container article section.description .sections ul li {
+    padding: 20px 0;
+    font-size: 1em;
+  }
 }
 
 header {
@@ -1586,6 +1768,8 @@ header .bg-color .container .hero .menu {
 .testimonials .container p {
   line-height: 1.4rem;
   font-size: 1em;
+  width: 80%;
+  margin: 15px auto;
 }
 
 .testimonials .container a {

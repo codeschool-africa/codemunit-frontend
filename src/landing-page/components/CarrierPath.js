@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Brain from "../../images/brain.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/all";
 import sections from "../../data/sections";
 
@@ -80,7 +80,7 @@ export default class CarrierPath extends Component {
       <div className="carrier-path">
         <div className="container">
           <div className="carrier-header">
-            <h1>A world class Curriculum</h1>
+            <h1>A world-class Curriculum</h1>
             <p>
               Our curriculum focuses on helping you learn the most in-demand
               skills in software development so you can get a great job no
@@ -107,7 +107,12 @@ export default class CarrierPath extends Component {
                     {property.title}
                   </li>
                    ))} */}
-                   <li onClick={() => this.showSection1()} className={this.state.isWeb?"active":""}><FaAngleRight className="icon"/>Full stack Web Development</li>
+                   <li onClick={() => this.showSection1()} className={this.state.isWeb?"active":""}><FaAngleRight className="icon"/>Full stack Web Development
+                      {/* ToDO 
+                        Gotta add this drop down for each syllabus in small devices
+                        a lot of work to do aaarrg
+                      */}
+                   </li>
                    <li onClick={() => this.showSection2()} className={this.state.isUi?"active":""}><FaAngleRight className="icon"/>UI/UX Design</li>
                    <li onClick={() => this.showSection3()} className={this.state.isMobile?"active":""}><FaAngleRight className="icon"/>Mobile App Development</li>
                    <li onClick={() => this.showSection4()} className={this.state.isDataScience?"active":""}><FaAngleRight className="icon"/>Data Science</li>
