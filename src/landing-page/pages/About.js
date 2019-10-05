@@ -1,11 +1,14 @@
 import React from 'react';
 import { FaAngleDown } from 'react-icons/all'
+// import "../../styles/landing-page/style.css"
 
 import Header from '../components/Header'
 import Banner from '../components/Banner'
+import AboutIntro from '../components/AboutIntro'
 import Team from "../components/Team"
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+
 
 class About extends React.Component{
     componentDidMount(){
@@ -29,6 +32,7 @@ class About extends React.Component{
             </Banner>
             </Header>
             <div className="content">
+                <AboutIntro/>
                 <Team/>
             </div>
             <Footer/>

@@ -29,7 +29,7 @@ export default function Footer() {
                         <a href="mailto:partner@codemunit.com">partner@codemunit.com</a>
                     </div>
                     <div className="col3 col">
-                    <h3>connect</h3>
+                    <h3>lets connect</h3>
                         <div className="follow">
                             <a href="https://www.facebook.com"><FaFacebookF className='icon'/></a>
                             <a href="https://www.twitter.com"><FaTwitter className='icon'/></a>

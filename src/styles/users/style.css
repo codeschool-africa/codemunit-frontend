@@ -326,12 +326,12 @@
   margin: 8px 0 !important;
   -webkit-transition: .2s;
   transition: .2s;
+  background: #438976;
 }
 
 .modal button.btn-primary:hover {
   color: #eee !important;
-  background: rgba(67, 137, 118, 0.2);
-  color: #438976 !important;
+  background: rgba(67, 137, 118, 0.8);
 }
 
 @media (max-width: 1100px) {

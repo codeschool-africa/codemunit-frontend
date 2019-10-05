@@ -229,10 +229,10 @@
         transition: transform 80ms ease-in;
         margin: 8px 0 !important;
         transition: .2s;
+        background: rgba(67, 137, 118, 1);
         &:hover {
             color: $secondaryColor !important;
-            background: rgba(67, 137, 118, .2);
-            color: $fancyColor !important;
+            background: rgba(67, 137, 118, .8);
         }
     }
 }

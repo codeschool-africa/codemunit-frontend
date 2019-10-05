@@ -28,7 +28,7 @@ input:focus, button:focus, a:focus {
 }
   
 ::-webkit-scrollbar-track {
-    border: 1px solid $fancyColor;
+    border: 3px solid $primaryColor;
 }
   
 ::-webkit-scrollbar-thumb {
@@ -67,4 +67,5 @@ input:focus, button:focus, a:focus {
 @import './components/news';
 @import './components/sponsors';
 @import './components/footer';
+@import "./components//about";
 @import './components//arrows';

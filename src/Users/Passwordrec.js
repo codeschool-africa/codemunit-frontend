@@ -18,7 +18,7 @@ export default class Passwordrec extends Component {
         return (
             <div className="modal">
                 <label htmlFor="email">Enter you email</label>
-                <input type="email" name="email" onChange={this.handleChange}/>
+                <input type="email" name="email" onChange={this.handleChange} placeholder="Email address"/>
                 <button className="btn-primary">Submit</button>
             </div>
         )
