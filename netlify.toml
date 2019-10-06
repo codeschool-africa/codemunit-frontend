@@ -1,4 +1,4 @@
 [build]
-base = "myapp/"
-publish = "myapp/build/"
+base = "codemunit/"
+publish = "codemunit/build/"
 command = "yarn build"
