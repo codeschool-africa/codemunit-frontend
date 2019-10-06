@@ -106,7 +106,7 @@ header {
     background-repeat: no-repeat;
 }
 
-@media (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
   header {
     .bg-color {
       .container {
@@ -137,7 +137,6 @@ header {
         }
         .hero {
           width: 70%;
-        //   height: calc(85vh - 100px);
           overflow: hidden;
           display: flex;
           flex-direction: column;
@@ -172,15 +171,9 @@ header {
             background: $secondaryColor;
             height: 25px;
             width: 50px;
-            // border-radius: 50%;
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
             cursor: pointer;
-            // span {
-            //     color: $primaryColor;
-            //     transform: rotateZ(45deg);
-            //     font-size: 30px;
-            // }
           }
         }
       }
@@ -188,7 +181,7 @@ header {
   }
 }
 
-@media (max-width: 880px) {
+@media screen and (max-width: 880px) {
   header {
     .bg-color {
       .container {
@@ -256,8 +249,9 @@ header {
     }
   }
 }
+  
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .btn-primary {
     padding: 7px 10px;
   }
@@ -329,7 +323,7 @@ header {
   }
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .btn-primary {
     padding: 7px 5px;
   }
@@ -344,17 +338,17 @@ header {
         }
         nav {
           height: 50px;
-          padding: 10px 5%;
-          width: calc(100vw);
+          padding: 10px 5% !important;
+          width: 100vw !important;
           margin-left: -6% !important;
-          transition: background-color .4s; 
+          transition: background-color .4s;
           .logo {
             h1 {
-              font-size: 30px;
+              font-size: 30px !important;
             }
           }
           .dropdown {
-            display: block;
+            display: block !important;
             .burger {
               display: inline-block;
               border: 0;
@@ -424,7 +418,6 @@ header {
               width: 100%;
               margin: 0;
               border-bottom: 1px solid $tertiaryColor;
-              
               a {
                   display: block;
                   width: 100%;

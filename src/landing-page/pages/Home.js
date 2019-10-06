@@ -23,7 +23,7 @@ class Home extends React.Component {
         <Header hero="home-header">
           <Banner
             title="com+code+unit"
-            subtitle="We monitor and guide software development learners (from zero to hero)  by bringing together learners and experts in a community.
+            subtitle="We monitor and guide software development learners by bringing together learners and experts in a community.
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
             <div className="btn">

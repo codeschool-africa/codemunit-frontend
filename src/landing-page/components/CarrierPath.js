@@ -3,6 +3,7 @@ import Brain from "../../images/brain.png";
 // import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/all";
 import sections from "../../data/sections";
+import MobileCurriculum from "../components/MobileCurriculum"
 
 export default class CarrierPath extends Component {
   constructor(props) {
@@ -94,24 +95,7 @@ export default class CarrierPath extends Component {
             <section className="description">
               <div className="syllabuses">
                 <ul>
-                   {/* {properties.map(property => (
-                    <li
-                    key={property.index}
-                    className={
-                      this.state.isOpen ? `active-${property.index}` : ""
-                    }
-                    property={property}
-                    onClick={() => this.showSections()}
-                  >
-                    <FaAngleRight className="icon" />
-                    {property.title}
-                  </li>
-                   ))} */}
                    <li onClick={() => this.showSection1()} className={this.state.isWeb?"active":""}><FaAngleRight className="icon"/>Full stack Web Development
-                      {/* ToDO 
-                        Gotta add this drop down for each syllabus in small devices
-                        a lot of work to do aaarrg
-                      */}
                    </li>
                    <li onClick={() => this.showSection2()} className={this.state.isUi?"active":""}><FaAngleRight className="icon"/>UI/UX Design</li>
                    <li onClick={() => this.showSection3()} className={this.state.isMobile?"active":""}><FaAngleRight className="icon"/>Mobile App Development</li>
@@ -127,6 +111,7 @@ export default class CarrierPath extends Component {
                 </ul>
               </div>
             </section>
+            <MobileCurriculum/>
           </article>
         </div>
         <div className="after" />

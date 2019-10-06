@@ -48,15 +48,12 @@
             section.description {
                 position: relative;
                 box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, .2);
-                // padding: 20px;
                 border: 1px solid $secondaryColor;
-                // transform: skew(2deg, 2deg);
                 color: #fff;
                 background: $primaryColor;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-between;
-                // background: linear-gradient(315deg, $fancyColor, $primaryColor);
                 &::before {
                     content: "";
                     position: absolute;
@@ -67,7 +64,6 @@
                     transform: skew(2deg, 2deg);
                     z-index: -1;
                     background: linear-gradient(315deg, $fancyColor, $primaryColor);
-                    // background: #fff;
                 }
                 &::after {
                     content: "";
@@ -170,6 +166,9 @@
                         }
                     }
                 }
+            }
+            .description.mobile-curriculum {
+                display: none;
             }
         }
     }
@@ -302,69 +301,4 @@
         }
     }
 }
-
-@media (max-width: 600px) {
-    .carrier-path {
-        .container  {
-            width: 95%;
-            .carrier-header {
-                h1 {
-                    padding: 10px;
-                    font-size: 20px;
-                }
-                p {
-                    line-height: 1.625rem;
-                    font-size: 1.125em;
-                    width: 100%;
-                }
-            }
-            article {
-                display: flex;
-                flex-direction: column;
-                margin-top: 50px;
-                width: 100%;
-                section.image {
-                    padding: 10px;
-                    padding-bottom: 40px;
-                    width: 80%;
-                    margin: 0 auto;
-                    img {
-                        width: 100%;
-                    }
-                }
-                section.description {
-                    .syllabuses {
-                        ul {
-                            padding: 50px 0;
-                            li {
-                                padding: 20px 0;
-                                padding-left: 4px;
-                                border-left: solid 8px $tertiaryColor;
-                                font-size: 1em;
-                                .icon {
-                                    margin-right: 8px;
-                                }
-                                &:hover {
-                                    border-left: 8px $fancyColor solid;
-                                }
-                            }
-                            li.active {
-                                border-left: 8px $fancyColor solid;
-                            }
-                        }
-                    }
-                    .sections {
-                        padding: 40px 0;
-                        ul  {
-                            padding: 10px;
-                            li {
-                                padding: 20px 0;
-                                font-size: 1em;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+@import "./carriermobile"

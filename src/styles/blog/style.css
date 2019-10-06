@@ -147,18 +147,11 @@
           align-items: center;
 }
 
-.about-header {
-  background: url(../../images/bg-about.jpg);
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 @media (max-width: 1080px) {
-  header .bg-color .container {
+  header.blog-bg .bg-color .container {
     width: 85%;
   }
-  header .bg-color .container nav .logo {
+  header.blog-bg .bg-color .container nav .logo {
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -167,13 +160,13 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  header .bg-color .container nav .logo h1 {
+  header.blog-bg .bg-color .container nav .logo h1 {
     font-size: 44px;
   }
-  header .bg-color .container nav .dropdown {
+  header.blog-bg .bg-color .container nav .dropdown {
     display: none;
   }
-  header .bg-color .container nav ul {
+  header.blog-bg .bg-color .container nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -186,11 +179,11 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header .bg-color .container nav ul li {
+  header.blog-bg .bg-color .container nav ul li {
     margin: 0 7px;
     font-size: 16px;
   }
-  header .bg-color .container .hero {
+  header.blog-bg .bg-color .container .hero {
     width: 70%;
     overflow: hidden;
     display: -webkit-box;
@@ -207,26 +200,26 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  header .bg-color .container .hero h1 {
+  header.blog-bg .bg-color .container .hero h1 {
     font-size: 66px;
     line-height: 4.2rem;
     font-weight: 100;
   }
-  header .bg-color .container .hero .intro {
+  header.blog-bg .bg-color .container .hero .intro {
     font-size: 1.125rem;
     line-height: 1.625rem;
     margin: 35px 0;
   }
-  header .bg-color .container .hero .btn a {
+  header.blog-bg .bg-color .container .hero .btn a {
     margin-right: 20px !important;
     padding: 7px 23px !important;
     font-size: 1.2rem;
     font-weight: lighter;
   }
-  header .bg-color .container .hero .btn a:hover {
+  header.blog-bg .bg-color .container .hero .btn a:hover {
     padding-right: 50px !important;
   }
-  header .bg-color .container .hero .menu {
+  header.blog-bg .bg-color .container .hero .menu {
     position: absolute;
     bottom: 0;
     left: 50%;
