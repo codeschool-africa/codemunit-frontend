@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
                     Hello
                 </aside>
                 <div className="main-container">
-                    Hello
+                    Hello from Dashboard
                 </div>
                 <div className="aside-right">
                     Hello
