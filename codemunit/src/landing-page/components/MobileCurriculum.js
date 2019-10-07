@@ -9,7 +9,7 @@ export default class MobileCurriculum extends Component {
             <section className="description mobile-curriculum">
               <div className="syllabuses">
                   <ul>
-                      <li>
+                      <li className="active">
                             <FaAngleRight className="icon"/>
                             Full Stack Web Development
                       </li>
