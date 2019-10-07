@@ -27,7 +27,7 @@ export default class Blog extends Component {
                 <div className="content" id="content">
                         <h1>Latest Posts</h1>
                         <div className="container carrier-posts">
-                            <h2>Carrier News</h2>
+                            <p>Blog /<span> Carrier-posts</span></p>
                             <div className="news-showcase">
                                 <Newssummary/>
                             </div>
@@ -38,7 +38,7 @@ export default class Blog extends Component {
                             </div>
                         </div>
                         <div className="container technology-posts">
-                            <h2>Technology News</h2>
+                             <p>Blog /<span> Technology-posts</span></p>
                             <div className="news-showcase">
                                 <Newssummary/>
                             </div>

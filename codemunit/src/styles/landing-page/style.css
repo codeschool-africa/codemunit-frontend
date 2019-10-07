@@ -1793,7 +1793,7 @@ header .bg-color .container .hero .menu {
 }
 
 .testimonials .container {
-  width: 70%;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
 }
@@ -1845,7 +1845,7 @@ header .bg-color .container .hero .menu {
   margin: 8px;
   -webkit-box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.15);
           box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.15);
-  padding: 30px;
+  padding: 20px;
   padding-top: 70px;
   position: relative;
   display: -webkit-box;
@@ -1912,6 +1912,94 @@ header .bg-color .container .hero .menu {
           align-items: flex-start;
   text-align: left;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .testimonials .container {
+    width: 70%;
+  }
+  .testimonials .container p {
+    width: 100%;
+  }
+  .testimonials .container .show-case article {
+    width: calc(50% - 12px);
+    margin: 6px;
+    padding: 16px 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .testimonials .container {
+    width: 75%;
+  }
+  .testimonials .container h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .testimonials .container {
+    width: 85%;
+  }
+  .testimonials .container h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials .container {
+    width: 90%;
+  }
+  .testimonials .container .show-case article .icon {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 585px) {
+  .testimonials {
+    padding-bottom: 30px;
+  }
+  .testimonials .container {
+    width: 75%;
+  }
+  .testimonials .container h1 {
+    font-size: 27px;
+  }
+  .testimonials .container p {
+    font-size: 1em;
+  }
+  .testimonials .container .show-case article {
+    width: calc(100% - 12px);
+  }
+}
+
+@media (max-width: 400px) {
+  .testimonials .container {
+    width: 90%;
+  }
+  .testimonials .container h1 {
+    font-size: 25px;
+  }
+  .testimonials .container p {
+    font-size: .9em;
+  }
+  .testimonials .container .show-case {
+    margin: 50px 0;
+    margin-top: 70px;
+  }
+  .testimonials .container .show-case article {
+    margin: 6px;
+    padding-top: 60px;
+  }
+  .testimonials .container .show-case article:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .testimonials .container .show-case article img {
+    top: -35px;
+    height: 70px;
+    width: 70px;
+  }
 }
 
 .sponsors {

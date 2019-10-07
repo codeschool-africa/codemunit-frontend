@@ -568,6 +568,19 @@
   font-weight: lighter;
 }
 
+.blog .content p {
+  font-size: 1em !important;
+  margin: 20px 0;
+  line-height: 1.2em;
+  background: #E9ECEF;
+  padding: 15px 7px;
+  width: 100%;
+}
+
+.blog .content p span {
+  color: #438976;
+}
+
 .blog .content .container {
   width: 100%;
 }
@@ -610,6 +623,10 @@
           flex-direction: column;
   height: 100%;
   padding: 10px 20px;
+}
+
+.blog .content .container article .post-description p {
+  background: none;
 }
 
 .blog .content .container article .post-description h1, .blog .content .container article .post-description h2 {
@@ -690,7 +707,7 @@
 
 @media (max-width: 800px) {
   .blog .content {
-    width: 85vw;
+    width: 90vw;
   }
 }
 

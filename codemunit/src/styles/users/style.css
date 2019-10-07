@@ -46,10 +46,22 @@
 }
 
 .user-registration a {
-  color: #333;
+  color: #438976;
   text-decoration: none;
   font-size: 14px;
   margin: 15px 0;
+}
+
+.user-registration a:hover {
+  opacity: .8;
+}
+
+.user-registration .copyright {
+  padding: 10px;
+}
+
+.user-registration .copyright a {
+  font-size: 16px;
 }
 
 .user-registration .container {
@@ -371,6 +383,13 @@
   .user-registration p {
     line-height: 17px;
     margin: 10px 0 15px;
+  }
+  .user-registration .copyright {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .user-registration .copyright a {
+    font-size: 14px;
   }
   .user-registration .container {
     width: 95%;

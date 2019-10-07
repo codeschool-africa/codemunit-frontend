@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import { Link } from "react-router-dom"
 import Login from "./Login"
 import Signup from "./Signup"
 import '../styles/users/style.css'
@@ -50,6 +52,9 @@ export default class User extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="copyright">
+                            Copyright &copy; 2019 <Link to="/">Codemunit.</Link> 
                 </div>
             </div>
         )
