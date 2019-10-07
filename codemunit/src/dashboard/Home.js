@@ -8,13 +8,13 @@ export default class Dashboard extends Component {
         return (
             <div className="dashboard-home header">
                 <aside>
-                    Hello
+                    This is navigation side bar
                 </aside>
                 <div className="main-container">
-                    Hello from Dashboard
+                    This is the main container of the dashboard.
                 </div>
                 <div className="aside-right">
-                    Hello
+                    this is another container to be aligned on the right hand side for additional features
                 </div>
             </div>
         )
