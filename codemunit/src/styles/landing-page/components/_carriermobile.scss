@@ -17,7 +17,8 @@
             article {
                 display: flex;
                 flex-direction: column;
-                margin-top: 50px;
+                margin: 50px 0;
+                margin-bottom: 200px;
                 width: 100%;
                 section.image {
                     padding: 10px;
@@ -34,7 +35,7 @@
             }
             .description.mobile-curriculum {
                 display: block !important;
-                height: 400%;
+                height: 100%;
                 &::after {
                     content: "";
                     position: absolute;
@@ -50,13 +51,17 @@
                         li {
                             position: relative;
                             display: flex;
-                            flex-direction: column;
+                            // flex-direction: column;
+                            padding-left:  5px;
                         }
                         .sections-container {
                             // position: absolute;
                             background: #fefefe;
-                            width: 80%;
+                            width: 90%;
                             margin: 0 auto;
+                            height: 0;
+                            overflow: hidden;
+                            // padding: 10px 10px;
                             ul {
                                 display: flex;
                                 flex-direction: column;
@@ -65,7 +70,7 @@
                                 padding: 0;
                                 li {
                                     border: none;
-                                    padding: 6px 3px;
+                                    padding: 1px 3px;
                                     width: 100%;
                                     box-shadow: none;
                                     text-align: left;
@@ -73,6 +78,11 @@
                                         background: #fefefe;
                                         color: #000;
                                         box-shadow: none;
+                                    }
+                                }
+                                li.btn-primary {
+                                    &:hover {
+                                        color: $primaryColor !important;
                                     }
                                 }
                             }

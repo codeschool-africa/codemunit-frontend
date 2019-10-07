@@ -573,6 +573,7 @@
   margin: 20px 0;
   line-height: 1.2em;
   background: #E9ECEF;
+  border-radius: 5px;
   padding: 15px 7px;
   width: 100%;
 }
@@ -706,8 +707,156 @@
 }
 
 @media (max-width: 800px) {
+  .blog {
+    width: 100vw;
+  }
   .blog .content {
-    width: 90vw;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -200px;
+    background: white;
+    min-height: 300px;
+    color: #000;
+    width: 80vw;
+    padding: 40px;
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, 0.2);
+            box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, 0.2);
+    z-index: 1000;
+  }
+  .blog .content h1 {
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 4px solid #438976;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  .blog .content h2 {
+    margin: 30px 0;
+    display: inline-block;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  .blog .content h3 {
+    display: inline-block;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  .blog .content p {
+    font-size: 1em !important;
+    margin: 20px 0;
+    line-height: 1.2em;
+    background: #E9ECEF;
+    padding: 15px 7px;
+    width: 100%;
+  }
+  .blog .content p span {
+    color: #438976;
+  }
+  .blog .content .container {
+    width: 100%;
+  }
+  .blog .content .container article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.2);
+            box-shadow: 2px 2px 2px 2px rgba(2, 2, 2, 0.2);
+  }
+  .blog .content .container article .post-image {
+    width: 400px;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  .blog .content .container article .post-image img {
+    width: 100%;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+  .blog .content .container article .post-image img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .blog .content .container article .post-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    padding: 10px 20px;
+  }
+  .blog .content .container article .post-description p {
+    background: none;
+  }
+  .blog .content .container article .post-description h1, .blog .content .container article .post-description h2 {
+    margin: 0;
+  }
+  .blog .content .container article .post-description a {
+    color: #438976;
+  }
+  .blog .content .container article .post-description a:hover {
+    opacity: .7;
+  }
+  .blog .content .container article .post-description .social-container {
+    padding: 5px 0;
+  }
+  .blog .content .container article .post-description .social-container a {
+    color: #438976;
+    margin-right: 8px;
+    margin-left: 0;
+  }
+  .blog .content .container article .post-description .social-container a .icon {
+    font-size: 20px;
+  }
+  .blog .content .container article .post-description .social-container a:hover {
+    opacity: .6;
+  }
+  .blog footer {
+    background: #fff;
+    color: black;
+    font-size: 18px;
+  }
+  .blog footer .container {
+    width: 60vw;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 25px 0;
+  }
+  .blog footer .container a {
+    color: #438976;
+    margin: 8px;
+  }
+  .blog footer .container a .icon {
+    font-size: 22px;
+  }
+  .blog footer .container a:hover {
+    opacity: .6;
+  }
+  .blog footer .container .social-container {
+    padding: 5px 0;
+  }
+  .blog footer .container .copyright {
+    padding: 5px 0;
   }
 }
 

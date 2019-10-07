@@ -10,7 +10,8 @@ export default class MobileCurriculum extends Component {
               <div className="syllabuses">
                   <ul>
                       <li>
-                          Full Stack Web Development
+                            <FaAngleRight className="icon"/>
+                            Full Stack Web Development
                       </li>
                       <div className="sections-container">
                             <ul>
@@ -26,6 +27,7 @@ export default class MobileCurriculum extends Component {
                             </ul>
                         </div>
                       <li>
+                         <FaAngleRight className="icon"/>
                           Full Stack Web Development
                       </li>
                       <div className="sections-container">
@@ -42,30 +44,42 @@ export default class MobileCurriculum extends Component {
                         </ul>
                        </div>
                        <li>
+                       <FaAngleRight className="icon"/>
                           Full Stack Web Development
                       </li>
                       <div className="sections-container">
                         <ul>
                             <li>HTML & CSS</li>
                             <li>Javascript</li>
+                            <li>
+                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                            </li>
                         </ul>
                        </div>
                        <li>
+                       <FaAngleRight className="icon"/>
                           Full Stack Web Development
                       </li>
                       <div className="sections-container">
                         <ul>
                             <li>HTML & CSS</li>
                             <li>Javascript</li>
+                            <li>
+                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                            </li>
                         </ul>
                        </div>
                        <li>
+                       <FaAngleRight className="icon"/>
                           Full Stack Web Development
                       </li>
                       <div className="sections-container">
                         <ul>
                             <li>HTML & CSS</li>
                             <li>Javascript</li>
+                            <li>
+                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                            </li>
                         </ul>
                        </div>
                   </ul>
