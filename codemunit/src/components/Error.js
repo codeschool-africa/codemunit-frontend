@@ -11,7 +11,7 @@ class Error extends React.Component {
     return (
         <Header>
           <Banner
-            title="Error 404 - Page Not Found"
+            title="Oooops!!! Page Not Found"
           >
             <div className="btn">
               <Link to="/" className="btn-primary">

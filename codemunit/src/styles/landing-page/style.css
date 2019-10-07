@@ -809,9 +809,6 @@ header .bg-color .container .hero .menu {
 }
 
 @media (max-width: 1080px) {
-  .service {
-    margin: 100px 0;
-  }
   .service .container {
     width: 75%;
   }
@@ -843,9 +840,6 @@ header .bg-color .container .hero .menu {
 }
 
 @media (max-width: 840px) {
-  .service {
-    margin: 100px 0;
-  }
   .service .container {
     width: 75%;
   }
@@ -877,9 +871,6 @@ header .bg-color .container .hero .menu {
 }
 
 @media (max-width: 600px) {
-  .service {
-    margin: 100px 0;
-  }
   .service .container {
     width: 60%;
   }
@@ -911,9 +902,6 @@ header .bg-color .container .hero .menu {
 }
 
 @media (max-width: 400px) {
-  .service {
-    margin: 100px 0;
-  }
   .service .container {
     width: 80%;
   }
