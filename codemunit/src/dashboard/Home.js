@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import "../styles/dashboard/style.css"
+
+//pages
+import Sidebar from "./components/Sidebar"
+import Main from "./components/Main"
 
 export default class Dashboard extends Component {
     componentDidMount() {
@@ -6,13 +11,9 @@ export default class Dashboard extends Component {
     }
     render() {
         return (
-            <div className="dashboard-home header">
-                <aside>
-                    This is navigation side bar
-                </aside>
-                <div className="main-container">
-                    This is the main container of the dashboard.
-                </div>
+            <div className="dashboard dashboard-home">
+                <Sidebar/>
+                <Main/>
                 <div className="aside-right">
                     this is another container to be aligned on the right hand side for additional features
                 </div>
