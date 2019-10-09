@@ -955,12 +955,12 @@ header .bg-color .container .hero .menu {
 }
 
 .carrier-path .container .carrier-header {
-  text-align: center;
+  text-align: left;
 }
 
 .carrier-path .container .carrier-header h1 {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 4px solid #438976;
   text-transform: uppercase;
   font-weight: lighter;
@@ -970,7 +970,7 @@ header .bg-color .container .hero .menu {
   line-height: 1.625rem;
   font-size: 1.125em;
   width: 80%;
-  margin: 15px auto;
+  margin: 15px 0;
 }
 
 .carrier-path .container article {
@@ -1175,9 +1175,6 @@ header .bg-color .container .hero .menu {
   .carrier-path .container {
     width: 95%;
   }
-  .carrier-path .container .carrier-header h1 {
-    padding: 10px;
-  }
   .carrier-path .container .carrier-header p {
     line-height: 1.625rem;
     font-size: 1.125em;
@@ -1231,9 +1228,6 @@ header .bg-color .container .hero .menu {
 @media (max-width: 940px) {
   .carrier-path .container {
     width: 70%;
-  }
-  .carrier-path .container .carrier-header h1 {
-    padding: 10px;
   }
   .carrier-path .container .carrier-header p {
     line-height: 1.625rem;
@@ -1298,7 +1292,6 @@ header .bg-color .container .hero .menu {
     width: 80%;
   }
   .carrier-path .container .carrier-header h1 {
-    padding: 10px;
     font-size: 20px;
   }
   .carrier-path .container .carrier-header p {
@@ -1412,7 +1405,7 @@ header .bg-color .container .hero .menu {
 .blog-news .container {
   width: 80%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .blog-news .container h1 {
@@ -1427,7 +1420,7 @@ header .bg-color .container .hero .menu {
   line-height: 1.625rem;
   font-size: 1.125em;
   width: 70%;
-  margin: 15px auto;
+  margin: 15px 0;
 }
 
 .blog-news .container a {
@@ -1443,7 +1436,7 @@ header .bg-color .container .hero .menu {
 }
 
 .blog-news .container .news-header {
-  width: 70%;
+  width: 100%;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1711,7 +1704,7 @@ header .bg-color .container .hero .menu {
     font-size: 1.2em;
   }
   .blog-news .container .news-header {
-    width: 80%;
+    width: 100%;
     height: 90px !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1768,7 +1761,7 @@ header .bg-color .container .hero .menu {
 
 @media (max-width: 500px) {
   .blog-news .container .news-header {
-    width: 60%;
+    width: 100%;
   }
   .blog-news .container .news-container .news {
     min-height: 450px;
@@ -1783,12 +1776,12 @@ header .bg-color .container .hero .menu {
 .testimonials .container {
   width: 75%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .testimonials .container h1 {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 4px solid #438976;
   text-transform: uppercase;
   font-weight: lighter;
@@ -1798,7 +1791,7 @@ header .bg-color .container .hero .menu {
   line-height: 1.4rem;
   font-size: 1em;
   width: 80%;
-  margin: 15px auto;
+  margin: 15px 0;
 }
 
 .testimonials .container a {

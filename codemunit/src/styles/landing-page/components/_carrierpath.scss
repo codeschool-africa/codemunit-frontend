@@ -18,10 +18,10 @@
         width: 90%;
         margin: 0 auto;
         .carrier-header {
-            text-align: center;
+            text-align: left;
             h1 {
                 display: inline-block;
-                padding: 10px;
+                padding: 10px 0;
                 border-bottom: 4px solid $fancyColor;
                 text-transform: uppercase;
                 font-weight: lighter;
@@ -30,7 +30,7 @@
                 line-height: 1.625rem;
                 font-size: 1.125em;
                 width: 80%;
-                margin: 15px auto;
+                margin: 15px 0;
             }
         }
         article {
@@ -179,9 +179,6 @@
         .container  {
             width: 95%;
             .carrier-header {
-                h1 {
-                    padding: 10px;
-                }
                 p {
                     line-height: 1.625rem;
                     font-size: 1.125em;
@@ -242,9 +239,6 @@
         .container  {
             width: 70%;
             .carrier-header {
-                h1 {
-                    padding: 10px;
-                }
                 p {
                     line-height: 1.625rem;
                     font-size: 1.125em;
@@ -301,4 +295,4 @@
         }
     }
 }
-@import "./carriermobile"
+@import "./carriermobile";

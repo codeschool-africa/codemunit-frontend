@@ -4,10 +4,10 @@
     .container {
         width: 75%;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
         h1 {
             display: inline-block;
-            padding: 10px;
+            padding: 10px 0;
             border-bottom: 4px solid $fancyColor;
             text-transform: uppercase;
             font-weight: lighter;
@@ -16,7 +16,7 @@
             line-height: 1.4rem;
             font-size: 1em;
             width: 80%;
-            margin: 15px auto;
+            margin: 15px 0;
         }
         a {
             color: $fancyColor;
