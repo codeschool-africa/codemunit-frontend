@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ScrollAnimation from 'react-animate-on-scroll'
+import "animate.css"
 import {FaProjectDiagram, FaNetworkWired, FaServicestack, GoProject} from 'react-icons/all'
 
 export default class Service extends Component {
@@ -47,24 +49,29 @@ export default class Service extends Component {
                    <p>
                    We provide learning resources, guidance and mentorship to software development learners and help them secure remote software development jobs.
                    </p>
+                   <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' style={{
+                               animationDelay: "0.2s",
+                               animationDuration: "0.2s"
+                           }}>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
-                       return <article key={index}>
-                            <div className="front-face">
-                                {item.icon}
-                                <h2>{item.title}</h2>
-                            </div>
-                            <div className="hovered-face">
-                                <h3>
-                                    {item.subtitle}
-                                </h3>
-                                <p>
-                                    {item.description}
-                                </p>
-                                <Link to="/">Learn more</Link>
-                            </div>
+                       return <article key={index} className="animated fadeIn delay-2s">
+                                <div className="front-face">
+                                    {item.icon}
+                                    <h2>{item.title}</h2>
+                                </div>
+                                <div className="hovered-face">
+                                    <h3>
+                                        {item.subtitle}
+                                    </h3>
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                    <Link to="/">Learn more</Link>
+                                </div>
                        </article>
                        })}
                    </div>
+                   </ScrollAnimation>
                </div>
             </div>
         )

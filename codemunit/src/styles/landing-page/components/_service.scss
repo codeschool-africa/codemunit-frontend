@@ -4,7 +4,7 @@
     .container {
         width: 75%;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
         h1 {
             display: inline-block;
             padding: 10px;
@@ -16,7 +16,7 @@
             line-height: 1.625rem;
             font-size: 1.125em;
             width: 80%;
-            margin: 15px auto;
+            margin: 15px 0;
         }
         .services-showcase {
             display: flex;
@@ -38,6 +38,7 @@
                     justify-content: space-around;
                     align-items: flex-start;
                     background: #fefefe;
+                    z-index: 1;
                 }
                 .hovered-face {
                     position: absolute;
@@ -46,7 +47,7 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    z-index: 2;
+                    z-index: 999999;
                     transition: all .25s;
                     overflow: hidden;
                     color: $secondaryColor;
@@ -163,7 +164,7 @@
                 line-height: 1.625rem;
                 font-size: 1.125em;
                 width: 80%;
-                margin: 10px auto;
+                // margin: 10px auto;
             }
             .services-showcase {
                 margin: 50px 0;
@@ -197,7 +198,7 @@
                 line-height: 1.625rem;
                 font-size: 1.125em;
                 width: 80%;
-                margin: 10px auto;
+                // margin: 10px auto;
             }
             .services-showcase {
                 margin: 50px 0;
@@ -231,7 +232,7 @@
                 line-height: 1.625rem;
                 font-size: 1.125em;
                 width: 100%;
-                margin: 10px auto;
+                // margin: 10px auto;
             }
             .services-showcase {
                 margin: 50px 0;
@@ -266,7 +267,7 @@
                 line-height: 1.625rem;
                 font-size: 1.125em;
                 width: 100%;
-                margin: 10px auto;
+                // margin: 10px auto;
             }
             .services-showcase {
                 margin: 50px 0;

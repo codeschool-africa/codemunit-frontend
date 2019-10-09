@@ -1,7 +1,7 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/all";
 import { Link } from "react-router-dom";
-// import ScrollAnimation from 'react-animate-on-scroll'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
@@ -15,7 +15,7 @@ import "../../styles/landing-page/style.css";
 
 class Home extends React.Component {
   componentDidMount() {
-    document.title = "Codemunit - Home";
+    document.title = "Codemunit | Code + community";
   }
   render() {
     return (

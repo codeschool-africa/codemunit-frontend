@@ -604,7 +604,7 @@ header .bg-color .container .hero .menu {
 .service .container {
   width: 75%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .service .container h1 {
@@ -619,7 +619,7 @@ header .bg-color .container .hero .menu {
   line-height: 1.625rem;
   font-size: 1.125em;
   width: 80%;
-  margin: 15px auto;
+  margin: 15px 0;
 }
 
 .service .container .services-showcase {
@@ -662,6 +662,7 @@ header .bg-color .container .hero .menu {
       -ms-flex-align: start;
           align-items: flex-start;
   background: #fefefe;
+  z-index: 1;
 }
 
 .service .container .services-showcase article .hovered-face {
@@ -671,7 +672,7 @@ header .bg-color .container .hero .menu {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 999999;
   -webkit-transition: all .25s;
   transition: all .25s;
   overflow: hidden;
@@ -819,7 +820,6 @@ header .bg-color .container .hero .menu {
     line-height: 1.625rem;
     font-size: 1.125em;
     width: 80%;
-    margin: 10px auto;
   }
   .service .container .services-showcase {
     margin: 50px 0;
@@ -850,7 +850,6 @@ header .bg-color .container .hero .menu {
     line-height: 1.625rem;
     font-size: 1.125em;
     width: 80%;
-    margin: 10px auto;
   }
   .service .container .services-showcase {
     margin: 50px 0;
@@ -881,7 +880,6 @@ header .bg-color .container .hero .menu {
     line-height: 1.625rem;
     font-size: 1.125em;
     width: 100%;
-    margin: 10px auto;
   }
   .service .container .services-showcase {
     margin: 50px 0;
@@ -915,7 +913,6 @@ header .bg-color .container .hero .menu {
     line-height: 1.625rem;
     font-size: 1.125em;
     width: 100%;
-    margin: 10px auto;
   }
   .service .container .services-showcase {
     margin: 50px 0;
