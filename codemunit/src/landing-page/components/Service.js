@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import ScrollAnimation from 'react-animate-on-scroll'
-import "animate.css"
+// import ScrollAnimation from 'react-animate-on-scroll'
+// import "animate.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {FaProjectDiagram, FaNetworkWired, FaServicestack, GoProject} from 'react-icons/all'
 
 export default class Service extends Component {
-        state = {
+    constructor(props) {
+        super(props);
+        this.state = {
             services:[
             {
                 // index:0,
@@ -41,6 +45,14 @@ export default class Service extends Component {
             }
         ]
     }
+}
+
+    componentDidMount(){
+        AOS.init({
+          duration : 2000
+        })
+      }
+
     render() {
         return (
             <div className='service' id='service'>
@@ -49,12 +61,8 @@ export default class Service extends Component {
                    <p>
                    We provide learning resources, guidance and mentorship to software development learners and help them secure remote software development jobs.
                    </p>
-                   <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut' style={{
-                               animationDelay: "0.2s",
-                               animationDuration: "0.2s"
-                           }}>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
-                       return <article key={index} className="animated fadeIn delay-2s">
+                       return <article key={index} data-aos="fade-up">
                                 <div className="front-face">
                                     {item.icon}
                                     <h2>{item.title}</h2>
@@ -71,7 +79,6 @@ export default class Service extends Component {
                        </article>
                        })}
                    </div>
-                   </ScrollAnimation>
                </div>
             </div>
         )

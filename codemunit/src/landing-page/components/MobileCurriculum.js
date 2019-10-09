@@ -1,15 +1,22 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { FaAngleDown, FaAngleRight } from "react-icons/all";
 
 export default class MobileCurriculum extends Component {
+    componentDidMount(){
+        AOS.init({
+          duration : 2000
+        })
+      }
     render() {
         return (
-            <section className="description mobile-curriculum">
+            <section className="description mobile-curriculum" data-aos="slide-left">
               <div className="syllabuses">
                   <ul>
-                      <li className="active">
+                      <li className="active" >
                             <FaAngleRight className="icon"/>
                             Full Stack Web Development
                       </li>

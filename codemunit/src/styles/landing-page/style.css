@@ -609,7 +609,7 @@ header .bg-color .container .hero .menu {
 
 .service .container h1 {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 0;
   border-bottom: 4px solid #438976;
   text-transform: uppercase;
   font-weight: lighter;
@@ -662,7 +662,7 @@ header .bg-color .container .hero .menu {
       -ms-flex-align: start;
           align-items: flex-start;
   background: #fefefe;
-  z-index: 1;
+  z-index: 1 !important;
 }
 
 .service .container .services-showcase article .hovered-face {
@@ -672,7 +672,7 @@ header .bg-color .container .hero .menu {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 9 !important;
   -webkit-transition: all .25s;
   transition: all .25s;
   overflow: hidden;
@@ -690,6 +690,8 @@ header .bg-color .container .hero .menu {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 20px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .service .container .services-showcase article .hovered-face h3 {
@@ -780,11 +782,6 @@ header .bg-color .container .hero .menu {
 
 .service .container .services-showcase article:nth-child(1) .hovered-face {
   background: #F99E22;
-  color: #1a2e3f;
-}
-
-.service .container .services-showcase article:nth-child(1) .hovered-face a {
-  color: #295c88;
 }
 
 .service .container .services-showcase article:nth-child(2) .hovered-face {
@@ -807,6 +804,7 @@ header .bg-color .container .hero .menu {
   opacity: 1;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  z-index: 100000;
 }
 
 @media (max-width: 1080px) {
