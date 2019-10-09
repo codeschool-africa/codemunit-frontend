@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Brain from "../../images/brain.png";
 // import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/all";
@@ -17,6 +20,12 @@ export default class CarrierPath extends Component {
       isDataScience: false,
       isAI: false,
     };
+  }
+
+  componentDidMount(){
+    AOS.init({
+      duration : 2000
+    })
   }
 
   showSection1 = () => {
@@ -90,9 +99,9 @@ export default class CarrierPath extends Component {
           </div>
           <article>
             <section className="image">
-              <img src={Brain} alt="brain network" />
+              <img src={Brain} alt="brain network" data-aos="fade-in"/>
             </section>
-            <section className="description">
+            <section className="description" data-aos="fade-in">
               <div className="syllabuses">
                 <ul>
                    <li onClick={() => this.showSection1()} className={this.state.isWeb?"active":""}><FaAngleRight className="icon"/>Full stack Web Development

@@ -13,7 +13,7 @@ export default class MobileCurriculum extends Component {
       }
     render() {
         return (
-            <section className="description mobile-curriculum" data-aos="slide-left">
+            <section className="description mobile-curriculum" data-aos="fade-in">
               <div className="syllabuses">
                   <ul>
                       <li className="active" >
