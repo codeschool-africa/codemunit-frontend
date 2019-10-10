@@ -1,4 +1,0 @@
-[build]
-base = "codemunit/"
-publish = "/build/"
-command = "yarn build"
