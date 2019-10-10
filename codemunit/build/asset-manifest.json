@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2efeeb7f.chunk.css",
+    "main.js": "/static/js/main.a2e5424c.chunk.js",
+    "main.js.map": "/static/js/main.a2e5424c.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.3bf7f257.js",
+    "runtime~main.js.map": "/static/js/runtime~main.3bf7f257.js.map",
+    "static/js/2.500a5af1.chunk.js": "/static/js/2.500a5af1.chunk.js",
+    "static/js/2.500a5af1.chunk.js.map": "/static/js/2.500a5af1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2d1d54ddce9c304edd74b6816613bbbb.js": "/precache-manifest.2d1d54ddce9c304edd74b6816613bbbb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2efeeb7f.chunk.css.map": "/static/css/main.2efeeb7f.chunk.css.map",
+    "static/media/style.css": "/static/media/blog-bg.035c985c.jpg",
+    "static/media/brain.png": "/static/media/brain.8e3ffd03.png",
+    "static/media/intro.jpg": "/static/media/intro.768a903c.jpg",
+    "static/media/sponsor-2jpeg": "/static/media/sponsor-2jpeg.1a2df59e.bin",
+    "static/media/tech.jpeg": "/static/media/tech.fee09062.jpeg"
+  }
+}
