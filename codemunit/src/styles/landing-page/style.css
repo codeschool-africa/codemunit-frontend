@@ -936,7 +936,7 @@ header .bg-color .container .hero .menu {
 }
 
 .carrier-path .container {
-  width: 90%;
+  width: 90vw;
   margin: 0 auto;
   text-align: center;
 }
@@ -1269,7 +1269,7 @@ header .bg-color .container .hero .menu {
     padding: 20px 0;
   }
   .carrier-path .container {
-    width: 90%;
+    width: 90vw;
     text-align: justify;
   }
   .carrier-path .container .carrier-header {

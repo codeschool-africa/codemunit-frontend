@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import {FaProjectDiagram, FaNetworkWired, FaServicestack, GoProject} from 'react-icons/all'
 
 export default class Service extends Component {
@@ -46,11 +46,11 @@ export default class Service extends Component {
     }
 }
 
-    componentDidMount(){
-        AOS.init({
-          duration : 2000
-        })
-      }
+    // componentDidMount(){
+    //     AOS.init({
+    //       duration : 2000
+    //     })
+    //   }
 
     render() {
         return (

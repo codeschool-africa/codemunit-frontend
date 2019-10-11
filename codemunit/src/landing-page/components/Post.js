@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'react-router-dom'
 
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 const Post = ({property}) => {
     const { picture} = property;

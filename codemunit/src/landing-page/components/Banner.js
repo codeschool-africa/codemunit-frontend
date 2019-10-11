@@ -1,5 +1,5 @@
 import React from 'react';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 const Banner = ({children,title,subtitle}) => {
     return (

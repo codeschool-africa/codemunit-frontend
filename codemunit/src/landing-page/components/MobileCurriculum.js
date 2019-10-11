@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 import { FaAngleRight } from "react-icons/all";
 

@@ -2,7 +2,7 @@ import React from 'react';
 import dummy from "../../images/dummy.jpeg"
 import { FaQuoteLeft, FaTwitter} from "react-icons/all"
 
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
 
 const Testimonials = () => {
     return (

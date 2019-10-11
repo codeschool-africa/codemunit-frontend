@@ -2,7 +2,7 @@ import React from "react";
 import { FaAngleDown } from "react-icons/all";
 import { Link } from "react-router-dom";
 // import ScrollAnimation from 'react-animate-on-scroll'
-import aos from "aos/dist/aos.css"
+// import aos from "aos/dist/aos.css"
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";

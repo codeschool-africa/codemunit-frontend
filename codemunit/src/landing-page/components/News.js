@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import aos from "aos/dist/aos.css"
+// import aos from "aos/dist/aos.css"
 
 import CarrierNews from "./CarrierNews";
 import TechNews from "./TechNews";
