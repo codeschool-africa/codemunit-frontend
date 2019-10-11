@@ -27,7 +27,7 @@ class Home extends React.Component {
             subtitle="We monitor and guide software development learners by bringing together learners and experts in a community.
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
-            <div className="btn" data-aos="fade-up">
+            <div className="btn" data-aos="fade-in">
               <Link to="/" className="btn-primary">
                 Hire the Team
               </Link>
