@@ -15,11 +15,9 @@ export default class Nav extends Component  {
     return (
         <nav className={this.state.isOpen?"nav-bg":""}>
             <div className="logo">
-                <h1>
                     <Link to='/'>
                         <img src={logo} alt="kodemunit logo"/>
                     </Link>
-                </h1>
             </div>
             <div></div>
             <div className="dropdown">

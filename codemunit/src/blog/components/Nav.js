@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import logo from "../../images/logo.png"
+
 export default class Nav extends Component  {
     state={
         isOpen:false
@@ -14,11 +16,9 @@ export default class Nav extends Component  {
     return (
         <nav className={this.state.isOpen?"blog-nav-bg":""}>
             <div className="logo">
-                <h1>
-                    <Link to='/'>
-                        Codemunit
-                    </Link>
-                </h1>
+                <Link to='/'>
+                    <img src={logo} alt="kodemunit logo" />
+                </Link>
             </div>
             <div></div>
             <div className="dropdown">
