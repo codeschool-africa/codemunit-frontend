@@ -18,6 +18,7 @@ header {
         align-items: center;
         justify-content: space-between;
         height: 100px;
+        // overflow: hidden;
         a {
           color: $secondaryColor;
           text-decoration: none;
@@ -31,9 +32,6 @@ header {
           align-items: center;
           img {
             height: 50px;
-          }
-          h1 {
-            font-size: 48px;
           }
         }
         .dropdown {
@@ -119,9 +117,6 @@ header {
             height: 100%;
             display: flex;
             align-items: center;
-            h1 {
-              font-size: 44px;
-            }
           }
           .dropdown {
             display: none;
@@ -190,11 +185,11 @@ header {
       .container {
         width: 90%;
         nav {
-          .logo {
-            h1 {
-              font-size: 36px;
-            }
-          }
+          // .logo {
+          //   img {
+
+          //   }
+          // }
           .dropdown {
             display: none;
           }
@@ -263,11 +258,11 @@ header {
       .container {
         width: 90%;
         nav {
-          .logo {
-            h1 {
-              font-size: 30px;
-            }
-          }
+          // .logo {
+          //   img {
+
+          //   }
+          // }
           .dropdown {
             display: none;
           }
@@ -346,8 +341,8 @@ header {
           margin-left: -6% !important;
           transition: background-color .4s;
           .logo {
-            h1 {
-              font-size: 30px !important;
+            img {
+              height: 35px;
             }
           }
           .dropdown {
