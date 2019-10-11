@@ -1313,6 +1313,7 @@ header .bg-color .container .hero .menu {
   }
   .carrier-path .container .description.mobile-curriculum .syllabuses {
     width: 100%;
+    border-top: 15px solid #438976;
   }
   .carrier-path .container .description.mobile-curriculum .syllabuses ul li {
     position: relative;
