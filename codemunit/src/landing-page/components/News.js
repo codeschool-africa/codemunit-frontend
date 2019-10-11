@@ -11,8 +11,8 @@ export default class News extends Component {
         <div className="after"></div>
           <div className="container">
             <h1>News and resources</h1>
-            <p>Some bunch of paragraph</p>
-            <Link to="/">View all stories</Link>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quibusdam molestiae temporibus, commodi repellat consectetur? Magni veniam laborum, eaque non commodi nam repellat laboriosam suscipit quibusdam accusamus adipisci voluptatibus velit!</p>
+            <Link to="/blog">View all stories</Link>
             <input type="radio" name="n" id="n1" defaultChecked />
             <input type="radio" name="n" id="n2" />
             <div className="news-header">

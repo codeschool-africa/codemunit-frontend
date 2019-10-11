@@ -1,15 +1,10 @@
 .content {
     h1 {
-        display: inline-block;
-        padding: 10px 0;
         border-bottom: 4px solid $fancyColor;
         text-transform: uppercase;
         font-weight: lighter;
     }
     p {
-        line-height: 1.825rem;
-        font-size: 1.2em;
-        // width: 80%;
         margin: 15px auto;
     }
     .about {
@@ -18,7 +13,7 @@
             width: 70vw;
             padding: 50px 0;
             margin: 0 auto;
-            text-align: left;
+            text-align: center;
         }
     }
     .team {
@@ -97,19 +92,6 @@
 
 @media (max-width: 992px) {
     .content {
-        h1 {
-            display: inline-block;
-            // padding: 10px;
-            border-bottom: 4px solid $fancyColor;
-            text-transform: uppercase;
-            font-weight: lighter;
-        }
-        p {
-            line-height: 1.825rem;
-            font-size: 1.2em;
-            // width: 80%;
-            margin: 15px auto;
-        }
         .about {
             background: $secondaryColor;
             .container {
@@ -123,9 +105,6 @@
             background: #fff;
             padding: 20px 0;
             .container {
-                width: 90vw;
-                margin: 0 auto;
-                text-align: center;
                 .show-case {
                     margin-top: 20px;
                     display: flex;
@@ -193,20 +172,6 @@
 
 @media (max-width: 762px) {
     .content {
-        h1 {
-            display: inline-block;
-            // padding: 10px;
-            font-size: 28px;
-            border-bottom: 4px solid $fancyColor;
-            text-transform: uppercase;
-            font-weight: lighter;
-        }
-        p {
-            line-height: 1.525rem;
-            font-size: 1em;
-            // width: 80%;
-            margin: 15px auto;
-        }
         .about {
             background: $secondaryColor;
             .container {
@@ -220,9 +185,6 @@
             background: #fff;
             padding: 20px 0;
             .container {
-                width: 90vw;
-                margin: 0 auto;
-                text-align: center;
                 .show-case {
                     margin-top: 20px;
                     display: flex;
@@ -290,27 +252,12 @@
 
 @media (max-width: 620px) {
     .content {
-        h1 {
-            display: inline-block;
-            // padding: 10px;
-            font-size: 27px;
-            border-bottom: 4px solid $fancyColor;
-            text-transform: uppercase;
-            font-weight: lighter;
-        }
-        p {
-            line-height: 1.525rem;
-            font-size: 1em;
-            // width: 80%;
-            margin: 15px auto;
-        }
         .about {
             background: $secondaryColor;
             .container {
                 width: 90vw;
                 padding: 50px 0;
                 margin: 0 auto;
-                // text-align: center;
             }
         }
         .team {
@@ -318,8 +265,6 @@
             padding: 20px 0;
             .container {
                 width: 80vw;
-                margin: 0 auto;
-                text-align: center;
                 .show-case {
                     margin-top: 20px;
                     display: flex;

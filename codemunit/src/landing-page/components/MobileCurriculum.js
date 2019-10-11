@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { FaAngleDown, FaAngleRight } from "react-icons/all";
+import { FaAngleRight } from "react-icons/all";
 
 export default class MobileCurriculum extends Component {
-    componentDidMount(){
-        AOS.init({
-          duration : 2000
-        })
-      }
     render() {
         return (
             <section className="description mobile-curriculum" data-aos="fade-in">
@@ -24,68 +18,60 @@ export default class MobileCurriculum extends Component {
                             <ul>
                                 <li>HTML & CSS</li>
                                 <li>Javascript</li>
-                                <li>HTML & CSS</li>
-                                <li>Javascript</li>
-                                <li>HTML & CSS</li>
-                                <li>Javascript</li>
+                                <li>ReactJs & AngularJs</li>
+                                <li>NodeJs</li>
+                                <li>PHP & Laravel</li>
+                                <li>Database Technology</li>
                                 <li>
-                                    <Link to="/" className="btn-primary">Enroll this course</Link>
+                                    <Link to="/" className="btn-primary">Enroll This Course</Link>
                                 </li>
                             </ul>
                         </div>
                       <li>
                          <FaAngleRight className="icon"/>
-                          Full Stack Web Development
+                          UI/UX Design
                       </li>
                       <div className="sections-container">
                         <ul>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
+                            <li>Coming soon!!</li>
                             <li>
-                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                                {/* <Link to="/" className="btn-primary">Enroll This Course</Link> */}
                             </li>
                         </ul>
                        </div>
                        <li>
                        <FaAngleRight className="icon"/>
-                          Full Stack Web Development
+                          Mobile App Development
                       </li>
                       <div className="sections-container">
                         <ul>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
+                            <li>Coming soon!!</li>
                             <li>
-                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                                {/* <Link to="/" className="btn-primary">Enroll This Course</Link> */}
                             </li>
                         </ul>
                        </div>
                        <li>
                        <FaAngleRight className="icon"/>
-                          Full Stack Web Development
+                          Data Science
                       </li>
                       <div className="sections-container">
                         <ul>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
+                            <li>Coming soon!!</li>
                             <li>
-                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                                {/* <Link to="/" className="btn-primary">Enroll This Course</Link> */}
                             </li>
                         </ul>
                        </div>
                        <li>
                        <FaAngleRight className="icon"/>
-                          Full Stack Web Development
+                          Artificial Intelligence
                       </li>
                       <div className="sections-container">
                         <ul>
-                            <li>HTML & CSS</li>
-                            <li>Javascript</li>
+                            <li>Coming soon!!</li>
                             <li>
-                                <Link to="/" className="btn-primary">Enroll this course</Link>
+                                {/* <Link to="/" className="btn-primary">Enroll This Course</Link> */}
                             </li>
                         </ul>
                        </div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import ScrollAnimation from 'react-animate-on-scroll'
-// import "animate.css"
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {FaProjectDiagram, FaNetworkWired, FaServicestack, GoProject} from 'react-icons/all'
@@ -57,8 +56,8 @@ export default class Service extends Component {
         return (
             <div className='service' id='service'>
                <div className="container">
-                   <h1>Services</h1>
-                   <p>
+                   <h1 data-aos="fade-in">Services</h1>
+                   <p data-aos="fade-out">
                    We provide learning resources, guidance and mentorship to software development learners and help them secure remote software development jobs.
                    </p>
                    <div className="services-showcase">{this.state.services.map((item,index) => {

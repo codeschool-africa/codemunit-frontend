@@ -4,19 +4,14 @@
     .container {
         width: 75%;
         margin: 0 auto;
-        text-align: left;
+        text-align: center;
         h1 {
-            display: inline-block;
-            padding: 10px 0;
             border-bottom: 4px solid $fancyColor;
             text-transform: uppercase;
-            font-weight: lighter;
         }
         p {
-            line-height: 1.4rem;
-            font-size: 1em;
-            width: 80%;
-            margin: 15px 0;
+            width: 70%;
+            margin: 15px auto;
         }
         a {
             color: $fancyColor;
@@ -72,6 +67,8 @@
                 p {
                     width: 100%;
                     margin: 0;
+                    font-style: italic;
+                    // font-family: 
                 }
                 .witness {
                     padding: 10px 0;
@@ -109,9 +106,6 @@
     .testimonials {
         .container {
             width: 75%;
-            h1 {
-                font-size: 30px;
-            }
         }
     }
 }
@@ -120,9 +114,6 @@
     .testimonials {
         .container {
             width: 85%;
-            h1 {
-                font-size: 30px;
-            }
         }
     }
 }
@@ -147,12 +138,6 @@
         padding-bottom: 30px;
         .container {
             width: 75%;
-            h1 {
-                font-size: 27px;
-            }
-            p {
-                font-size: 1em;
-            }
             .show-case {
                 article {
                     width: calc(100% - 12px);
@@ -166,12 +151,6 @@
     .testimonials {
         .container {
             width: 90%;
-            h1 {
-                font-size: 25px;
-            }
-            p {
-                font-size: .9em;
-            }
             .show-case {
                 margin: 50px 0;
                 margin-top: 70px;

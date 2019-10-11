@@ -17,20 +17,18 @@
     .container  {
         width: 90%;
         margin: 0 auto;
+        text-align: center;
         .carrier-header {
-            text-align: left;
+            text-align: center;
+            margin-bottom: 50px;
             h1 {
-                display: inline-block;
-                padding: 10px 0;
                 border-bottom: 4px solid $fancyColor;
                 text-transform: uppercase;
                 font-weight: lighter;
             }
             p {
-                line-height: 1.625rem;
-                font-size: 1.125em;
-                width: 80%;
-                margin: 15px 0;
+                width: 60%;
+                margin: 15px auto;
             }
         }
         article {
@@ -180,8 +178,6 @@
             width: 95%;
             .carrier-header {
                 p {
-                    line-height: 1.625rem;
-                    font-size: 1.125em;
                     width: 80%;
                 }
             }
@@ -240,8 +236,6 @@
             width: 70%;
             .carrier-header {
                 p {
-                    line-height: 1.625rem;
-                    font-size: 1.125em;
                     width: 100%;
                 }
             }

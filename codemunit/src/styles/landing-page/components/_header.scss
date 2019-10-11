@@ -335,12 +335,14 @@ header {
             background: $primaryColor;
         }
         nav {
-          height: 50px;
+          height: 60px;
           padding: 10px 5% !important;
+          padding-top: 20px;
           width: 100vw !important;
           margin-left: -6% !important;
           transition: background-color .4s;
           .logo {
+            padding-top: 5px;
             img {
               height: 35px;
             }
@@ -396,12 +398,12 @@ header {
             }
           }
           .show-nav {
-              max-height: 300px;
+              max-height: 480px;
               z-index: 100;
           }
           ul {
             position: absolute;
-            top: 50px;
+            top: 60px;
             left: 0;
             flex-direction: column;
             justify-content: flex-start;
@@ -410,7 +412,7 @@ header {
             width: 100%;
             background: $primaryColor;
             overflow: hidden;
-            transition: max-height .2s;
+            transition: max-height .4s;
             li {
               font-size: 15px;
               width: 100%;

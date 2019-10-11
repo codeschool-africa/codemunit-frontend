@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Brain from "../../images/brain.png";
 // import { Link } from "react-router-dom";
-import { FaAngleDown, FaAngleRight } from "react-icons/all";
+import { FaAngleRight } from "react-icons/all";
 import sections from "../../data/sections";
 import MobileCurriculum from "../components/MobileCurriculum"
 
@@ -20,12 +19,6 @@ export default class CarrierPath extends Component {
       isDataScience: false,
       isAI: false,
     };
-  }
-
-  componentDidMount(){
-    AOS.init({
-      duration : 2000
-    })
   }
 
   showSection1 = () => {
@@ -90,8 +83,8 @@ export default class CarrierPath extends Component {
       <div className="carrier-path">
         <div className="container">
           <div className="carrier-header">
-            <h1>A world-class Curriculum</h1>
-            <p>
+            <h1 data-aos="fade-in">A world-class Curriculum</h1>
+            <p data-aos="fade-out">
               Our curriculum focuses on helping you learn the most in-demand
               skills in software development so you can get a great job no
               matter where you are.

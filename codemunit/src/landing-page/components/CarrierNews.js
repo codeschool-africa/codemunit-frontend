@@ -3,6 +3,8 @@ import { FaAngleLeft, FaAngleRight} from 'react-icons/all'
 import Carrierposts from "../../data/Carrierposts"
 import Post from "./Post"
 
+import 'aos/dist/aos.css';
+
 export default class CarrierNews extends Component {
     constructor(props) {
         super(props);
@@ -43,10 +45,10 @@ export default class CarrierNews extends Component {
             property
         } = this.state;
         return (
-            <div className="carrier-news-showcase news">
+            <div className="carrier-news-showcase news" data-aos="fade-in">
                 <div className="arrows">
-                    <div className="circle circle-left" onClick={() => this.prevBtn()}><FaAngleLeft/></div>
-                    <div className="circle circle-right" onClick={() => this.nextBtn()}><FaAngleRight/></div>
+                    <div className="circle circle-left" onClick={() => this.prevBtn()} data-aos="slide-right"><FaAngleLeft/></div>
+                    <div className="circle circle-right" onClick={() => this.nextBtn()} data-aos="slide-left"><FaAngleRight/></div>
                 </div>
                 <div className="showcase"
                     style={{

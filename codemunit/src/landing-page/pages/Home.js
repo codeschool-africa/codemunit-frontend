@@ -1,7 +1,8 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/all";
 import { Link } from "react-router-dom";
-import ScrollAnimation from 'react-animate-on-scroll'
+// import ScrollAnimation from 'react-animate-on-scroll'
+import aos from "aos/dist/aos.css"
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
@@ -26,7 +27,7 @@ class Home extends React.Component {
             subtitle="We monitor and guide software development learners by bringing together learners and experts in a community.
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
-            <div className="btn">
+            <div className="btn" data-aos="fade-up">
               <Link to="/" className="btn-primary">
                 Hire the Team
               </Link>

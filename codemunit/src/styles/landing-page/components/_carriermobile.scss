@@ -2,17 +2,10 @@
     .carrier-path {
         padding: 20px 0;
         .container  {
-            width: 80%;
+            width: 90%;
+            text-align: justify;
             .carrier-header {
-                h1 {
-                    // padding: 10px 0;
-                    font-size: 20px;
-                }
-                p {
-                    line-height: 1.625rem;
-                    font-size: 1.125em;
-                    width: 100%;
-                }
+                text-align: center;
             }
             article {
                 display: flex;
