@@ -8,8 +8,8 @@ const Testimonials = () => {
     return (
         <div className="testimonials">
             <div className="container">
-                <h1 data-aos="fade-left">Testimonial</h1>
-                <p data-aos="fade-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet tempora libero laboriosam expedita consequuntur illum possimus temporibus iusto quaerat ratione beatae consequatur, numquam tempore aperiam nostrum magni error ut non.</p>
+                <h1 data-aos="fade-in">Testimonial</h1>
+                <p data-aos="fade-in">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet tempora libero laboriosam expedita consequuntur illum possimus temporibus iusto quaerat ratione beatae consequatur, numquam tempore aperiam nostrum magni error ut non.</p>
                 <div className="show-case">
                     <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
                         <img src={dummy} alt=""/>
