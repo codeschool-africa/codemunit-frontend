@@ -112,7 +112,7 @@ export default class MobileCurriculum extends Component {
                 : "sections-container"
             }>
               <ul>
-                <li>Coming soon!!</li>
+                <li>Coming Soon!!</li>
                 <li>
                   {/* <Link to="/" className="btn-primary">Enroll This Course</Link> */}
                 </li>
