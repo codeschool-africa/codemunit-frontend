@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/all'
+import logo from "../../images/logo.png"
 
 export default function Footer() {
     return (
@@ -8,7 +9,7 @@ export default function Footer() {
             <div className="footer-nav-links">
                 <div className="container">
                     <div className="col1 col">
-                        <h1>Codemunit logo</h1>
+                        <img src={logo} alt="kodemunit logo"/>
                         <p>Do you have a project?</p>
                         <div className="btn">
                             <Link to='/' className='btn-primary'>Hire the Team</Link>
