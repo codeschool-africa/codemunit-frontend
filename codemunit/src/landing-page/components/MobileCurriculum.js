@@ -8,7 +8,7 @@ export default class MobileCurriculum extends Component {
   constructor(props) {
     super();
     this.state = {
-      isWeb: true,
+      isWeb: false,
       isMobile: false,
       isUi: false,
       isDataScience: false,

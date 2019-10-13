@@ -1,6 +1,5 @@
 .arrows {
-    padding: 0 50px;
-    padding-top: 50px;
+    padding: 50px 50px;
     display: flex;
     justify-content: space-between;
     .arrow {
@@ -19,5 +18,11 @@
             font-size: 20px;
             background: $secondaryColor;
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .arrows {
+        padding: 30px 0;
     }
 }

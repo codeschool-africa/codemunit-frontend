@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from "./components/Header"
-import { FaFacebookF, FaTwitter, FaInstagram, FaAngleDown, FaArrowLeft, FaArrowRight } from "react-icons/all"
+import { FaFacebookF, FaTwitter, FaInstagram, FaArrowLeft, FaArrowRight } from "react-icons/all"
 import "../styles/blog/style.css"
 import Newssummary from './components/Newssummary';
 
@@ -14,22 +14,15 @@ export default class Blog extends Component {
         return (
             <div className="blog">
                 <Header hero="blog-bg">
-                    <a href="#content" className="menu">
-                        <FaAngleDown
-                            style={{
-                                color: "#1a2e3f",
-                                fontSize: "25px",
-                                marginTop: "7px"
-                            }}
-                        />
-                    </a>
                 </Header>
                 <div className="content" id="content">
                         <h1>Latest Posts</h1>
                         <div className="container carrier-posts">
-                            <p>Blog /<span> Carrier-posts</span></p>
+                            <p>Carrier Posts</p>
                             <div className="news-showcase">
                                 <Newssummary/>
+                                <Newssummary />
+                                <Newssummary />
                             </div>
                             <div className="arrows">
                                 <div className="arrow arrow-left"><FaArrowLeft className="icon"/></div>
@@ -38,9 +31,11 @@ export default class Blog extends Component {
                             </div>
                         </div>
                         <div className="container technology-posts">
-                             <p>Blog /<span> Technology-posts</span></p>
+                             <p>Technology Posts</p>
                             <div className="news-showcase">
                                 <Newssummary/>
+                                <Newssummary />
+                                <Newssummary />
                             </div>
                             <div className="arrows">
                                 <div className="arrow arrow-left"><FaArrowLeft className="icon"/></div>

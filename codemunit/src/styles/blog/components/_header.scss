@@ -1,14 +1,14 @@
-.blog-bg {
+header.blog-bg {
     background: url(../../images/blog-bg.jpg);
     background-position: center top;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 400px;
     color: $secondaryColor;
     position: relative;
     .bg-color {
-      height: 450px;
+      height: 400px;
       background-color: rgba(26, 46, 63, 0.75);
       .container {
         width: 60%;
@@ -104,7 +104,7 @@
     header.blog-bg {
       .bg-color {
         .container {
-          width: 85%;
+          width: 80%;
           nav {
             .logo {
               height: 100%;
@@ -178,9 +178,11 @@
   
   @media (max-width: 880px) {
     header.blog-bg {
+      height: 350px;
       .bg-color {
+        height: 350px;
         .container {
-          width: 70%;
+          width: 80%;
           nav {
             .logo {
               h1 {
@@ -250,9 +252,11 @@
       padding: 7px 10px;
     }
     header.blog-bg {
+      height: 300px;
       .bg-color {
+        height: 300px;
         .container {
-          width: 70%;
+          width: 80%;
           nav {
             .logo {
               h1 {
@@ -322,9 +326,9 @@
     padding: 7px 5px;
   }
   header.blog-bg {
-      height: 480px;
+      // height: 480px;
     .bg-color {
-        height: 480px;
+        // height: 480px;
       .container {
         width: 90%;
         .blog-nav-bg {
@@ -333,7 +337,7 @@
         nav {
           height: 50px;
           padding: 10px 10%;
-          width: calc(100vw);
+          width: 100vw;
           margin-left: -6% !important;
           transition: background-color .4s;
           .logo {
@@ -407,6 +411,7 @@
             background: $primaryColor;
             overflow: hidden;
             transition: max-height .2s;
+            z-index: 99999000;
             li {
               font-size: 15px;
               width: 100%;

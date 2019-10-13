@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
-import Sponsors from '../components/Sponsors'
+// import Sponsors from '../components/Sponsors'
 import News from "../components/News";
 import Service from "../components/Service";
 import CarrierPath from '../components/CarrierPath'
@@ -27,7 +27,7 @@ class Home extends React.Component {
             subtitle="We monitor and guide software development learners by bringing together learners and experts in a community.
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
-            <div className="btn" data-aos="fade-in">
+            <div className="btn">
               <Link to="/" className="btn-primary">
                 Hire the Team
               </Link>
@@ -41,9 +41,6 @@ class Home extends React.Component {
                   color: "#1a2e3f",
                   fontSize: "25px",
                   marginTop: "7px"
-                  // display: 'flex',
-                  // justifyContent: 'center',
-                  // alignItems: 'center'
                 }}
               />
             </a>
