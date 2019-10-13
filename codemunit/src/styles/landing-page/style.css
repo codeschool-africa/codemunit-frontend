@@ -87,7 +87,7 @@ p {
 header {
   background: url(../../images/bg-image.jpg);
   background-position: center top;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
   height: 672px;
