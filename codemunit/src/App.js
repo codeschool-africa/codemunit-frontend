@@ -8,7 +8,7 @@ import About from './landing-page/pages/About'
 import User from "./Users/User"
 import Blog from "./blog/Blog"
 import Post from "./blog/Post"
-import Curriculum from './landing-page/pages/Curriculum'
+import Curriculum from './curriculum/'
 import Error from './components/Error'
 
 import Dashboard from "./dashboard/Home"

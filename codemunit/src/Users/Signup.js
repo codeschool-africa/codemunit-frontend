@@ -133,6 +133,8 @@ class Signup extends Component {
                     {formErrors.confirmPassword.length > 0 && (
                         <small>{formErrors.confirmPassword}</small>
                     )}
+                    <span>by registering you agree with our <Link to="/">terms and conditions</Link></span>
+                    {/* I've to add countries for user to choose where they come from */}
                     <button className="btn-primary" type="submit">Register</button>
                 </form>
             </div>
