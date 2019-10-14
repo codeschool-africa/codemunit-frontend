@@ -35,9 +35,9 @@ export default class Nav extends Component  {
                 <label htmlFor="burger-check" className="burger" onClick={this.handleToggle}></label>
             </div>
             <ul className={this.state.isOpen?"show-nav":""}>
-                <li><Link to='/'>Mentorship</Link></li>
+                <li><Link to='/mentorship'>Mentorship</Link></li>
                 <li><Link to='/blog'>Blog</Link></li>
-                <li><Link to='/'>FAQ</Link></li>
+                <li><Link to='/faq'>FAQ</Link></li>
                 <li><Link to='/en/dashboard' className='btn'>Comunity Hub</Link></li>
             </ul>
             <div className="user-nav">

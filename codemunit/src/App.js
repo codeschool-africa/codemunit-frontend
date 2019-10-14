@@ -9,6 +9,8 @@ import User from "./Users/User"
 import Blog from "./blog/Blog"
 import Post from "./blog/Post"
 import Curriculum from './curriculum/'
+import Mentorship from "./landing-page/pages/Mentorship"
+import Faq from "./landing-page/pages/Faq"
 import Error from './components/Error'
 
 import Dashboard from "./dashboard/Home"
@@ -25,6 +27,8 @@ const App = () => {
             <Route exact path="/blog" component={Blog} key="blog"/>
             <Route exact path="/blog/post" component={Post} key="post"/>
             <Route exact path="/curriculum" component={Curriculum} key="curriculum"/>
+            <Route exact path="/mentorship" component={Mentorship} key="mentorship" />
+            <Route exact path="/faq" component={Faq} key="faq" />
             <Route exact path="/en/dashboard" component={Dashboard} key="dashboard"/>
             <Route exact path="/profile" component={Profile} key="profile"/>
             <Route component={Error} />
