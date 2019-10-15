@@ -15,7 +15,7 @@ export default class Nav extends Component  {
 
     render() {
     return (
-        <nav className={this.state.isOpen?"nav-bg":""}>
+        <nav className={this.state.isOpen?"nav-bg desktop-navigation":"desktop-navigation"}>
             <div className="logo">
                     <Link to='/'>
                         <img src={logo} alt="kodemunit logo"/>
@@ -28,23 +28,18 @@ export default class Nav extends Component  {
                 <button type="submit">
                     <FaSearch className="icon"/>
                 </button>
-                <div className="search-open"></div>
-            </div>
-            <div className="dropdown">
-                <input className="burger-check" id="burger-check" type="checkbox" defaultChecked={this.state.isOpen?"checked":""}/>
-                <label htmlFor="burger-check" className="burger" onClick={this.handleToggle}></label>
             </div>
             <ul className={this.state.isOpen?"show-nav":""}>
                 <li><Link to='/mentorship'>Mentorship</Link></li>
                 <li><Link to='/blog'>Blog</Link></li>
                 <li><Link to='/faq'>FAQ</Link></li>
-                <li><Link to='/en/dashboard' className='btn'>Comunity Hub</Link></li>
+                <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
             </ul>
             <div className="user-nav">
                 <div className="notification">
                     <div className="notification-menu">
                         <FaBell className="icon"/>
-                        <small>2</small>
+                        <small>99+</small>
                     </div>
                     <div className="dropdown-notification">
                         <ul>

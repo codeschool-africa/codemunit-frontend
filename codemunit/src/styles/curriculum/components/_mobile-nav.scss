@@ -1,0 +1,23 @@
+nav {
+    &.mobile-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        // overflow: hidden;
+        .logo {
+            a {
+                img {
+                    height: 35px;
+                }
+            }
+        }
+        #notification {
+            display: none;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

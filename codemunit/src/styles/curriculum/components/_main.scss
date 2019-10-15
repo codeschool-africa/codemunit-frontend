@@ -1,0 +1,17 @@
+.main-content {
+    .container {
+        width: 60%;
+        margin: 0 auto;
+        padding: 30px 0;
+        aside {
+            float: left;
+            width: 20%;
+            height: 300px;
+            border-right: 1px solid #999;
+        }
+        .curriculum-showcase {
+            float: right;
+            width: 70%;
+        }
+    }
+}
