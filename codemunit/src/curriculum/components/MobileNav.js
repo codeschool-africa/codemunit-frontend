@@ -21,25 +21,6 @@ export default class Nav extends Component {
                         <img src={logo} alt="kodemunit logo" />
                     </Link>
                 </div>
-                <div className="notification" id="notification">
-                    <div className="notification-menu">
-                        <FaBell className="icon" />
-                        <small>99+</small>
-                    </div>
-                    <div className="dropdown-notification">
-                        <ul>
-                            <li>
-                                notification one
-                            </li>
-                            <li>
-                                notification one
-                            </li>
-                            <li>
-                                notification one
-                            </li>
-                        </ul>
-                    </div>
-                </div>
                 <div className="navigation">
                     <div className="search-bar">
                         <label>
@@ -61,25 +42,6 @@ export default class Nav extends Component {
                         <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
                     </ul>
                     <div className="user-nav">
-                        <div className="notification">
-                            <div className="notification-menu">
-                                <FaBell className="icon" />
-                                <small>99+</small>
-                            </div>
-                            <div className="dropdown-notification">
-                                <ul>
-                                    <li>
-                                        notification one
-                            </li>
-                                    <li>
-                                        notification one
-                            </li>
-                                    <li>
-                                        notification one
-                            </li>
-                                </ul>
-                            </div>
-                        </div>
                         <div className="profile-img dropdown">
                             <div className="profile-menu">
                                 <div className="img">

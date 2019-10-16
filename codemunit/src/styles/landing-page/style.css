@@ -184,13 +184,15 @@ header .bg-color .container .hero {
 }
 
 header .bg-color .container .hero h1 {
-  font-size: 70px;
+  font-size: 6rem;
   line-height: 4.2rem;
   font-weight: 100;
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+  -webkit-text-stroke: 1px #eee;
+  color: transparent;
 }
 
 header .bg-color .container .hero .intro {
