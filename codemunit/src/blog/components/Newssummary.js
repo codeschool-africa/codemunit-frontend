@@ -12,9 +12,9 @@ export default class Newssummary extends Component {
                         </div>
                         <div className="post-description">
                             <h2>Introduction to community hub</h2>
-                            <small>by Justine Peterson, CTO of Codemunit</small>
+                            <small>by Justine Peterson, 30 October 2019</small>
                             <p>
-                                Hello our georgeus friends from all around the world
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <Link to="/blog/post">Read the story</Link>
                             <div className="share">

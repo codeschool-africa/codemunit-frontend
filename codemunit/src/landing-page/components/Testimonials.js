@@ -43,7 +43,7 @@ const Testimonials = () => {
                             {/* <FaQuoteRight className="icon"/> */}
                         </p>
                         <div className="witness">
-                            <a href="www.twitter.com"><FaTwitter/> @johndoe</a>
+                            <a href="www.twitter.com"><abbr title="twitter" > <FaTwitter /> @johndoe </abbr></a>
                             <small>John Doe</small>
                         </div>
                     </article>

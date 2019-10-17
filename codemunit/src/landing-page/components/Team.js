@@ -15,7 +15,7 @@ export default class Team extends Component {
                             </section>
                             <section className="section-description">
                                 <h2>Justin Peterson Mahinyila</h2>
-                                <h3>CO-Founder and CTO of Codemunit</h3>
+                                <h3>CO-Founder and CTO of Kodemunit</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam excepturi ducimus, eveniet quidem cumque. Debitis, laudantium ipsa! Eveniet architecto doloribus quia labore non quibusdam atque expedita a omnis et!
                                 </p>
@@ -30,7 +30,7 @@ export default class Team extends Component {
                         <article className="team-show the-team">
                             <section className="section-description">
                                 <h2>Benedict Steven Mwinuka</h2>
-                                <h3>CO-Founder and CTO of Codemunit</h3>
+                                <h3>CO-Founder and CTO of Kodemunit</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam excepturi ducimus, eveniet quidem cumque. Debitis, laudantium ipsa! Eveniet architecto doloribus quia labore non quibusdam atque expedita a omnis et!
                                 </p>
@@ -51,7 +51,7 @@ export default class Team extends Component {
                             </section>
                             <section className="section-description">
                                 <h2>Veronica</h2>
-                                <h3>Management and CTO of Codemunit</h3>
+                                <h3>Management and CTO of Kodemunit</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quisquam excepturi ducimus, eveniet quidem cumque. Debitis, laudantium ipsa! Eveniet architecto doloribus quia labore non quibusdam atque expedita a omnis et!
                                 </p>

@@ -577,20 +577,19 @@ header.blog-bg .bg-color .container .hero .menu {
 
 .blog {
   width: 100vw;
+  background: #eee;
 }
 
 .blog .content {
   position: relative;
   margin: 0 auto;
   margin-top: -200px;
-  background: white;
   min-height: 300px;
   color: #000;
   width: 60vw;
   padding: 40px;
-  -webkit-box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, 0.2);
-          box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, 0.2);
   z-index: 1000;
+  background: #fff;
 }
 
 .blog .content h1 {
@@ -709,7 +708,7 @@ header.blog-bg .bg-color .container .hero .menu {
 }
 
 .blog footer {
-  background: #fff;
+  background: #eee;
   color: black;
   font-size: 18px;
 }
@@ -804,7 +803,6 @@ header.blog-bg .bg-color .container .hero .menu {
     opacity: .6;
   }
   .blog footer {
-    background: #fff;
     color: black;
     font-size: 18px;
   }
@@ -914,7 +912,6 @@ header.blog-bg .bg-color .container .hero .menu {
     display: none;
   }
   .blog footer {
-    background: #fff;
     color: black;
     font-size: 18px;
   }
@@ -951,5 +948,59 @@ header.blog-bg .bg-color .container .hero .menu {
   .blog footer .container .copyright {
     padding: 5px 0;
   }
+}
+
+.blog .content p a {
+  color: #438976;
+  text-decoration: none;
+}
+
+.blog .content p a:hover {
+  opacity: .7;
+}
+
+.blog .content h1 {
+  display: block;
+  border: none;
+}
+
+.blog .content hr {
+  margin: 20px 0;
+}
+
+.blog .content .post-content p {
+  background: none;
+  font-size: 1em;
+  line-height: 1.425em;
+}
+
+.blog .content .content-provider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.blog .content .content-provider .profile-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #295c88;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.blog .content .content-provider .profile-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.blog .content .content-provider .profile-status a {
+  color: #438976;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

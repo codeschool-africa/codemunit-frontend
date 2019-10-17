@@ -25,9 +25,9 @@ export default function Footer() {
                         <Link to='/blog'>blog</Link>
                         <Link to='/user'>register/login</Link>
                         <h4>Sponsor us</h4>
-                        <a href="mailto:sponsor@codemunit.com">sponsor@codemunit.com</a>
+                        <a href="mailto:sponsor@kodemunit.com">sponsor@kodemunit.com</a>
                         <h4>Partner with us</h4>
-                        <a href="mailto:partner@codemunit.com">partner@codemunit.com</a>
+                        <a href="mailto:partner@kodemunit.com">partner@kodemunit.com</a>
                     </div>
                     <div className="col3 col">
                     <h3>lets connect</h3>
@@ -49,7 +49,7 @@ export default function Footer() {
             <div className="footer-bottom">
                 <div className="container">
                     <div className="copyright left">
-                        Copyright &copy;2019 Codemunit.
+                        Copyright &copy;2019 Kodemunit.
                     </div>
                     <div></div>
                     <div className="right">

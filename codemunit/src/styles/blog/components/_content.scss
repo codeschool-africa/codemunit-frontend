@@ -1,18 +1,17 @@
 .blog {
     width: 100vw;
+    background: $secondaryColor;
     .content {
         position: relative;
         margin: 0 auto;
         margin-top: -200px;
-        // margin-bottom: 50px;
-        background: white;
         min-height: 300px;
         color: #000;
         width: 60vw;
         padding: 40px;
-        box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, .2);
-        // border: 1px solid #000;
+        // box-shadow: 1px 1px 2px 2px rgba(2, 2, 2, .2);
         z-index: 1000;
+        background: #fff;
         h1 {
             margin-bottom: 10px;
             display: inline-block;
@@ -102,7 +101,7 @@
         }
     }
     footer {
-        background: #fff;
+        background: $secondaryColor;
         color:  black;
         font-size: 18px;
         .container {
@@ -183,7 +182,7 @@
             }
         }
         footer {
-            background: #fff;
+            // background: #fff;
             color:  black;
             font-size: 18px;
             .container {
@@ -289,7 +288,7 @@
             }
         }
         footer {
-            background: #fff;
+            // background: #fff;
             color:  black;
             font-size: 18px;
             .container {
