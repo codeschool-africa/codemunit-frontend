@@ -16,7 +16,7 @@ import "../../styles/landing-page/style.css";
 
 class Home extends React.Component {
   componentDidMount() {
-    document.title = "Codemunit | Code + community";
+    document.title = "Kodemunit | Code + community";
   }
   render() {
     return (
@@ -28,7 +28,7 @@ class Home extends React.Component {
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
             <div className="btn">
-              <Link to="/" className="btn-primary">
+              <Link to="/contact-us" className="btn-primary">
                 Hire the Team
               </Link>
               <Link to="/user" className="btn-primary">

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from "../../images/black-logo.png"
 import profile from "../../images/profile.png"
 import { Link } from 'react-router-dom'
-import { FaSearch, FaBell, FaAngleDown } from "react-icons/all"
+import { FaSearch, FaAngleDown } from "react-icons/all"
 
 export default class Nav extends Component  {
     state={
@@ -37,12 +37,14 @@ export default class Nav extends Component  {
             </ul>
             <div className="user-nav">
                 <div className="profile-img dropdown">
-                    <div className="profile-menu">
-                        <div className="img">
-                            <img src={profile} alt="dp" />
+                    <Link to="/profile">
+                        <div className="profile-menu">
+                            <div className="img">
+                                <img src={profile} alt="dp" />
+                            </div>
+                            <FaAngleDown />
                         </div>
-                        <FaAngleDown/>
-                    </div>
+                    </Link>
                     <div className="dropdown-profile-menu">
                         <ul>
                             <li>

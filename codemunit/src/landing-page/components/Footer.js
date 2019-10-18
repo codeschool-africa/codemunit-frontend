@@ -12,16 +12,17 @@ export default function Footer() {
                         <img src={logo} alt="kodemunit logo"/>
                         <p>Do you have a project?</p>
                         <div className="btn">
-                            <Link to='/' className='btn-primary'>Hire the Team</Link>
+                            <Link to='/contact-us' className='btn-primary'>Hire the Team</Link>
                             <Link to='/user' className='btn-primary'>Join Now</Link>
                         </div>
                     </div>
                     <div className="col2 col">
-                        <Link to='/'>become a mentor</Link>
+                        <Link to='/mentorship'>become a mentor</Link>
+                        <Link to='/curriculum'>our curriculum</Link>
                         <Link to='/'>community hub</Link>
                         <Link to='/about'>about us</Link>
                         <Link to='/'>help and support</Link>
-                        <Link to='/'>contact us</Link>
+                        <Link to='/contact-us'>contact us</Link>
                         <Link to='/blog'>blog</Link>
                         <Link to='/user'>register/login</Link>
                         <h4>Sponsor us</h4>

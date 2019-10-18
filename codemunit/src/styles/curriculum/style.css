@@ -483,7 +483,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 700px) {
   .curriculum-container header .container .desktop-navigation {
     display: none;
   }

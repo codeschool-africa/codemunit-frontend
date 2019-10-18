@@ -43,12 +43,14 @@ export default class Nav extends Component {
                     </ul>
                     <div className="user-nav">
                         <div className="profile-img dropdown">
-                            <div className="profile-menu">
-                                <div className="img">
-                                    <img src={profile} alt="dp" />
+                            <Link to="/">
+                                <div className="profile-menu">
+                                    <div className="img">
+                                        <img src={profile} alt="dp" />
+                                    </div>
+                                    <FaAngleDown />
                                 </div>
-                                <FaAngleDown />
-                            </div>
+                            </Link>
                             <div className="dropdown-profile-menu">
                                 <ul>
                                     <li>
