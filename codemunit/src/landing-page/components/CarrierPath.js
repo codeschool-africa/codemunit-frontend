@@ -2,13 +2,13 @@ import React, { Component } from "react";
 // import 'aos/dist/aos.css';
 
 import Brain from "../../images/brain.png";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/all";
 import sections from "../../data/sections";
 import MobileCurriculum from "../components/MobileCurriculum"
 
 export default class CarrierPath extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       properties: sections.properties,
@@ -80,7 +80,7 @@ export default class CarrierPath extends Component {
   render() {
     const { properties, property} = this.state;
     return (
-      <div className="carrier-path">
+      <div className="carrier-path" id="curriculum">
         <div className="container">
           <div className="carrier-header">
             <h1 data-aos="fade-in">our Curriculum</h1>
@@ -109,7 +109,8 @@ export default class CarrierPath extends Component {
                 <ul>
                     <li key={property.index} property={property}>
                         {properties[property.index].sections.topics}
-                      </li>
+                    </li>
+                    <Link to="/curriculum">Enroll this course</Link>
                 </ul>
               </div>
             </section>

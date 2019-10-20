@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from "react-router-dom"
+import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 import { FaFacebookF, FaGooglePlusG } from "react-icons/all"
+import { connect } from 'react-redux';
+
+import { signupUser } from "../redux/actions/userActions"
 
 const emailReg = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 const passwordReg = RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*)[0-9a-zA-Z]{6,}$/);
 
-const formValid = (formErrors, ...rest) => {
-    let valid = true;
+// const formValid = (formErrors, ...rest) => {
+//     let valid = true;
 
-    // validate form errors being empty
-    Object.values(formErrors).forEach(val => {
-        val.length > 0 && (valid = false);
-    });
+//     // validate form errors being empty
+//     Object.values(formErrors).forEach(val => {
+//         val.length > 0 && (valid = false);
+//     });
 
-    // validate the form was filled out
-    Object.values(rest).forEach(val => {
-        val === null && (valid = false);
-    });
+//     // validate the form was filled out
+//     Object.values(rest).forEach(val => {
+//         val === null && (valid = false);
+//     });
 
-    return valid;
-}
+//     return valid;
+// }
 
 class Signup extends Component {
     constructor (props) {
@@ -43,11 +47,14 @@ class Signup extends Component {
     handleSubmit = e => {
         e.preventDefault();
 
-        if (formValid(this.state.formErrors)) {
-            this.props.history.push("/en/dashboard");
-        } else {
-            console.error(this.state.formErrors);
-        }
+        const newUserData = {
+            name: this.state.name,
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password,
+            confirmPassword: this.state.confirmPassword
+        };
+        this.props.signupUser(newUserData, this.props.history);
     }
 
     handleChange = e => {
@@ -68,7 +75,7 @@ class Signup extends Component {
                 value.length < 3 ? "minimum 3 characaters required" : "";
             break;
             case 'email':
-                formErrors.email = (value.length > 0 && !emailReg.test(value)) ?"Enter a valid email address":"";
+                formErrors.email = (value.length === 0 && !emailReg.test(value)) ?"Enter a valid email address":"";
             break;
             case 'password':
                 formErrors.password = !passwordReg.test(value) ? "Your password isn't strong":"";
@@ -80,7 +87,7 @@ class Signup extends Component {
              break;
         }
 
-        this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+        this.setState({ formErrors, [name]: value }, () => console.log(passwordMatch));
     };
 
 
@@ -129,7 +136,7 @@ class Signup extends Component {
                         <small>{formErrors.password}</small>
                     )}
                     <label htmlFor="confirmPassword">Confirm password:</label>
-                    <input type="password" className={formErrors.confirmPassword.length > 0 ? "error" : null} name="confirmPassword" id="confirmPassword" noValidate onBlur={this.handleChange}/>
+                    <input type="password" className={formErrors.confirmPassword.length > 0 ? "error" : null} name="confirmPassword" id="confirmPassword" noValidate onChange={this.handleChange}/>
                     {formErrors.confirmPassword.length > 0 && (
                         <small>{formErrors.confirmPassword}</small>
                     )}
@@ -142,4 +149,19 @@ class Signup extends Component {
     }
 };
 
-export default withRouter(Signup);
+Signup.propTypes = {
+    classes: PropTypes.object.isRequired,
+    user: PropTypes.object.isRequired,
+    UI: PropTypes.object.isRequired,
+    signupUser: PropTypes.func.isRequired
+};
+
+const mapStateToProps = (state) => ({
+    user: state.user,
+    UI: state.UI
+});
+
+export default connect(
+    mapStateToProps,
+    { signupUser }
+)(Signup);

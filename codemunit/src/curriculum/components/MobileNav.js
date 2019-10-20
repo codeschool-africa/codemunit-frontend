@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from "../../images/black-logo.png"
 import profile from "../../images/profile.png"
 import { Link } from 'react-router-dom'
-import { FaSearch, FaBell, FaAngleDown } from "react-icons/all"
+import { FaSearch, FaAngleDown } from "react-icons/all"
 
 export default class Nav extends Component {
     state = {

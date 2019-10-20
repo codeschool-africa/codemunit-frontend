@@ -16,6 +16,7 @@ header.blog-bg .bg-color {
 
 header.blog-bg .bg-color .container {
   width: 60%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -587,6 +588,7 @@ header.blog-bg .bg-color .container .hero .menu {
   min-height: 300px;
   color: #000;
   width: 60vw;
+  max-width: 1200px;
   padding: 40px;
   z-index: 1000;
   background: #fff;

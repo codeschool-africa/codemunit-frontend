@@ -45,6 +45,10 @@
   font-size: 12px;
 }
 
+.user-registration small {
+  padding: 7px;
+}
+
 .user-registration a {
   color: #438976;
   text-decoration: none;

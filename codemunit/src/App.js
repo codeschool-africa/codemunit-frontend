@@ -17,6 +17,8 @@ import Error from './components/Error'
 import Dashboard from "./dashboard/Home"
 import Profile from "./dashboard/pages/User-profile"
 
+import AuthRoute from "./util/AuthRoute"
+
 const App = () => {
 
   return (
@@ -27,11 +29,11 @@ const App = () => {
             <Route exact path="/user" component={User} key="user"/>
             <Route exact path="/blog" component={Blog} key="blog"/>
             <Route exact path="/blog/post" component={Post} key="post"/>
-            <Route exact path="/curriculum" component={Curriculum} key="curriculum"/>
+            <AuthRoute exact path="/curriculum" component={Curriculum} key="curriculum"/>
             <Route exact path="/mentorship" component={Mentorship} key="mentorship" />
             <Route exact path="/faq" component={Faq} key="faq" />
             <Route exact path="/contact-us" component={Contact} key="contact-us" />
-            <Route exact path="/en/dashboard" component={Dashboard} key="dashboard"/>
+            <AuthRoute exact path="/en/dashboard" component={Dashboard} key="dashboard"/>
             <Route exact path="/profile" component={Profile} key="profile"/>
             <Route component={Error} />
           </Switch>

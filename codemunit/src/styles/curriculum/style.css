@@ -13,6 +13,7 @@
 .curriculum-container header .container {
   color: #1a2e3f;
   width: 90%;
+  max-width: 1600px;
   margin: 0 auto;
   height: 100%;
 }
@@ -549,6 +550,7 @@
 
 .main-content .container {
   width: 60%;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 30px 0;
 }
