@@ -27,7 +27,7 @@ export default class Nav extends Component  {
             </div>
             <ul className={this.state.isOpen?"show-nav":""}>
                 <li><Link to='/' onClick={this.handleToggle}>Home</Link></li>
-                <li><Link to='/user' className='btn-primary' onClick={this.handleToggle}>Join Now</Link></li>
+                <li><Link to='/account' className='btn-primary' onClick={this.handleToggle}>Join Now</Link></li>
             </ul>
         </nav>
     );

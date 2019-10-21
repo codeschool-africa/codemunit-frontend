@@ -24,7 +24,7 @@ export default function Footer() {
                         <Link to='/'>help and support</Link>
                         <Link to='/contact-us'>contact us</Link>
                         <Link to='/blog'>blog</Link>
-                        <Link to='/user'>register/login</Link>
+                        <Link to='/account'>register/login</Link>
                         <h4>Sponsor us</h4>
                         <a href="mailto:sponsor@kodemunit.com">sponsor@kodemunit.com</a>
                         <h4>Partner with us</h4>
