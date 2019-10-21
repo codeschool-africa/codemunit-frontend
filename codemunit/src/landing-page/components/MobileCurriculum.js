@@ -78,8 +78,8 @@ export default class MobileCurriculum extends Component {
                 <li>PHP & Laravel</li>
                 <li>Database Technology</li>
                 <li>
-                  <Link to="/" className="btn-primary">
-                    Enroll This Course
+                  <Link to="/curriculum" className="btn-primary">
+                    View in Details
                   </Link>
                 </li>
               </ul>

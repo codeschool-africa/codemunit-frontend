@@ -263,11 +263,11 @@ header {
       .container {
         width: 90%;
         nav {
-          // .logo {
-          //   img {
-
-          //   }
-          // }
+          .logo {
+            img {
+              height: 35px;
+            }
+          }
           .dropdown {
             display: none;
           }

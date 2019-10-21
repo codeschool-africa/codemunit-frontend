@@ -110,7 +110,7 @@ export default class CarrierPath extends Component {
                     <li key={property.index} property={property}>
                         {properties[property.index].sections.topics}
                     </li>
-                    <Link to="/curriculum">Enroll this course</Link>
+                    <Link to="/curriculum">View in Details</Link>
                 </ul>
               </div>
             </section>

@@ -23,7 +23,7 @@ export default class Nav extends Component  {
             </div>
             <div className="search-bar">
                 <label>
-                    <input type="text" placeholder="Search course"/>
+                    <input type="text" placeholder="Search"/>
                 </label>
                 <button type="submit">
                     <FaSearch className="icon"/>

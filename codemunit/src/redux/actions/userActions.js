@@ -16,5 +16,5 @@ export const logoutUser = (userData, history) => (dispatch) => {
 
 export const signupUser = (newUserData, history) => (dispatch) => {
     dispatch({ type: SET_AUTHENTICATED });
-    history.push('/en/dashboard');
+    // history.push('/en/dashboard');
 }

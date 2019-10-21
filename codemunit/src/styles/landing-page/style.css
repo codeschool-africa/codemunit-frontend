@@ -379,6 +379,9 @@ header .bg-color .container .hero .menu {
   header .bg-color .container {
     width: 90%;
   }
+  header .bg-color .container nav .logo img {
+    height: 35px;
+  }
   header .bg-color .container nav .dropdown {
     display: none;
   }
@@ -983,7 +986,7 @@ header .bg-color .container .hero .menu {
           box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.2);
   border: 1px solid #eee;
   color: #fff;
-  background: #1a2e3f;
+  background: #295c88;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1026,6 +1029,7 @@ header .bg-color .container .hero .menu {
   display: flex;
   border-bottom: 15px solid #1a2e3f;
   height: 100%;
+  min-height: 465px;
   width: 50%;
 }
 
@@ -1097,9 +1101,10 @@ header .bg-color .container .hero .menu {
 }
 
 .carrier-path .container article section.description .sections {
-  z-index: 2;
+  z-index: 6;
   width: 50%;
   height: 100%;
+  min-height: 465px;
   border-top: 15px solid #438976;
   background: #295c88;
   padding: 40px 0;
@@ -1157,7 +1162,7 @@ header .bg-color .container .hero .menu {
   display: none;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1120px) {
   .carrier-path .container {
     width: 95%;
   }
@@ -1303,6 +1308,10 @@ header .bg-color .container .hero .menu {
   .carrier-path .container .description.mobile-curriculum {
     display: block !important;
     height: 100%;
+    max-width: 400px;
+    min-width: 290px;
+    width: 100%;
+    margin: 0 auto;
   }
   .carrier-path .container .description.mobile-curriculum::after {
     content: "";

@@ -484,67 +484,414 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .curriculum-container header {
+    background: #eee;
+    height: 70px;
+  }
+  .curriculum-container header .container {
+    color: #1a2e3f;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .curriculum-container header .container nav {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .curriculum-container header .container nav .logo {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .curriculum-container header .container nav .logo a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .curriculum-container header .container nav .logo a img {
+    height: 35px;
+  }
+  .curriculum-container header .container nav .dropdown input {
+    display: none;
+  }
+  .curriculum-container header .container nav .search-bar {
+    background: #fff;
+  }
+  .curriculum-container header .container nav .search-bar label input {
+    border: none;
+    background: none;
+    height: 30px;
+    width: 15vw;
+    padding: 0 10px;
+  }
+  .curriculum-container header .container nav .search-bar button {
+    height: 35px;
+    width: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .curriculum-container header .container nav .search-bar button .icon {
+    color: #999;
+    font-size: 18px;
+  }
+  .curriculum-container header .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    list-style: none;
+  }
+  .curriculum-container header .container nav ul li {
+    margin: 0 5px;
+  }
+  .curriculum-container header .container nav ul li a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: #1a2e3f;
+    text-transform: uppercase;
+  }
+  .curriculum-container header .container nav ul li a:hover {
+    color: #438976;
+  }
+  .curriculum-container header .container nav ul li a.btn {
+    padding: 10px 10px;
+    color: #eee;
+    background: #438976;
+  }
+  .curriculum-container header .container nav ul li a.btn:hover {
+    opacity: .8;
+  }
+  .curriculum-container header .container nav .user-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .curriculum-container header .container nav .user-nav .notification {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 15px;
+  }
+  .curriculum-container header .container nav .user-nav .notification:hover .dropdown-notification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+  }
+  .curriculum-container header .container nav .user-nav .notification .notification-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .curriculum-container header .container nav .user-nav .notification .notification-menu .icon {
+    font-size: 18px;
+    color: #1a2e3f;
+  }
+  .curriculum-container header .container nav .user-nav .notification .notification-menu small {
+    background: #a83131;
+    color: #fff;
+    font-size: 10px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    opacity: 2;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+  .curriculum-container header .container nav .user-nav .notification .dropdown-notification {
+    display: none;
+  }
+  .curriculum-container header .container nav .user-nav .notification .dropdown-notification ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img {
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img .profile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img .profile-menu .img {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img .profile-menu .img img {
+    height: 100%;
+    width: 100%;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img .dropdown-profile-menu {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    background: #eee;
+    width: 200px;
+    padding: 15px;
+    -webkit-box-shadow: -1px -2px 1px 1px rgba(2, 2, 2, 0.2);
+            box-shadow: -1px -2px 1px 1px rgba(2, 2, 2, 0.2);
+    z-index: 4;
+    display: none;
+  }
+  .curriculum-container header .container nav .user-nav .profile-img .dropdown-profile-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .curriculum-container header {
+    position: relative;
+    height: 60px;
+  }
+  .curriculum-container header .container {
+    width: 80%;
+  }
   .curriculum-container header .container .desktop-navigation {
     display: none;
   }
-  .curriculum-container header .container nav.mobile-navigation {
+  .curriculum-container header .container .mobile-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .curriculum-container header .container .mobile-navigation .logo a img {
+    height: 35px;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger {
+    display: inline-block;
+    border: 0;
+    background: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 4px solid #000;
+    width: 28px;
+    transition: border-bottom 1s ease-in-out;
+    -webkit-transition: border-bottom 1s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger::before {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #000;
+    width: 100%;
+    margin-bottom: 6px;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #000;
+    width: 100%;
+    margin-bottom: 6px;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger-check {
+    display: none;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger-check:checked ~ .burger {
+    border-bottom: 4px solid transparent;
+    -webkit-transition: border-bottom 0.4s ease-in-out;
+    transition: border-bottom 0.4s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger-check:checked ~ .burger:before {
+    -webkit-transform: rotate(-405deg) translateY(5px) translateX(-7px);
+            transform: rotate(-405deg) translateY(5px) translateX(-7px);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .dropdown .burger-check:checked ~ .burger:after {
+    -webkit-transform: rotate(405deg) translateY(0px) translateX(-1px);
+            transform: rotate(405deg) translateY(0px) translateX(-1px);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation-checked {
+    height: 340px;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    background: #eee;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container .search-bar {
+    width: 100%;
+    margin: 15px 0;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container .search-bar label {
+    width: 100%;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container .search-bar label input {
+    width: calc( 100% - 35px);
+    padding: 0 5px;
+    height: 35px;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container .search-bar button {
+    width: 35px;
+    height: 35px;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container ul {
+    margin-top: 15px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container ul li {
+    width: 100%;
+    border-top: 1px solid #aaa;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container ul li a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 0.9em;
+  }
+  .curriculum-container header .container .mobile-navigation .navigation .container ul li a.btn {
+    width: 140px;
+    margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .curriculum-container header .container nav.mobile-navigation .logo a img {
-    height: 35px;
+  .curriculum-container header .container .mobile-navigation .navigation .container .user-nav a {
+    color: #000;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
   }
-  .curriculum-container header .container nav.mobile-navigation #notification {
-    display: none;
-  }
-  .curriculum-container header .container nav.mobile-navigation .navigation {
+  .curriculum-container header .container .mobile-navigation .navigation .container .user-nav a .img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .curriculum-container header .container .mobile-navigation nav.mobile-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-items: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .curriculum-container header .container .mobile-navigation nav.mobile-navigation .logo a img {
-    height: 35px;
-  }
-  .curriculum-container header .container .mobile-navigation nav.mobile-navigation #notification {
-    display: none;
-  }
-  .curriculum-container header .container .mobile-navigation nav.mobile-navigation .navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .curriculum-container header .container .mobile-navigation .navigation .container .user-nav a .img img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 2px;
+    border: 1px solid #295c88;
+    border-radius: 6px;
   }
 }
 

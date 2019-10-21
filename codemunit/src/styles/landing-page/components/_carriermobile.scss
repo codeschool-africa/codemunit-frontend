@@ -29,6 +29,10 @@
             .description.mobile-curriculum {
                 display: block !important;
                 height: 100%;
+                max-width: 400px;
+                min-width: 290px;
+                width: 100%;
+                margin: 0 auto;
                 &::after {
                     content: "";
                     position: absolute;

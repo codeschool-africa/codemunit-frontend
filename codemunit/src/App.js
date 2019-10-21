@@ -34,7 +34,7 @@ const App = () => {
             <Route exact path="/faq" component={Faq} key="faq" />
             <Route exact path="/contact-us" component={Contact} key="contact-us" />
             <AuthRoute exact path="/en/dashboard" component={Dashboard} key="dashboard"/>
-            <Route exact path="/profile" component={Profile} key="profile"/>
+            <Route exact path="/profile:username" component={Profile} key="profile"/>
             <Route component={Error} />
           </Switch>
     </>
