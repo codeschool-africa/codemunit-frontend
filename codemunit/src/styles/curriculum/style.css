@@ -791,9 +791,6 @@
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
-  .curriculum-container header .container .mobile-navigation .navigation-checked {
-    height: 340px;
-  }
   .curriculum-container header .container .mobile-navigation .navigation {
     position: absolute;
     width: 100%;
