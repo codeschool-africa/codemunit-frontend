@@ -104,7 +104,7 @@ export default class Curriculum extends Component {
                                 <Link to="/user-profile">
                                     <div className="img">
                                         <img src={profile} alt="dp" />
-                                        <div>Profile</div>
+                                        <div>username</div>
                                     </div>
                                 </Link>
                             </div>
@@ -114,7 +114,7 @@ export default class Curriculum extends Component {
                         <aside>side nav</aside>
                         <div className="curriculum-showcase">
                             hello there
-                </div>
+                        </div>
                     </div>
                 </div>
             </div>
