@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-// import Header from "./components/Header"
-// import Main from "./components/Main"
-// import Nav from "./components"
-// import MobileNav from "./MobileNav"
+
+//components
+
+import SideNav from "./main-content/side-nav"
+import Main from "./main-content/main-content"
+
 import "../styles/curriculum/style.css"
 
 import logo from "../images/black-logo.png"
@@ -111,9 +113,17 @@ export default class Curriculum extends Component {
                         </div>
                     </div>
                     <div className="container">
-                        <aside>side nav</aside>
+                        <aside>
+                            <SideNav/>
+                        </aside>
                         <div className="curriculum-showcase">
-                            hello there
+                            <Main/>
+                        </div>
+                        <div className="footer">
+                            <div className="container">
+                                <hr />
+                                footer
+                            </div>
                         </div>
                     </div>
                 </div>

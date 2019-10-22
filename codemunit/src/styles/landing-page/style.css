@@ -21,19 +21,6 @@ input:focus, button:focus, a:focus {
   outline: none !important;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-  background: #eee !important;
-}
-
-::-webkit-scrollbar-track {
-  border: 3px solid #1a2e3f;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1a2e3f;
-}
-
 .btn-primary {
   margin: 0 !important;
   padding: 7px 20px;
