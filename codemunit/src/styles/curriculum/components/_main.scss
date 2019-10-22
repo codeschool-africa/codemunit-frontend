@@ -1,18 +1,38 @@
 .main-content {
+    // position: relative;
+    .navigation {
+        display: none;
+    }
     .container {
         width: 60%;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 30px 0;
+        padding: 20px 0;
         aside {
             float: left;
             width: 20%;
-            height: 300px;
-            border-right: 1px solid #999;
+            // height: 300px;
+            // border-right: 1px solid #999;
         }
         .curriculum-showcase {
             float: right;
             width: 70%;
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .main-content {
+        @import "./_navigation";
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        @import "./_navigation";
+        .container {
+            width: 90% !important;
         }
     }
 }
