@@ -8,6 +8,10 @@
   height: 70px;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
 .curriculum-container header .container {
@@ -715,6 +719,7 @@
 
 @media (max-width: 800px) {
   .curriculum-container header {
+    position: relative;
     height: 60px;
   }
   .curriculum-container header .container {
@@ -789,8 +794,10 @@
 }
 
 .main-content {
+  position: relative;
   background: #F8F9FA;
-  min-height: 100vh;
+  min-height: 125vh;
+  margin-top: 60px;
 }
 
 .main-content .navigation {
@@ -808,25 +815,44 @@
   float: left;
   width: 400px;
   background: #fff;
-  height: 80vh;
-  margin: 20px;
+  height: calc( 100vh - 90px);
+  position: fixed;
+  margin: 10px;
+  margin-bottom: 0;
   padding: 20px;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
 }
 
 .main-content .container .curriculum-showcase {
-  height: 80vh;
   float: right;
-  width: calc( 100% - 480px);
+  width: calc( 100% - 440px);
+}
+
+.main-content .container .curriculum-showcase .div {
+  height: 100vh;
   background: #fff;
-  margin: 20px;
+  margin-right: 20px;
   padding: 20px;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
 }
 
+.main-content .container .curriculum-showcase footer {
+  width: calc( 100% - 20px);
+  background: inherit;
+  color: #1a2e3f;
+  margin: 50px 0;
+}
+
+.main-content .container .curriculum-showcase footer hr {
+  opacity: .6;
+}
+
 @media (max-width: 800px) {
+  .main-content {
+    margin-top: 0px;
+  }
   .main-content .navigation {
     display: block;
     width: 100%;

@@ -118,12 +118,12 @@ export default class Curriculum extends Component {
                         </aside>
                         <div className="curriculum-showcase">
                             <Main/>
-                        </div>
-                        <div className="footer">
-                            <div className="container">
-                                <hr />
-                                footer
-                            </div>
+                            <footer>
+                                <div className="container">
+                                    <hr />
+                                    footer
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,8 @@
 .main-content {
-    // position: relative;
+    position: relative;
     background: #F8F9FA;
-    min-height: 100vh;
+    min-height: 125vh;
+    margin-top: 60px;
     .navigation {
         display: none;
         // background: #fff;
@@ -15,20 +16,33 @@
             float: left;
             width: 400px;
             background: #fff;
-            height: 80vh;
-            // border-right: 1px solid #999;
-            margin: 20px;
+            height: calc( 100vh - 90px );
+            position: fixed;
+            // overflow-y: scroll;
+            margin: 10px;
+            margin-bottom: 0;
             padding: 20px;
             box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
         }
         .curriculum-showcase {
-            height: 80vh;
             float: right;
-            width: calc( 100% - 480px );
-            background: #fff;
-            margin: 20px;
-            padding: 20px;
-            box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+            width: calc( 100% - 440px );
+            .div {
+                height: 100vh;
+                background: #fff;
+                margin-right: 20px;
+                padding: 20px;
+                box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+            }
+            footer {
+                width: calc( 100% - 20px );
+                background: inherit;
+                color: $primaryColor;
+                margin: 50px 0;
+                hr {
+                    opacity: .6;
+                }
+            }
         }
     }
 }
@@ -36,6 +50,7 @@
 
 @media (max-width: 800px) {
     .main-content {
+        margin-top: 0px;
         @import "./_navigation";
     }
 }
