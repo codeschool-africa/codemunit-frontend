@@ -23,17 +23,19 @@ input:focus, button:focus, a:focus {
 }
 
 // ::-webkit-scrollbar {
-//     width: 12px;
-//     background: $secondaryColor !important;
+//     // width: 12px;
+//     // background: $secondaryColor !important;
+//     // margin-top: 70px;
+//     // position: absolute;
 // }
   
 // ::-webkit-scrollbar-track {
-//     border: 3px solid $primaryColor;
+//     // border: 3px solid $primaryColor;
 // }
   
-// ::-webkit-scrollbar-thumb {
-//     background: $primaryColor;
-// }
+::-webkit-scrollbar-thumb {
+    background: $secondaryColor;
+}
 
 .btn-primary {
     margin: 0 !important;

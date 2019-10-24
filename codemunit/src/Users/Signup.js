@@ -74,7 +74,7 @@ class Signup extends Component {
                 formErrors.username =
                 value.length < 3 ? "minimum 3 characaters required" : "";
             break;
-            case 'email':
+            case 'email': 
                 formErrors.email = (value.length === 0 && !emailReg.test(value)) ?"Enter a valid email address":"";
             break;
             case 'password':

@@ -31,7 +31,7 @@ class Nav extends Component  {
             </div>
             <ul className={this.state.isOpen?"show-nav":""}>
                 <li><Link to='/about' onClick={this.handleToggle}>About</Link></li>
-                <li><a href='#curriculum' onClick={this.handleToggle}>Curriculum</a></li>
+                <li><Link to='/curriculum' onClick={this.handleToggle}>Curriculum</Link></li>
                 <li><Link to='/mentorship' onClick={this.handleToggle}>Mentorship</Link></li>
                 <li><Link to='/blog' onClick={this.handleToggle}>Blog</Link></li>
                 <li><Link to='/mentorship' onClick={this.handleToggle}>FAQ</Link></li>

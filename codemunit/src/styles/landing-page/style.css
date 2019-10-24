@@ -21,6 +21,10 @@ input:focus, button:focus, a:focus {
   outline: none !important;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #eee;
+}
+
 .btn-primary {
   margin: 0 !important;
   padding: 7px 20px;

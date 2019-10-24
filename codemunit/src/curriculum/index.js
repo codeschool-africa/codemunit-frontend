@@ -14,12 +14,17 @@ import { FaSearch, FaAngleDown } from "react-icons/all"
 
 export default class Curriculum extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        isNavOpen: false
     }
 
     handleToggle = () => {
         this.setState({ isOpen: !this.state.isOpen });
-        console.log(this.state.isOpen)
+    }
+
+    handleNav = () => {
+        this.setState({ isNavOpen: !this.state.isNavOpen });
+        console.log(this.state.isNavOpen)
     }
     render() {
         return (
@@ -53,21 +58,52 @@ export default class Curriculum extends Component {
                                             <div className="img">
                                                 <img src={profile} alt="dp" />
                                             </div>
-                                            <FaAngleDown />
+                                            <FaAngleDown className="icon"/>
                                         </div>
                                     </Link>
                                     <div className="dropdown-profile-menu">
-                                        <ul>
-                                            <li>
-                                                <Link to="/">Link 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/">Link 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="/">Link 1</Link>
-                                            </li>
-                                        </ul>
+                                        <div className="profile-image">
+                                            <Link to="/profile">
+                                                <div className="profile-menu">
+                                                    <div className="img">
+                                                        <img src={profile} alt="dp" />
+                                                    </div>
+                                                    <div className="account-details">
+                                                        <div className="username">
+                                                            Username
+                                                        </div>
+                                                        <div className="email">
+                                                            example@email.com
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <Link>Notifications <span>{1}</span></Link>
+                                                </li>
+                                                <li>
+                                                    <Link>History</Link>
+                                                </li>
+                                                <li>
+                                                    <Link>Account</Link>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <Link>Help</Link>
+                                                </li>
+                                                <li>
+                                                    <Link>Log out</Link>
+                                                </li>
+                                            </ul>
+
+                                        </nav>
+                                        <div className="mentor-div">
+                                            <Link>Become a mentor</Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -113,15 +149,24 @@ export default class Curriculum extends Component {
                         </div>
                     </div>
                     <div className="container">
-                        <aside>
+                        <aside className={this.state.isNavOpen ? "side-nav-open" : ""}>
                             <SideNav/>
                         </aside>
-                        <div className="curriculum-showcase">
-                            <Main/>
+                        <div className={this.state.isNavOpen ? "main-open curriculum-showcase" : "curriculum-showcase"}>
+                            <div className="div">
+                                <div className="burger" onClick={this.handleNav}>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <Main/>
+                                Hello content showcase
+                            </div>
                             <footer>
                                 <div className="container">
                                     <hr />
-                                    footer
+                                    <Link to="/">Help and FAQ</Link> | &nbsp;
+                                    <Link to="/">Report An Issue</Link>
                                 </div>
                             </footer>
                         </div>

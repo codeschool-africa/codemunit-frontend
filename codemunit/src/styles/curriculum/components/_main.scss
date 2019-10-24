@@ -14,15 +14,20 @@
         padding: 20px 0;
         aside {
             float: left;
+            transform: translateX(0);
             width: 400px;
             background: #fff;
-            height: calc( 100vh - 90px );
+            min-height: calc( 100vh - 90px );
+            max-height: calc( 100vh - 90px );
             position: fixed;
-            // overflow-y: scroll;
+            overflow-y: auto;
             margin: 10px;
             margin-bottom: 0;
             padding: 20px;
             box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+            ul {
+                list-style: none;
+            }
         }
         .curriculum-showcase {
             float: right;
@@ -30,9 +35,33 @@
             .div {
                 height: 100vh;
                 background: #fff;
-                margin-right: 20px;
+                margin-right: 10px;
                 padding: 20px;
                 box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                .burger {
+                    height: 30px;
+                    display: none;
+                    width: 40px;
+                    background: rgb(238, 242, 247);
+                    // display: inline-flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 5px;
+                    transition: .15s;
+                    border-radius: 2px;
+                    box-shadow: 0 0 2px 0 rgba(1,2,2,.04), 0 4px 2px 0 rgba(1,2,2,.04), 0 4px 4px 0 rgba(1,2,2,.04);
+                    span {
+                        height: 2px;
+                        width: 80%;
+                        margin: 0 auto;
+                        background: $primaryColor;
+                        display: inline-block;
+                    }
+                    &:hover {
+                        box-shadow: 0 0 8px 0 rgba(1,2,2,.2), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                    }
+                }
             }
             footer {
                 width: calc( 100% - 20px );
@@ -40,18 +69,190 @@
                 color: $primaryColor;
                 margin: 50px 0;
                 hr {
-                    opacity: .6;
+                    opacity: .2;
+                    margin-bottom: 10px;
+                }
+                a {
+                    color: $primaryColor;
+                    margin-right: 10px;
+
                 }
             }
         }
     }
 }
 
+@media (max-width: 992px) {
+    .main-content {
+        position: relative;
+        background: #F8F9FA;
+        min-height: 125vh;
+        margin-top: 60px;
+        .navigation {
+            display: none;
+            // background: #fff;
+        }
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 0;
+            aside {
+                float: left;
+                transform: translateX(0);
+                width: 300px;
+                background: #fff;
+                min-height: calc( 100vh - 90px );
+                max-height: calc( 100vh - 90px );
+                position: fixed;
+                overflow-y: auto;
+                margin: 10px;
+                margin-bottom: 0;
+                padding: 20px;
+                box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                ul {
+                    list-style: none;
+                }
+            }
+            .curriculum-showcase {
+                float: right;
+                width: calc( 100% - 340px );
+                .div {
+                    height: 100vh;
+                    background: #fff;
+                    margin-right: 10px;
+                    padding: 20px;
+                    box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                    .burger {
+                        height: 30px;
+                        display: none;
+                        width: 40px;
+                        background: rgb(238, 242, 247);
+                        // display: inline-flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        padding: 5px;
+                        transition: .15s;
+                        border-radius: 2px;
+                        box-shadow: 0 0 2px 0 rgba(1,2,2,.04), 0 4px 2px 0 rgba(1,2,2,.04), 0 4px 4px 0 rgba(1,2,2,.04);
+                        span {
+                            height: 2px;
+                            width: 80%;
+                            margin: 0 auto;
+                            background: $primaryColor;
+                            display: inline-block;
+                        }
+                        &:hover {
+                            box-shadow: 0 0 8px 0 rgba(1,2,2,.2), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                        }
+                    }
+                }
+                footer {
+                    width: calc( 100% - 20px );
+                    background: inherit;
+                    color: $primaryColor;
+                    margin: 50px 0;
+                    hr {
+                        opacity: .2;
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        color: $primaryColor;
+                        margin-right: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 800px) {
     .main-content {
         margin-top: 0px;
         @import "./_navigation";
+        .container {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 0;
+            aside {
+                float: left;
+                transform: translateX(-100%);
+                width: 250px;
+                background: #fff;
+                min-height: calc( 100vh - 90px );
+                max-height: calc( 100vh - 90px );
+                position: fixed;
+                overflow-y: auto;
+                margin: 0;
+                margin-bottom: 0;
+                padding: 20px;
+                transition: .3s;
+                box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                &.side-nav-open {
+                    transform: translateX(0);
+                }
+                ul {
+                    list-style: none;
+                }
+            }
+            .curriculum-showcase {
+                float: right;
+                width: 100% ;
+                &.main-open {
+                    transform: translateX(250px);
+                    transition: .3s;
+                }
+                .div {
+                    height: 100vh;
+                    background: #fff;
+                    margin:0 10px;
+                    padding: 20px;
+                    box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                    .burger {
+                        height: 30px;
+                        // display: none;
+                        width: 40px;
+                        background: rgb(238, 242, 247);
+                        display: inline-flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        padding: 5px;
+                        transition: .15s;
+                        border-radius: 2px;
+                        box-shadow: 0 0 2px 0 rgba(1,2,2,.04), 0 4px 2px 0 rgba(1,2,2,.04), 0 4px 4px 0 rgba(1,2,2,.04);
+                        span {
+                            height: 2px;
+                            width: 80%;
+                            margin: 0 auto;
+                            background: $primaryColor;
+                            display: inline-block;
+                        }
+                        &:hover {
+                            box-shadow: 0 0 8px 0 rgba(1,2,2,.2), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+                        }
+                    }
+                }
+                footer {
+                    width: calc( 100% - 40px );
+                    background: inherit;
+                    color: $primaryColor;
+                    margin: 50px auto;
+                    hr {
+                        opacity: .2;
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        color: $primaryColor;
+                        margin-right: 10px;
+
+                    }
+                }
+            }
+        }
     }
 }
 
