@@ -24,3 +24,10 @@ export default class Nav extends Component {
 }
 
 
+if (isMobile) {
+    return <div>mobile structure</div>;
+  } else {
+    return <div>desktop structure</div>;
+  }
+
+  window.matchMedia 
