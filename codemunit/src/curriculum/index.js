@@ -160,7 +160,6 @@ export default class Curriculum extends Component {
                                     <span></span>
                                 </div>
                                 <Main/>
-                                Hello content showcase
                             </div>
                             <footer>
                                 <div className="container">

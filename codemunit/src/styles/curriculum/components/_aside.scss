@@ -6,14 +6,17 @@ ul {
     color: $primaryColor;
     list-style: none;
     width: 100%;
+    pointer-events: all;
+    cursor: pointer;
     &.main-ul {
         margin: 30px 0;
     }
     li {
         width: 99%;
-        padding: 10px 0;
+        padding: 5px 0;
         padding-left: 10px;
         transition: .25s;
+        border-left: 7px #fff solid;
         // border-left: solid 15px $tertiaryColor;
         margin: 4px auto;
         // margin-right: 10px;
@@ -23,10 +26,17 @@ ul {
         background: #fefefe;
         font-size: 1.1em;
         transition: .25s;
+        &.anchor {
+            border: none;
+            &:hover {
+                border: none;
+            }
+        }
          .icon {
             margin-right: 10px;
             transition: .25s;
             color: $primaryColor;
+            opacity: .5;
         }
         &:hover {
             background: #F8F9FA;
@@ -41,4 +51,23 @@ ul {
             }
         }
     }
+}
+
+div.dropdown {
+    margin-left: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+    a {
+        color: $fancyColor;
+        text-decoration: none;
+    }
+}
+
+div.dropdown-active {
+    max-height: 100%;
+}
+
+.nav-header {
+    padding: 10px;
 }
