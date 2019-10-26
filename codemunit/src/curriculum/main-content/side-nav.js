@@ -13,6 +13,7 @@ export default class SideNav extends Component {
         isProgramming: false,
         isWebstarter: false,
         isFrontend: false,
+        isCssFrameWork: false,
         isFrontEndFramework: false,
         isBackend: false
     }
@@ -39,6 +40,10 @@ export default class SideNav extends Component {
 
     showBackEnd = () => {
         this.setState({ isBackend: !this.state.isBackend })
+    }
+
+    showCssFramework = () => {
+        this.setState({ isCssFrameWork: !this.state.isCssFrameWork })
     }
 
     render() {
@@ -101,9 +106,24 @@ export default class SideNav extends Component {
                                     <li className="anchor">
                                         <Link to="/curriculum/web-development/css">Css</Link>
                                     </li>
-                                    <li className="anchor">
-                                        <Link to="/curriculum/web-development/css-frameworks-and-responsive-design">Css frameworks and responsive design</Link>
+                                    <li onClick={() => this.showCssFramework()} className={this.state.isCssFrameWork ? "active" : ""}>
+                                        <FaAngleRight className="icon"/> Css frameworks and responsive design
                                     </li>
+                                    <div className={this.state.isCssFrameWork
+                                        ? "dropdown dropdown-active sub-section-3"
+                                        : "dropdown sub-section-3"}>
+                                        <ul>
+                                            <li className="anchor">
+                                                <Link to="/curriculum/web-development/responsive-web-design-with-media-queries">Responsive web design with media queries</Link>
+                                            </li>
+                                            <li className="anchor">
+                                                <Link to="/curriculum/web-development/bootstrap">Bootstrap</Link>
+                                            </li>
+                                            <li className="anchor">
+                                                <Link to="/curriculum/web-development/sass">Sass</Link>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <li className="anchor">
                                         <Link to="/curriculum/web-development/javascript">Javascript</Link>
                                     </li>
