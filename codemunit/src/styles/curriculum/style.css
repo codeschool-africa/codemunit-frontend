@@ -267,7 +267,7 @@
 }
 
 .curriculum-container header .container nav .user-nav .profile-img .dropdown-profile-menu nav ul li a span {
-  background: #db0b0b;
+  background: #438976;
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -876,8 +876,6 @@
 
 .main-content {
   position: relative;
-  background: #F8F9FA;
-  min-height: 125vh;
   margin-top: 60px;
 }
 
@@ -898,7 +896,7 @@
   transition: .3s;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  width: 400px;
+  width: 410px;
   background: #fff;
   min-height: calc( 100vh - 90px);
   max-height: calc( 100vh - 90px);
@@ -912,8 +910,8 @@
 }
 
 .main-content .container aside.side-nav-open {
-  -webkit-transform: translateX(-102%);
-          transform: translateX(-102%);
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
 }
 
 .main-content .container aside ul {
@@ -955,6 +953,10 @@
   border: none;
 }
 
+.main-content .container aside ul li.anchor:active {
+  background: #fefefe;
+}
+
 .main-content .container aside ul li .icon {
   margin-right: 10px;
   -webkit-transition: .25s;
@@ -979,7 +981,7 @@
 }
 
 .main-content .container aside div.dropdown {
-  margin-left: 30px;
+  margin-left: 40px;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height .2s;
@@ -1022,12 +1024,15 @@
 
 .main-content .container .curriculum-showcase .div {
   position: relative;
-  height: 100vh;
   background: #fff;
   margin-right: 10px;
   padding: 20px;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+}
+
+.main-content .container .curriculum-showcase .div .main {
+  margin: 0 70px;
 }
 
 .main-content .container .curriculum-showcase .div .burger {

@@ -25,6 +25,21 @@ export default class SideNav extends Component {
         this.setState({ isProgramming: !this.state.isProgramming })
     }
 
+    showWebStart = () => {
+        this.setState({ isWebstarter: !this.state.isWebstarter })
+    }
+
+    showFrontEnd = () => {
+        this.setState({ isFrontend: !this.state.isFrontend})
+    }
+
+    showFrontEndFramework = () => {
+        this.setState({ isFrontEndFramework: !this.state.isFrontEndFramework})
+    }
+
+    showBackEnd = () => {
+        this.setState({ isBackend: !this.state.isBackend })
+    }
 
     render() {
         return (
@@ -58,66 +73,74 @@ export default class SideNav extends Component {
                                     </li>
                                 </ul>
                             </div>
-                            <li>
+                            <li onClick={() => this.showWebStart()} className={this.state.isWebstarter ? "active" : ""} >
                                 <FaAngleRight className="icon"/> Getting started with the Web
                             </li>
-                            <div className="programming-sections dropdown sub-section-2">
+                            <div className={this.state.isWebstarter
+                                ? "dropdown dropdown-active sub-section-2"
+                                : "dropdown sub-section-2"}>
                                 <ul>
-                                    <li>
-                                        <Link className="anchor">>What is the internet?</Link>
+                                    <li className="anchor">
+                                        <Link>What is the internet?</Link>
                                     </li>
-                                    <li>
-                                        <Link className="anchor">>What is a web?</Link>
+                                    <li className="anchor">
+                                        <Link>What is a web?</Link>
                                     </li>
                                 </ul>
                             </div>
-                            <li>
+                            <li onClick={() => this.showFrontEnd()} className={this.state.isFrontend? "active" : ""}>
                                 <FaAngleRight className="icon"/> Front-end web development
                             </li>
-                            <div className="programming-sections dropdown sub-section-2">
+                            <div className={this.state.isFrontend
+                                ? "dropdown dropdown-active sub-section-2"
+                                : "dropdown sub-section-2"}>
                                 <ul>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/html">Html</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/css">Css</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/css-frameworks-and-responsive-design">Css frameworks and responsive design</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/javascript">Javascript</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/advanced-html5">Advanced HTML5</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li onClick={() => this.showFrontEndFramework()} className={this.state.isFrontEndFramework ? "active" : ""}>
                                         <FaAngleRight className="icon"/> Front-end Frameworks
                                     </li>
-                                    <div className="dropdown sub-section-3">
+                                    <div className={this.state.isFrontEndFramework
+                                        ? "dropdown dropdown-active sub-section-3"
+                                        : "dropdown sub-section-3"}>
                                         <ul>
-                                            <li className="anchor">>
+                                            <li className="anchor">
                                                 <Link to="/curriculum/web-development/react-js">ReactJs</Link>
                                             </li>
-                                            <li className="anchor">>
+                                            <li className="anchor">
                                                 <Link to="/curriculum/web-development/angular">AngularJs</Link>
                                             </li>
-                                            <li className="anchor">>
+                                            <li className="anchor">
                                                 <Link to="/curriculum/web-development/jquery">jQuery</Link>
                                             </li>
                                         </ul>
                                     </div>
                                 </ul>
                             </div>
-                            <li>
+                            <li onClick={() => this.showBackEnd()} className={this.state.isBackend ? "active" : ""}>
                                 <FaAngleRight className="icon" /> Back-end web development
                             </li>
-                            <div className="sub-section-2 dropdown">
+                            <div className={this.state.isBackend
+                                ? "dropdown dropdown-active sub-section-2"
+                                : "dropdown sub-section-2"}>
                                 <ul>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/node-js">Node js</Link>
                                     </li>
-                                    <li className="anchor">>
+                                    <li className="anchor">
                                         <Link to="/curriculum/web-development/php">Php</Link>
                                     </li>
                                 </ul>

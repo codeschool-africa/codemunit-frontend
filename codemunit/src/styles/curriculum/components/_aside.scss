@@ -28,10 +28,17 @@ ul {
         transition: .25s;
         &.anchor {
             border: none;
+            // padding-left: 0;
             &:hover {
                 border: none;
             }
+            &:active {
+                background: #fefefe;
+            }
         }
+        // &.anchor-li {
+        //     margin-left: -20px;
+        // }
          .icon {
             margin-right: 10px;
             transition: .25s;
@@ -54,7 +61,7 @@ ul {
 }
 
 div.dropdown {
-    margin-left: 30px;
+    margin-left: 40px;
     max-height: 0;
     overflow: hidden;
     transition: max-height .2s;
