@@ -1,8 +1,7 @@
 import React from "react";
 import { FaAngleDown } from "react-icons/all";
 import { Link } from "react-router-dom";
-// import ScrollAnimation from 'react-animate-on-scroll'
-// import aos from "aos/dist/aos.css"
+import img from "../../images/bg-image.jpg"
 
 import Header from "../components/Header";
 import Banner from "../components/Banner";
@@ -23,7 +22,7 @@ class Home extends React.Component {
       <>
         <Header hero="home-header">
           <Banner
-            title="com+code+unit"
+            title="Welcome to" special="kodemunit"
             subtitle="We monitor and guide software development learners by bringing together learners and experts in a community.
             We equip software developer with skills and knowledge necessary to get software developer jobs"
           >
@@ -45,6 +44,9 @@ class Home extends React.Component {
               />
             </a>
           </Banner>
+          {/* <div className="img-right">
+            <img src={img} alt=""/>
+          </div> */}
         </Header>
         <Service />
         <CarrierPath/>

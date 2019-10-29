@@ -57,9 +57,6 @@ export default class Service extends Component {
             <div className='service' id='service'>
                <div className="container">
                    <h1>Services</h1>
-                   <p>
-                   We provide learning resources, guidance and mentorship to software development learners and help them secure remote software development jobs.
-                   </p>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
                        return <article key={index} data-aos="fade-up">
                                 <div className="front-face">
