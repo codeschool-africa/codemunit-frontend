@@ -52,14 +52,17 @@ header {
       }
       .hero {
         width: 60%;
+        margin: 0 auto;
         height: calc(672px - 100px);
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         // margin-top: -30px;
         h1 {
+          display: inline-block;
+          text-align: center;
           font-size: 4rem;
           line-height: 4.2rem;
           font-weight: 100;
@@ -69,14 +72,16 @@ header {
           // // -webkit-background-clip: $primaryColor;
           // color: transparent;
           // font-weight: bolder;
-          span {
-            font-size: 4.5rem;
+          code {
+            // font-size: 4.5rem;
+            color: burlywood;
           }
         }
         .intro {
           font-size: 1.125rem;
           line-height: 1.625rem;
           margin: 35px 0;
+          text-align: center;
         }
         .btn {
           a {
@@ -147,7 +152,7 @@ header {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
+          // align-items: flex-start;
           h1 {
             font-size: 66px;
             line-height: 4.2rem;

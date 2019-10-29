@@ -4,7 +4,7 @@ import {
 } from '../types/types';
 
 const initialState = {
-    authenticated: true,
+    authenticated: false,
     loading: false,
 };
 
@@ -13,7 +13,7 @@ export default function (state = initialState, action) {
         case SET_AUTHENTICATED:
             return {
                 ...state,
-                authenticated: false
+                authenticated: true
             };
         case SET_UNAUTHENTICATED:
             return initialState;

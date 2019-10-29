@@ -157,6 +157,7 @@ header .bg-color .container nav ul li {
 
 header .bg-color .container .hero {
   width: 60%;
+  margin: 0 auto;
   height: calc(672px - 100px);
   overflow: hidden;
   display: -webkit-box;
@@ -169,12 +170,14 @@ header .bg-color .container .hero {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .bg-color .container .hero h1 {
+  display: inline-block;
+  text-align: center;
   font-size: 4rem;
   line-height: 4.2rem;
   font-weight: 100;
@@ -184,14 +187,15 @@ header .bg-color .container .hero h1 {
           margin-block-end: 0;
 }
 
-header .bg-color .container .hero h1 span {
-  font-size: 4.5rem;
+header .bg-color .container .hero h1 code {
+  color: burlywood;
 }
 
 header .bg-color .container .hero .intro {
   font-size: 1.125rem;
   line-height: 1.625rem;
   margin: 35px 0;
+  text-align: center;
 }
 
 header .bg-color .container .hero .btn a {
@@ -281,9 +285,6 @@ header .bg-color .container .hero .menu {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
   header .bg-color .container .hero h1 {
     font-size: 66px;

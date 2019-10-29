@@ -19,16 +19,16 @@ export default function Footer() {
                     <div className="col2 col">
                         <Link to='/mentorship'>become a mentor</Link>
                         <Link to='/curriculum'>our curriculum</Link>
-                        <Link to='/'>community hub</Link>
+                        {/* <Link to='/'>community hub</Link> */}
                         <Link to='/about'>about us</Link>
                         <Link to='/'>help and support</Link>
                         <Link to='/contact-us'>contact us</Link>
                         <Link to='/blog'>blog</Link>
                         <Link to='/account'>register/login</Link>
-                        <h4>Sponsor us</h4>
+                        {/* <h4>Sponsor us</h4>
                         <a href="mailto:sponsor@kodemunit.com">sponsor@kodemunit.com</a>
-                        <h4>Partner with us</h4>
-                        <a href="mailto:partner@kodemunit.com">partner@kodemunit.com</a>
+                        <h4>Partner with us</h4> */}
+                        {/* <a href="mailto:partner@kodemunit.com">partner@kodemunit.com</a> */}
                     </div>
                     <div className="col3 col">
                     <h3>lets connect</h3>
