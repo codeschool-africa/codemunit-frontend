@@ -13,35 +13,36 @@ class Nav extends Component  {
         this.setState({isOpen:!this.state.isOpen});
     }
 
-
     render() {
         const authenticated = this.state.authenticated;
         console.log(authenticated);
     return (
-        <nav className={this.state.isOpen?"nav-bg":""}>
-            <div className="logo">
-                    <Link to='/'>
-                        <img src={logo} alt="kodemunit logo"/>
-                    </Link>
+        <nav className={this.state.isOpen ? "nav-bg" : ""}>
+            <div className="container">
+                <div className="logo">
+                        <Link to='/'>
+                            <img src={logo} alt="kodemunit logo"/>
+                        </Link>
+                </div>
+                <div></div>
+                <div className="dropdown">
+                    <span className={this.state.isOpen ? "burger burger-open" : "burger"} onClick={this.handleToggle}></span>
+                </div>
+                <ul className={this.state.isOpen?"show-nav":""}>
+                    <li><Link to='/about' onClick={this.handleToggle}>About</Link></li>
+                    <li><Link to='/curriculum' onClick={this.handleToggle}>Curriculum</Link></li>
+                    <li><Link to='/mentorship' onClick={this.handleToggle}>Mentorship</Link></li>
+                    <li><Link to='/blog' onClick={this.handleToggle}>Blog</Link></li>
+                    <li><Link to='/mentorship' onClick={this.handleToggle}>FAQ</Link></li>
+                    <li>{ authenticated === true ? (
+                            <Link to="/en/dashboard" className="btn-primary" onClick={this.handleToggle}>Dashboard</Link>
+                        ) :
+                        (
+                            <Link to="/account" className="btn-primary" onClick={this.handleToggle}>Join Now</Link>
+                        ) }
+                    </li>
+                </ul>
             </div>
-            <div></div>
-            <div className="dropdown">
-                <span className={this.state.isOpen ? "burger burger-open" : "burger"} onClick={this.handleToggle}></span>
-            </div>
-            <ul className={this.state.isOpen?"show-nav":""}>
-                <li><Link to='/about' onClick={this.handleToggle}>About</Link></li>
-                <li><Link to='/curriculum' onClick={this.handleToggle}>Curriculum</Link></li>
-                <li><Link to='/mentorship' onClick={this.handleToggle}>Mentorship</Link></li>
-                <li><Link to='/blog' onClick={this.handleToggle}>Blog</Link></li>
-                <li><Link to='/mentorship' onClick={this.handleToggle}>FAQ</Link></li>
-                <li>{ authenticated === true ? (
-                        <Link to="/en/dashboard" className="btn-primary" onClick={this.handleToggle}>Dashboard</Link>
-                    ) :
-                    (
-                        <Link to="/account" className="btn-primary" onClick={this.handleToggle}>Join Now</Link>
-                    ) }
-                </li>
-            </ul>
         </nav>
     );
  }

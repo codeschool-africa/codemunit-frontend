@@ -15,45 +15,68 @@ header {
       max-width: 1600px;
       margin: 0 auto;
       nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100px;
-        // overflow: hidden;
-        a {
-          color: $secondaryColor;
-          text-decoration: none;
-          &:hover {
-            color: $fancyColor;
-          }
-        }
-        .logo {
-          height: 100%;
+        z-index: 999999;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        .container {
           display: flex;
-          align-items: center;
-          img {
-            height: 50px;
-          }
-        }
-        .dropdown {
-          display: none;
-        }
-        ul {
-          display: flex;
-          list-style: none;
-          height: 100%;
           align-items: center;
           justify-content: space-between;
-          li {
-            margin: 0 10px;
-            font-size: 18px;
+          height: 100px;
+          // overflow: hidden;
+          a {
+            position: relative;
+            color: $secondaryColor;
+            text-decoration: none;
+            padding: 0 5px;
+            &:hover {
+              color: $fancyColor;
+              &::before {
+                width: 100%;
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              height: 2px;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 0%;
+              background: rgb(150, 131, 106);
+              transition: .4s;
+            }
           }
-        }
+          .logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            img {
+              height: 50px;
+            }
+          }
+          .dropdown {
+            display: none;
+          }
+          ul {
+            display: flex;
+            list-style: none;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            li {
+              margin: 0 10px;
+              font-size: 18px;
+            }
+          }
       }
+    }
       .hero {
         width: 60%;
         margin: 0 auto;
-        height: calc(672px - 100px);
+        height: 672px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -108,6 +131,12 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
+          // &::before {
+          //   content: "\276D";
+          //   position: absolute;
+          //   transform: rotate(90deg);
+          //   // height: 30px;
+          // }
         }
       }
     }

@@ -155,6 +155,14 @@ header .bg-color .container {
 }
 
 header .bg-color .container nav {
+  z-index: 999999;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+header .bg-color .container nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,16 +175,36 @@ header .bg-color .container nav {
   height: 100px;
 }
 
-header .bg-color .container nav a {
+header .bg-color .container nav .container a {
+  position: relative;
   color: #eee;
   text-decoration: none;
+  padding: 0 5px;
 }
 
-header .bg-color .container nav a:hover {
+header .bg-color .container nav .container a:hover {
   color: #438976;
 }
 
-header .bg-color .container nav .logo {
+header .bg-color .container nav .container a:hover::before {
+  width: 100%;
+}
+
+header .bg-color .container nav .container a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0%;
+  background: #96836a;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+header .bg-color .container nav .container .logo {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,15 +214,15 @@ header .bg-color .container nav .logo {
           align-items: center;
 }
 
-header .bg-color .container nav .logo img {
+header .bg-color .container nav .container .logo img {
   height: 50px;
 }
 
-header .bg-color .container nav .dropdown {
+header .bg-color .container nav .container .dropdown {
   display: none;
 }
 
-header .bg-color .container nav ul {
+header .bg-color .container nav .container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,7 +236,7 @@ header .bg-color .container nav ul {
           justify-content: space-between;
 }
 
-header .bg-color .container nav ul li {
+header .bg-color .container nav .container ul li {
   margin: 0 10px;
   font-size: 18px;
 }
@@ -216,7 +244,7 @@ header .bg-color .container nav ul li {
 header .bg-color .container .hero {
   width: 60%;
   margin: 0 auto;
-  height: calc(672px - 100px);
+  height: 672px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1457,6 +1485,7 @@ header .bg-color .container .hero .menu {
   padding: 10px 0;
   text-transform: uppercase;
   font-weight: lighter;
+  margin-bottom: 25px;
 }
 
 .blog-news .container p {
