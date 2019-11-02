@@ -47,8 +47,8 @@ export default class CarrierNews extends Component {
         return (
             <div className="carrier-news-showcase news" data-aos="fade-in">
                 <div className="arrows">
-                    <div className="circle circle-left" onClick={() => this.prevBtn()} data-aos="fade-left"><FaAngleLeft/></div>
-                    <div className="circle circle-right" onClick={() => this.nextBtn()} data-aos="fade-right"><FaAngleRight/></div>
+                    <div className="circle circle-left" onClick={() => this.prevBtn()}><FaAngleLeft/></div>
+                    <div className="circle circle-right" onClick={() => this.nextBtn()}><FaAngleRight/></div>
                 </div>
                 <div className="showcase"
                     style={{

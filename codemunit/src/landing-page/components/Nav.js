@@ -26,8 +26,7 @@ class Nav extends Component  {
             </div>
             <div></div>
             <div className="dropdown">
-                <input className="burger-check" id="burger-check" type="checkbox" defaultChecked={this.state.isOpen?"checked":""}/>
-                <label htmlFor="burger-check" className="burger" onClick={this.handleToggle}></label>
+                <span className={this.state.isOpen ? "burger burger-open" : "burger"} onClick={this.handleToggle}></span>
             </div>
             <ul className={this.state.isOpen?"show-nav":""}>
                 <li><Link to='/about' onClick={this.handleToggle}>About</Link></li>

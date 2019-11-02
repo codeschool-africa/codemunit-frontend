@@ -3,11 +3,10 @@
     background: $secondaryColor;
     .container {
         width: 75%;
-         max-width: 1400px;
+        max-width: 1400px;
         margin: 0 auto;
         text-align: center;
         h1 {
-            border-bottom: 4px solid $fancyColor;
             text-transform: uppercase;
         }
         p {
@@ -151,9 +150,6 @@
         // margin: 100px 0;
         .container {
             width: 75%;
-            h1 {
-                border-bottom: 4px solid $fancyColor;
-            }
             .services-showcase {
                 margin: 50px 0;
                 article {

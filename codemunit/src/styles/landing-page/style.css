@@ -58,9 +58,45 @@ h1 {
   font-weight: lighter;
 }
 
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 1px;
+  width: 60%;
+  background: #438976;
+}
+
 p {
   line-height: 1.625rem;
   font-size: 1.125em;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    display: inline-block;
+    padding: 10px 0;
+    font-weight: lighter;
+  }
+  p {
+    line-height: 1.625rem;
+    font-size: 1.125em;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    display: inline-block;
+    padding: 10px 0;
+    font-weight: lighter;
+  }
+  p {
+    line-height: 1.625rem;
+    font-size: 1.125em;
+  }
 }
 
 @media (max-width: 992px) {
@@ -516,15 +552,12 @@ header .bg-color .container .hero .menu {
     border: 0;
     padding: 0;
   }
-  header .bg-color .container nav .dropdown .burger-check {
-    display: none;
-  }
-  header .bg-color .container nav .dropdown .burger-check:checked ~ .burger {
+  header .bg-color .container nav .dropdown .open:checked ~ .burger {
     border-bottom: 4px solid transparent;
     -webkit-transition: border-bottom 0.4s ease-in-out;
     transition: border-bottom 0.4s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .burger-check:checked ~ .burger:before {
+  header .bg-color .container nav .dropdown .open:checked ~ .burger:before {
     -webkit-transform: rotate(-405deg) translateY(5px) translateX(-7px);
             transform: rotate(-405deg) translateY(5px) translateX(-7px);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
@@ -532,7 +565,7 @@ header .bg-color .container .hero .menu {
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .burger-check:checked ~ .burger:after {
+  header .bg-color .container nav .dropdown .open:checked ~ .burger:after {
     -webkit-transform: rotate(405deg) translateY(0px) translateX(-1px);
             transform: rotate(405deg) translateY(0px) translateX(-1px);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
@@ -541,7 +574,7 @@ header .bg-color .container .hero .menu {
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   header .bg-color .container nav .show-nav {
-    max-height: 480px;
+    max-height: 380px;
     z-index: 100;
   }
   header .bg-color .container nav ul {
@@ -648,7 +681,6 @@ header .bg-color .container .hero .menu {
 }
 
 .service .container h1 {
-  border-bottom: 4px solid #438976;
   text-transform: uppercase;
 }
 
@@ -845,9 +877,6 @@ header .bg-color .container .hero .menu {
   .service .container {
     width: 75%;
   }
-  .service .container h1 {
-    border-bottom: 4px solid #438976;
-  }
   .service .container .services-showcase {
     margin: 50px 0;
   }
@@ -970,7 +999,6 @@ header .bg-color .container .hero .menu {
 }
 
 .carrier-path .container .carrier-header h1 {
-  border-bottom: 4px solid #438976;
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -1427,7 +1455,6 @@ header .bg-color .container .hero .menu {
 .blog-news .container h1 {
   display: inline-block;
   padding: 10px 0;
-  border-bottom: 4px solid #438976;
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -1796,7 +1823,6 @@ header .bg-color .container .hero .menu {
 }
 
 .testimonials .container h1 {
-  border-bottom: 4px solid #438976;
   text-transform: uppercase;
 }
 

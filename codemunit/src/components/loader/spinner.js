@@ -5,22 +5,23 @@ const Spinner = () => (
         style={{
             display: 'block',
             position: 'fixed',
-            right: 15,
-            top: 15,
+            left: `50%`,
+            top: `50%`,
+            transform: `translate(-50%, -50%)`,
             zIndex: 1031
         }}
     >
         <div
             style={{
                 animation: '400ms linear infinite spinner',
-                borderBottom: '2px solid transparent',
-                borderLeft: '2px solid #29d',
+                borderBottom: '3px solid transparent',
+                borderLeft: '3px solid #438976',
                 borderRadius: '50%',
-                borderRight: '2px solid transparent',
-                borderTop: '2px solid #29d',
+                borderRight: '3px solid transparent',
+                borderTop: '3px solid #438976',
                 boxSizing: 'border-box',
-                height: 18,
-                width: 18
+                height: 70,
+                width: 70
             }}
         />
     </div>
