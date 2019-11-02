@@ -186,11 +186,19 @@ header .bg-color .container nav .container a:hover {
   color: #438976;
 }
 
-header .bg-color .container nav .container a:hover::before {
+header .bg-color .container nav .container .nav-link {
+  padding-bottom: 7px;
+}
+
+header .bg-color .container nav .container .nav-link:hover {
+  color: #438976;
+}
+
+header .bg-color .container nav .container .nav-link:hover::before {
   width: 100%;
 }
 
-header .bg-color .container nav .container a::before {
+header .bg-color .container nav .container .nav-link::before {
   content: "";
   position: absolute;
   height: 2px;

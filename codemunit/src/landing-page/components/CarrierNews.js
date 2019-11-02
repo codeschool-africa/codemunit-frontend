@@ -40,6 +40,19 @@ export default class CarrierNews extends Component {
         }
     }
 
+    mouseDown = () => {
+        const newIndex = this.state.property.id + 1;
+        if (newIndex <= Carrierposts.properties.length - 1) {
+            this.setState({
+                property: Carrierposts.properties[newIndex]
+            })
+        } else {
+            this.setState({
+                property: Carrierposts.properties[0]
+            })
+        }
+    }
+
     render() {
         const {properties,
             property
@@ -54,6 +67,9 @@ export default class CarrierNews extends Component {
                     style={{
                         "transform":`translateX(-${property.id*(100/properties.length)}%)`
                     }}
+                    onMouseDown = { () => {
+                        this.mouseDown()
+                    } }
                 >
                     {properties.map( property =>
                             <Post

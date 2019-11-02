@@ -33,6 +33,12 @@ header {
             padding: 0 5px;
             &:hover {
               color: $fancyColor;
+            }
+          }
+          .nav-link {
+            padding-bottom: 7px;
+            &:hover {
+              color: $fancyColor;
               &::before {
                 width: 100%;
               }

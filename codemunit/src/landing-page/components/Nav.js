@@ -29,11 +29,11 @@ class Nav extends Component  {
                     <span className={this.state.isOpen ? "burger burger-open" : "burger"} onClick={this.handleToggle}></span>
                 </div>
                 <ul className={this.state.isOpen?"show-nav":""}>
-                    <li><Link to='/about' onClick={this.handleToggle}>About</Link></li>
-                    <li><Link to='/curriculum' onClick={this.handleToggle}>Curriculum</Link></li>
-                    <li><Link to='/mentorship' onClick={this.handleToggle}>Mentorship</Link></li>
-                    <li><Link to='/blog' onClick={this.handleToggle}>Blog</Link></li>
-                    <li><Link to='/mentorship' onClick={this.handleToggle}>FAQ</Link></li>
+                    <li><Link to='/about' onClick={this.handleToggle} className="nav-link">About</Link></li>
+                    <li><Link to='/curriculum' onClick={this.handleToggle} className="nav-link">Curriculum</Link></li>
+                    <li><Link to='/mentorship' onClick={this.handleToggle} className="nav-link">Mentorship</Link></li>
+                    <li><Link to='/blog' onClick={this.handleToggle} className="nav-link">Blog</Link></li>
+                    <li><Link to='/mentorship' onClick={this.handleToggle} className="nav-link">FAQ</Link></li>
                     <li>{ authenticated === true ? (
                             <Link to="/en/dashboard" className="btn-primary" onClick={this.handleToggle}>Dashboard</Link>
                         ) :
