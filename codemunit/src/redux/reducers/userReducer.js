@@ -4,7 +4,7 @@ import {
 } from '../types/types';
 
 const initialState = {
-    authenticated: false,
+    authenticated: true,
     loading: false,
 };
 
