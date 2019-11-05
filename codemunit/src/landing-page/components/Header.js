@@ -3,26 +3,28 @@ import Nav from './Nav'
 
 export default function Header({children,hero}) {
 
-    // const [value, setValue] = useState(false);
+    // componentDidMount() {
+    //     window.addEventListener("scroll", this.myFunc);
+    // };
 
-    // componentDidMount = () => {
-    //     document.addEventListener('scroll', this.trackScrolling);
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.updateDimensions);
     // }
 
-    // componentWillUnmount = () => {
-    //     document.removeEventListener('scroll', this.trackScrolling);
+    // myFunc = () => {
+    //     alert("hello world");
     // }
 
     return (
-        <header className={hero}>
-            <div className="bg-color">
-                <div className="container">
-                    <Nav />
-                    {children}
-                </div>
-            </div>
-        </header>
-    )
+      <header className={hero} >
+        <div className="bg-color">
+          <div className="container">
+            <Nav />
+            {children}
+          </div>
+        </div>
+      </header>
+    );
 }
 
 Header.defaultProps = {
