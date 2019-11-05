@@ -535,11 +535,13 @@ header .bg-color .container .hero .menu {
   header .bg-color .container nav {
     height: 60px;
     padding: 10px 5% !important;
-    padding-top: 20px;
     width: 100vw !important;
-    margin-left: -6% !important;
     -webkit-transition: background-color .4s;
     transition: background-color .4s;
+  }
+  header .bg-color .container nav .container {
+    height: 100%;
+    width: 100%;
   }
   header .bg-color .container nav .logo {
     padding-top: 5px;
@@ -610,7 +612,7 @@ header .bg-color .container .hero .menu {
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
   header .bg-color .container nav .show-nav {
-    max-height: 380px;
+    width: 100%;
     z-index: 100;
   }
   header .bg-color .container nav ul {
@@ -621,18 +623,18 @@ header .bg-color .container .hero .menu {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-height: 0px;
-    width: 100%;
+    width: 0%;
     background: #1a2e3f;
     overflow: hidden;
-    -webkit-transition: max-height .4s;
-    transition: max-height .4s;
+    -webkit-transition: width .4s;
+    transition: width .4s;
+    height: 420px !important;
   }
   header .bg-color .container nav ul li {
     font-size: 15px;
@@ -643,9 +645,9 @@ header .bg-color .container .hero .menu {
   header .bg-color .container nav ul li a {
     display: block;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 5%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 5% !important;
   }
   header .bg-color .container nav ul li a:hover {
     background: #0c1f31;
@@ -655,9 +657,17 @@ header .bg-color .container .hero .menu {
     margin: 25px 0;
   }
   header .bg-color .container nav ul li:nth-child(6) a {
-    display: inline-block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 0 5% !important;
-    width: 50%;
+    width: 200px;
     line-height: 30px;
     text-align: center;
     padding: 0;
