@@ -14,14 +14,14 @@ const Spinner = () => (
         <div
             style={{
                 animation: '400ms linear infinite spinner',
-                borderBottom: '3px solid transparent',
-                borderLeft: '3px solid #438976',
+                borderBottom: '5px solid transparent',
+                borderLeft: '5px solid #438976',
                 borderRadius: '50%',
-                borderRight: '3px solid transparent',
-                borderTop: '3px solid #438976',
+                borderRight: '5px solid transparent',
+                borderTop: '5px solid #438976',
                 boxSizing: 'border-box',
-                height: 70,
-                width: 70
+                height: 50,
+                width: 50
             }}
         />
     </div>

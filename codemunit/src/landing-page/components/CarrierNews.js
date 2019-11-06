@@ -41,21 +41,21 @@ export default class CarrierNews extends Component {
     }
 
     mouseDown = e => {
-        let x = e.clientX;
-        const newIndex = this.state.property.id + 1;
-        if ( x > 0) {
-            if (newIndex <= Carrierposts.properties.length - 1) {
-                this.setState({
-                    property: Carrierposts.properties[newIndex]
-                })
-            } else {
-                this.setState({
-                    property: Carrierposts.properties[0]
-                })
-            }
-        }
+        // let x = e.clientX;
+        // const newIndex = this.state.property.id + 1;
+        // if ( x > 0) {
+        //     if (newIndex <= Carrierposts.properties.length - 1) {
+        //         this.setState({
+        //             property: Carrierposts.properties[newIndex]
+        //         })
+        //     } else {
+        //         this.setState({
+        //             property: Carrierposts.properties[0]
+        //         })
+        //     }
+        // }
 
-        console.log(x);
+        // console.log(x);
     }
 
     render() {

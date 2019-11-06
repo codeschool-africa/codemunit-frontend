@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from './Nav'
 
 export default function Header({children,hero}) {
 
-    // componentDidMount() {
-    //     window.addEventListener("scroll", this.myFunc);
-    // };
+  const [theposition, setThePosition] = useState({
+    theposition: 0
+  });
 
-    // componentWillUnmount() {
-    //     window.removeEventListener('scroll', this.updateDimensions);
-    // }
+  const [isNav, setTheNav] = useState({
+    isNav: false
+  });
 
-    // myFunc = () => {
-    //     alert("hello world");
+  useEffect(() => {
+    // window.addEventListener("scroll", handleScroll)
+  })
+
+
+
+    // const handleScroll = () => {
+
+      // setThePosition({
+      //     theposition: window.pageYOffset
+      //   });
+
+        // console.log(theposition);
     // }
 
     return (

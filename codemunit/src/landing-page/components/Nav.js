@@ -14,8 +14,8 @@ class Nav extends Component  {
     }
 
     render() {
-        const authenticated = this.state.authenticated;
-        console.log(authenticated);
+    const authenticated = this.state.authenticated;
+    // console.log(authenticated);
     return (
         <nav className={this.state.isOpen ? "nav-bg" : ""}>
             <div className="container">

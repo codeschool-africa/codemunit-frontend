@@ -6,7 +6,7 @@ export default function Header({children,hero}) {
         <header className={hero}>
             <div className="bg-color">
                 <div className="container">
-                    <Nav/>
+                    {/* <Nav/> */}
                     {children}
                 </div>
             </div>

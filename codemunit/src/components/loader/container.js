@@ -7,6 +7,9 @@ const Container = ({ children, isFinished, animationDuration }) => (
             opacity: isFinished ? 0 : 1,
             pointerEvents: 'none',
             transition: `opacity ${animationDuration}ms linear`
+            // background: "#eee",
+            // height: '100vh',
+            // width: "100vw"
         }}
     >
         {children}
