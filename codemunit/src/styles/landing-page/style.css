@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
 * {
   padding: 0;
   margin: 0;
@@ -145,7 +146,7 @@ header {
 
 header .bg-color {
   height: 672px;
-  background-color: rgba(26, 46, 63, 0.75);
+  background-color: rgba(26, 46, 63, 0.9);
 }
 
 header .bg-color .container {
@@ -282,7 +283,10 @@ header .bg-color .container .hero h1 {
 }
 
 header .bg-color .container .hero h1 code {
+  font-size: 3.3rem;
   color: burlywood;
+  text-shadow: 0px 5px 5px #918c92;
+  font-family: 'Monoton', cursive;
 }
 
 header .bg-color .container .hero .intro {
@@ -385,6 +389,12 @@ header .bg-color .container .hero .menu {
     line-height: 4.2rem;
     font-weight: 100;
   }
+  header .bg-color .container .hero h1 code {
+    font-size: 3rem;
+    color: burlywood;
+    text-shadow: 0px 5px 5px #918c92;
+    font-family: 'Monoton', cursive;
+  }
   header .bg-color .container .hero .intro {
     font-size: 1.125rem;
     line-height: 1.625rem;
@@ -432,6 +442,12 @@ header .bg-color .container .hero .menu {
     font-size: 56px;
     line-height: 4.2rem;
     font-weight: 100;
+  }
+  header .bg-color .container .hero h1 code {
+    font-size: 2.5rem;
+    color: burlywood;
+    text-shadow: 0px 5px 5px #918c92;
+    font-family: 'Monoton', cursive;
   }
   header .bg-color .container .hero .intro {
     font-size: 1rem;
@@ -486,6 +502,12 @@ header .bg-color .container .hero .menu {
     font-size: 56px;
     line-height: 4.2rem;
     font-weight: 100;
+  }
+  header .bg-color .container .hero h1 code {
+    font-size: 2rem;
+    color: burlywood;
+    text-shadow: 0px 5px 5px #918c92;
+    font-family: 'Monoton', cursive;
   }
   header .bg-color .container .hero .intro {
     font-size: 1rem;
@@ -684,6 +706,12 @@ header .bg-color .container .hero .menu {
     font-size: 25px;
     line-height: 2rem;
     font-weight: 100;
+  }
+  header .bg-color .container .hero h1 code {
+    font-size: 1.5rem;
+    color: burlywood;
+    text-shadow: 0px 5px 5px #918c92;
+    font-family: 'Monoton', cursive;
   }
   header .bg-color .container .hero .intro {
     font-size: 1rem;
