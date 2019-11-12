@@ -10,7 +10,7 @@ const Technposts = {
             "title": "Official launch of codemunit landing page",
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
-            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores corrupti architecto quod excepturi, a ",
+            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat officia. Lorem ipsum",
             "picture": TechImg,
             "link": "/blog/post"
         },
@@ -19,7 +19,7 @@ const Technposts = {
             "title": "technology post title two",
             "author": "Benedict Steven",
             "author_title": "CTO of codemunit",
-            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores corrupti architecto quod excepturi, a ",
+            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat",
             "picture": CarrierImg,
             "link": "/blog/post"
         },
@@ -28,7 +28,7 @@ const Technposts = {
             "title": "technology post title three",
             "author": "Justin Peterson",
             "author_title": "CTO of codemunit",
-            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores corrupti architecto quod excepturi, a ",
+            "subdescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus magni dicta earum sed architecto ad voluptatum, deleniti id porro optio quis natus iste incidunt soluta eos quo perspiciatis placeat officia.",
             "picture": CarrierImg,
             "link": "/blog/post"
         }

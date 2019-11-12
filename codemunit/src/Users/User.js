@@ -55,9 +55,9 @@ export default class User extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="copyright">
+                {/* <div className="copyright">
                     Copyright &copy; 2019 <Link to="/">Codemunit.</Link>
-                </div>
+                </div> */}
             </div>
         )
     }
