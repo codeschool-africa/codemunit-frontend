@@ -1,9 +1,5 @@
 import React from 'react';
 import { FaAngleDown } from 'react-icons/all'
-import { NProgress } from '@tanem/react-nprogress'
-import Bar from '../../components/loader/bar'
-import Spinner from "../../components/loader/spinner"
-import Container from "../../components/loader/container"
 // import "../../styles/landing-page/style.css"
 
 import Header from '../components/Header'
@@ -13,11 +9,6 @@ import Team from "../components/Team"
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
-const callFakeAPI = delay =>
-    new Promise(resolve => {
-        setTimeout(resolve, delay)
-    })
-
 
 class About extends React.Component{
 
@@ -26,27 +17,15 @@ class About extends React.Component{
     }
 
     async componentDidMount(){
-        await callFakeAPI(3000)
-        this.setState(() => ({
-            isLoading: false
-        }))
+        // await callFakeAPI(3000)
+        // this.setState(() => ({
+        //     isLoading: false
+        // }))
         document.title = "Codemunit - The Team"
       }
       render() {
     return (
         <>
-            <NProgress isAnimating={this.state.isLoading}>
-                {({ isFinished, progress, animationDuration }) => (
-                    <Container
-                        isFinished={isFinished}
-                        animationDuration={animationDuration}
-                    >
-                        <Bar progress={progress} animationDuration={animationDuration} />
-                        <Spinner />
-                    </Container>
-                )}
-            </NProgress>
-            {this.state.isLoading ? '' :
         <div>
             <Header hero='about-header'>
                 <Banner title='The team - Codemunit' subtitle='Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum vitae omnis fugit natus magnam nesciunt sed cupiditate aliquid quae modi odit quidem, quo repudiandae, ipsam fugiat tenetur maiores. Sunt!'>
@@ -68,7 +47,6 @@ class About extends React.Component{
             </div>
             <Footer/>
         </div>
-            }
         </>
     );
 }
