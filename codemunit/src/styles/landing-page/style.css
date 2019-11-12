@@ -1933,6 +1933,7 @@ header .bg-color .container .hero .menu {
 .testimonials .container {
   width: 75%;
   max-width: 1400px;
+  overflow-x: hidden;
   margin: 0 auto;
   text-align: center;
 }
