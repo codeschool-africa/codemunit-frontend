@@ -11,7 +11,7 @@ export default class News extends Component {
       <div className="blog-news">
         <div className="after"></div>
           <div className="container">
-            <h1 data-aos="fade-in">News and resources</h1>
+            <h1 className="header">News and resources</h1>
             <br/>
             <Link to="/blog" data-aos="fade-in" className="news-link view-all">View all stories</Link>
             <input type="radio" name="n" id="n1" defaultChecked />

@@ -9,6 +9,13 @@
                 }
             }
         }
+        .img {
+            width: 100%;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
         h1 {
             display: block;
             border: none;

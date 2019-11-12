@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/all"
 import "../styles/blog/style.css"
 import profile from "../images/profile.png"
+import image from "../images/intro.jpg"
 
 export default class Blog extends Component {
 
@@ -14,10 +15,12 @@ export default class Blog extends Component {
     render() {
         return (
             <div className="blog">
-                <Header hero="blog-bg">
-                </Header>
+                <Header hero="blog-bg"></Header>
                 <div className="content" id="content">
                     <p><Link to="/blog">Carrier Posts</Link> / first post</p>
+                    <div className="img">
+                        <img src={image} alt="intro"/>
+                    </div>
                     <h1>First post guys...  Hope you enjoy being here</h1>
                     <small>by Justine Peterson, 30 October 2019</small>
                     <hr/>

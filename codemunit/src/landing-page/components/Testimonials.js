@@ -8,7 +8,7 @@ const Testimonials = () => {
     return (
         <div className="testimonials">
             <div className="container">
-                <h1 data-aos="fade-in">Testimonial</h1>
+                <h1 className="header">Testimonial</h1>
                 <div className="show-case">
                     <article data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
                         <img src={dummy} alt=""/>

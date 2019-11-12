@@ -400,7 +400,7 @@ header {
     .bg-color {
         height: 480px;
       .container {
-        width: 90%;
+        width: 95%;
         .nav-bg {
             background: $primaryColor;
         }
@@ -409,7 +409,7 @@ header {
           height: 60px;
           padding: 10px 5% !important;
           // padding-top: 20px;
-          width: 100vw !important;
+          width: 100% !important;
           // margin-left: -6% !important;
           transition: background-color .4s;
           .container {

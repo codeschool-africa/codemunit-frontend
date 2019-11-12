@@ -24,6 +24,16 @@ const Spinner = () => (
                 width: 50
             }}
         />
+        <p className="loader" style={{
+            position: 'absolute',
+            width: '100vw',
+            margin: '20px auto'
+        }}>
+            loading
+            <span> . </span>
+            <span> . </span>
+            <span> . </span>
+        </p>
     </div>
 )
 

@@ -338,6 +338,7 @@
             }
             .sign-in-container {
                 left: 0;
+                top: 30%;
                 width: 100%;
                 height: 70%;
                 z-index: 2;
@@ -350,7 +351,7 @@
             }
             .overlay-container {
                 left: 0;
-                top: 70%;
+                top: 0%;
                 width: 100%;
                 height: 30%;
                 max-height: 30%;
@@ -390,7 +391,7 @@
             transform: translateY(180px);
         }
         .container.right-panel-active .overlay-container {
-            transform: translateY(-700px);
+            transform: translateY(0px);
         }
         // bring sign-up to the front
         .container.right-panel-active .sign-up-container{

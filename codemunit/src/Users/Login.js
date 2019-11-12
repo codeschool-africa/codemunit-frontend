@@ -40,10 +40,10 @@ export default class Login extends Component {
                         <Link to=""><FaGooglePlusG className="icon"/></Link>
                     </div>
                     <span>or use your email</span>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" onChange={this.handleChange}/>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" name="password" autoComplete="current-password" onChange={this.handleChange}/>
+                    <label htmlFor="login-email">Email</label>
+                    <input type="email" name="login-email" id="login-email" onChange={this.handleChange}/>
+                    <label htmlFor="login-password">Password</label>
+                    <input type="password" name="login-password" id="login-password" autoComplete="current-password" onChange={this.handleChange}/>
                     <button className="btn-primary" onClick={this.handleSubmit}>Log in</button>
                     <Link to="#" onClick={this.onOpenModal} className="btn-forgot-password">Forgot your password?</Link>
                     <Modal open={open} onClose={this.onCloseModal} center>

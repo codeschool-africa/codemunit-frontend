@@ -432,6 +432,7 @@
   }
   .user-registration .container .sign-in-container {
     left: 0;
+    top: 30%;
     width: 100%;
     height: 70%;
     z-index: 2;
@@ -444,7 +445,7 @@
   }
   .user-registration .container .overlay-container {
     left: 0;
-    top: 70%;
+    top: 0%;
     width: 100%;
     height: 30%;
     max-height: 30%;
@@ -497,8 +498,8 @@
             transform: translateY(180px);
   }
   .user-registration .container.right-panel-active .overlay-container {
-    -webkit-transform: translateY(-700px);
-            transform: translateY(-700px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   .user-registration .container.right-panel-active .sign-up-container {
     -webkit-transform: translateY(280px);

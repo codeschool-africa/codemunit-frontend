@@ -83,8 +83,8 @@ export default class CarrierPath extends Component {
       <div className="carrier-path" id="curriculum">
         <div className="container">
           <div className="carrier-header">
-            <h1 data-aos="fade-in">our Curriculum</h1>
-            <p data-aos="fade-out">
+            <h1 className="header">our Curriculum</h1>
+            <p>
               Our curriculum focuses on helping you learn the most in-demand
               skills in software development so you can get a great job no
               matter where you are.

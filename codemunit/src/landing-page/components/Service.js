@@ -48,7 +48,7 @@ export default class Service extends Component {
 
     componentDidMount(){
        AOS.init({
-         duration : 2000
+         duration : 1000
         })
     }
 
@@ -56,9 +56,9 @@ export default class Service extends Component {
         return (
             <div className='service' id='service'>
                <div className="container">
-                    <h1 data-aos="fade-up" data-aos-duration="0" data-aos-delay="0">Services</h1>
+                    <h1 className="header">Services</h1>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
-                       return <article key={index} data-aos="fade-up">
+                       return <article key={index} data-aos="fade-up" data-aos-duration="1000">
                                 <div className="front-face">
                                     {item.icon}
                                     <h2>{item.title}</h2>
