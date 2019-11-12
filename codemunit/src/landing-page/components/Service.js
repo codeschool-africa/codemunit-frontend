@@ -9,7 +9,7 @@ export default class Service extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            services:[
+            services: [
             {
                 // index:0,
                 icon:<FaNetworkWired className="service-icon"/>,

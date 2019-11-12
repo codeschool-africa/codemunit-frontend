@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -799,10 +800,6 @@ header .bg-color .container .hero .menu {
   text-transform: uppercase;
 }
 
-.service .container p {
-  margin: 15px auto;
-}
-
 .service .container .services-showcase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,7 +881,7 @@ header .bg-color .container .hero .menu {
   width: 100%;
   margin: 0;
   line-height: 1.675em;
-  font-size: 15px;
+  font-size: .9em;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -1894,6 +1891,7 @@ header .bg-color .container .hero .menu {
     min-width: 100% !important;
     padding: 20px 5px;
     min-height: 600px;
+    overflow-y: auto;
   }
   .blog-news .container .news-container .news .showcase article {
     -webkit-box-orient: vertical;
@@ -1903,7 +1901,7 @@ header .bg-color .container .hero .menu {
     min-width: 80vw;
     max-width: 80vw;
     padding-left: 40px;
-    padding-right: 0;
+    padding-right: 10px;
   }
   .blog-news .container .news-container .news .showcase article .post-description {
     width: 100%;
@@ -1911,7 +1909,7 @@ header .bg-color .container .hero .menu {
   }
   .blog-news .container .news-container .news .showcase article .post-image {
     width: 100%;
-    padding-right: 0;
+    padding-right: 10px;
   }
 }
 
@@ -1943,11 +1941,6 @@ header .bg-color .container .hero .menu {
   text-transform: uppercase;
 }
 
-.testimonials .container p {
-  width: 70%;
-  margin: 15px auto;
-}
-
 .testimonials .container a {
   color: #438976;
   text-decoration: none;
@@ -1961,25 +1954,22 @@ header .bg-color .container .hero .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 50px 0;
   margin-top: 70px;
 }
 
 .testimonials .container .show-case article {
   background: #fefefe;
-  width: calc(33% - 16px);
+  min-width: 350px;
   margin: 8px;
-  -webkit-box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.15);
-          box-shadow: 2px 3px 4px 3px rgba(2, 2, 2, 0.15);
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   padding-top: 70px;
   position: relative;
@@ -1999,7 +1989,6 @@ header .bg-color .container .hero .menu {
           align-items: center;
   -webkit-transition: .2s;
   transition: .2s;
-  min-height: 350px;
 }
 
 .testimonials .container .show-case article:hover {
@@ -2032,7 +2021,8 @@ header .bg-color .container .hero .menu {
 .testimonials .container .show-case article p {
   width: 100%;
   margin: 0;
-  font-style: italic;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1em;
 }
 
 .testimonials .container .show-case article .witness {
@@ -2059,7 +2049,6 @@ header .bg-color .container .hero .menu {
     width: 100%;
   }
   .testimonials .container .show-case article {
-    width: calc(50% - 12px);
     margin: 6px;
     padding: 16px 15px;
     padding-top: 70px;
@@ -2081,6 +2070,12 @@ header .bg-color .container .hero .menu {
 @media (max-width: 640px) {
   .testimonials .container {
     width: 90%;
+  }
+  .testimonials .container .show-case article p {
+    font-size: 0.8em;
+  }
+  .testimonials .container .show-case article a {
+    font-size: 0.8em;
   }
   .testimonials .container .show-case article .icon {
     font-size: 15px;
@@ -2110,6 +2105,7 @@ header .bg-color .container .hero .menu {
   .testimonials .container .show-case article {
     margin: 6px;
     padding-top: 60px;
+    min-width: 250px;
   }
   .testimonials .container .show-case article:hover {
     -webkit-transform: scale(1.05);
@@ -3110,7 +3106,7 @@ footer .footer-bottom .container {
           align-items: center;
   font-size: 30px;
   pointer-events: all;
-  z-index: 1000;
+  z-index: 100000;
   -webkit-transition: .25s;
   transition: .25s;
 }

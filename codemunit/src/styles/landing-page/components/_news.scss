@@ -351,20 +351,21 @@
                     min-width: 100% !important;
                     padding: 20px 5px;
                     min-height: 600px;
+                    overflow-y: auto;
                     .showcase {
                         article {
                             flex-direction: column;
                             min-width: 80vw;
                             max-width: 80vw;
                             padding-left: 40px;
-                            padding-right: 0;
+                            padding-right: 10px;
                             .post-description {
                                 width: 100%;
                                 margin-bottom: 15px;
                             }
                             .post-image {
                                 width: 100%;
-                                padding-right: 0;
+                                padding-right: 10px;
                             }
                         }
                     }
