@@ -101,15 +101,16 @@ p {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 524px) {
   h1.header {
     display: inline-block;
     padding: 10px 0;
     font-weight: lighter;
+    font-size: 1.3rem;
   }
   p {
-    line-height: 1.625rem;
-    font-size: 1.125em;
+    line-height: 1.4rem;
+    font-size: 1em;
   }
 }
 
@@ -1829,8 +1830,8 @@ header .bg-color .container .hero .menu {
     width: calc(100% - 310px);
   }
   .blog-news .container .news-container .news .showcase article .post-description p {
-    font-size: 15px;
-    line-height: 1.1em;
+    font-size: 0.9em;
+    line-height: 1.3em;
   }
   .blog-news .container .news-container .news .showcase article .post-image {
     width: 300px;
@@ -1846,10 +1847,6 @@ header .bg-color .container .hero .menu {
   }
   .blog-news .container .news-container .news .showcase article .post-description {
     width: calc(100% - 280px);
-  }
-  .blog-news .container .news-container .news .showcase article .post-description p {
-    font-size: 15px;
-    line-height: 1.1em;
   }
   .blog-news .container .news-container .news .showcase article .post-image {
     width: 270px;
@@ -1905,7 +1902,8 @@ header .bg-color .container .hero .menu {
             flex-direction: column;
     min-width: 80vw;
     max-width: 80vw;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding-right: 0;
   }
   .blog-news .container .news-container .news .showcase article .post-description {
     width: 100%;
@@ -1913,12 +1911,16 @@ header .bg-color .container .hero .menu {
   }
   .blog-news .container .news-container .news .showcase article .post-image {
     width: 100%;
+    padding-right: 0;
   }
 }
 
 @media (max-width: 500px) {
   .blog-news .container .news-header {
     width: 100%;
+  }
+  .blog-news .container .news-header label {
+    font-size: 1em;
   }
   .blog-news .container .news-container .news {
     min-height: 450px;

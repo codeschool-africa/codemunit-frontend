@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import Login from "./Login"
 import Signup from "./Signup"
 import '../styles/users/style.css'

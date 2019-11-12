@@ -275,8 +275,8 @@
                             .post-description {
                                 width: calc(100% - 310px);
                                 p {
-                                    font-size: 15px;
-                                    line-height: 1.1em;
+                                    font-size: 0.9em;
+                                    line-height: 1.3em;
                                 }
                             }
                             .post-image {
@@ -301,10 +301,6 @@
                         article {
                             .post-description {
                                 width: calc(100% - 280px);
-                                p {
-                                    font-size: 15px;
-                                    line-height: 1.1em;
-                                }
                             }
                             .post-image {
                                 width: 270px;
@@ -330,6 +326,7 @@
                     display: block;
                     width: 100%;
                     border-bottom:7px solid $tertiaryColor;
+                    // font-size: 1em;
                     &::before {
                         top: 35px;
                         border-left: 15px solid transparent;
@@ -359,13 +356,15 @@
                             flex-direction: column;
                             min-width: 80vw;
                             max-width: 80vw;
-                            padding-left: 50px;
+                            padding-left: 40px;
+                            padding-right: 0;
                             .post-description {
                                 width: 100%;
                                 margin-bottom: 15px;
                             }
                             .post-image {
                                 width: 100%;
+                                padding-right: 0;
                             }
                         }
                     }
@@ -380,6 +379,9 @@
         .container {
             .news-header {
                 width: 100%;
+                label {
+                    font-size: 1em;
+                }
             }
             .news-container {
                 .news {
