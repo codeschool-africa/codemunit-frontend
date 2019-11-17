@@ -9,6 +9,7 @@ header {
   height: 672px;
   color: $secondaryColor;
   position: relative;
+  width: 100%;
   .bg-color {
     height: 672px;
     background-color: rgba(26, 46, 63, 0.9);
@@ -19,7 +20,7 @@ header {
       nav {
         z-index: 999999;
         position: fixed;
-        width: 100vw;
+        width: 100%;
         left: 0;
         top: 0;
         background: $tertiaryColor;
@@ -410,7 +411,7 @@ header {
           height: 60px;
           padding: 10px 5% !important;
           // padding-top: 20px;
-          width: 100% !important;
+          width: 100%;
           // margin-left: -6% !important;
           transition: background-color .4s;
           .container {

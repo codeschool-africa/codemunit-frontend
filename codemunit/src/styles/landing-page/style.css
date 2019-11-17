@@ -193,6 +193,7 @@ header {
   height: 672px;
   color: #eee;
   position: relative;
+  width: 100%;
 }
 
 header .bg-color {
@@ -209,7 +210,7 @@ header .bg-color .container {
 header .bg-color .container nav {
   z-index: 999999;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   left: 0;
   top: 0;
   background: #295c88;
@@ -605,7 +606,7 @@ header .bg-color .container .hero .menu {
   header .bg-color .container nav {
     height: 60px;
     padding: 10px 5% !important;
-    width: 100% !important;
+    width: 100%;
     -webkit-transition: background-color .4s;
     transition: background-color .4s;
   }
@@ -1938,7 +1939,8 @@ header .bg-color .container .hero .menu {
 .testimonials .container {
   margin-right: 20px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 100vw;
+  overflow-x: hidden;
   text-align: center;
 }
 
@@ -1971,6 +1973,7 @@ header .bg-color .container .hero .menu {
   margin-bottom: 50px;
   margin-left: 12.5%;
   margin-top: 70px;
+  margin-right: 0;
 }
 
 .testimonials .container .show-case article {
