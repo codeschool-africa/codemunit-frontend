@@ -23,6 +23,10 @@ input:focus, button:focus, a:focus {
   outline: none !important;
 }
 
+::-webkit-scrollbar {
+  z-index: -1;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #eee;
 }
@@ -204,10 +208,11 @@ header .bg-color .container {
 
 header .bg-color .container nav {
   z-index: 999999;
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  width: 100vw;
   left: 0;
   top: 0;
+  background: #295c88;
 }
 
 header .bg-color .container nav .container {
@@ -1931,15 +1936,17 @@ header .bg-color .container .hero .menu {
 }
 
 .testimonials .container {
-  width: 75%;
+  margin-right: 20px;
+  width: 100%;
   max-width: 1400px;
-  overflow-x: hidden;
-  margin: 0 auto;
   text-align: center;
 }
 
 .testimonials .container h1 {
   text-transform: uppercase;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .testimonials .container a {
@@ -1961,7 +1968,8 @@ header .bg-color .container .hero .menu {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 50px 0;
+  margin-bottom: 50px;
+  margin-left: 12.5%;
   margin-top: 70px;
 }
 

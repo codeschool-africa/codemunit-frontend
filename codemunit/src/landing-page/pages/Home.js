@@ -17,17 +17,35 @@ import "../../styles/landing-page/style.css";
 //     setTimeout(resolve, delay)
 //   })
 
-class Home extends React.Component {
+// function useOnScreen (options, ) {
 
-  state = {
-    isLoading: true
+// }
+
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    }
+    this.rootRef = React.createRef();
+
+    const callback = entries => {
+      entries.forEach(
+        entry =>
+          (this.singleRefs[entry.target.id].ratio =
+            entry.intersectionRatio),
+      );
+    };
+
+    this.observer = new IntersectionObserver(callback, {
+      root: this.rootRef.current,
+      threshold: new Array(101).fill(0).map((v, i) => i * 0.01),
+    });
+
   }
 
   async componentDidMount() {
-    // await callFakeAPI(3000)
-    // this.setState(() => ({
-    //   isLoading: false
-    // }))
+    // this.observer.observe(value.ref.current);
     document.title = "Kodemunit | Code + community";
   }
   render() {
@@ -58,11 +76,13 @@ class Home extends React.Component {
             </a>
           </Banner>
         </Header>
-        <Service />
-        <CarrierPath/>
-        <News />
-        <Testimonials/>
-        <Footer />
+        <div className="home-main-content" ref={this.rootRef}>
+          <Service />
+          <CarrierPath/>
+          <News />
+          <Testimonials/>
+          <Footer />
+        </div>
       </>
     );
   }

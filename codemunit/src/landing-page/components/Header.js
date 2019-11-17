@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Nav from './Nav'
 
 export default function Header({children,hero}) {
@@ -12,22 +12,10 @@ export default function Header({children,hero}) {
   });
 
   useEffect(() => {
-    // window.addEventListener("scroll", handleScroll)
   })
 
-
-
-    // const handleScroll = () => {
-
-      // setThePosition({
-      //     theposition: window.pageYOffset
-      //   });
-
-        // console.log(theposition);
-    // }
-
     return (
-      <header className={hero} >
+      <header className={hero}>
         <div className="bg-color">
           <div className="container">
             <Nav />
