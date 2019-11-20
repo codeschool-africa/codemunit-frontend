@@ -782,6 +782,7 @@
 }
 
 .main-content .container .curriculum-showcase .div {
+  min-height: 40vh;
   position: relative;
   background: #fff;
   margin-right: 10px;

@@ -6,7 +6,7 @@ const curriculum = {
             "link": "",
             "sections": {
                 "topics": [
-                "HTML & CSS\n",
+                "HTML & CSS",
                 "JavaScript",
                 "ReactJs & AngularJs",
                 "NodeJs",

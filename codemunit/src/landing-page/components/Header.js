@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Nav from './Nav'
 
-export default function Header({children,hero}) {
 
-  const [theposition, setThePosition] = useState({
-    theposition: 0
-  });
+function useOnScreen (options) {
+  const ref = React.useRef();
+  const [ intersect, setIntersect ] = React.useState(true);
 
-  const [isNav, setTheNav] = useState({
-    isNav: false
-  });
+  React.useEffect(()=> {
+    const observer = new IntersectionObserver(([entry])=> {
+      setIntersect(entry.isIntersecting);
+    }, options)
+  },[ref, options])
+}
 
-  useEffect(() => {
-  })
-
+export default function Header({children, hero, nav}) {
     return (
       <header className={hero}>
         <div className="bg-color">

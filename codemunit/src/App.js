@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import { NProgress } from '@tanem/react-nprogress'
+import axios from "axios"
+import jwtDecode from "jwt-decode"
 
 //components
 import Bar from './components/loader/bar'
@@ -46,12 +48,15 @@ class App extends Component {
     this.setState(() => ({
       isLoading: false
     }))
+    // axios.get('http://kodemunit-api.herokuapp.com/')
+    // .then(res => console.log(res))
+
   }
 
   render() {
     return (
       <>
-        <NProgress isAnimating={this.state.isLoading}>
+        {/* <NProgress isAnimating={this.state.isLoading}>
           {({ isFinished, progress, animationDuration }) => (
             <Container
               isFinished={isFinished}
@@ -61,25 +66,27 @@ class App extends Component {
               <Spinner />
             </Container>
           )}
-        </NProgress>
+        </NProgress> */}
+        {/* {this.state.isLoading ? '' : */}
           <Switch >
-          {this.state.isLoading ? '' :<Route exact path="/" component={Home} key="home"/>}
-          {this.state.isLoading ? '' :<Route exact path="/about" component={About} key="about"/>}
-          {this.state.isLoading ? '' : <Route exact path="/account" component={User} key="user"/>}
-          {this.state.isLoading ? '' :<Route exact path="/blog" component={Blog} key="blog"/>}
-          {this.state.isLoading ? '' :<Route exact path="/blog/post" component={Post} key="post"/>}
+            <Route exact path="/" component={Home} key="home"/>
+            <Route exact path="/about" component={About} key="about"/>
+            <Route exact path="/account" component={User} key="user"/>
+            <Route exact path="/blog" component={Blog} key="blog"/>
+            <Route exact path="/blog/post" component={Post} key="post"/>
 
-              {/* curriculum routes */}
-          {this.state.isLoading ? '' :<AuthRoute exact path="/curriculum" component={Curriculum} key="curriculum"/>}
-          {this.state.isLoading ? '' :<AuthRoute exact path="/curriculum/web-development/html" component={Html} key="html"/>}
+                {/* curriculum routes */}
+            <AuthRoute exact path="/curriculum" component={Curriculum} key="curriculum"/>
+            <AuthRoute exact path="/curriculum/web-development/html" component={Html} key="html"/>
 
-          {this.state.isLoading ? '' :<Route exact path="/mentorship" component={Mentorship} key="mentorship" />}
-          {this.state.isLoading ? '' :<Route exact path="/faq" component={Faq} key="faq" />}
-          {this.state.isLoading ? '' :<Route exact path="/contact-us" component={Contact} key="contact-us" />}
-          {this.state.isLoading ? '' :<AuthRoute exact path="/en/dashboard" component={Dashboard} key="dashboard"/>}
-          {this.state.isLoading ? '' :<Route exact path="/profile:username" component={Profile} key="profile"/>}
-          {this.state.isLoading ? '' : <Route component={Error} />}
-            </Switch>
+            <Route exact path="/mentorship" component={Mentorship} key="mentorship" />
+            <Route exact path="/faq" component={Faq} key="faq" />
+            <Route exact path="/contact-us" component={Contact} key="contact-us" />
+            <AuthRoute exact path="/en/dashboard" component={Dashboard} key="dashboard"/>
+            <Route exact path="/profile:username" component={Profile} key="profile"/>
+            <Route component={Error} />
+          </Switch>
+        {/* } */}
       </>
     );
   }

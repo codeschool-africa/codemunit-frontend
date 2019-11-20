@@ -3,6 +3,12 @@ import { Route, Switch } from 'react-router-dom'
 import AuthRoute from "../util/AuthRoute"
 import Html from "./pages/html"
 
+import { NProgress } from '@tanem/react-nprogress'
+
+//components
+import Spinner from "../components/content-loader/spinner"
+import Container from "../components/content-loader/container"
+
 //components
 
 import Header from "./components/Header"
@@ -16,10 +22,23 @@ import "../styles/curriculum/style.css"
 import { Link } from 'react-router-dom'
 // import { FaSearch, FaAngleDown } from "react-icons/all"
 
+
+const callFakeAPI = delay =>
+    new Promise(resolve => {
+        setTimeout(resolve, delay)
+    })
 export default class Curriculum extends Component {
     state = {
         isOpen: false,
-        isNavOpen: false
+        isNavOpen: false,
+        isLoading: true
+    }
+
+    async componentDidMount() {
+        await callFakeAPI(3000)
+        this.setState(() => ({
+            isLoading: false
+        }))
     }
 
     handleToggle = () => {
@@ -46,11 +65,19 @@ export default class Curriculum extends Component {
                                     <span></span>
                                     <span></span>
                                 </div>
-                                {/* <Switch >
-                                    <AuthRoute exact path="/curriculum" component={Curriculum} key="curriculum" />
-                                    <AuthRoute exact path="/curriculum/web-development/html" component={Html} key="html" />
-                                </Switch> */}
-                                <Main/>
+                                <NProgress isAnimating={this.state.isLoading}>
+                                    {({ isFinished, progress, animationDuration }) => (
+                                        <Container
+                                        isFinished={isFinished}
+                                        animationDuration={animationDuration}
+                                        >
+                                        <Spinner />
+                                        </Container>
+                                    )}
+                                    </NProgress> */}
+                                {this.state.isLoading ? '' :
+                                    <Main/>
+                                }
                             </div>
                             <footer>
                                 <div className="container">
