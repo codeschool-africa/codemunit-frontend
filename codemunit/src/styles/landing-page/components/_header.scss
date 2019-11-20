@@ -19,11 +19,11 @@ header {
       margin: 0 auto;
       nav {
         z-index: 999999;
-        position: fixed;
+        position: absolute;
         width: 100%;
         left: 0;
         top: 0;
-        background: $tertiaryColor;
+        // background: $tertiaryColor;
         .container {
           display: flex;
           align-items: center;
