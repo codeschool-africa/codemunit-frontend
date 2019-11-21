@@ -284,7 +284,7 @@ header .bg-color .container nav .container .logo {
 }
 
 header .bg-color .container nav .container .logo img {
-  height: 90px;
+  height: 70px;
 }
 
 header .bg-color .container nav .container .dropdown {
@@ -310,8 +310,19 @@ header .bg-color .container nav .container ul li {
   font-size: 18px;
 }
 
+header .bg-color .container nav .container ul li a.btn-primary {
+  padding: 7px 15px;
+  background: #438976;
+}
+
+header .bg-color .container nav .container ul li a.btn-primary:hover {
+  background: #295c88;
+  color: #eee !important;
+  border-color: #295c88;
+}
+
 header .bg-color .container .hero {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   height: 672px;
   overflow: hidden;
@@ -353,6 +364,7 @@ header .bg-color .container .hero .intro {
   line-height: 1.625rem;
   margin: 35px 0;
   text-align: center;
+  width: 70%;
 }
 
 header .bg-color .container .hero .btn a {
@@ -409,6 +421,9 @@ header .bg-color .container .hero .menu {
         -ms-flex-align: center;
             align-items: center;
   }
+  header .bg-color .container nav .logo img {
+    height: 70px;
+  }
   header .bg-color .container nav .dropdown {
     display: none;
   }
@@ -426,11 +441,10 @@ header .bg-color .container .hero .menu {
             justify-content: space-between;
   }
   header .bg-color .container nav ul li {
-    margin: 0 7px;
+    margin: 0 5px !important;
     font-size: 16px;
   }
   header .bg-color .container .hero {
-    width: 70%;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -457,6 +471,7 @@ header .bg-color .container .hero .menu {
     font-size: 1.125rem;
     line-height: 1.625rem;
     margin: 35px 0;
+    width: 90%;
   }
   header .bg-color .container .hero .btn a {
     margin-right: 20px !important;
@@ -482,19 +497,18 @@ header .bg-color .container .hero .menu {
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 920px) {
   header .bg-color .container {
     width: 90%;
   }
-  header .bg-color .container nav .dropdown {
+  header .bg-color .container nav .container .logo a img {
+    height: 60px;
+  }
+  header .bg-color .container nav .container .dropdown {
     display: none;
   }
-  header .bg-color .container nav ul li {
-    margin: 0 7px;
+  header .bg-color .container nav .container ul li {
     font-size: 15px;
-  }
-  header .bg-color .container .hero {
-    width: 80%;
   }
   header .bg-color .container .hero h1 {
     font-size: 56px;
@@ -502,7 +516,6 @@ header .bg-color .container .hero .menu {
     font-weight: 100;
   }
   header .bg-color .container .hero h1 code {
-    font-size: 2.5rem;
     color: burlywood;
     font-family: 'Monoton', cursive;
   }
@@ -510,6 +523,7 @@ header .bg-color .container .hero .menu {
     font-size: 1rem;
     line-height: 1.625rem;
     margin: 35px 0;
+    width: 90%;
   }
   header .bg-color .container .hero .btn a {
     margin-right: 20px !important;
@@ -540,28 +554,27 @@ header .bg-color .container .hero .menu {
     padding: 7px 10px;
   }
   header .bg-color .container {
-    width: 90%;
+    width: 95%;
   }
-  header .bg-color .container nav .logo img {
-    height: 60px;
+  header .bg-color .container nav .container .logo a img {
+    height: 55px;
   }
-  header .bg-color .container nav .dropdown {
+  header .bg-color .container nav .container .dropdown {
     display: none;
   }
-  header .bg-color .container nav ul li {
-    margin: 0 7px;
+  header .bg-color .container nav .container ul li {
+    margin: 0 4px !important;
     font-size: 15px;
   }
-  header .bg-color .container .hero {
-    width: 80%;
+  header .bg-color .container nav .container ul li a.btn-primary {
+    margin-top: 20px !important;
+    padding: 5px 10px;
   }
   header .bg-color .container .hero h1 {
-    font-size: 56px;
     line-height: 4.2rem;
     font-weight: 100;
   }
   header .bg-color .container .hero h1 code {
-    font-size: 2rem;
     color: burlywood;
     font-family: 'Monoton', cursive;
   }
@@ -758,17 +771,17 @@ header .bg-color .container .hero .menu {
   }
   header .bg-color .container .hero {
     width: 100%;
-    height: calc(480px - 50px);
+    height: 480px;
     padding: 15px 0;
   }
   header .bg-color .container .hero h1 {
-    font-size: 25px;
-    line-height: 2rem;
+    font-size: 40px;
+    line-height: 3rem;
     font-weight: 100;
   }
   header .bg-color .container .hero h1 code {
-    font-size: 1.5rem;
-    color: burlywood;
+    font-size: 35px;
+    color: #EFEFF0;
     font-family: 'Monoton', cursive;
   }
   header .bg-color .container .hero .intro {
