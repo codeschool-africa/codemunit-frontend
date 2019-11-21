@@ -26,11 +26,11 @@ header {
         transition: background-color  .8s;
         &.nav-props {
           position: fixed;
-          background: $primaryColor;
+          background-color: rgba(26, 46, 63, .9);
         }
         &.nav-neg {
           position: absolute;
-          background: rgba(0,0,0,0);
+          background-color: rgba(0,0,0,0);
         }
         .container {
           display: flex;
@@ -412,7 +412,7 @@ header {
       .container {
         width: 95%;
         .nav-bg {
-            background: $primaryColor;
+            background: rgba(26, 46, 63, .9);
             transition: background-color .4s;
         }
         nav {
@@ -500,7 +500,7 @@ header {
             align-items: flex-start;
             // max-height: 0px;
             width: 0%;
-            background: $primaryColor;
+            background: rgba(26, 46, 63, .9);
             overflow: hidden;
             transition: width .4s;
             height: 420px !important;

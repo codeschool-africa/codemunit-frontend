@@ -23,14 +23,6 @@ input:focus, button:focus, a:focus {
   outline: none !important;
 }
 
-::-webkit-scrollbar {
-  z-index: -1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #eee;
-}
-
 .btn-primary {
   margin: 0 !important;
   padding: 7px 20px;
@@ -219,12 +211,12 @@ header .bg-color .container nav {
 
 header .bg-color .container nav.nav-props {
   position: fixed;
-  background: #1a2e3f;
+  background-color: rgba(26, 46, 63, 0.9);
 }
 
 header .bg-color .container nav.nav-neg {
   position: absolute;
-  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 header .bg-color .container nav .container {
@@ -612,7 +604,7 @@ header .bg-color .container .hero .menu {
     width: 95%;
   }
   header .bg-color .container .nav-bg {
-    background: #1a2e3f;
+    background: rgba(26, 46, 63, 0.9);
     -webkit-transition: background-color .4s;
     transition: background-color .4s;
   }
@@ -715,7 +707,7 @@ header .bg-color .container .hero .menu {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 0%;
-    background: #1a2e3f;
+    background: rgba(26, 46, 63, 0.9);
     overflow: hidden;
     -webkit-transition: width .4s;
     transition: width .4s;

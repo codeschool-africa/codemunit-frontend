@@ -28,7 +28,7 @@ function useOnScreen (options) {
 export default function Header({children, hero}) {
 
   const [ ref, intersect ] = useOnScreen({
-    rootMargin: '60px'
+    rootMargin: '-100px'
   });
     return (
       <header className={hero} ref={ref}>
