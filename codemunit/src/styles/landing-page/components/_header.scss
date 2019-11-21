@@ -23,7 +23,15 @@ header {
         width: 100%;
         left: 0;
         top: 0;
-        // background: $tertiaryColor;
+        transition: background-color  .8s;
+        &.nav-props {
+          position: fixed;
+          background: $primaryColor;
+        }
+        &.nav-neg {
+          position: absolute;
+          background: rgba(0,0,0,0);
+        }
         .container {
           display: flex;
           align-items: center;
@@ -405,15 +413,20 @@ header {
         width: 95%;
         .nav-bg {
             background: $primaryColor;
+            transition: background-color .4s;
         }
         nav {
           // position: fixed;
           height: 60px;
-          padding: 10px 5% !important;
-          // padding-top: 20px;
           width: 100%;
           // margin-left: -6% !important;
-          transition: background-color .4s;
+          // transition: background-color .4s;
+          .nav {
+            padding: 10px 5% !important;
+            // padding-top: 20px;
+            width: 100%;
+            // margin-left: -6% !important;
+          }
           .container {
             height: 100%;
             width: 100%;
@@ -580,4 +593,9 @@ header {
       }
     }
   }
+}
+
+.nav-bg > body {
+  overflow-x: hidden;
+  background: rgba(26, 46, 63, 0.5);
 }

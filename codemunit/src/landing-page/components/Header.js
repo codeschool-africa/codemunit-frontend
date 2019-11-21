@@ -4,21 +4,37 @@ import Nav from './Nav'
 
 function useOnScreen (options) {
   const ref = React.useRef();
-  const [ intersect, setIntersect ] = React.useState(true);
+  const [ intersect, setIntersect ] = React.useState();
 
   React.useEffect(()=> {
     const observer = new IntersectionObserver(([entry])=> {
       setIntersect(entry.isIntersecting);
     }, options)
-  },[ref, options])
+
+    if(ref.current){
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    }
+  },[ref, options]);
+
+  return [ref, intersect];
 }
 
-export default function Header({children, hero, nav}) {
+export default function Header({children, hero}) {
+
+  const [ ref, intersect ] = useOnScreen({
+    rootMargin: '60px'
+  });
     return (
-      <header className={hero}>
+      <header className={hero} ref={ref}>
         <div className="bg-color">
           <div className="container">
-            <Nav />
+            <Nav navProps={intersect?`nav-neg`:`nav-props`}/>
             {children}
           </div>
         </div>

@@ -213,6 +213,18 @@ header .bg-color .container nav {
   width: 100%;
   left: 0;
   top: 0;
+  -webkit-transition: background-color  .8s;
+  transition: background-color  .8s;
+}
+
+header .bg-color .container nav.nav-props {
+  position: fixed;
+  background: #1a2e3f;
+}
+
+header .bg-color .container nav.nav-neg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
 }
 
 header .bg-color .container nav .container {
@@ -601,13 +613,16 @@ header .bg-color .container .hero .menu {
   }
   header .bg-color .container .nav-bg {
     background: #1a2e3f;
+    -webkit-transition: background-color .4s;
+    transition: background-color .4s;
   }
   header .bg-color .container nav {
     height: 60px;
+    width: 100%;
+  }
+  header .bg-color .container nav .nav {
     padding: 10px 5% !important;
     width: 100%;
-    -webkit-transition: background-color .4s;
-    transition: background-color .4s;
   }
   header .bg-color .container nav .container {
     height: 100%;
@@ -787,6 +802,11 @@ header .bg-color .container .hero .menu {
     border-top-right-radius: 25px;
     cursor: pointer;
   }
+}
+
+.nav-bg > body {
+  overflow-x: hidden;
+  background: rgba(26, 46, 63, 0.5);
 }
 
 .service {
