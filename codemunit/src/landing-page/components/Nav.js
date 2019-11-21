@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../../images/logo.png"
+import logo from "../../images/logo12.png"
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
