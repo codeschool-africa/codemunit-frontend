@@ -24,6 +24,9 @@ header {
         left: 0;
         top: 0;
         transition: background-color  .8s;
+        .nav-open {
+          background-color: rgba(26, 46, 63, .9) !important;
+        }
         &.nav-props {
           position: fixed;
           background-color: rgba(26, 46, 63, .9);

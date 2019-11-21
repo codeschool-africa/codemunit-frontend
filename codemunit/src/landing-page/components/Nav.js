@@ -13,7 +13,7 @@ const Nav = ({navProps}) =>  {
     }
     return (
         <nav className={navProps}>
-            <div className={isOpen?"nav-bg nav": "nav"}>
+            <div className={isOpen?"nav-bg nav nav-open": "nav"}>
                 <div className="container">
                     <div className="logo">
                             <Link to='/'>

@@ -209,6 +209,10 @@ header .bg-color .container nav {
   transition: background-color  .8s;
 }
 
+header .bg-color .container nav .nav-open {
+  background-color: rgba(26, 46, 63, 0.9) !important;
+}
+
 header .bg-color .container nav.nav-props {
   position: fixed;
   background-color: rgba(26, 46, 63, 0.9);
