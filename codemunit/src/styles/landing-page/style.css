@@ -604,7 +604,6 @@ header .bg-color .container .hero .menu {
     width: 95%;
   }
   header .bg-color .container .nav-bg {
-    background: rgba(26, 46, 63, 0.9);
     -webkit-transition: background-color .4s;
     transition: background-color .4s;
   }
