@@ -765,6 +765,8 @@
   width: calc( 100% - 440px);
   -webkit-transition: .3s;
   transition: .3s;
+  min-height: 100%;
+  position: relative;
 }
 
 .main-content .container .curriculum-showcase.main-open {
@@ -799,7 +801,7 @@
   position: fixed;
   height: 30px;
   width: 40px;
-  background: #eef2f7;
+  background: #f9fafc;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -849,6 +851,10 @@
 .main-content .container .curriculum-showcase footer a {
   color: #1a2e3f;
   margin-right: 10px;
+}
+
+.main-content .container .curriculum-showcase footer a:hover {
+  color: #438976;
 }
 
 @media (max-width: 992px) {

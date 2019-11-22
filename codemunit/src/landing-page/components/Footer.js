@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/all'
-import logo from "../../images/logo.png"
+import logo from "../../images/logo12.png"
 
 export default function Footer() {
     return (

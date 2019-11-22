@@ -74,7 +74,7 @@ export default class Curriculum extends Component {
                                         <Spinner />
                                         </Container>
                                     )}
-                                    </NProgress> */}
+                                    </NProgress>
                                 {this.state.isLoading ? '' :
                                     <Main/>
                                 }
