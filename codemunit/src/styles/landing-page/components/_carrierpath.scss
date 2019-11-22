@@ -111,12 +111,9 @@
                                 color: $primaryColor;
                             }
                             &:hover {
-                                background: $tertiaryColor;
+                                background: #EEEEEE;
                                 border-left: 15px $fancyColor solid;
-                                color: $secondaryColor;
-                            }
-                            &:hover .icon {
-                                color: $secondaryColor;
+                                // color: $secondaryColor;
                             }
                         }
                         li.active {

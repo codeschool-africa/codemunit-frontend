@@ -1271,13 +1271,8 @@ header .bg-color .container .hero .menu {
 }
 
 .carrier-path .container article section.description .syllabuses ul li:hover {
-  background: #295c88;
+  background: #EEEEEE;
   border-left: 15px #438976 solid;
-  color: #eee;
-}
-
-.carrier-path .container article section.description .syllabuses ul li:hover .icon {
-  color: #eee;
 }
 
 .carrier-path .container article section.description .syllabuses ul li.active {
