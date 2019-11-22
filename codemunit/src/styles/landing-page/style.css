@@ -1954,6 +1954,162 @@ header .bg-color .container .hero .menu {
   }
 }
 
+.pricing {
+  padding: 50px 0;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.pricing ul {
+  list-style: none;
+}
+
+.pricing .container {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.pricing .container .header h1 {
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.pricing .container .pricing-showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 500px;
+}
+
+.pricing .container .pricing-showcase .pricing-description {
+  width: 35%;
+  text-align: left;
+  padding: 30px;
+  color: #eee;
+}
+
+.pricing .container .pricing-showcase .pricing-description::before {
+  content: "";
+  position: absolute;
+  left: calc( -10% - 30px);
+  background: #295c88;
+  height: calc( 100% - 100px);
+  width: 75%;
+  z-index: -1;
+  bottom: 0;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.pricing .container .pricing-showcase .pricing-description h1 {
+  font-weight: normal;
+}
+
+.pricing .container .pricing-showcase .pricing-description p {
+  font-size: 1.125em;
+  line-height: 1.625em;
+}
+
+.pricing .container .pricing-showcase .pricing-description .btn-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.pricing .container .pricing-showcase .pricing-description .btn-plan button {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #438976;
+  font-size: 18px;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.pricing .container .pricing-showcase .pricing-description .btn-plan button.active {
+  background: #438976;
+  color: #fff;
+}
+
+.pricing .container .pricing-showcase .pricing-description .btn-plan button:hover {
+  opacity: .9;
+}
+
+.pricing .container .pricing-showcase .pricing-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 65%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card {
+  width: 49%;
+  padding: 30px;
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform .25s, -webkit-box-shadow .25s;
+  transition: -webkit-transform .25s, -webkit-box-shadow .25s;
+  transition: transform .25s, box-shadow .25s;
+  transition: transform .25s, box-shadow .25s, -webkit-transform .25s, -webkit-box-shadow .25s;
+  background: #fff;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 400px;
+  margin: auto;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card.active {
+  -webkit-box-shadow: 1px 1px 80px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 80px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card:hover {
+  -webkit-box-shadow: 1px 1px 80px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 80px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .btn-primary {
+  background: #438976;
+  font-size: 18px;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .btn-primary:hover {
+  background: #1a2e3f;
+  border-color: #1a2e3f;
+}
+
 .testimonials {
   padding: 40px 0;
   padding-bottom: 60px;

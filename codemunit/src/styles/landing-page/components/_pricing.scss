@@ -1,0 +1,112 @@
+.pricing {
+    padding: 50px 0;
+    position: relative;
+    // margin: 50px 0;
+    padding-bottom: 100px;
+    ul {
+        list-style: none;
+    }
+    .container {
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        .header {
+            h1 {
+                text-transform: uppercase;
+                margin-bottom: 40px;
+            }
+        }
+        .pricing-showcase {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 500px;
+            .pricing-description {
+                width: 35%;
+                text-align: left;
+                padding: 30px;
+                color: $secondaryColor;
+                // max-height: 250px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: calc( -10% - 30px );
+                    background: $tertiaryColor;
+                    height: calc( 100% - 100px );
+                    width: 75%;
+                    z-index: -1;
+                    // top: 0;
+                    bottom: 0;
+                    border-bottom-right-radius: 50px;
+                    border-top-right-radius: 50px;
+                }
+                h1 {
+                    font-weight: normal;
+                }
+                p {
+                    font-size: 1.125em;
+                    line-height: 1.625em;
+                }
+                .btn-plan {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin: 10px 0;
+                    button {
+                        // height: 40px;
+                        padding: 10px 20px;
+                        border: none;
+                        background: #fff;
+                        color: $fancyColor;
+                        font-size: 18px;
+                        transition: .25s;
+                        &.active {
+                            background: $fancyColor;
+                            color: #fff;
+                        }
+                        &:hover {
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
+            .pricing-cards {
+                display: flex;
+                width: 65%;
+                justify-content: space-between;
+                .card {
+                    width: 49%;
+                    padding: 30px;
+                    box-shadow: $boxShadow;
+                    transition: transform .25s, box-shadow .25s;
+                    background: #fff;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    justify-content: space-evenly;
+                    &.active {
+                        box-shadow: 1px 1px 80px rgba(0,0,0,.1);
+                        transform: scale(1.05);
+                    }
+                    &:hover {
+                        box-shadow: 1px 1px 80px rgba(0,0,0,.1);
+                        transform: scale(1.05);
+                    }
+                    height: 400px;
+                    margin: auto;
+                    // background: #F8F9FA;
+                    .btn-primary {
+                        background: $fancyColor;
+                        font-size: 18px;
+                        &:hover {
+                            background: $primaryColor;
+                            border-color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

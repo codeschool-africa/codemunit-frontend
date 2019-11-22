@@ -53,7 +53,7 @@ export default class Testimonials extends Component {
                     <h1 className="header">Testimonial</h1>
                     <div className="show-case">
                         {this.state.testimonies.map((item, index) => {
-                            return <article key={index} data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                            return <article key={index}>
                                 <img src={dummy} alt="" />
                                 <p>
                                     <FaQuoteLeft className="icon" />
