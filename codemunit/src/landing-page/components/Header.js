@@ -35,6 +35,7 @@ export default function Header({children, hero}) {
         <div className="bg-color">
           <div className="container">
             <Nav navProps={intersect?`nav-neg`:`nav-props`}/>
+            {/* add animations to the nav in css to transform it from -60px to 0px */}
             {children}
           </div>
         </div>

@@ -29,7 +29,7 @@ export default class User extends Component {
     }
 
     componentDidMount() {
-        document.title = "Users";
+        document.title = "User registration/log in";
     }
 
     render() {
@@ -55,9 +55,6 @@ export default class User extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="copyright">
-                    Copyright &copy; 2019 <Link to="/">Codemunit.</Link>
-                </div> */}
             </div>
         )
     }

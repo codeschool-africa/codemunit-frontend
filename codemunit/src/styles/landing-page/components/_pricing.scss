@@ -33,7 +33,7 @@
                     content: "";
                     position: absolute;
                     left: calc( -10% - 30px );
-                    background: $tertiaryColor;
+                    background: linear-gradient(to right, $primaryColor, $tertiaryColor), no-repeat 0 0 / cover;
                     height: calc( 100% - 100px );
                     width: 75%;
                     z-index: -1;

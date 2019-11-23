@@ -11,7 +11,7 @@ export default class Service extends Component {
         this.state = {
             services: [
             {
-                // index:0,
+                index:0,
                 icon:<FaNetworkWired className="service-icon"/>,
                 title: "Courses",
                 subtitle: "Learn anywhere, anytime, at your own pace",
@@ -19,7 +19,7 @@ export default class Service extends Component {
                 link: "/service1"
             },
             {
-                // index:1,
+                index:1,
                 icon:<FaProjectDiagram className="service-icon"/>,
                 title: "Projects",
                 subtitle: "subservice 2",
@@ -27,7 +27,7 @@ export default class Service extends Component {
                 link: "/service1"
             },
             {
-                // index:0,
+                index:2,
                 icon:<FaServicestack className="service-icon"/>,
                 title: "Mentorship",
                 subtitle: "subservice 3",
@@ -35,7 +35,7 @@ export default class Service extends Component {
                 link: "/service1"
             },
             {
-                // index:3,
+                index:3,
                 icon:<GoProject className="service-icon"/>,
                 title: "Community hub",
                 subtitle: "subservice 4",
@@ -52,13 +52,15 @@ export default class Service extends Component {
         })
     }
 
+    // use tinypng.com for compressing all images I'll use and help kilimoshare.com image loading
+
     render() {
         return (
             <div className='service' id='service'>
                <div className="container">
                     <h1 className="header">Services</h1>
                    <div className="services-showcase">{this.state.services.map((item,index) => {
-                       return <article key={index} data-aos="fade-up" data-aos-duration="1000">
+                       return <article key={index} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={item.index*300}>
                                 <div className="front-face">
                                     {item.icon}
                                     <h2>{item.title}</h2>

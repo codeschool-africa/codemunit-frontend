@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FaCheckCircle, FaCross, FaCheck, FaCrosshairs, GiCrossMark, GoX } from "react-icons/all"
+import { FaCheck,  GoX } from "react-icons/all"
 
 export default class Pricing extends Component {
     render() {

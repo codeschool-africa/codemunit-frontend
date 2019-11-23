@@ -2001,7 +2001,8 @@ header .bg-color .container .hero .menu {
   content: "";
   position: absolute;
   left: calc( -10% - 30px);
-  background: #295c88;
+  background: -webkit-gradient(linear, left top, right top, from(#1a2e3f), to(#295c88)), no-repeat 0 0/cover;
+  background: linear-gradient(to right, #1a2e3f, #295c88), no-repeat 0 0/cover;
   height: calc( 100% - 100px);
   width: 75%;
   z-index: -1;
