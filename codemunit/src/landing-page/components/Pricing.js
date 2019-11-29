@@ -2,6 +2,19 @@ import React, { Component } from 'react'
 import { FaCheck,  GoX } from "react-icons/all"
 
 export default class Pricing extends Component {
+
+    state = {
+        isMonthly: true
+    }
+
+    setMonthly = () => {
+        this.setState({isMonthly: true});
+    }
+
+    setAnnually = () => {
+        this.setState({ isMonthly: false });
+    }
+
     render() {
         return (
             <div className="pricing" id="pricing">
@@ -17,47 +30,47 @@ export default class Pricing extends Component {
                             </p>
                             <h3>Select your plan</h3>
                             <div className="btn-plan">
-                                <button className="active">Monthly</button>
-                                <button>Annually</button>
+                                <button className={this.state.isMonthly? "active": ""} onClick={this.setMonthly}>Monthly</button>
+                                <button className={!this.state.isMonthly ? "active" : ""} onClick={this.setAnnually}>Annually</button>
                             </div>
                         </article>
                         <div className="pricing-cards">
                             <article className="freemium card">
                                 <h2>Freemium</h2>
                                 <div className="price">
-                                    <span>
+                                    <span className="span">
                                         Free
                                     </span>
                                 </div>
                                 <div className="content">
                                     <ul>
-                                        <li>Curriculum <span><FaCheck /></span></li>
-                                        <li>Projects <span><GoX/></span></li>
-                                        <li>Mentorship <span><GoX /></span></li>
-                                        <li>Access to Community Hub <span><GoX /></span></li>
+                                        <li>Curriculum <span><FaCheck className="icon"/></span></li>
+                                        <li>Projects <span><GoX className="icon icon-x"/></span></li>
+                                        <li>Mentorship <span><GoX className="icon icon-x"/></span></li>
+                                        <li>Access to Community Hub <span><GoX className="icon icon-x"/></span></li>
                                     </ul>
                                 </div>
                                 <div className="btn-subscribe">
-                                    <button className="btn-primary">Subscribe Now</button>
+                                    <button className="btn-primary">Subscribe</button>
                                 </div>
                             </article>
                             <article className="premium card">
                                 <h2>Premium</h2>
                                 <div className="price">
-                                    <span>
-                                        $20/month
+                                    <span className="span">
+                                        <span className="span-worth">{this.state.isMonthly? "$20": "$200"}</span>/{this.state.isMonthly? "Monthly": "Annually"}
                                     </span>
                                 </div>
                                 <div className="content">
                                     <ul>
-                                        <li>Curriculum <span><FaCheck/></span></li>
-                                        <li>Projects <span><FaCheck /></span></li>
-                                        <li>Mentorship <span><FaCheck /></span></li>
-                                        <li>Access to Community Hub <span><FaCheck /></span></li>
+                                        <li>Curriculum <span><FaCheck className="icon"/></span></li>
+                                        <li>Projects <span><FaCheck className="icon"/></span></li>
+                                        <li>Mentorship <span><FaCheck className="icon"/></span></li>
+                                        <li>Access to Community Hub <span><FaCheck className="icon"/></span></li>
                                     </ul>
                                 </div>
                                 <div className="btn-subscribe">
-                                    <button className="btn-primary">Subscribe Now</button>
+                                    <button className="btn-primary">Subscribe</button>
                                 </div>
                             </article>
                         </div>

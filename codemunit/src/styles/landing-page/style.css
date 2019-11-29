@@ -2006,6 +2006,7 @@ header .bg-color .container .hero .menu {
   height: calc( 100% - 100px);
   width: 75%;
   z-index: -1;
+  top: 100px;
   bottom: 0;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
@@ -2083,7 +2084,7 @@ header .bg-color .container .hero .menu {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  height: 400px;
+  min-height: 400px;
   margin: auto;
 }
 
@@ -2099,6 +2100,58 @@ header .bg-color .container .hero .menu {
           box-shadow: 1px 1px 80px rgba(0, 0, 0, 0.1);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card h2 {
+  font-size: 46px;
+  color: #1a2e3f;
+  font-weight: lighter;
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #1a2e3f;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .price {
+  padding: 10px 0 0 0;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .price span {
+  font-size: 36px;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .price span .span-worth {
+  font-size: 40px;
+  color: #160f77;
+  font-weight: bold;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .content {
+  width: 100%;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .content ul {
+  width: 70%;
+  margin: 30px 0;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .content ul li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
+  font-size: 17px;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .content ul li .icon {
+  color: #438976;
+}
+
+.pricing .container .pricing-showcase .pricing-cards .card .content ul li .icon-x {
+  color: red;
 }
 
 .pricing .container .pricing-showcase .pricing-cards .card .btn-primary {

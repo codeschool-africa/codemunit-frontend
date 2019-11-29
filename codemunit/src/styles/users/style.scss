@@ -15,7 +15,8 @@
         // transition: .2s;
         background: rgba(67, 137, 118, 1) !important;
         &:hover {
-            background: rgba(67, 137, 118, .8) !important;
+            background: $tertiaryColor !important;
+            border: 5px solid $tertiaryColor;
         }
     }
     h1 {
@@ -250,8 +251,8 @@
         transition: .2s;
         background: rgba(67, 137, 118, 1);
         &:hover {
-            color: $secondaryColor !important;
-            background: rgba(67, 137, 118, .8);
+            background: $tertiaryColor !important;
+            border: 5px solid $tertiaryColor;
         }
     }
 }

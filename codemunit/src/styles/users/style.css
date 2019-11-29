@@ -26,7 +26,8 @@
 }
 
 .user-registration button.btn-primary:hover {
-  background: rgba(67, 137, 118, 0.8) !important;
+  background: #295c88 !important;
+  border: 5px solid #295c88;
 }
 
 .user-registration h1 {
@@ -353,8 +354,8 @@
 }
 
 .modal button.btn-primary:hover {
-  color: #eee !important;
-  background: rgba(67, 137, 118, 0.8);
+  background: #295c88 !important;
+  border: 5px solid #295c88;
 }
 
 @media (max-width: 1100px) {
