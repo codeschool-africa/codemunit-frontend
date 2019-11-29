@@ -41,7 +41,7 @@ export default class Login extends Component {
     }
 
     render() {
-        const { open } = this.state;
+        const { open,isSignin, isSignup } = this.state;
         return (
             <div className="form-container sign-in-container">
                 <form>
@@ -62,7 +62,7 @@ export default class Login extends Component {
                     </Modal>
                     <div className="shift shift-signup">
                         <span>Don't have an account yet?</span>
-                        <button className="ghost" id="signUp" onClick={this.props.signUpbtn} type="button">Sign up</button>
+                        <button className="ghost" id="signUp" onClick={this.props.onClick} type="button">Sign up</button>
                     </div>
                 </form>
             </div>

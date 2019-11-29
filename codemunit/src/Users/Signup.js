@@ -145,7 +145,7 @@ class Signup extends Component {
                     <button className="btn-primary" type="submit">Register</button>
                     <div className="shift shift-signin">
                         <span>Already have an account?</span>
-                        <button className="ghost" id="signIn" onClick={this.props.signInbtn}>Log in</button>
+                        <button className="ghost" id="signIn" onClick={this.props.onClick}>Log in</button>
                     </div>
                 </form>
             </div>

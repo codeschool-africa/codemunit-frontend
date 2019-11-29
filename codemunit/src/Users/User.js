@@ -14,19 +14,19 @@ export default class User extends Component {
         }
     }
 
-    // signUpbtn = () => {
-    //     this.setState({
-    //         isSignup: !this.state.isSignup,
-    //         isSignin: !this.state.isSignin
-    //     })
-    // }
+    signUpbtn = () => {
+        this.setState({
+            isSignup: !this.state.isSignup,
+            isSignin: !this.state.isSignin
+        })
+    }
 
-    // signInbtn = () => {
-    //     this.setState({
-    //         isSignup: !this.state.isSignup,
-    //         isSignin: !this.state.isSignin
-    //     })
-    // }
+    signInbtn = () => {
+        this.setState({
+            isSignup: !this.state.isSignup,
+            isSignin: !this.state.isSignin
+        })
+    }
 
     componentDidMount() {
         document.title = "User registration/log in";
@@ -36,8 +36,8 @@ export default class User extends Component {
         return (
             <div className="user-registration">
                 <div className={(this.state.isSignup && !this.state.isSignin)?"container right-panel-active": "container"}>
-                    <Signup/>
-                    <Login/>
+                    <Signup onClick={this.signUpbtn}/>
+                    <Login onClick={this.signUpbtn}/>
                     <div className="overlay-container">
                         <div className="overlay">
                             <div className="overlay-panel overlay-left">

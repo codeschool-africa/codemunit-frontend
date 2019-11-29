@@ -64,7 +64,7 @@
             border: none;
             color: $fancyColor;
             height: 40px;
-            padding: 0 20px;
+            padding: 10px;
             border-radius: 20px;
             background: transparent;
             // text-transform: uppercase;
@@ -234,6 +234,13 @@
         padding: 10px 15px;
         margin: 8px 0;
         width: 100%;
+        &.error{
+            border: 1px solid rgb(194, 48, 48);
+        }
+    }
+    small {
+        color: rgb(194, 48, 48);
+        font-size: 12px;
     }
     button.btn-primary {
         letter-spacing: 1px;

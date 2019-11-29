@@ -85,7 +85,7 @@
   border: none;
   color: #438976;
   height: 40px;
-  padding: 0 20px;
+  padding: 10px;
   border-radius: 20px;
   background: transparent;
   -ms-flex-item-align: center;
@@ -328,6 +328,15 @@
   padding: 10px 15px;
   margin: 8px 0;
   width: 100%;
+}
+
+.modal input.error {
+  border: 1px solid #c23030;
+}
+
+.modal small {
+  color: #c23030;
+  font-size: 12px;
 }
 
 .modal button.btn-primary {
