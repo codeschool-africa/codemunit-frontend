@@ -9,6 +9,8 @@ export default class Login extends Component {
     constructor (props) {
         super(props);
         this.state = {
+            isSignin: true,
+            isSignup: false,
             open: false,
             email: null,
             formErrors: {
@@ -28,6 +30,15 @@ export default class Login extends Component {
     onCloseModal = () => {
         this.setState({ open: false });
     };
+
+    signUpbtn = () => {
+        this.setState({
+            isSignup: !this.state.isSignup,
+            isSignin: !this.state.isSignin
+        })
+        console.log(this.state.isSignup)
+        console.log(this.state.isSignin)
+    }
 
     render() {
         const { open } = this.state;
@@ -49,6 +60,10 @@ export default class Login extends Component {
                     <Modal open={open} onClose={this.onCloseModal} center>
                         <Passwordrec/>
                     </Modal>
+                    <div className="shift shift-signup">
+                        <span>Don't have an account yet?</span>
+                        <button className="ghost" id="signUp" onClick={this.props.signUpbtn} type="button">Sign up</button>
+                    </div>
                 </form>
             </div>
         )

@@ -9,21 +9,21 @@ import { signupUser } from "../redux/actions/userActions"
 const emailReg = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 const passwordReg = RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*)[0-9a-zA-Z]{6,}$/);
 
-// const formValid = (formErrors, ...rest) => {
-//     let valid = true;
+const formValid = (formErrors, ...rest) => {
+    let valid = true;
 
-//     // validate form errors being empty
-//     Object.values(formErrors).forEach(val => {
-//         val.length > 0 && (valid = false);
-//     });
+    // validate form errors being empty
+    Object.values(formErrors).forEach(val => {
+        val.length > 0 && (valid = false);
+    });
 
-//     // validate the form was filled out
-//     Object.values(rest).forEach(val => {
-//         val === null && (valid = false);
-//     });
+    // validate the form was filled out
+    Object.values(rest).forEach(val => {
+        val === null && (valid = false);
+    });
 
-//     return valid;
-// }
+    return valid;
+}
 
 class Signup extends Component {
     constructor (props) {
@@ -74,8 +74,8 @@ class Signup extends Component {
                 formErrors.username =
                 value.length < 3 ? "minimum 3 characaters required" : "";
             break;
-            case 'email': 
-                formErrors.email = (value.length === 0 && !emailReg.test(value)) ?"Enter a valid email address":"";
+            case 'email':
+                formErrors.email = (value.length === 0 || !emailReg.test(value)) ?"Enter a valid email address":"";
             break;
             case 'password':
                 formErrors.password = !passwordReg.test(value) ? "Your password isn't strong":"";
@@ -143,6 +143,10 @@ class Signup extends Component {
                     <span>by registering you agree with our <Link to="/">terms and conditions</Link></span>
                     {/* I've to add countries for user to choose where they come from */}
                     <button className="btn-primary" type="submit">Register</button>
+                    <div className="shift shift-signin">
+                        <span>Already have an account?</span>
+                        <button className="ghost" id="signIn" onClick={this.props.signInbtn}>Log in</button>
+                    </div>
                 </form>
             </div>
         )

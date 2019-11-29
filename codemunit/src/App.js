@@ -56,7 +56,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NProgress isAnimating={this.state.isLoading}>
+        {/* <NProgress isAnimating={this.state.isLoading}>
           {({ isFinished, progress, animationDuration }) => (
             <Container
               isFinished={isFinished}
@@ -67,7 +67,7 @@ class App extends Component {
             </Container>
           )}
         </NProgress>
-        {this.state.isLoading ? '' :
+        {this.state.isLoading ? '' : */}
           <Switch >
             <Route exact path="/" component={Home} key="home"/>
             <Route exact path="/about" component={About} key="about"/>
@@ -86,7 +86,7 @@ class App extends Component {
             <Route exact path="/profile:username" component={Profile} key="profile"/>
             <Route component={Error} />
           </Switch>
-        }
+        {/* } */}
       </>
     );
   }
