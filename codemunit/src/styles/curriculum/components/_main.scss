@@ -38,6 +38,16 @@
             transition: .3s;
             min-height: 100%;
             position: relative;
+            &.main-page {
+                width: 100%;
+                // margin: 0 auto;
+                .div {
+                    margin-left: 10px;
+                }
+                footer {
+                    margin-left: 10px;
+                }
+            }
             &.main-open {
                 width: 100%;
                 transition: .3s;
@@ -54,12 +64,83 @@
                 // height: 100vh;
                 background: #fff;
                 margin-right: 10px;
-                padding: 20px;
+                // padding: 20px;
                 box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
                 .main {
-                    margin:0 70px;
+                    position: relative;
+                    .main-container {
+                        padding: 100px 100px;
+                        text-align: center;
+                        section {
+                            padding: 20px;
+                            background: #F8F9FA;
+                            margin-bottom: 50px;
+                            box-shadow: 0 0 8px 0 rgba(17,22,26,.16), 0 4px 8px 0 rgba(17,22,26,.08), 0 8px 16px 0 rgba(17,22,26,.08);
+                            overflow: hidden;
+                            transition: .25s;
+                            &:hover {
+                                box-shadow: 0 0 27px 0 rgba(17,22,26,.16), 0 15px 20px 0 rgba(17,22,26,.08), 0 25px 39px 0 rgba(17,22,26,.08);
+                            }
+                            h1 {
+                                text-align: left;
+                                color: $tertiaryColor;
+                            }
+                            p {
+                                color: $primaryColor;
+                                margin: 20px 0;
+                                font-size: 15px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .bg-container {
+                        width: 100%;
+                        background: linear-gradient(270deg,rgba(2,2,2,.3), #222), url(../../images/library.jpg);
+                        background-position: center top;
+                        background-attachment: fixed;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 300px;
+                        .bg-color {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            .title-container {
+                                position: absolute;
+                                left: 50%;
+                                bottom: -50px;
+                                // z-index: 2;
+                                transform: translateX(-50%);
+                                color: #fff;
+                                
+                                h2 {
+                                    padding: 30px 30px;
+                                    background: $fancyColor;
+                                    border-top-left-radius: 15px;
+                                    border-top-right-radius: 15px;
+                                    text-align: center;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    box-shadow: 0 0 8px 0 rgba(17,22,26,.16), 0 4px 8px 0 rgba(17,22,26,.08), 0 8px 16px 0 rgba(17,22,26,.08);
+                                }
+                                h3 {
+                                    box-shadow: 0 0 8px 0 rgba(17,22,26,.16), 0 4px 8px 0 rgba(17,22,26,.08), 0 8px 16px 0 rgba(17,22,26,.08);
+                                    text-align: center;
+                                    background: #F8F9FA;
+                                    padding: 30px 30px;
+                                    width: 100%;
+                                    color: $primaryColor;
+                                    font-weight: 100;
+                                    border-bottom-left-radius: 15px;
+                                    border-bottom-right-radius: 15px;
+                                }
+                            }
+                        }
+                    }
                 }
                 .burger {
+                    z-index: 2;
+                    margin: 20px 20px;
                     position: fixed;
                     height: 30px;
                     // display: none;

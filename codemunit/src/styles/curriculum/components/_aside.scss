@@ -32,8 +32,12 @@ ul {
             &:hover {
                 border: none;
             }
-            &:active {
-                background: #fefefe;
+            a {
+                display: block;
+                width: 100%;
+                &:active {
+                    background: #fefefe;
+                }
             }
         }
         // &.anchor-li {
@@ -61,7 +65,7 @@ ul {
 }
 
 div.dropdown {
-    margin-left: 40px;
+    margin-left: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height .2s;

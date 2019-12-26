@@ -23,7 +23,7 @@ import Blog from "./blog/Blog"
 import Post from "./blog/Post"
 
 //curriculum pages
-import Curriculum from './curriculum/'
+import Curriculum from './curriculum/curriculum'
 import Html from "./curriculum/pages/html"
 import Error from './components/Error'
 
@@ -76,8 +76,8 @@ class App extends Component {
             <Route exact path="/blog/post" component={Post} key="post"/>
 
                 {/* curriculum routes */}
-            <AuthRoute exact path="/curriculum" component={Curriculum} key="curriculum"/>
-            <AuthRoute exact path="/curriculum/web-development/html" component={Html} key="html"/>
+            <AuthRoute path="/curriculum" component={Curriculum} key="curriculum"/>
+            {/* <AuthRoute exact path="/curriculum/web-development/html" component={Html} key="html"/> */}
 
             <Route exact path="/mentorship" component={Mentorship} key="mentorship" />
             <Route exact path="/faq" component={Faq} key="faq" />

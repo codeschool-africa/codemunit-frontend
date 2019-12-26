@@ -9,8 +9,6 @@ export default class Login extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            isSignin: true,
-            isSignup: false,
             open: false,
             email: null,
             formErrors: {
@@ -31,17 +29,8 @@ export default class Login extends Component {
         this.setState({ open: false });
     };
 
-    signUpbtn = () => {
-        this.setState({
-            isSignup: !this.state.isSignup,
-            isSignin: !this.state.isSignin
-        })
-        console.log(this.state.isSignup)
-        console.log(this.state.isSignin)
-    }
-
     render() {
-        const { open,isSignin, isSignup } = this.state;
+        const { open } = this.state;
         return (
             <div className="form-container sign-in-container">
                 <form>
