@@ -24,7 +24,6 @@ import Post from "./blog/Post"
 
 //curriculum pages
 import Curriculum from './curriculum/curriculum'
-import Html from "./curriculum/pages/html"
 import Error from './components/Error'
 
 import Dashboard from "./dashboard/Home"
