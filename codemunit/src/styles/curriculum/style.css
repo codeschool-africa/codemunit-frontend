@@ -604,7 +604,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+    width: 90%;
     height: 100%;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav .container .search-bar {
@@ -1442,7 +1442,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+    width: 90%;
     height: 100%;
   }
   .main-content .mobile-nav .container .search-bar {
