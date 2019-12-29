@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom"
 import logo from "../../images/black-logo.png"
 import profile from "../../images/profile.png"
 import { FaSearch, FaAngleDown } from "react-icons/all"
-// import Nav from "./Nav"
+import Nav from "./Nav"
 // import MobileNav from "./MobileNav"
 
 const Header = () => {
+
+    const [isOpen, setOpen ] = useState(false)
+
+    const handleToggle = () =>{
+        setOpen(!isOpen);
+        console.log(isOpen)
+    }
+
     return (
         <header>
             <div className="container">
@@ -42,7 +50,7 @@ const Header = () => {
                             </a>
                             <div className="dropdown-profile-menu">
                                 <div className="profile-image">
-                                    <Link to="/profile">
+                                    <Link to={`/profile`}>
                                         <div className="profile-menu">
                                             <div className="img">
                                                 <img src={profile} alt="dp" />
@@ -53,7 +61,7 @@ const Header = () => {
                                                         </div>
                                                 <div className="email">
                                                     example@email.com
-                                                        </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </Link>
@@ -94,9 +102,10 @@ const Header = () => {
                         </Link>
                     </div>
                     <div className="dropdown">
-                        {/* <input className="burger-check" id="burger-check" type="checkbox" defaultChecked={this.state.isOpen ? "checked" : ""} /> */}
-                        {/* <label htmlFor="burger-check" className="burger" onClick={this.handleToggle}></label> */}
+                        <input className="burger-check" id="burger-check" type="checkbox" />
+                        <label htmlFor="burger-check" className="burger" onClick={handleToggle}></label>
                     </div>
+                    <Nav navProps={isOpen?`nav-open mobile-nav`:`mobile-nav`}/>
                 </nav>
             </div>
         </header>

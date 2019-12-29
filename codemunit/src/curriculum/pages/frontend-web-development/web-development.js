@@ -63,7 +63,6 @@ const handleNav = () => {
 let { path, url } = useRouteMatch();
     return (
         <div className="curriculum-container">
-            <Header/>
             <div className="main-content">
                 <div className="container">
                     <aside className={isNavOpen ? "side-nav-open" : ""}>
@@ -185,7 +184,7 @@ let { path, url } = useRouteMatch();
                                                     <div className="left-container">
                                                         <div className="info">
                                                             <span></span>
-                                                            This curriculum will guide you in your learning process and become expert in html
+                                                            This curriculum will guide you in your learning process and become expert in web development
                                                         </div>
                                                         <p>
                                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet neque dolore expedita repellendus, iure consequuntur, veniam animi deleniti qui dolor obcaecati nihil? Quia consequatur doloremque dignissimos architecto? Eaque, nesciunt consequuntur!

@@ -122,7 +122,8 @@
                                 height: 40px;
                                 width: 40px;
                                 overflow: hidden;
-                                border-radius: 50%;
+                                border-radius: 8px;
+                                border: 1px solid $tertiaryColor;
                                 margin: 5px;
                                 background: #F8F9FA;
                                 img {

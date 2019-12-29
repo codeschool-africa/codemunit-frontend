@@ -19,6 +19,7 @@
                             }
                         }
                     }
+                    @import "./navigation";
                     .dropdown {
                         .burger {
                             display: inline-block;
@@ -29,15 +30,15 @@
                             cursor: pointer;
                             border-bottom: 4px solid #000;
                             width: 28px;
-                            // transition: border-bottom 1s ease-in-out;
-                            // -webkit-transition: border-bottom 1s ease-in-out;
+                            transition: border-bottom 1s ease-in-out;
+                            -webkit-transition: border-bottom 1s ease-in-out;
                             &::before {
                                 content: "";
                                 display: block;
                                 border-bottom: 4px solid #000;
                                 width: 100%;
                                 margin-bottom: 6px;
-                                // transition: transform 0.5s ease-in-out;
+                                transition: transform 0.5s ease-in-out;
                             }
                             &::after {
                                 content: "";
@@ -45,7 +46,7 @@
                                 border-bottom: 4px solid #000;
                                 width: 100%;
                                 margin-bottom: 6px;
-                                // transition: transform 0.5s ease-in-out;
+                                transition: transform 0.5s ease-in-out;
                             }
                         }
                         .burger::-moz-focus-inner {
