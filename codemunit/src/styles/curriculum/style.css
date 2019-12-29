@@ -587,8 +587,8 @@
     display: block;
     width: 100%;
     background: #F8F9FA;
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
     overflow: hidden;
     height: 0;
     -webkit-transition: height 0.4s ease-in;
@@ -1426,8 +1426,8 @@
     display: block;
     width: 100%;
     background: #F8F9FA;
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
     overflow: hidden;
     height: 0;
     -webkit-transition: height 0.4s ease-in;
