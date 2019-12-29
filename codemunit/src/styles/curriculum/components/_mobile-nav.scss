@@ -1,11 +1,12 @@
 @media (max-width: 800px) {
     .curriculum-container {
         header {
-            // position: fixed !important;
-            position: relative;
+            position: fixed !important;
+            // position: relative;
             height: 60px;
+            z-index: 2;
             .container {
-                width: 80%;
+                width: 90%;
                 .desktop-navigation {
                     display: none;
                 }

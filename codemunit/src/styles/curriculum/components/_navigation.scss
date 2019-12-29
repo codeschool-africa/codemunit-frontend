@@ -1,5 +1,6 @@
 .mobile-nav {
-    top: 65px;
+    z-index: -1;
+    top: 60px;
     left: 0;
     width: 100%;
     position: absolute;
@@ -7,7 +8,7 @@
     width: 100%;
     // background: #fff;
     background: #F8F9FA;
-    box-shadow: 0 2px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 0 rgba(0,0,0,.2), 0px 2px 0px rgba(0,0,0,.2) inset;
     overflow: hidden;
     height: 0;
     transition: height 0.4s ease-in;

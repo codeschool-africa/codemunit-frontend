@@ -557,11 +557,12 @@
 
 @media (max-width: 800px) {
   .curriculum-container header {
-    position: relative;
+    position: fixed !important;
     height: 60px;
+    z-index: 2;
   }
   .curriculum-container header .container {
-    width: 80%;
+    width: 90%;
   }
   .curriculum-container header .container .desktop-navigation {
     display: none;
@@ -578,15 +579,16 @@
     height: 35px;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav {
-    top: 65px;
+    z-index: -1;
+    top: 60px;
     left: 0;
     width: 100%;
     position: absolute;
     display: block;
     width: 100%;
     background: #F8F9FA;
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
     overflow: hidden;
     height: 0;
     -webkit-transition: height 0.4s ease-in;
@@ -1416,15 +1418,16 @@
 
 @media (max-width: 600px) {
   .main-content .mobile-nav {
-    top: 65px;
+    z-index: -1;
+    top: 60px;
     left: 0;
     width: 100%;
     position: absolute;
     display: block;
     width: 100%;
     background: #F8F9FA;
-    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
     overflow: hidden;
     height: 0;
     -webkit-transition: height 0.4s ease-in;
