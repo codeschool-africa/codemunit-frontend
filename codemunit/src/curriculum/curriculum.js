@@ -21,6 +21,39 @@ const callFakeAPI = delay =>
 
 const Curriculum = () => {
 
+const [ courses, setCourses ] = useState([
+    {
+        title: "Introduction to Programming",
+        content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "introduction-to-programming"
+    },
+    {
+        title: "Frontend Web Development",
+        content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "frontend-web-development"
+    },
+    {
+        title: "Backend Web Development",
+        content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "backend-web-development"
+    },
+    {
+        title: "UI/UX Design",
+        content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "ui-ux-design"
+    },
+    {
+        title: "Mobile APp Development",
+        content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "mobile-app-development"
+    }
+])
+
 const [isLoading, setLoading] = useState(true)
 
 useEffect(() => {
@@ -55,7 +88,7 @@ let { path, url } = useRouteMatch();
                                             </div>
                                         </div>
                                         <div className="main-container">
-                                            <h1>Start your journey with us by selecting the course you want to learn</h1>
+                                            <h1>Start your journey with us by selecting the program you want to learn</h1>
                                             <div className="showcase">
                                                 <section className="section-one">
                                                     <h1>Get started</h1>
@@ -63,36 +96,14 @@ let { path, url } = useRouteMatch();
                                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
                                                     <Link to={`${url}/get-started`} target="_blank" className="btn-primary">Learn More</Link>
                                                 </section>
-                                                <section className="section section-one">
-                                                    <h1>Introduction to Programming</h1>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <Link to={`${url}/introduction-to-programming`} target="_blank" className="btn-primary">View Curriculum</Link>
+                                                {courses.map(course => (
+                                                    <section className="section section-one">
+                                                        <h1>{course.title}</h1>
+                                                        <p>{course.content}</p>
+                                                        <p>{course.description}</p>
+                                                    <Link to={`${url}/${course.link}`} target="_blank" className="btn-primary">View Curriculum</Link>
                                                 </section>
-                                                <section className="section section-one">
-                                                    <h1>Frontend Web Development</h1>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <Link to={`${url}/frontend-web-development`} target="_blank" className="btn-primary">View Curriculum</Link>
-                                                </section>
-                                                <section className="section section-one">
-                                                    <h1>Backend Web Development</h1>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <Link to={`${url}/backend-web-development`} target="_blank" className="btn-primary">View Curriculum</Link>
-                                                </section>
-                                                <section className="section section-one">
-                                                    <h1>UI/UX Design</h1>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <Link to={`${url}/ui-ux-design`} target="_blank" className="btn-primary">View Curriculum</Link>
-                                                </section>
-                                                <section className="section section-one">
-                                                    <h1>Mobile App Development</h1>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias?</p>
-                                                    <Link to={`${url}/mobile-app-development`} target="_blank" className="btn-primary">View Curriculum</Link>
-                                                </section>
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
