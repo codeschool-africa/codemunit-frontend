@@ -47,7 +47,7 @@ const [ courses, setCourses ] = useState([
         link: "ui-ux-design"
     },
     {
-        title: "Mobile APp Development",
+        title: "Mobile APP Development",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
         link: "mobile-app-development"
@@ -80,7 +80,7 @@ let { path, url } = useRouteMatch();
                                                     <img src={CurriculumImage} alt=""/>
                                                 </div>
                                                 <div className="title-container">
-                                                    <h2><span>Learn today, build your tomorrow</span><br/><span className="left">it is fun and it is worth</span></h2>
+                                                    <h2><span>Learn today, build your tomorrow</span><span className="left">it is fun and it is worth</span></h2>
                                                     <p>
                                                         Programming is a critical skill in today’s economy, and there is a shortage of qualified developers. Whether you’re new to coding, adding more skills, or advancing your career, 10 hours a week will prepare you for your ideal developer job.
                                                     </p>

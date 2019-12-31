@@ -59,7 +59,7 @@ class Home extends React.Component {
           <Service />
           <CarrierPath/>
           <News />
-          <Pricing/>
+          {/* <Pricing/> */}
           <Testimonials/>
           <Footer />
         </div>

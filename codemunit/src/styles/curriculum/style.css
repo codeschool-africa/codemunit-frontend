@@ -1470,7 +1470,246 @@
   }
   .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span {
     background: #438976;
-    padding: 5px 20px;
+    padding: 5px 10px;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span.left {
+    position: absolute;
+    right: 0;
+    margin-left: 0px;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container p {
+    margin-top: 1.2rem;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    width: 100%;
+    font-weight: 100;
+    font-size: 0.9rem;
+    color: #e4e6e7;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container p a {
+    color: #438976;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container p a:hover {
+    color: #eee;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .img-container {
+    width: 0%;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .img-container img {
+    width: 100%;
+    z-index: 2;
+    -webkit-box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16), 0 4px 8px 0 rgba(17, 22, 26, 0.18), 8px 8px 16px 0 rgba(17, 22, 26, 0.18);
+            box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16), 0 4px 8px 0 rgba(17, 22, 26, 0.18), 8px 8px 16px 0 rgba(17, 22, 26, 0.18);
+  }
+  .main-content .container .curriculum-showcase .div .burger {
+    height: 30px;
+    display: none;
+    width: 40px;
+    background: #eef2f7;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 5px;
+    -webkit-transition: .15s;
+    transition: .15s;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 2px 0 rgba(1, 2, 2, 0.04), 0 4px 2px 0 rgba(1, 2, 2, 0.04), 0 4px 4px 0 rgba(1, 2, 2, 0.04);
+            box-shadow: 0 0 2px 0 rgba(1, 2, 2, 0.04), 0 4px 2px 0 rgba(1, 2, 2, 0.04), 0 4px 4px 0 rgba(1, 2, 2, 0.04);
+  }
+  .main-content .container .curriculum-showcase .div .burger span {
+    height: 2px;
+    width: 80%;
+    margin: 0 auto;
+    background: #1a2e3f;
+    display: inline-block;
+  }
+  .main-content .container .curriculum-showcase .div .burger:hover {
+    -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.2), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+            box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.2), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+  }
+  .main-content .container .curriculum-showcase footer {
+    width: calc( 100% - 40px);
+    background: inherit;
+    color: #1a2e3f;
+    margin: 50px auto;
+  }
+  .main-content .container .curriculum-showcase footer hr {
+    opacity: .2;
+    margin-bottom: 10px;
+  }
+  .main-content .container .curriculum-showcase footer a {
+    color: #1a2e3f;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .main-content {
+    margin-top: 60px;
+  }
+  .main-content.curriculum-page-only {
+    padding-top: 5px;
+  }
+  .main-content .container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .main-content .container aside {
+    display: none;
+  }
+  .main-content .container .curriculum-showcase {
+    float: right;
+    width: 100%;
+  }
+  .main-content .container .curriculum-showcase.main-open {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .main-content .container .curriculum-showcase .div {
+    height: 100%;
+    background: #fff;
+    margin: 0 10px;
+    -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+            box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+  }
+  .main-content .container .curriculum-showcase .div .main {
+    width: 100%;
+    position: relative;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container {
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container h1 {
+    font-weight: 100;
+    color: #1a2e3f;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section {
+    width: 100%;
+    margin: 20px 10px;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section h1 {
+    text-align: left;
+    color: #295c88;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section p {
+    color: #1a2e3f;
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section a {
+    text-align: left;
+    display: inline;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section .btn-primary {
+    background: #438976;
+    -webkit-box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.06), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+            box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.06), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase section .btn-primary:hover {
+    background: #295c88;
+    border: 5px solid #295c88;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase .section {
+    background: #F8FcFc;
+    -webkit-box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.06), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+            box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.06), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+    overflow: hidden;
+    -webkit-transition: .25s;
+    transition: .25s;
+  }
+  .main-content .container .curriculum-showcase .div .main .main-container .showcase .section:hover {
+    -webkit-box-shadow: 0 0 27px 0 rgba(17, 22, 26, 0.06), 0 15px 20px 0 rgba(17, 22, 26, 0.08), 0 25px 39px 0 rgba(17, 22, 26, 0.08);
+            box-shadow: 0 0 27px 0 rgba(17, 22, 26, 0.06), 0 15px 20px 0 rgba(17, 22, 26, 0.08), 0 25px 39px 0 rgba(17, 22, 26, 0.08);
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container {
+    width: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(2, 2, 2, 0.5)), to(#000)), url(../../images/library.jpg);
+    background: linear-gradient(90deg, rgba(2, 2, 2, 0.5), #000), url(../../images/library.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-right: 0px;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 {
+    display: inline-block;
+    font-weight: 100;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span {
+    background: #438976;
+    padding: 5px 5px;
   }
   .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span.left {
     position: absolute;
