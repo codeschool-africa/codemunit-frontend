@@ -47,8 +47,8 @@ class App extends Component {
     this.setState(() => ({
       isLoading: false
     }))
-    axios.get('http://kodemunit-api.herokuapp.com/')
-    .then(res => console.log(res))
+    // axios.get('http://kodemunit-api.herokuapp.com/')
+    // .then(res => console.log(res))
 
   }
 

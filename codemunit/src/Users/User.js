@@ -43,14 +43,10 @@ export default class User extends Component {
                             <div className="overlay-panel overlay-left">
                                 <h1>Hello Learners!</h1>
                                 <p>Enter your personal details to start your journey with us</p>
-                                {/* <small>Already have an account?</small>
-                                <button className="ghost" id="signIn" onClick={this.signInbtn}>Log in</button> */}
                             </div>
                             <div className="overlay-panel overlay-right">
                                 <h1>Welcome back!</h1>
                                 <p>To keep connected with us please login with your personal info</p>
-                                {/* <small>Don't have an account yet?</small>
-                                <button className="ghost" id="signUp" onClick={this.signUpbtn}>Sign up</button> */}
                             </div>
                         </div>
                     </div>

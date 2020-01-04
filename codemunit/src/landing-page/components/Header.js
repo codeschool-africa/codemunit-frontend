@@ -3,10 +3,10 @@ import Nav from './Nav'
 
 
 function useOnScreen (options) {
-  const ref = React.useRef();
-  const [ intersect, setIntersect ] = React.useState();
+  const ref = useRef();
+  const [ intersect, setIntersect ] = useState();
 
-  React.useEffect(()=> {
+  useEffect(()=> {
     const observer = new IntersectionObserver(([entry])=> {
       setIntersect(entry.isIntersecting);
     }, options)
