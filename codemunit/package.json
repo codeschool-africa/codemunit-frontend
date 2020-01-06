@@ -9,11 +9,13 @@
     "axios": "^0.19.0",
     "eslint": "^6.8.0",
     "jwt-decode": "^2.2.0",
+    "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0",
+    "react-moment": "^0.9.7",
     "react-pose": "^4.0.8",
     "react-redux": "^7.1.1",
     "react-responsive-modal": "^4.0.1",
@@ -46,5 +48,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://kodemunit.herokuapp.com"
 }

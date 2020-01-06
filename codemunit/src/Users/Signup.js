@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 // import { FaFacebookF, FaGooglePlusG } from "react-icons/all";
 import { connect } from "react-redux";
 import { setAlert } from "../redux/actions/alert";
-import Alert from "../components/alerts"
-// import { signupUser } from "../redux/actions/userActions";
-import axios from "axios";
+import Alert from "../components/alerts";
+import { signupUser } from "../redux/actions/auth";
 
 // const emailReg = RegExp(
 //   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -29,7 +28,7 @@ import axios from "axios";
 //   return valid;
 // };
 
-const Signup = ({ setAlert, onClick }) => {
+const Signup = ({ setAlert, signupUser, onClick, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     firstname: "",
     secondname: "",
@@ -49,36 +48,20 @@ const Signup = ({ setAlert, onClick }) => {
     if (password !== confirmPassword) {
       setAlert("password do not match", "error");
     } else {
-      setAlert("successfull logged in", "success");
-      const newUser = {
-        firstname,
-        secondname,
-        email,
-        password
-      };
-      try {
-        const config = {
-          headers: {
-            "Content-Type": "application/json"
-        }
-      };
-      const body = JSON.stringify(newUser);
-      const res = await axios.post(
-        "http://kodemunit.herokuapp.com/api/users",
-        body,
-          config
-        );
-        console.log(res.data);
-      } catch (err) {
-        console.log(err.response.data);
-      }
+      signupUser({ firstname, secondname, email, password})
     }
   };
+
+  //redirect if logged in
+  if(isAuthenticated) {
+    return <Redirect to="/curriculum" />
+  }
 
   return (
     <div className='form-container sign-up-container'>
       <form onSubmit={e => handleSubmit(e)}>
         <h1>Create an account</h1>
+        <Alert />
         {/* <div className='social-container'>
                 <Link to=''>
                 <FaFacebookF className='icon' />
@@ -162,7 +145,6 @@ const Signup = ({ setAlert, onClick }) => {
           //   noValidate
           //   onChange={handleChange}
         />
-        <Alert/>
         <span>
           by registering you agree with our{" "}
           <Link to='/'>terms and conditions</Link>
@@ -183,12 +165,13 @@ const Signup = ({ setAlert, onClick }) => {
 };
 
 Signup.propTypes = {
-  setAlert: PropTypes.func.isRequired
+  setAlert: PropTypes.func.isRequired,
+  signupUser: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
-// const mapStateToProps = state => ({
-//   user: state.user,
-//   UI: state.UI
-// });
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
 
-export default connect(null, { setAlert })(Signup);
+export default connect(mapStateToProps, { setAlert, signupUser })(Signup);

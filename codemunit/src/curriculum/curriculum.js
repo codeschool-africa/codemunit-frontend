@@ -54,14 +54,14 @@ const [ courses, setCourses ] = useState([
     }
 ])
 
-const [isLoading, setLoading] = useState(true)
+// const [isLoading, setLoading] = useState(true)
 
-useEffect(() => {
-    ;(async () => {
-      await callFakeAPI(3000)
-      setLoading(false)
-    })()
-  }, [])
+// useEffect(() => {
+//     ;(async () => {
+//       await callFakeAPI(3000)
+//       setLoading(false)
+//     })()
+//   }, [])
 
 let { path, url } = useRouteMatch();
     return (
@@ -97,7 +97,7 @@ let { path, url } = useRouteMatch();
                                                     <Link to={`${url}/get-started`} target="_blank" className="btn-primary">Learn More</Link>
                                                 </section>
                                                 {courses.map(course => (
-                                                    <section className="section section-one">
+                                                    <section className="section section-one" key={course.title}>
                                                         <h1>{course.title}</h1>
                                                         <p>{course.content}</p>
                                                         <p>{course.description}</p>

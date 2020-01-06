@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Nav = ({navProps}) =>  {
+const Nav = ({navProps, isAuthenticated }) =>  {
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -31,12 +31,12 @@ const Nav = ({navProps}) =>  {
                         <li><Link to='/blog' onClick={handleToggle} className="nav-link">Blog</Link></li>
                         <li><Link to='/mentorship' onClick={handleToggle} className="nav-link">FAQ</Link></li>
                         <li>
-                        {/* { authenticated === true ? (
-                                <Link to="/en/dashboard" className="btn-primary" onClick={this.handleToggle}>Dashboard</Link>
+                        { isAuthenticated === true ? (
+                                <Link to="/en/dashboard" className="btn-primary" onClick={handleToggle}>Dashboard</Link>
                             ) :
-                            ( */}
+                            (
                                 <Link to="/account" className="btn-primary" onClick={handleToggle}>Join Now</Link>
-                            {/* ) } */}
+                            ) }
                         </li>
                     </ul>
                 </div>
@@ -46,11 +46,13 @@ const Nav = ({navProps}) =>  {
 }
 
 const mapStateToProps = (state) => ({
-    authenticated: state.user.authenticated
+    isAuthenticated: state.auth.isAuthenticated
 });
 
 Nav.propTypes = {
-    user: PropTypes.object
+    isAuthenticated: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(Nav);
+export default connect(
+    mapStateToProps
+)(Nav);

@@ -69,27 +69,27 @@ const Header = () => {
                                 <nav>
                                     <ul>
                                         <li>
-                                            <Link>Notifications <span>{1}</span></Link>
+                                            <Link to="/">Notifications <span>{1}</span></Link>
                                         </li>
                                         <li>
-                                            <Link>History</Link>
+                                            <Link to="/">History</Link>
                                         </li>
                                         <li>
-                                            <Link>Account</Link>
+                                            <Link to="/">Account</Link>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li>
-                                            <Link>Help</Link>
+                                            <Link to="/">Help</Link>
                                         </li>
                                         <li>
-                                            <Link>Log out</Link>
+                                            <Link to="/">Log out</Link>
                                         </li>
                                     </ul>
 
                                 </nav>
                                 <div className="mentor-div">
-                                    <Link>Become a mentor</Link>
+                                    <Link to="/">Become a mentor</Link>
                                 </div>
                             </div>
                         </div>

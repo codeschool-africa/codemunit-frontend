@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import Passwordrec from "./Passwordrec";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 // import { FaFacebookF, FaGooglePlusG } from "react-icons/all"
 import Modal from "react-responsive-modal";
-import axios from "axios"
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { setAlert } from "../redux/actions/alert";
+import Alert from "../components/alerts";
+import { login } from "../redux/actions/auth";
 
-const Login = ({ onClick }) => {
+const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
   });
+
+  const [OpenModal, setOpenModal] = useState(false);
 
   const { email, password } = formData;
 
@@ -18,30 +24,13 @@ const Login = ({ onClick }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log(formData);
-    const newUser = {
-        email,
-        password
-      };
-      try {
-        const config = {
-          headers: {
-            "Content-Type": "application/json"
-          }
-        };
-        const body = JSON.stringify(newUser);
-        const res = await axios.post(
-          "http://kodemunit.herokuapp.com/api/auth",
-          body,
-          config
-        );
-        console.log(res.data);
-      } catch (err) {
-        console.log(err.response.data);
-      }
+    login({ email, password})
   };
 
-  const [OpenModal, setOpenModal] = useState(false);
+  //redirect if logged in
+  if(isAuthenticated) {
+    return <Redirect to="/curriculum" />
+  }
 
   const onOpenModal = () => {
     setOpenModal(true);
@@ -56,6 +45,7 @@ const Login = ({ onClick }) => {
     <div className='form-container sign-in-container'>
       <form onSubmit={e => handleSubmit(e)}>
         <h1>Sign in to your account</h1>
+        <Alert />
         {/* <div className="social-container">
                     <Link to=""><FaFacebookF className="icon"/></Link>
                     <Link to=""><FaGooglePlusG className="icon"/></Link>
@@ -98,4 +88,14 @@ const Login = ({ onClick }) => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
+};
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { setAlert, login })(Login);
