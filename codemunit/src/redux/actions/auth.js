@@ -104,7 +104,7 @@ try {
 };
 
 //logout user && clear profile
-export const logout = dispatch => {
+export const logout = () => dispatch => {
   dispatch({
     type: LOGOUT
   })
