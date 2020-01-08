@@ -103,19 +103,9 @@ try {
 }
 };
 
-//logout user
+//logout user //clear profile
 export const logout = dispatch => {
   dispatch({
     type: LOGOUT
   })
 }
-
-// export const logoutUser = (userData, history) => (dispatch) => {
-//     dispatch({ type: SET_UNAUTHENTICATED });
-//     history.push('/');
-// }
-
-// export const loginUser = (newUserData, history) => (dispatch) => {
-//     dispatch({ type: SET_AUTHENTICATED });
-//     // history.push('/en/dashboard');
-// }
