@@ -15,7 +15,7 @@ const Dashboard = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <Main/>
                 <div className="aside-right">
                     this is another container to be aligned on the right hand side for additional features
-                    <button onClick={logout} className="btn-primary">logout</button>
+                    <a href="#!" onClick={logout} className="btn-primary">logout</a>
                 </div>
             </div>
         )
