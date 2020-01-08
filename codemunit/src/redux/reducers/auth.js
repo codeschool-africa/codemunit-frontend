@@ -19,6 +19,7 @@ export default function(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
     case USER_LOADED:
+      localStorage.getItem("token", payload.token);
       return {
         ...state,
         isAuthenticated: true,
@@ -33,7 +34,6 @@ export default function(state = initialState, action) {
         ...payload,
         isAuthenticated: true,
         loading: false
-        // user: payload
       };
     case REGISTER_FAIL:
     case AUTH_ERROR:

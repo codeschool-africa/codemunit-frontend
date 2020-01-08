@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NProgress } from "@tanem/react-nprogress";
 
 //react-redux
-import { Provider } from 'react-redux'
-import store from "./redux/store"
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 //loading components
 import Bar from "./components/loader/bar";
@@ -40,28 +40,28 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-// const callFakeAPI = delay =>
-//   new Promise(resolve => {
-//     setTimeout(resolve, delay);
-//   });
+const callFakeAPI = delay =>
+  new Promise(resolve => {
+    setTimeout(resolve, delay);
+  });
 
 const App = () => {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     await callFakeAPI(3000);
-  //      setLoading(false);
-  //   })();
-  // }, []);
+  useEffect(() => {
+    (async () => {
+      await callFakeAPI(3000);
+       setLoading(false);
+    })();
+  }, []);
 
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
   return (
     <Provider store={store}>
-        <Router>
-      {/* <NProgress isAnimating={loading}>
+      <Router>
+        <NProgress isAnimating={loading}>
           {({ isFinished, progress, animationDuration }) => (
             <Container
               isFinished={isFinished}
@@ -74,37 +74,46 @@ const App = () => {
         </NProgress>
         {loading ? (
           ""
-        ) : ( */}
-      <Switch>
-        <Route exact path='/' component={Home} key='home' />
-        <Route exact path='/about' component={About} key='about' />
-        <Route exact path='/account' component={User} key='user' />
-        <Route exact path='/blog' component={Blog} key='blog' />
-        <Route exact path='/blog/post' component={Post} key='post' />
-        <AuthRoute path='/curriculum' component={Curriculum} key='curriculum' />
-        <Route
-          exact
-          path='/mentorship'
-          component={Mentorship}
-          key='mentorship'
-        />
-        <Route exact path='/faq' component={Faq} key='faq' />
-        <Route exact path='/contact-us' component={Contact} key='contact-us' />
-        <AuthRoute
-          exact
-          path='/en/dashboard'
-          component={Dashboard}
-          key='dashboard'
-        />
-        <Route
-          exact
-          path='/profile:username'
-          component={Profile}
-          key='profile'
-        />
-        <Route component={Error} />
-      </Switch>
-      {/* )} */}
+        ) : (
+          <Switch>
+            <Route exact path='/' component={Home} key='home' />
+            <Route exact path='/about' component={About} key='about' />
+            <Route exact path='/account' component={User} key='user' />
+            <Route exact path='/blog' component={Blog} key='blog' />
+            <Route exact path='/blog/post' component={Post} key='post' />
+            <AuthRoute
+              path='/curriculum'
+              component={Curriculum}
+              key='curriculum'
+            />
+            <Route
+              exact
+              path='/mentorship'
+              component={Mentorship}
+              key='mentorship'
+            />
+            <Route exact path='/faq' component={Faq} key='faq' />
+            <Route
+              exact
+              path='/contact-us'
+              component={Contact}
+              key='contact-us'
+            />
+            <AuthRoute
+              exact
+              path='/en/dashboard'
+              component={Dashboard}
+              key='dashboard'
+            />
+            <Route
+              exact
+              path='/profile:username'
+              component={Profile}
+              key='profile'
+            />
+            <Route component={Error} />
+          </Switch>
+        )}
       </Router>
     </Provider>
   );
