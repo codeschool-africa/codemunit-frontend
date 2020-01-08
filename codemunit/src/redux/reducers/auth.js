@@ -21,7 +21,7 @@ export default function(state = initialState, action) {
     case USER_LOADED:
       return {
         ...state,
-        isAuthenticated: false,
+        isAuthenticated: true,
         loading: false,
         user: payload
       };
@@ -31,7 +31,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         ...payload,
-        isAuthenticated: false,
+        isAuthenticated: true,
         loading: false
       };
     case REGISTER_FAIL:
