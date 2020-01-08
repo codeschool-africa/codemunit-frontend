@@ -18,7 +18,6 @@ export const loadUser = () => async dispatch => {
   }
   try {
     const res = await axios.get("/api/auth");
-    window.localStorage.setItem('x-auth-token', res.data.token)
     dispatch({
       type: USER_LOADED,
       payload: res.data
