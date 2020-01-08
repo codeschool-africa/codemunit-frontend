@@ -75,7 +75,7 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading }, logout }) => {
                   >
                     Dashboard
                   </Link>
-                  <button onClick={logout}></button>
+                  <button onClick={logout}>logout</button>
                 </>
               ) : (
                 <Link
