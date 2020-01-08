@@ -30,7 +30,7 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
   //redirect if logged in
   if (isAuthenticated) {
     // setAlert("congratulations you have successful logged in", "success");
-    return <Redirect to='/en/dashboard' />;
+    // return <Redirect to='/en/dashboard' />;
   }
 
   const onOpenModal = () => {
