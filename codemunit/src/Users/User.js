@@ -41,7 +41,7 @@ export default class User extends Component {
                     <div className="overlay-container">
                         <div className="overlay">
                             <div className="overlay-panel overlay-left">
-                                <h1>Hello Learners!</h1>
+                                <h1>Hello Learner!</h1>
                                 <p>Enter your personal details to start your journey with us</p>
                             </div>
                             <div className="overlay-panel overlay-right">

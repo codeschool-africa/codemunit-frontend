@@ -24,12 +24,13 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    login({ email, password})
+    login({ email, password });
   };
 
   //redirect if logged in
-  if(isAuthenticated) {
-    return <Redirect to="/curriculum" />
+  if (isAuthenticated) {
+    // setAlert("congratulations you have successful logged in", "success");
+    return <Redirect to='/curriculum' />;
   }
 
   const onOpenModal = () => {

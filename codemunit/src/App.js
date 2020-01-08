@@ -40,10 +40,10 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-const callFakeAPI = delay =>
-  new Promise(resolve => {
-    setTimeout(resolve, delay);
-  });
+// const callFakeAPI = delay =>
+//   new Promise(resolve => {
+//     setTimeout(resolve, delay);
+//   });
 
 const App = () => {
   // const [loading, setLoading] = useState(true);

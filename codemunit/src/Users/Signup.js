@@ -28,7 +28,7 @@ import { signupUser } from "../redux/actions/auth";
 //   return valid;
 // };
 
-const Signup = ({ setAlert, signupUser, onClick, isAuthenticated }) => {
+const Signup = ({ setAlert, signupUser, onClick, isAuthenticated, loading }) => {
   const [formData, setFormData] = useState({
     firstname: "",
     secondname: "",
@@ -52,9 +52,9 @@ const Signup = ({ setAlert, signupUser, onClick, isAuthenticated }) => {
     }
   };
 
-  //redirect if logged in
+  // //redirect if logged in
   if(isAuthenticated) {
-    return <Redirect to="/curriculum" />
+    // setAlert("Confirmation message was sent to your email", "success");
   }
 
   return (
@@ -150,7 +150,7 @@ const Signup = ({ setAlert, signupUser, onClick, isAuthenticated }) => {
           <Link to='/'>terms and conditions</Link>
         </span>
         {/* I've to add countries for user to choose where they come from */}
-        <button className='btn-primary' type='submit'>
+        <button className='btn-primary' type='submit' disabled={loading}>
           Register
         </button>
         <div className='shift shift-signin'>
@@ -167,11 +167,13 @@ const Signup = ({ setAlert, signupUser, onClick, isAuthenticated }) => {
 Signup.propTypes = {
   setAlert: PropTypes.func.isRequired,
   signupUser: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  isAuthenticated: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  loading: state.auth.loading
 });
 
 export default connect(mapStateToProps, { setAlert, signupUser })(Signup);
