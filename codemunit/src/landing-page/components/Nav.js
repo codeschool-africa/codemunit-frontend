@@ -69,13 +69,12 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading }, logout }) => {
               {isAuthenticated === true ? (
                 <>
                   <Link
-                    to='/en/dashboard'
+                    to='/dashboard'
                     className='btn-primary'
                     onClick={handleToggle}
                   >
                     Dashboard
                   </Link>
-                  {/* <button onClick={logout}>logout</button> */}
                 </>
               ) : (
                 <Link

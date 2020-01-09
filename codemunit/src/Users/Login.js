@@ -9,7 +9,7 @@ import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
 import { login } from "../redux/actions/auth";
 
-const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
+const Login = ({ onClick, login, setAlert, auth: { isAuthenticated, loading }}) => {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -27,10 +27,8 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
     login({ email, password });
   };
 
-  //redirect if logged in
   if (isAuthenticated) {
-    // setAlert("congratulations you have successful logged in", "success");
-    return <Redirect to='/en/dashboard' />;
+    return <Redirect to='/dashboard' />;
   }
 
   const onOpenModal = () => {
@@ -47,11 +45,6 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
       <form onSubmit={e => handleSubmit(e)}>
         <h1>Sign in to your account</h1>
         <Alert />
-        {/* <div className="social-container">
-                    <Link to=""><FaFacebookF className="icon"/></Link>
-                    <Link to=""><FaGooglePlusG className="icon"/></Link>
-                </div> */}
-        {/* <span>or use your email</span> */}
         <label htmlFor='login-email'>Email</label>
         <input
           type='email'
@@ -59,7 +52,6 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
           id='login-email'
           value={email}
           onChange={e => handleChange(e)}
-          // onChange={this.handleChange}
         />
         <label htmlFor='login-password'>Password</label>
         <input
@@ -69,9 +61,9 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
           value={password}
           onChange={e => handleChange(e)}
           autoComplete='current-password'
-          // onChange={this.handleChange}
         />
-        <button className='btn-primary'>Log in</button>
+        <button className='btn-primary' disabled={loading} style={{
+          pointer: "cursor"}}>{loading?`Please wait`: `Log In`}</button>
         <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
           Forgot your password?
         </Link>
@@ -92,11 +84,13 @@ const Login = ({ onClick, login, setAlert, isAuthenticated }) => {
 Login.propTypes = {
   setAlert: PropTypes.func.isRequired,
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool
+  // isAuthenticated: PropTypes.bool,
+  auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  // isAuthenticated: state.auth.isAuthenticated,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, { setAlert, login })(Login);

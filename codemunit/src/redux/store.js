@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 // import dataReducer from "./reducers/dataReducer"
 import auth from "./reducers/auth"
 import alert from "./reducers/alert"
+import profile from "./reducers/profile"
 
 
 const initialState = {};
@@ -13,6 +14,7 @@ const middleware = [thunk];
 
 const reducers = combineReducers({
     auth,
+    profile,
     alert
 });
 

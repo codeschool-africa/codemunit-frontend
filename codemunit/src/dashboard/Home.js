@@ -8,7 +8,7 @@ import "../styles/dashboard/style.css"
 import Sidebar from "./components/Sidebar"
 import Main from "./components/Main"
 
-const Dashboard = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Dashboard = ({ auth: { isAuthenticated, loading, user }, logout }) => {
         return (
             <div className="dashboard dashboard-home">
                 <Sidebar/>
@@ -17,6 +17,10 @@ const Dashboard = ({ auth: { isAuthenticated, loading }, logout }) => {
                     this is another container to be aligned on the right hand side for additional features
                     <a href="#!" onClick={logout} className="btn-primary">logout</a>
                 </div>
+                <h1>Welcome {user.firstname}</h1>
+                <img src={user.avatar} />
+                <span>{user._id}</span>
+                <span>{user.avatar}</span>
             </div>
         )
 }

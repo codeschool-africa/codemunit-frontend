@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom"
 import logo from "../../images/black-logo.png"
-import profile from "../../images/profile.png"
+
+//redux
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../redux/actions/auth";
+
+
 import { FaSearch, FaAngleDown } from "react-icons/all"
 import Nav from "./Nav"
 // import MobileNav from "./MobileNav"
 
-const Header = () => {
+const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
 
     const [isOpen, setOpen ] = useState(false)
 
@@ -36,14 +42,14 @@ const Header = () => {
                         <li><Link to='/mentorship'>Mentorship</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/faq'>FAQ</Link></li>
-                        <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
+                        <li><Link to='/dashboard' className='btn'>Dashboard</Link></li>
                     </ul>
                     <div className="user-nav">
                         <div className="profile-img dropdown">
                             <a href="#profile">
                                 <div className="profile-menu">
                                     <div className="img">
-                                        <img src={profile} alt="dp" />
+                                        <img src={user.avatar} alt="dp" />
                                     </div>
                                     <FaAngleDown className="icon" />
                                 </div>
@@ -53,14 +59,14 @@ const Header = () => {
                                     <Link to={`/profile`}>
                                         <div className="profile-menu">
                                             <div className="img">
-                                                <img src={profile} alt="dp" />
+                                                <img src={user.avatar} alt="dp" />
                                             </div>
                                             <div className="account-details">
                                                 <div className="username">
-                                                    Username
+                                                    {user.firstname}
                                                         </div>
                                                 <div className="email">
-                                                    example@email.com
+                                                    {user.email}
                                                 </div>
                                             </div>
                                         </div>
@@ -83,7 +89,7 @@ const Header = () => {
                                             <Link to="/">Help</Link>
                                         </li>
                                         <li>
-                                            <Link to="/">Log out</Link>
+                                            <a href="#!" onClick={logout}>Log out</a>
                                         </li>
                                     </ul>
 
@@ -112,4 +118,13 @@ const Header = () => {
     );
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  auth: state.auth,
+});
+
+Header.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+export default connect(mapStateToProps, { logout })(Header);

@@ -101,7 +101,7 @@ const App = () => {
             />
             <AuthRoute
               exact
-              path='/en/dashboard'
+              path='/dashboard'
               component={Dashboard}
               key='dashboard'
             />

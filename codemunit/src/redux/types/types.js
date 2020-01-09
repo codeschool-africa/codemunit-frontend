@@ -12,3 +12,7 @@ export const REMOVE_ALERT = "REMOVE_ALERT";
 //checking the token
 export const USER_LOADED = "USER_LOADED";
 export const AUTH_ERROR = "AUTH_ERROR";
+
+//user profile data
+export const PROFILE_LOADED = "PROFILE_LOADED"
+export const PROFILE_ERROR = "PROFILE_ERROR"
