@@ -101,7 +101,7 @@ const Signup = ({ setAlert, signupUser, onClick, auth: { isAuthenticated, loadin
           <Link to='/'>terms and conditions</Link>
         </span>
         <button className='btn-primary' type='submit' disabled={loading}>
-          {!loading? `please wait...`: `Register`}
+          Register
         </button>
         <div className='shift shift-signin'>
           <span>Already have an account?</span>

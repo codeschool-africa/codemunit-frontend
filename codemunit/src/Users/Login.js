@@ -62,7 +62,7 @@ const Login = ({ onClick, login, setAlert, auth: { isAuthenticated, loading }}) 
           autoComplete='current-password'
         />
         <button className='btn-primary' disabled={loading} style={{
-          pointer: "cursor"}}>{loading?`Please wait`: `Log In`}</button>
+          pointer: "cursor"}}>Log In</button>
         <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
           Forgot your password?
         </Link>
