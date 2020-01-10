@@ -179,7 +179,7 @@ p {
 
 header {
   background: url(../../images/bg-image.jpg);
-  background-position: center top;
+  background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
   height: 672px;

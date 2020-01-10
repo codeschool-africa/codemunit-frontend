@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Passwordrec from "./Passwordrec";
 import { Link, Redirect } from "react-router-dom";
-// import { FaFacebookF, FaGooglePlusG } from "react-icons/all"
 import Modal from "react-responsive-modal";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -84,12 +83,10 @@ const Login = ({ onClick, login, setAlert, auth: { isAuthenticated, loading }}) 
 Login.propTypes = {
   setAlert: PropTypes.func.isRequired,
   login: PropTypes.func.isRequired,
-  // isAuthenticated: PropTypes.bool,
   auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  // isAuthenticated: state.auth.isAuthenticated,
   auth: state.auth
 });
 
