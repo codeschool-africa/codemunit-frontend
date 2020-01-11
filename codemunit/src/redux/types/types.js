@@ -21,3 +21,7 @@ export const PROFILE_ERROR = "PROFILE_ERROR";
 export const PROFILE_UPDATED = "PROFILE_UPDATED";
 export const PROFILEUPDATE_FAIL = "PROFILEUPDATE_FAIL";
 export const CLEAR_PROFILE = "CLEAR_PROFILE";
+
+//get location
+export const LOCATION = "LOCATION";
+export const LOCATION_ERROR = "LOCATION_ERROR";

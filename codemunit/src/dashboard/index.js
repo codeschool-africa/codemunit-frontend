@@ -60,7 +60,7 @@ const Dashboard = ({
           <div className='logo'>
             <img
               src={user.avatar}
-              alt='kodemunit logo'
+              alt={`${user.avatar} avatar`}
               style={{
                 height: "40px"
               }}

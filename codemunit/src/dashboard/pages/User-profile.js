@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 });
 
 Profile.propTypes = {
-  logout: PropTypes.func.isRequired,
+//   logout: PropTypes.func.isRequired,
   getProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired
