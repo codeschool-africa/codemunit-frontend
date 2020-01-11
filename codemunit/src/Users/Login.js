@@ -8,7 +8,12 @@ import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
 import { login } from "../redux/actions/auth";
 
-const Login = ({ onClick, login, setAlert, auth: { isAuthenticated, loading }}) => {
+const Login = ({
+  onClick,
+  login,
+  setAlert,
+  auth: { isAuthenticated, loading }
+}) => {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -61,8 +66,15 @@ const Login = ({ onClick, login, setAlert, auth: { isAuthenticated, loading }}) 
           onChange={e => handleChange(e)}
           autoComplete='current-password'
         />
-        <button className='btn-primary' disabled={loading} style={{
-          pointer: "cursor"}}>Log In</button>
+        <button
+          className='btn-primary'
+          disabled={loading}
+          style={{
+            pointer: "cursor"
+          }}
+        >
+          Log In
+        </button>
         <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
           Forgot your password?
         </Link>

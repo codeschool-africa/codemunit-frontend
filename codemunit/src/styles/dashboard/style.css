@@ -1,10 +1,90 @@
 .dashboard {
+  position: relative;
+  color: white;
+}
+
+.dashboard a {
+  text-decoration: none;
+  color: #438976;
+}
+
+.dashboard aside {
+  float: left;
+  width: 250px;
+  background: #1a2e3f;
   min-height: 100vh;
-  background: #295c88;
+  max-height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  z-index: 2000;
+  top: 0;
+}
+
+.dashboard aside ul {
+  list-style: none;
+}
+
+.dashboard aside a {
   color: #eee;
 }
 
-.dashboard form {
+.dashboard .dashboard-header {
+  background: #fff;
+  margin-left: 250px;
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: calc( 100% - 250px);
+  overflow-y: hidden;
+  -webkit-box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.dashboard .dashboard-header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.dashboard .dashboard-header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.dashboard .dashboard-header nav ul li {
+  margin: 0 7px;
+}
+
+.dashboard .main {
+  z-index: 1;
+  color: black;
+  position: relative;
+  -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+          box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
+  min-height: calc( 100vh - 70px);
+  margin: 70px 0px 0 260px;
+  padding: 50px;
+}
+
+.dashboard .main .update-profile {
+  text-align: center;
+}
+
+.dashboard .main .update-profile form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,23 +92,30 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.dashboard form li {
-  color: white;
-}
-
-.dashboard form input {
+.dashboard .main .update-profile form input {
   margin: 10px 0;
-  padding: 7px 10px;
-  width: 500px;
+  height: 35px;
+  width: 300px;
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
-.dashboard form .btn-primary {
-  margin: 7px 0;
-  width: 500px;
-  text-align: center;
+.dashboard .main .update-profile form button.btn-primary {
   display: inline-block;
+  margin: 10px 0;
+  width: 150px;
+  background: #438976;
+  border: 5px solid #438976;
+}
+
+.dashboard .main .update-profile form button.btn-primary:hover {
+  background: #295c88;
+  border: 5px solid #295c88;
 }
 /*# sourceMappingURL=style.css.map */

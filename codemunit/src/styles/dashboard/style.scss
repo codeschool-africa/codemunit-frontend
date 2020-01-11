@@ -1,26 +1,91 @@
 @import "../variables";
 
 .dashboard {
-    min-height: 100vh;
-    background: $tertiaryColor;
-    color: $secondaryColor;
-    form {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        li {
-            color: white;
+    position: relative;
+    color: white;
+    a {
+        text-decoration: none;
+        color: $fancyColor;
+    }
+    aside {
+        float: left;
+        width: 250px;
+        background: $primaryColor;
+        min-height: 100vh;
+        max-height: 100vh;
+        position: fixed;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        z-index: 2000;
+        top: 0;
+        ul {
+            list-style: none;
         }
-        input {
-            margin: 10px 0;
-            padding: 7px 10px;
-            width: 500px;
+        a {
+            color: $secondaryColor;
         }
-        .btn-primary {
-            margin: 7px 0;
-            width: 500px;
+    }
+    .dashboard-header {
+        background: #fff;
+        margin-left: 250px;
+        position: fixed;
+        top: 0;
+        height: 60px;
+        width: calc( 100% - 250px );
+        overflow-y: hidden;
+        box-shadow: 5px 5px 28px rgba(0,0,0,.05);
+        z-index: 2;
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 95%;
+            margin: 0 auto;
+            ul {
+                display: flex;
+                list-style: none;
+                li {
+                    margin: 0 7px;
+                }
+            }
+        }
+    }
+    .main {
+        z-index: 1;
+        color: black;
+        position: relative;
+        box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
+        min-height: calc( 100vh - 70px );
+        margin: 70px 0px 0 260px;
+        padding: 50px;
+        .update-profile {
             text-align: center;
-            display: inline-block;
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                input {
+                    margin: 10px 0;
+                    height: 35px;
+                    width: 300px;
+                    padding: 0 10px;
+                    border: 1px solid rgba(0,0,0,.2);
+                    background: rgba(0,0,0,.2);
+                }
+                button.btn-primary {
+                    display: inline-block;
+                    margin: 10px 0;
+                    width: 150px;
+                    background: rgba(67, 137, 118, 1);
+                    border: 5px solid $fancyColor;
+                    &:hover {
+                        background: $tertiaryColor;
+                        border: 5px solid $tertiaryColor;
+                    }
+                }
+            }
         }
     }
 }

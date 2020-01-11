@@ -26,7 +26,7 @@ import Error from "./components/Error";
 //curriculum pages
 import Curriculum from "./curriculum/curriculum";
 
-import Dashboard from "./dashboard/Home";
+import Dashboard from "./dashboard/";
 import Profile from "./dashboard/pages/User-profile";
 
 //protected routes
@@ -51,7 +51,7 @@ const App = () => {
   useEffect(() => {
     (async () => {
       await callFakeAPI(3000);
-       setLoading(false);
+      setLoading(false);
     })();
   }, []);
 
@@ -100,7 +100,6 @@ const App = () => {
               key='contact-us'
             />
             <AuthRoute
-              exact
               path='/dashboard'
               component={Dashboard}
               key='dashboard'

@@ -2,14 +2,13 @@ import React, { useEffect, useState, Fragment } from "react";
 // import { Link } from "react-router-dom"
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { logout } from "../redux/actions/auth";
-import { getProfile, updateProfile } from "../redux/actions/profile";
-import Alert from "../components/alerts";
-import "../styles/dashboard/style.css";
+import { logout } from "../../redux/actions/auth";
+import { getProfile, updateProfile } from "../../redux/actions/profile";
+import Alert from "../../components/alerts";
 
 //pages
 
-const Dashboard = ({
+const UpdateProfile = ({
   auth: { isAuthenticated, user },
   logout,
   getProfile,
@@ -54,16 +53,7 @@ const Dashboard = ({
     });
   };
   return (
-    <div className='dashboard dashboard-home'>
-      <h1>Welcome {`${user.firstname}${" "}${user.secondname}`}</h1>
-      <img src={user.avatar} alt={`${user.firstname} profile's avatar`} />
-      {loading && profile === null ? (
-        "fill the form below to set your profile"
-      ) : (
-        <Fragment>
-          <h1>hello {profile.githubusername}, welcome to your dashboard</h1>
-        </Fragment>
-      )}
+    <div className="update-profile">
       <form onSubmit={e => handleSubmit(e)}>
         <Alert />
         <label htmlFor='location'>
@@ -122,9 +112,6 @@ const Dashboard = ({
         </label>
         <button className='btn-primary'>Submit</button>
       </form>
-      <a href='#!' onClick={logout} className='btn-primary'>
-        logout
-      </a>
     </div>
   );
 };
@@ -134,7 +121,7 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-Dashboard.propTypes = {
+UpdateProfile.propTypes = {
   logout: PropTypes.func.isRequired,
   getProfile: PropTypes.func.isRequired,
   updateProfile: PropTypes.func.isRequired,
@@ -143,5 +130,5 @@ Dashboard.propTypes = {
 };
 
 export default connect(mapStateToProps, { logout, getProfile, updateProfile })(
-  Dashboard
+  UpdateProfile
 );

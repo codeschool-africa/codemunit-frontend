@@ -56,7 +56,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                             </a>
                             <div className="dropdown-profile-menu">
                                 <div className="profile-image">
-                                    <Link to={`/profile`}>
+                                    <Link to={`/dashboard/profile`}>
                                         <div className="profile-menu">
                                             <div className="img">
                                                 <img src={user.avatar} alt="dp" />
