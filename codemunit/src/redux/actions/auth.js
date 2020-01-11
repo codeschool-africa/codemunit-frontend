@@ -55,7 +55,7 @@ export const signupUser = ({
       type: REGISTER_SUCCESS,
       payload: res.data
     });
-    // dispatch(loadUser());
+    dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
@@ -90,7 +90,7 @@ try {
     type: LOGIN_SUCCESS,
     payload: res.data
   });
-  // dispatch(loadUser());
+  dispatch(loadUser());
 } catch (err) {
   const errors = err.response.data.errors;
   if (errors) {
