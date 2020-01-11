@@ -4,8 +4,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  USER_LOADED,
-  AUTH_ERROR,
+  USERDATA_LOADED,
+  AUTH_ERROR
 } from "../types/types";
 
 const initialState = {
@@ -18,7 +18,7 @@ const initialState = {
 export default function(state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
-    case USER_LOADED:
+    case USERDATA_LOADED:
       return {
         ...state,
         isAuthenticated: true,

@@ -33,7 +33,7 @@ import Profile from "./dashboard/pages/User-profile";
 import AuthRoute from "./util/AuthRoute";
 
 //load user data
-import { loadUser } from "./redux/actions/auth";
+import { loadUserData } from "./redux/actions/auth";
 import setAuthToken from "./util/setAuthToken";
 
 if (localStorage.token) {
@@ -56,7 +56,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    store.dispatch(loadUser());
+    store.dispatch(loadUserData());
   }, []);
   return (
     <Provider store={store}>
