@@ -1,11 +1,13 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import {
   IoMdHome,
   MdGolfCourse,
   FaUserCircle,
   FiSettings,
-  FiLogOut
+  FiLogOut,
+  FaProjectDiagram,
+  MdNotifications
 } from "react-icons/all";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -17,15 +19,23 @@ import "../styles/dashboard/style.css";
 import logo from "../images/logo.png";
 import altLogo from "../images/logo192x192.png";
 
-//components
-// import Header from "./components/header";
-// import Aside from "./components/aside";
-
 //pages
+import Home from "./pages/Home"
 import Profile from "./pages/User-profile";
 import UpdateProfile from "./pages/updateProfile";
+import AllCourses from "./pages/allCourses";
+import MyCourses from "./pages/myCourses";
+import Notifications from "./pages/notifications";
 
-const Error = () => <h1>Error 404: page not found</h1>;
+const Error = () => {
+  return (
+    <header>
+      <div className="container">
+        <h2>Oooopss!!! page not found, check your url and try again</h2>
+      </div>
+    </header>
+  )
+};
 
 const Dashboard = ({
   auth: { isAuthenticated, user },
@@ -35,6 +45,68 @@ const Dashboard = ({
   profile: { profile, loading }
 }) => {
   const [navOpen, setOpen] = useState(true);
+
+  const [isHome, setHome] = useState(true);
+  const [isProfile, setProfile] = useState(false);
+  const [isSetting, setSetting] = useState(false);
+  const [isNotification, setNotification] = useState(false);
+  const [isCourses, setCourses] = useState(false);
+  const [isMyCourses, setMyCourses] = useState(false);
+
+  const homeToggle = () => {
+    setHome(true);
+    setProfile(false);
+    setSetting(false);
+    setNotification(false);
+    setCourses(false);
+    setMyCourses(false);
+  };
+
+  const profileToggle = () => {
+    setHome(false);
+    setProfile(true);
+    setSetting(false);
+    setNotification(false);
+    setCourses(false);
+    setMyCourses(false);
+  };
+
+  const settingToggle = () => {
+    setHome(false);
+    setProfile(false);
+    setSetting(true);
+    setNotification(false);
+    setCourses(false);
+    setMyCourses(false);
+  };
+
+  const notificationToggle = () => {
+    setHome(false);
+    setProfile(false);
+    setSetting(false);
+    setNotification(true);
+    setCourses(false);
+    setMyCourses(false);
+  };
+
+  const coursesToggle = () => {
+    setHome(false);
+    setProfile(false);
+    setSetting(false);
+    setNotification(false);
+    setCourses(true);
+    setMyCourses(false);
+  };
+
+  const myCoursesToggle = () => {
+    setHome(false);
+    setProfile(false);
+    setSetting(false);
+    setNotification(false);
+    setCourses(false);
+    setMyCourses(true);
+  };
+
   const handleNav = () => {
     setOpen(!navOpen);
     console.log(navOpen);
@@ -56,22 +128,25 @@ const Dashboard = ({
             </div>
             <ul>
               <li>
-                <Link to={`${url}/my-courses`}>My Courses</Link>
+                <Link to={`${url}/my-courses`} onClick={myCoursesToggle}>
+                  My Courses
+                </Link>
               </li>
               <li>
-                <Link to={`${url}/profile`}>Profile</Link>
+                <Link to={`${url}/profile`} onClick={profileToggle}>
+                  Profile
+                </Link>
               </li>
               <li>
-                <Link to={`${url}/edit-profile`}>Edit profile</Link>
+                <Link to={`${url}/edit-profile`} onClick={settingToggle}>
+                  Edit profile
+                </Link>
               </li>
               <li className='img'>
                 {user === null ? (
                   ""
                 ) : (
-                  <img
-                    src={user.avatar}
-                    alt={`${user.avatar} avatar`}
-                  />
+                  <img src={user.avatar} alt={`${user.avatar} avatar`} />
                 )}
               </li>
             </ul>
@@ -79,54 +154,87 @@ const Dashboard = ({
         </div>
         <aside className={navOpen ? "" : "side-nav"}>
           <div className='logo'>
-            <img
-              src={navOpen ? logo : altLogo}
-              alt={`kodemunit logo`}
-            />
+            <img src={navOpen ? logo : altLogo} alt={`kodemunit logo`} />
           </div>
-          <ul className='navigation'>
-            <div className='profile-name'>
-              {user.firstname} {user.secondname}
-            </div>
-            <li>
-              <Link to='/dashboard' className='active'>
-                <IoMdHome className='icon' /> Home
-              </Link>
-            </li>
-            <li>
-              <Link to='/dashboard/my-courses'>
-                <MdGolfCourse className='icon' />
-                My Courses
-              </Link>
-            </li>
-            <li>
-              <Link to='/dashboard/profile'>
-                {" "}
-                <FaUserCircle className='icon' />
-                Profile
-              </Link>
-            </li>
-            <li>
-              <Link to='/dashboard/edit-profile'>
-                {" "}
-                <FiSettings className='icon' />
-                Settings
-              </Link>
-            </li>
-          </ul>
-          <ul className='extra-links'>
-            <li>
-              <a href='#!' onClick={logout}>
-                <FiLogOut className='icon' />
-                Logout
-              </a>
-            </li>
-          </ul>
+          <div className='profile-name'>
+            {user.firstname} {user.secondname}
+          </div>
+          <nav>
+            <ul className='navigation'>
+              <li>
+                <Link
+                  to={`${url}`}
+                  className={isHome ? "active" : ""}
+                  onClick={homeToggle}
+                >
+                  <IoMdHome className='icon' /> <span>Home</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/notifications`}
+                  className={isNotification ? "active" : ""}
+                  onClick={notificationToggle}
+                >
+                  <MdNotifications className='icon' />
+                  <span>Notifications</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/my-courses`}
+                  className={isMyCourses ? "active" : ""}
+                  onClick={myCoursesToggle}
+                >
+                  <MdGolfCourse className='icon' />
+                  <span>My Courses</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/all-courses`}
+                  className={isCourses ? "active" : ""}
+                  onClick={coursesToggle}
+                >
+                  <FaProjectDiagram className='icon' />
+                  <span>All Courses</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/profile`}
+                  className={isProfile ? "active" : ""}
+                  onClick={profileToggle}
+                >
+                  <FaUserCircle className='icon' />
+                  <span>Profile</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={`${url}/edit-profile`}
+                  className={isSetting ? "active" : ""}
+                  onClick={settingToggle}
+                >
+                  <FiSettings className='icon' />
+                  <span>Settings</span>
+                </Link>
+              </li>
+            </ul>
+            <ul className='extra-links'>
+              <li>
+                <a href='#!' onClick={logout}>
+                  <FiLogOut className='icon' />
+                  <span>Logout</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </aside>
         <div className={navOpen ? "main" : "main full-width"}>
           <Switch>
             <Route exact path={path}>
-              <h1>Hello {user.firstname}, welcome to your dashboard</h1>
+              <Home/>
             </Route>
             <Route exact path={`${path}/profile`}>
               <Profile />
@@ -135,10 +243,13 @@ const Dashboard = ({
               <UpdateProfile />
             </Route>
             <Route exact path={`${path}/my-courses`}>
-              <div>
-                <h1>hello from my courses</h1>
-                <Link to='/curriculum'>Curriculum</Link>
-              </div>
+              <MyCourses />
+            </Route>
+            <Route exact path={`${path}/notifications`}>
+              <Notifications />
+            </Route>
+            <Route exact path={`${path}/all-courses`}>
+              <AllCourses />
             </Route>
             <Route component={Error} />>
           </Switch>

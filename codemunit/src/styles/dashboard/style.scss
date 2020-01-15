@@ -8,8 +8,8 @@
 
 .dashboard {
     position: relative;
-    color: white;
-
+    height: 100vh;
+    overflow: hidden;
     a {
         text-decoration: none;
         color: $fancyColor;
@@ -19,15 +19,13 @@
         float: left;
         width: 250px;
         background: $primaryColor;
-        min-height: 100vh;
-        max-height: 100vh;
+        height: 100%;
         position: fixed;
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 2000;
         top: 0;
         transition: .35s;
-
         &.side-nav {
             width: 70px;
             .logo {
@@ -39,6 +37,12 @@
                     height: 30px;
                 }
             }
+            nav {
+                justify-content: space-between;
+                min-height: calc( 100vh - 60px);
+                flex-direction: column;
+                display: flex;
+            }
             .profile-name {
                 visibility: hidden;
                 display: none;
@@ -46,18 +50,22 @@
             ul {
                 li {
                     a {
-                        visibility: hidden;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         &:hover {
                             background: $faintPrimary;
                         }
+                        span {
+                            display: none;
+                        }
                         .icon {
-                            visibility: visible;
+                            margin-right: 0;
                         }
                     }
                 }
             }
         }
-
         .logo {
             height: 60px;
             border-bottom: 1px solid $tertiaryColor;
@@ -69,6 +77,12 @@
             img {
                 height: 40px;
             }
+        }
+        nav {
+            justify-content: space-between;
+            min-height: calc( 100vh - 130px);
+            flex-direction: column;
+            display: flex;
         }
 
         ul {
@@ -87,17 +101,27 @@
                     color: $faintWhite;
                     transition: .35s;
                     overflow: hidden;
+                    font-size: 1.05rem;
                     .icon {
                         font-size: 22px;
-                        margin-right: 20px;
+                        margin-right: 15px;
                         line-height: 100%;
                         vertical-align: middle;
                     }
                     &.active {
                         background: $tertiaryColor;
                         color: $secondaryColor;
+                        &:hover {
+                            background: $tertiaryColor;
+                        }
                     }
-
+                    &:active {
+                        background: $tertiaryColor;
+                        color: $secondaryColor;
+                        &:hover {
+                            background: $tertiaryColor;
+                        }
+                    }
                     &:hover {
                         background: $faintPrimary;
                         color: $secondaryColor;
@@ -111,25 +135,24 @@
             height: 70px;
             line-height: 70px;
             font-size: 1.2rem;
+            color: #fff;
         }
 
         ul.extra-links {
-            position: absolute;
-            bottom: 0;
-            left: 0;
             width: 100%;
         }
     }
 
     .dashboard-header {
-        background: $cleanColor;
+        background: #fff;
         margin-left: 250px;
         position: fixed;
         top: 0;
         height: 60px;
         width: calc(100% - 250px);
         overflow-y: hidden;
-        box-shadow: 5px 5px 28px rgba(0, 0, 0, .05);
+        // box-shadow: 5px 5px 28px rgba(0, 0, 0, .05);
+        box-shadow: 0 0 30px rgba(0,0,0,.2);
         z-index: 2;
         transition: .35s;
 
@@ -197,55 +220,33 @@
     }
 
     .main {
+        // width: 100%;
         z-index: 1;
         color: black;
         position: relative;
         box-shadow: 0 0 8px 0 rgba(1, 2, 2, .04), 0 4px 8px 0 rgba(1, 2, 2, .04), 0 8px 16px 0 rgba(1, 2, 2, .04);
         min-height: calc(100vh - 70px);
-        margin: 90px 30px 0 280px;
-        padding: 50px;
+        margin: 70px 0 0 260px;
+        overflow-y: auto;
+        height: 130vh;
         transition: .35s;
-
+        // padding: 2rem 0;
         &.full-width {
-            margin-left: 100px;
+            margin-left: 80px;
         }
-
-        .update-profile {
+        .container {
+            width: calc(95% + 10px);
+            margin: 0 auto;
             text-align: center;
-
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-
-                input,
-                select {
-                    margin: 10px 0;
-                    height: 35px;
-                    width: 300px;
-                    padding: 0 10px;
-                    border: 1px solid rgba(0, 0, 0, .2);
-                    background: rgba(0, 0, 0, .2);
-                }
-
-                select option {
-                    padding: 5px 0;
-                    margin: 5px 0;
-                }
-
-                button.btn-primary {
-                    display: inline-block;
-                    margin: 10px 0;
-                    width: 150px;
-                    background: rgba(67, 137, 118, 1);
-                    border: 5px solid $fancyColor;
-
-                    &:hover {
-                        background: $tertiaryColor;
-                        border: 5px solid $tertiaryColor;
-                    }
-                }
+        }
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid $secondaryColor;
+        }
+        .main-content {
+            .container {
+                @import "./components/updateProfile";
             }
         }
-    }
+   }
 }

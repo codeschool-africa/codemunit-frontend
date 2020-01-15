@@ -3,9 +3,8 @@ import logo from "../../images/logo12.png";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { logout } from "../../redux/actions/auth";
 
-const Nav = ({ navProps, auth: { isAuthenticated, loading }, logout }) => {
+const Nav = ({ navProps, auth: { isAuthenticated, loading, user }}) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleToggle = () => {
@@ -69,7 +68,7 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading }, logout }) => {
               {isAuthenticated === true ? (
                 <>
                   <Link
-                    to='/dashboard'
+                    to={`/dashboard/${user._id}`}
                     className='btn-primary'
                     onClick={handleToggle}
                   >
@@ -98,8 +97,7 @@ const mapStateToProps = state => ({
 });
 
 Nav.propTypes = {
-  logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
 };
 
-export default connect(mapStateToProps, { logout })(Nav);
+export default connect(mapStateToProps, {  })(Nav);

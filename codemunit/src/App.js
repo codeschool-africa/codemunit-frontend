@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NProgress } from "@tanem/react-nprogress";
 
 //react-redux
-import { Provider } from "react-redux";
 import store from "./redux/store";
 
 //loading components
@@ -27,14 +28,13 @@ import Error from "./components/Error";
 import Curriculum from "./curriculum/curriculum";
 
 import Dashboard from "./dashboard/";
-import Profile from "./dashboard/pages/User-profile";
+import DashboardAuth from "./components/dashboard";
 
 //protected routes
 import AuthRoute from "./util/AuthRoute";
 
 //load user data
 import { loadUserData } from "./redux/actions/auth";
-import { logout } from "./redux/actions/auth"
 import setAuthToken from "./util/setAuthToken";
 
 if (localStorage.token) {
@@ -46,7 +46,7 @@ const callFakeAPI = delay =>
     setTimeout(resolve, delay);
   });
 
-const App = () => {
+const App = ({ auth: { isAuthenticated, user } }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -60,63 +60,68 @@ const App = () => {
     store.dispatch(loadUserData());
   }, []);
   return (
-    <Provider store={store}>
-      <Router>
-        <NProgress isAnimating={loading}>
-          {({ isFinished, progress, animationDuration }) => (
-            <Container
-              isFinished={isFinished}
-              animationDuration={animationDuration}
-            >
-              <Bar progress={progress} animationDuration={animationDuration} />
-              <Spinner />
-            </Container>
-          )}
-        </NProgress>
-        {loading ? (
-          ""
-        ) : (
-          <Switch>
-            <Route exact path='/' component={Home} key='home' />
-            <Route exact path='/about' component={About} key='about' />
-            <Route exact path='/account' component={User} key='user' />
-            <Route exact path='/blog' component={Blog} key='blog' />
-            <Route exact path='/blog/post' component={Post} key='post' />
-            <AuthRoute
-              path='/curriculum'
-              component={Curriculum}
-              key='curriculum'
-            />
-            <Route
-              exact
-              path='/mentorship'
-              component={Mentorship}
-              key='mentorship'
-            />
-            <Route exact path='/faq' component={Faq} key='faq' />
-            <Route
-              exact
-              path='/contact-us'
-              component={Contact}
-              key='contact-us'
-            />
-            <AuthRoute
-              path='/dashboard'
-              component={Dashboard}
-              key='dashboard'
-            />
-            <Route
-              exact
-              path='/profile:username'
-              component={Profile}
-              key='profile'
-            />
-            <Route component={Error} />
-          </Switch>
+    <Router>
+      <NProgress isAnimating={loading}>
+        {({ isFinished, progress, animationDuration }) => (
+          <Container
+            isFinished={isFinished}
+            animationDuration={animationDuration}
+          >
+            <Bar progress={progress} animationDuration={animationDuration} />
+            <Spinner />
+          </Container>
         )}
-      </Router>
-    </Provider>
+      </NProgress>
+      {loading ? (
+        ""
+      ) : (
+        <Switch>
+          <Route exact path='/' component={Home} key='home' />
+          <Route exact path='/about' component={About} key='about' />
+          <Route exact path='/account' component={User} key='user' />
+          <Route exact path='/blog' component={Blog} key='blog' />
+          <Route exact path='/blog/post' component={Post} key='post' />
+          <AuthRoute
+            path='/curriculum'
+            component={Curriculum}
+            key='curriculum'
+          />
+          <Route
+            exact
+            path='/mentorship'
+            component={Mentorship}
+            key='mentorship'
+          />
+          <Route exact path='/faq' component={Faq} key='faq' />
+          <Route
+            exact
+            path='/contact-us'
+            component={Contact}
+            key='contact-us'
+          />
+          <AuthRoute
+            path='/dashboard/:_id'
+            component={Dashboard}
+            key='dashboard'
+          />
+          <AuthRoute
+            path={`/dashboard/`}
+            component={DashboardAuth}
+            key='dashboardauth'
+          />
+          <Route component={Error} />
+        </Switch>
+      )}
+    </Router>
   );
 };
 
-export default App;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+Home.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+export default connect(mapStateToProps, {})(App);

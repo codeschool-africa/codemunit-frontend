@@ -177,29 +177,29 @@ p {
   }
 }
 
-header {
+.home-header, .about-header, .mentor-header {
   background: url(../../images/bg-image.jpg);
   background-position: left bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 672px;
+  height: 750px;
   color: #eee;
   position: relative;
   width: 100%;
 }
 
-header .bg-color {
-  height: 672px;
+.home-header .bg-color, .about-header .bg-color, .mentor-header .bg-color {
+  height: 750px;
   background-color: rgba(26, 46, 63, 0.9);
 }
 
-header .bg-color .container {
+.home-header .bg-color .container, .about-header .bg-color .container, .mentor-header .bg-color .container {
   width: 80%;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-header .bg-color .container nav {
+.home-header .bg-color .container nav, .about-header .bg-color .container nav, .mentor-header .bg-color .container nav {
   z-index: 999999;
   position: absolute;
   width: 100%;
@@ -209,21 +209,21 @@ header .bg-color .container nav {
   transition: background-color  .8s;
 }
 
-header .bg-color .container nav .nav-open {
+.home-header .bg-color .container nav .nav-open, .about-header .bg-color .container nav .nav-open, .mentor-header .bg-color .container nav .nav-open {
   background-color: rgba(26, 46, 63, 0.9) !important;
 }
 
-header .bg-color .container nav.nav-props {
+.home-header .bg-color .container nav.nav-props, .about-header .bg-color .container nav.nav-props, .mentor-header .bg-color .container nav.nav-props {
   position: fixed;
   background-color: rgba(26, 46, 63, 0.9);
 }
 
-header .bg-color .container nav.nav-neg {
+.home-header .bg-color .container nav.nav-neg, .about-header .bg-color .container nav.nav-neg, .mentor-header .bg-color .container nav.nav-neg {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
 }
 
-header .bg-color .container nav .container {
+.home-header .bg-color .container nav .container, .about-header .bg-color .container nav .container, .mentor-header .bg-color .container nav .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,33 +233,33 @@ header .bg-color .container nav .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100px;
+  height: 70px;
 }
 
-header .bg-color .container nav .container a {
+.home-header .bg-color .container nav .container a, .about-header .bg-color .container nav .container a, .mentor-header .bg-color .container nav .container a {
   position: relative;
   color: #eee;
   text-decoration: none;
   padding: 0 5px;
 }
 
-header .bg-color .container nav .container a:hover {
+.home-header .bg-color .container nav .container a:hover, .about-header .bg-color .container nav .container a:hover, .mentor-header .bg-color .container nav .container a:hover {
   color: #438976;
 }
 
-header .bg-color .container nav .container .nav-link {
+.home-header .bg-color .container nav .container .nav-link, .about-header .bg-color .container nav .container .nav-link, .mentor-header .bg-color .container nav .container .nav-link {
   padding-bottom: 7px;
 }
 
-header .bg-color .container nav .container .nav-link:hover {
+.home-header .bg-color .container nav .container .nav-link:hover, .about-header .bg-color .container nav .container .nav-link:hover, .mentor-header .bg-color .container nav .container .nav-link:hover {
   color: #438976;
 }
 
-header .bg-color .container nav .container .nav-link:hover::before {
+.home-header .bg-color .container nav .container .nav-link:hover::before, .about-header .bg-color .container nav .container .nav-link:hover::before, .mentor-header .bg-color .container nav .container .nav-link:hover::before {
   width: 100%;
 }
 
-header .bg-color .container nav .container .nav-link::before {
+.home-header .bg-color .container nav .container .nav-link::before, .about-header .bg-color .container nav .container .nav-link::before, .mentor-header .bg-color .container nav .container .nav-link::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -273,7 +273,7 @@ header .bg-color .container nav .container .nav-link::before {
   transition: .4s;
 }
 
-header .bg-color .container nav .container .logo {
+.home-header .bg-color .container nav .container .logo, .about-header .bg-color .container nav .container .logo, .mentor-header .bg-color .container nav .container .logo {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,15 +283,15 @@ header .bg-color .container nav .container .logo {
           align-items: center;
 }
 
-header .bg-color .container nav .container .logo img {
+.home-header .bg-color .container nav .container .logo img, .about-header .bg-color .container nav .container .logo img, .mentor-header .bg-color .container nav .container .logo img {
   height: 70px;
 }
 
-header .bg-color .container nav .container .dropdown {
+.home-header .bg-color .container nav .container .dropdown, .about-header .bg-color .container nav .container .dropdown, .mentor-header .bg-color .container nav .container .dropdown {
   display: none;
 }
 
-header .bg-color .container nav .container ul {
+.home-header .bg-color .container nav .container ul, .about-header .bg-color .container nav .container ul, .mentor-header .bg-color .container nav .container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,23 +305,23 @@ header .bg-color .container nav .container ul {
           justify-content: space-between;
 }
 
-header .bg-color .container nav .container ul li {
+.home-header .bg-color .container nav .container ul li, .about-header .bg-color .container nav .container ul li, .mentor-header .bg-color .container nav .container ul li {
   margin: 0 10px;
   font-size: 18px;
 }
 
-header .bg-color .container nav .container ul li a.btn-primary {
+.home-header .bg-color .container nav .container ul li a.btn-primary, .about-header .bg-color .container nav .container ul li a.btn-primary, .mentor-header .bg-color .container nav .container ul li a.btn-primary {
   padding: 7px 15px;
   background: #438976;
 }
 
-header .bg-color .container nav .container ul li a.btn-primary:hover {
+.home-header .bg-color .container nav .container ul li a.btn-primary:hover, .about-header .bg-color .container nav .container ul li a.btn-primary:hover, .mentor-header .bg-color .container nav .container ul li a.btn-primary:hover {
   background: #295c88;
   color: #eee !important;
   border-color: #295c88;
 }
 
-header .bg-color .container .hero {
+.home-header .bg-color .container .hero, .about-header .bg-color .container .hero, .mentor-header .bg-color .container .hero {
   width: 100%;
   margin: 0 auto;
   height: 672px;
@@ -341,7 +341,7 @@ header .bg-color .container .hero {
           align-items: center;
 }
 
-header .bg-color .container .hero h1 {
+.home-header .bg-color .container .hero h1, .about-header .bg-color .container .hero h1, .mentor-header .bg-color .container .hero h1 {
   display: inline-block;
   text-align: center;
   font-size: 4rem;
@@ -353,13 +353,13 @@ header .bg-color .container .hero h1 {
           margin-block-end: 0;
 }
 
-header .bg-color .container .hero h1 code {
+.home-header .bg-color .container .hero h1 code, .about-header .bg-color .container .hero h1 code, .mentor-header .bg-color .container .hero h1 code {
   font-size: 3.3rem;
   color: burlywood;
   font-family: 'Monoton', cursive;
 }
 
-header .bg-color .container .hero .intro {
+.home-header .bg-color .container .hero .intro, .about-header .bg-color .container .hero .intro, .mentor-header .bg-color .container .hero .intro {
   font-size: 1.125rem;
   line-height: 1.625rem;
   margin: 35px 0;
@@ -367,7 +367,7 @@ header .bg-color .container .hero .intro {
   width: 70%;
 }
 
-header .bg-color .container .hero .btn a {
+.home-header .bg-color .container .hero .btn a, .about-header .bg-color .container .hero .btn a, .mentor-header .bg-color .container .hero .btn a {
   margin-right: 20px !important;
   padding: 7px 25px !important;
   width: 200px;
@@ -375,11 +375,11 @@ header .bg-color .container .hero .btn a {
   font-weight: lighter;
 }
 
-header .bg-color .container .hero .btn a:hover {
+.home-header .bg-color .container .hero .btn a:hover, .about-header .bg-color .container .hero .btn a:hover, .mentor-header .bg-color .container .hero .btn a:hover {
   padding-right: 50px !important;
 }
 
-header .bg-color .container .hero .menu {
+.home-header .bg-color .container .hero .menu, .about-header .bg-color .container .hero .menu, .mentor-header .bg-color .container .hero .menu {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -409,10 +409,10 @@ header .bg-color .container .hero .menu {
 }
 
 @media screen and (max-width: 1080px) {
-  header .bg-color .container {
+  .home-header .bg-color .container, .about-header .bg-color .container, .mentor-header .bg-color .container {
     width: 85%;
   }
-  header .bg-color .container nav .logo {
+  .home-header .bg-color .container nav .logo, .about-header .bg-color .container nav .logo, .mentor-header .bg-color .container nav .logo {
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -421,13 +421,13 @@ header .bg-color .container .hero .menu {
         -ms-flex-align: center;
             align-items: center;
   }
-  header .bg-color .container nav .logo img {
+  .home-header .bg-color .container nav .logo img, .about-header .bg-color .container nav .logo img, .mentor-header .bg-color .container nav .logo img {
     height: 70px;
   }
-  header .bg-color .container nav .dropdown {
+  .home-header .bg-color .container nav .dropdown, .about-header .bg-color .container nav .dropdown, .mentor-header .bg-color .container nav .dropdown {
     display: none;
   }
-  header .bg-color .container nav ul {
+  .home-header .bg-color .container nav ul, .about-header .bg-color .container nav ul, .mentor-header .bg-color .container nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -440,11 +440,11 @@ header .bg-color .container .hero .menu {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  header .bg-color .container nav ul li {
+  .home-header .bg-color .container nav ul li, .about-header .bg-color .container nav ul li, .mentor-header .bg-color .container nav ul li {
     margin: 0 5px !important;
     font-size: 16px;
   }
-  header .bg-color .container .hero {
+  .home-header .bg-color .container .hero, .about-header .bg-color .container .hero, .mentor-header .bg-color .container .hero {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -457,32 +457,32 @@ header .bg-color .container .hero .menu {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header .bg-color .container .hero h1 {
+  .home-header .bg-color .container .hero h1, .about-header .bg-color .container .hero h1, .mentor-header .bg-color .container .hero h1 {
     font-size: 66px;
     line-height: 4.2rem;
     font-weight: 100;
   }
-  header .bg-color .container .hero h1 code {
+  .home-header .bg-color .container .hero h1 code, .about-header .bg-color .container .hero h1 code, .mentor-header .bg-color .container .hero h1 code {
     font-size: 3rem;
     color: burlywood;
     font-family: 'Monoton', cursive;
   }
-  header .bg-color .container .hero .intro {
+  .home-header .bg-color .container .hero .intro, .about-header .bg-color .container .hero .intro, .mentor-header .bg-color .container .hero .intro {
     font-size: 1.125rem;
     line-height: 1.625rem;
     margin: 35px 0;
     width: 90%;
   }
-  header .bg-color .container .hero .btn a {
+  .home-header .bg-color .container .hero .btn a, .about-header .bg-color .container .hero .btn a, .mentor-header .bg-color .container .hero .btn a {
     margin-right: 20px !important;
     padding: 7px 23px !important;
     font-size: 1.2rem;
     font-weight: lighter;
   }
-  header .bg-color .container .hero .btn a:hover {
+  .home-header .bg-color .container .hero .btn a:hover, .about-header .bg-color .container .hero .btn a:hover, .mentor-header .bg-color .container .hero .btn a:hover {
     padding-right: 50px !important;
   }
-  header .bg-color .container .hero .menu {
+  .home-header .bg-color .container .hero .menu, .about-header .bg-color .container .hero .menu, .mentor-header .bg-color .container .hero .menu {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -498,43 +498,43 @@ header .bg-color .container .hero .menu {
 }
 
 @media screen and (max-width: 920px) {
-  header .bg-color .container {
+  .home-header .bg-color .container, .about-header .bg-color .container, .mentor-header .bg-color .container {
     width: 90%;
   }
-  header .bg-color .container nav .container .logo a img {
+  .home-header .bg-color .container nav .container .logo a img, .about-header .bg-color .container nav .container .logo a img, .mentor-header .bg-color .container nav .container .logo a img {
     height: 60px;
   }
-  header .bg-color .container nav .container .dropdown {
+  .home-header .bg-color .container nav .container .dropdown, .about-header .bg-color .container nav .container .dropdown, .mentor-header .bg-color .container nav .container .dropdown {
     display: none;
   }
-  header .bg-color .container nav .container ul li {
+  .home-header .bg-color .container nav .container ul li, .about-header .bg-color .container nav .container ul li, .mentor-header .bg-color .container nav .container ul li {
     font-size: 15px;
   }
-  header .bg-color .container .hero h1 {
+  .home-header .bg-color .container .hero h1, .about-header .bg-color .container .hero h1, .mentor-header .bg-color .container .hero h1 {
     font-size: 56px;
     line-height: 4.2rem;
     font-weight: 100;
   }
-  header .bg-color .container .hero h1 code {
+  .home-header .bg-color .container .hero h1 code, .about-header .bg-color .container .hero h1 code, .mentor-header .bg-color .container .hero h1 code {
     color: burlywood;
     font-family: 'Monoton', cursive;
   }
-  header .bg-color .container .hero .intro {
+  .home-header .bg-color .container .hero .intro, .about-header .bg-color .container .hero .intro, .mentor-header .bg-color .container .hero .intro {
     font-size: 1rem;
     line-height: 1.625rem;
     margin: 35px 0;
     width: 90%;
   }
-  header .bg-color .container .hero .btn a {
+  .home-header .bg-color .container .hero .btn a, .about-header .bg-color .container .hero .btn a, .mentor-header .bg-color .container .hero .btn a {
     margin-right: 20px !important;
     padding: 7px 23px !important;
     font-size: 1.2rem;
     font-weight: lighter;
   }
-  header .bg-color .container .hero .btn a:hover {
+  .home-header .bg-color .container .hero .btn a:hover, .about-header .bg-color .container .hero .btn a:hover, .mentor-header .bg-color .container .hero .btn a:hover {
     padding-right: 50px !important;
   }
-  header .bg-color .container .hero .menu {
+  .home-header .bg-color .container .hero .menu, .about-header .bg-color .container .hero .menu, .mentor-header .bg-color .container .hero .menu {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -553,46 +553,46 @@ header .bg-color .container .hero .menu {
   .btn-primary {
     padding: 7px 10px;
   }
-  header .bg-color .container {
+  .home-header .bg-color .container, .about-header .bg-color .container, .mentor-header .bg-color .container {
     width: 95%;
   }
-  header .bg-color .container nav .container .logo a img {
+  .home-header .bg-color .container nav .container .logo a img, .about-header .bg-color .container nav .container .logo a img, .mentor-header .bg-color .container nav .container .logo a img {
     height: 55px;
   }
-  header .bg-color .container nav .container .dropdown {
+  .home-header .bg-color .container nav .container .dropdown, .about-header .bg-color .container nav .container .dropdown, .mentor-header .bg-color .container nav .container .dropdown {
     display: none;
   }
-  header .bg-color .container nav .container ul li {
+  .home-header .bg-color .container nav .container ul li, .about-header .bg-color .container nav .container ul li, .mentor-header .bg-color .container nav .container ul li {
     margin: 0 4px !important;
     font-size: 15px;
   }
-  header .bg-color .container nav .container ul li a.btn-primary {
+  .home-header .bg-color .container nav .container ul li a.btn-primary, .about-header .bg-color .container nav .container ul li a.btn-primary, .mentor-header .bg-color .container nav .container ul li a.btn-primary {
     margin-top: 20px !important;
     padding: 5px 10px;
   }
-  header .bg-color .container .hero h1 {
+  .home-header .bg-color .container .hero h1, .about-header .bg-color .container .hero h1, .mentor-header .bg-color .container .hero h1 {
     line-height: 4.2rem;
     font-weight: 100;
   }
-  header .bg-color .container .hero h1 code {
+  .home-header .bg-color .container .hero h1 code, .about-header .bg-color .container .hero h1 code, .mentor-header .bg-color .container .hero h1 code {
     color: burlywood;
     font-family: 'Monoton', cursive;
   }
-  header .bg-color .container .hero .intro {
+  .home-header .bg-color .container .hero .intro, .about-header .bg-color .container .hero .intro, .mentor-header .bg-color .container .hero .intro {
     font-size: 1rem;
     line-height: 1.625rem;
     margin: 35px 0;
   }
-  header .bg-color .container .hero .btn a {
+  .home-header .bg-color .container .hero .btn a, .about-header .bg-color .container .hero .btn a, .mentor-header .bg-color .container .hero .btn a {
     margin-right: 20px !important;
     padding: 7px 23px !important;
     font-size: 1.2rem;
     font-weight: lighter;
   }
-  header .bg-color .container .hero .btn a:hover {
+  .home-header .bg-color .container .hero .btn a:hover, .about-header .bg-color .container .hero .btn a:hover, .mentor-header .bg-color .container .hero .btn a:hover {
     padding-right: 50px !important;
   }
-  header .bg-color .container .hero .menu {
+  .home-header .bg-color .container .hero .menu, .about-header .bg-color .container .hero .menu, .mentor-header .bg-color .container .hero .menu {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -611,42 +611,42 @@ header .bg-color .container .hero .menu {
   .btn-primary {
     padding: 7px 5px;
   }
-  header {
+  .home-header, .about-header, .mentor-header {
     height: 480px;
   }
-  header .bg-color {
+  .home-header .bg-color, .about-header .bg-color, .mentor-header .bg-color {
     height: 480px;
   }
-  header .bg-color .container {
+  .home-header .bg-color .container, .about-header .bg-color .container, .mentor-header .bg-color .container {
     width: 95%;
   }
-  header .bg-color .container .nav-bg {
+  .home-header .bg-color .container .nav-bg, .about-header .bg-color .container .nav-bg, .mentor-header .bg-color .container .nav-bg {
     -webkit-transition: background-color .4s;
     transition: background-color .4s;
   }
-  header .bg-color .container nav {
+  .home-header .bg-color .container nav, .about-header .bg-color .container nav, .mentor-header .bg-color .container nav {
     height: 60px;
     width: 100%;
   }
-  header .bg-color .container nav .nav {
+  .home-header .bg-color .container nav .nav, .about-header .bg-color .container nav .nav, .mentor-header .bg-color .container nav .nav {
     padding: 0px 5% !important;
     height: 100%;
     width: 100%;
   }
-  header .bg-color .container nav .container {
+  .home-header .bg-color .container nav .container, .about-header .bg-color .container nav .container, .mentor-header .bg-color .container nav .container {
     height: 100%;
     width: 100%;
   }
-  header .bg-color .container nav .logo {
+  .home-header .bg-color .container nav .logo, .about-header .bg-color .container nav .logo, .mentor-header .bg-color .container nav .logo {
     padding-top: 5px;
   }
-  header .bg-color .container nav .logo img {
+  .home-header .bg-color .container nav .logo img, .about-header .bg-color .container nav .logo img, .mentor-header .bg-color .container nav .logo img {
     height: 55px !important;
   }
-  header .bg-color .container nav .dropdown {
+  .home-header .bg-color .container nav .dropdown, .about-header .bg-color .container nav .dropdown, .mentor-header .bg-color .container nav .dropdown {
     display: block !important;
   }
-  header .bg-color .container nav .dropdown .burger {
+  .home-header .bg-color .container nav .dropdown .burger, .about-header .bg-color .container nav .dropdown .burger, .mentor-header .bg-color .container nav .dropdown .burger {
     display: inline-block;
     border: 0;
     background: none;
@@ -658,7 +658,7 @@ header .bg-color .container .hero .menu {
     transition: border-bottom 1s ease-in-out;
     -webkit-transition: border-bottom 1s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .burger::before {
+  .home-header .bg-color .container nav .dropdown .burger::before, .about-header .bg-color .container nav .dropdown .burger::before, .mentor-header .bg-color .container nav .dropdown .burger::before {
     content: "";
     display: block;
     border-bottom: 4px solid #eee;
@@ -669,7 +669,7 @@ header .bg-color .container .hero .menu {
     transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .burger::after {
+  .home-header .bg-color .container nav .dropdown .burger::after, .about-header .bg-color .container nav .dropdown .burger::after, .mentor-header .bg-color .container nav .dropdown .burger::after {
     content: "";
     display: block;
     border-bottom: 4px solid #eee;
@@ -680,16 +680,16 @@ header .bg-color .container .hero .menu {
     transition: transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .burger::-moz-focus-inner {
+  .home-header .bg-color .container nav .dropdown .burger::-moz-focus-inner, .about-header .bg-color .container nav .dropdown .burger::-moz-focus-inner, .mentor-header .bg-color .container nav .dropdown .burger::-moz-focus-inner {
     border: 0;
     padding: 0;
   }
-  header .bg-color .container nav .dropdown .open:checked ~ .burger {
+  .home-header .bg-color .container nav .dropdown .open:checked ~ .burger, .about-header .bg-color .container nav .dropdown .open:checked ~ .burger, .mentor-header .bg-color .container nav .dropdown .open:checked ~ .burger {
     border-bottom: 4px solid transparent;
     -webkit-transition: border-bottom 0.4s ease-in-out;
     transition: border-bottom 0.4s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .open:checked ~ .burger:before {
+  .home-header .bg-color .container nav .dropdown .open:checked ~ .burger:before, .about-header .bg-color .container nav .dropdown .open:checked ~ .burger:before, .mentor-header .bg-color .container nav .dropdown .open:checked ~ .burger:before {
     -webkit-transform: rotate(-405deg) translateY(5px) translateX(-7px);
             transform: rotate(-405deg) translateY(5px) translateX(-7px);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
@@ -697,7 +697,7 @@ header .bg-color .container .hero .menu {
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
-  header .bg-color .container nav .dropdown .open:checked ~ .burger:after {
+  .home-header .bg-color .container nav .dropdown .open:checked ~ .burger:after, .about-header .bg-color .container nav .dropdown .open:checked ~ .burger:after, .mentor-header .bg-color .container nav .dropdown .open:checked ~ .burger:after {
     -webkit-transform: rotate(405deg) translateY(0px) translateX(-1px);
             transform: rotate(405deg) translateY(0px) translateX(-1px);
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
@@ -705,11 +705,12 @@ header .bg-color .container .hero .menu {
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   }
-  header .bg-color .container nav .show-nav {
+  .home-header .bg-color .container nav .show-nav, .about-header .bg-color .container nav .show-nav, .mentor-header .bg-color .container nav .show-nav {
     width: 100%;
     z-index: 100;
+    overflow-y: auto;
   }
-  header .bg-color .container nav ul {
+  .home-header .bg-color .container nav ul, .about-header .bg-color .container nav ul, .mentor-header .bg-color .container nav ul {
     position: absolute;
     top: 60px;
     left: 0;
@@ -730,27 +731,27 @@ header .bg-color .container .hero .menu {
     transition: width .4s;
     height: 420px !important;
   }
-  header .bg-color .container nav ul li {
+  .home-header .bg-color .container nav ul li, .about-header .bg-color .container nav ul li, .mentor-header .bg-color .container nav ul li {
     font-size: 15px;
     width: 100%;
     margin: 0;
     border-bottom: 1px solid #295c88;
   }
-  header .bg-color .container nav ul li a {
+  .home-header .bg-color .container nav ul li a, .about-header .bg-color .container nav ul li a, .mentor-header .bg-color .container nav ul li a {
     display: block;
     width: 100%;
     height: 50px;
     line-height: 50px;
     padding: 0 5% !important;
   }
-  header .bg-color .container nav ul li a:hover {
+  .home-header .bg-color .container nav ul li a:hover, .about-header .bg-color .container nav ul li a:hover, .mentor-header .bg-color .container nav ul li a:hover {
     background: #0c1f31;
   }
-  header .bg-color .container nav ul li:nth-child(6) {
+  .home-header .bg-color .container nav ul li:nth-child(6), .about-header .bg-color .container nav ul li:nth-child(6), .mentor-header .bg-color .container nav ul li:nth-child(6) {
     border: none;
     margin: 25px 0;
   }
-  header .bg-color .container nav ul li:nth-child(6) a {
+  .home-header .bg-color .container nav ul li:nth-child(6) a, .about-header .bg-color .container nav ul li:nth-child(6) a, .mentor-header .bg-color .container nav ul li:nth-child(6) a {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -766,39 +767,39 @@ header .bg-color .container .hero .menu {
     text-align: center;
     padding: 0;
   }
-  header .bg-color .container nav ul li:nth-child(6) a:hover {
+  .home-header .bg-color .container nav ul li:nth-child(6) a:hover, .about-header .bg-color .container nav ul li:nth-child(6) a:hover, .mentor-header .bg-color .container nav ul li:nth-child(6) a:hover {
     background: rgba(67, 137, 118, 0.2);
   }
-  header .bg-color .container .hero {
+  .home-header .bg-color .container .hero, .about-header .bg-color .container .hero, .mentor-header .bg-color .container .hero {
     width: 100%;
     height: 480px;
     padding: 15px 0;
   }
-  header .bg-color .container .hero h1 {
+  .home-header .bg-color .container .hero h1, .about-header .bg-color .container .hero h1, .mentor-header .bg-color .container .hero h1 {
     font-size: 40px;
     line-height: 3rem;
     font-weight: 100;
   }
-  header .bg-color .container .hero h1 code {
+  .home-header .bg-color .container .hero h1 code, .about-header .bg-color .container .hero h1 code, .mentor-header .bg-color .container .hero h1 code {
     font-size: 35px;
     color: #EFEFF0;
     font-family: 'Monoton', cursive;
   }
-  header .bg-color .container .hero .intro {
+  .home-header .bg-color .container .hero .intro, .about-header .bg-color .container .hero .intro, .mentor-header .bg-color .container .hero .intro {
     font-size: 1rem;
     line-height: 1.625rem;
     margin: 20px 0;
   }
-  header .bg-color .container .hero .btn a {
+  .home-header .bg-color .container .hero .btn a, .about-header .bg-color .container .hero .btn a, .mentor-header .bg-color .container .hero .btn a {
     margin-right: 10px !important;
     padding: 7px 15px !important;
     font-size: 1rem;
     font-weight: lighter;
   }
-  header .bg-color .container .hero .btn a:hover {
+  .home-header .bg-color .container .hero .btn a:hover, .about-header .bg-color .container .hero .btn a:hover, .mentor-header .bg-color .container .hero .btn a:hover {
     padding-right: 20px !important;
   }
-  header .bg-color .container .hero .menu {
+  .home-header .bg-color .container .hero .menu, .about-header .bg-color .container .hero .menu, .mentor-header .bg-color .container .hero .menu {
     position: absolute;
     bottom: 0;
     left: 50%;

@@ -42,7 +42,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                         <li><Link to='/mentorship'>Mentorship</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/faq'>FAQ</Link></li>
-                        <li><Link to='/dashboard' className='btn'>Dashboard</Link></li>
+                        <li><Link to={`/dashboard/${user._id}`} className='btn'>Dashboard</Link></li>
                     </ul>
                     <div className="user-nav">
                         <div className="profile-img dropdown">
@@ -56,7 +56,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                             </a>
                             <div className="dropdown-profile-menu">
                                 <div className="profile-image">
-                                    <Link to={`/dashboard/profile`}>
+                                    <Link to={`/dashboard/${user._id}/profile`}>
                                         <div className="profile-menu">
                                             <div className="img">
                                                 <img src={user.avatar} alt="dp" />
@@ -75,7 +75,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                                 <nav>
                                     <ul>
                                         <li>
-                                            <Link to="/">Notifications <span>{1}</span></Link>
+                                            <Link to={`/dashboard/${user._id}/notifications`}>Notifications <span>{1}</span></Link>
                                         </li>
                                         <li>
                                             <Link to="/">History</Link>

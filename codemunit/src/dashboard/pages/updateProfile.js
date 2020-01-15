@@ -47,69 +47,79 @@ const UpdateProfile = ({
   const handleSubmit = e => {
     e.preventDefault();
     updateProfile({
-      formData, history
+      formData,
+      history
     });
   };
 
   return (
-    <div className='update-profile'>
-      <form onSubmit={e => handleSubmit(e)}>
-        <Alert />
-        <label htmlFor='location'>
-          <select name='location' onChange={e => handleChange(e)}>
-            <option value=''>Choose country</option>
-            <option value='Tanzania'>Tanzania</option>
-            <option value='Kenya'>Kenya</option>
-            <option value='Uganda'>Uganda</option>
-          </select>
-        </label>
-        <label htmlFor='skills'>
-          <input
-            type='text'
-            placeholder='skills'
-            name='skills'
-            value={skills}
-            onChange={e => handleChange(e)}
-          />
-        </label>
-        <label htmlFor='courses'>
-          <input
-            type='text'
-            placeholder='courses'
-            name='courses'
-            value={courses}
-            onChange={e => handleChange(e)}
-          />
-        </label>
-        <label htmlFor='twitter'>
-          <input
-            type='text'
-            placeholder='twitter'
-            name='twitter'
-            value={twitter}
-            onChange={e => handleChange(e)}
-          />
-        </label>
-        <label htmlFor='linkedin'>
-          <input
-            type='text'
-            placeholder='linkedin'
-            name='linkedin'
-            value={linkedin}
-            onChange={e => handleChange(e)}
-          />
-        </label>
-        <label htmlFor='githubusername'>
-          <input
-            type='text'
-            placeholder='github username'
-            name='githubusername'
-            value={githubusername}
-            onChange={e => handleChange(e)}
-          />
-        </label>
-        <button className='btn-primary'>Submit</button>
-      </form>
+    <div className='content'>
+      <header>
+        <div className='container'>
+          <h2>Hello please add or edit your profile</h2>
+        </div>
+      </header>
+      <div className='main-content'>
+        <div className='container'>
+          <form onSubmit={e => handleSubmit(e)}>
+            <Alert />
+            <label htmlFor='location'>
+              <select name='location' onChange={e => handleChange(e)}>
+                <option value=''>Choose country</option>
+                <option value='Tanzania'>Tanzania</option>
+                <option value='Kenya'>Kenya</option>
+                <option value='Uganda'>Uganda</option>
+              </select>
+            </label>
+            <label htmlFor='skills'>
+              <input
+                type='text'
+                placeholder='skills'
+                name='skills'
+                value={skills}
+                onChange={e => handleChange(e)}
+              />
+            </label>
+            <label htmlFor='courses'>
+              <input
+                type='text'
+                placeholder='courses'
+                name='courses'
+                value={courses}
+                onChange={e => handleChange(e)}
+              />
+            </label>
+            <label htmlFor='twitter'>
+              <input
+                type='text'
+                placeholder='twitter'
+                name='twitter'
+                value={twitter}
+                onChange={e => handleChange(e)}
+              />
+            </label>
+            <label htmlFor='linkedin'>
+              <input
+                type='text'
+                placeholder='linkedin'
+                name='linkedin'
+                value={linkedin}
+                onChange={e => handleChange(e)}
+              />
+            </label>
+            <label htmlFor='githubusername'>
+              <input
+                type='text'
+                placeholder='github username'
+                name='githubusername'
+                value={githubusername}
+                onChange={e => handleChange(e)}
+              />
+            </label>
+            <button className='btn-primary'>Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

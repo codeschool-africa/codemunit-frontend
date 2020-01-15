@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 
-header {
+.home-header, .about-header, .mentor-header {
   background: url(../../images/bg-image.jpg);
   background-position: left bottom;
   // background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 672px;
+  height: 750px;
   color: $secondaryColor;
   position: relative;
   width: 100%;
   .bg-color {
-    height: 672px;
+    height: 750px;
     background-color: rgba(26, 46, 63, 0.9);
     .container {
       width: 80%;
@@ -39,7 +39,7 @@ header {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          height: 100px;
+          height: 70px;
           // overflow: hidden;
           a {
             position: relative;
@@ -183,7 +183,7 @@ header {
 }
 
 @media screen and (max-width: 1080px) {
-  header {
+  .home-header, .about-header, .mentor-header {
     .bg-color {
       .container {
         width: 85%;
@@ -265,7 +265,7 @@ header {
 }
 
 @media screen and (max-width: 920px) {
-  header {
+  .home-header, .about-header, .mentor-header {
     .bg-color {
       .container {
         width: 90%;
@@ -349,7 +349,7 @@ header {
   .btn-primary {
     padding: 7px 10px;
   }
-  header {
+  .home-header, .about-header, .mentor-header {
     .bg-color {
       .container {
         width: 95%;
@@ -435,7 +435,7 @@ header {
   .btn-primary {
     padding: 7px 5px;
   }
-  header {
+  .home-header, .about-header, .mentor-header {
       height: 480px;
     .bg-color {
         height: 480px;
@@ -521,6 +521,7 @@ header {
           .show-nav {
               width: 100%;
               z-index: 100;
+              overflow-y: auto;
           }
           ul {
             position: absolute;

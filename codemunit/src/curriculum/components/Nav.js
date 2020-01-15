@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
 import { FaSearch } from "react-icons/all"
 const MobileNav = ({navProps, auth: { isAuthenticated, loading, user }}) =>  {
-
     return (
         <nav className={navProps}>
             <div className="container">
@@ -23,7 +22,7 @@ const MobileNav = ({navProps, auth: { isAuthenticated, loading, user }}) =>  {
                     <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
                 </ul>
                 <div className="profile user-nav">
-                    <Link to="/dashboard/profile">
+                    <Link to={`/dashboard/${user._id}/profile`}>
                         <div className="profile-menu">
                             <div className="img">
                                 <img src={user.avatar} alt={`${user.firstname} avatar`} />

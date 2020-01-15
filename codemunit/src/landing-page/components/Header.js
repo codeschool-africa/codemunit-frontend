@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react'
-import Nav from './Nav'
+import React, { useState, useEffect, useRef } from "react";
+import Nav from "./Nav";
 
-
-function useOnScreen (options) {
+function useOnScreen(options) {
   const ref = useRef();
-  const [ intersect, setIntersect ] = useState();
+  const [intersect, setIntersect] = useState();
 
-  useEffect(()=> {
-    const observer = new IntersectionObserver(([entry])=> {
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
       setIntersect(entry.isIntersecting);
-    }, options)
+    }, options);
 
-    if(ref.current){
+    if (ref.current) {
       observer.observe(ref.current);
     }
 
@@ -19,30 +18,29 @@ function useOnScreen (options) {
       if (ref.current) {
         observer.unobserve(ref.current);
       }
-    }
-  },[ref, options]);
+    };
+  }, [ref, options]);
 
   return [ref, intersect];
 }
 
-export default function Header({children, hero}) {
-
-  const [ ref, intersect ] = useOnScreen({
-    rootMargin: '-100px'
+export default function Header({ children, hero }) {
+  const [ref, intersect] = useOnScreen({
+    rootMargin: "-100px"
   });
-    return (
-      <header className={hero} ref={ref}>
-        <div className="bg-color">
-          <div className="container">
-            <Nav navProps={intersect?`nav-neg`:`nav-props`}/>
-            {/* add animations to the nav in css to transform it from -60px to 0px */}
-            {children}
-          </div>
+  return (
+    <header className={hero} ref={ref}>
+      <div className='bg-color'>
+        <div className='container'>
+          <Nav navProps={intersect ? `nav-neg` : `nav-props`} />
+          {/* add animations to the nav in css to transform it from -60px to 0px */}
+          {children}
         </div>
-      </header>
-    );
+      </div>
+    </header>
+  );
 }
 
 Header.defaultProps = {
-    hero:"defaultHero"
+  hero: "defaultHero"
 };
