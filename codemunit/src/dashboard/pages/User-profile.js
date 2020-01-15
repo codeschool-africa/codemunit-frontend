@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/all"
 
 import { getProfile } from "../../redux/actions/profile";
 
@@ -15,13 +16,16 @@ const Profile = ({
   return (
     <div>
       <h1>Hey {user.firstname} here is your profile</h1>
-      {loading && profile === null ?
+      {profile === null ?
         "You haven't set your profile yet...": (
         <ul>
           <h2>Courses</h2>
-          {/* <span>{profile.githubusername}</span> */}
+          
           <h2>Social media</h2>
+          <a href={profile.social.linkedin}><FaLinkedinIn/></a><br/>
+          <a href={profile.social.twitter}><FaTwitter/></a>
           <h2>Github</h2>
+          <span><a href={`http://www.github.com/${profile.githubusername}`}><FaGithub/></a></span>
         </ul>
       )}
     </div>

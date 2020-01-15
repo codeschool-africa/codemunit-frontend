@@ -1,10 +1,10 @@
 import React, { useEffect, useState, Fragment } from "react";
-// import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 // import { logout } from "../../redux/actions/auth";
 import { getProfile, updateProfile } from "../../redux/actions/profile";
-import { location } from "../../redux/actions/location"
+import { location } from "../../redux/actions/location";
 import Alert from "../../components/alerts";
 
 //pages
@@ -13,8 +13,10 @@ const UpdateProfile = ({
   auth: { isAuthenticated, user },
   getProfile,
   updateProfile,
+  history,
   location: { countries },
-  profile: { profile, loading }
+  profile: { profile, loading },
+  props
 }) => {
   const [formData, setFormData] = useState({
     location: "",
@@ -45,36 +47,21 @@ const UpdateProfile = ({
   const handleSubmit = e => {
     e.preventDefault();
     updateProfile({
-      location,
-      skills,
-      courses,
-      twitter,
-      linkedin,
-      githubusername
+      formData, history
     });
   };
-  const loadLocation = () => {
-    // location();
-  }
+
   return (
-    <div className="update-profile">
-      {/* <button onClick={loadLocation}>Load location</button> */}
+    <div className='update-profile'>
       <form onSubmit={e => handleSubmit(e)}>
         <Alert />
         <label htmlFor='location'>
-          <select name="location" onChange={e => handleChange(e)}>
-            <option value="">Choose country</option>
-            <option value="Tanzania">Tanzania</option>
-            <option value="Kenya">Kenya</option>
-            <option value="Uganda">Uganda</option>
+          <select name='location' onChange={e => handleChange(e)}>
+            <option value=''>Choose country</option>
+            <option value='Tanzania'>Tanzania</option>
+            <option value='Kenya'>Kenya</option>
+            <option value='Uganda'>Uganda</option>
           </select>
-          {/* <input
-            type='text'
-            placeholder='location'
-            name='location'
-            value={location}
-            onChange={e => handleChange(e)}
-          /> */}
         </label>
         <label htmlFor='skills'>
           <input
@@ -87,33 +74,12 @@ const UpdateProfile = ({
         </label>
         <label htmlFor='courses'>
           <input
-            type='checkbox'
-            // placeholder='courses'
+            type='text'
+            placeholder='courses'
             name='courses'
-            value="frontend web development"
+            value={courses}
             onChange={e => handleChange(e)}
-          /> Frontend web development
-          <input
-            type='checkbox'
-            // placeholder='courses'
-            name='courses'
-            value="backend web development"
-            onChange={e => handleChange(e)}
-          /> Backend Web Development
-          <input
-            type='checkbox'
-            // placeholder='courses'
-            name='courses'
-            value="UI/UX Design"
-            onChange={e => handleChange(e)}
-          /> UI/UX Design
-          <input
-            type='checkbox'
-            // placeholder='courses'
-            name='courses'
-            value="Mobile App Development"
-            onChange={e => handleChange(e)}
-          /> Mobile App Development Development
+          />
         </label>
         <label htmlFor='twitter'>
           <input
@@ -162,6 +128,8 @@ UpdateProfile.propTypes = {
   profile: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, { getProfile, updateProfile, location })(
-  UpdateProfile
-);
+export default connect(mapStateToProps, {
+  getProfile,
+  updateProfile,
+  location
+})(withRouter(UpdateProfile));

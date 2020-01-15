@@ -1,3 +1,9 @@
+.errors {
+  background: #be1414;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+
 .dashboard {
   position: relative;
   color: white;
@@ -17,30 +23,139 @@
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 20px;
   z-index: 2000;
   top: 0;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.dashboard aside.side-nav {
+  width: 70px;
+}
+
+.dashboard aside.side-nav .logo {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard aside.side-nav .logo img {
+  height: 30px;
+}
+
+.dashboard aside.side-nav .profile-name {
+  visibility: hidden;
+  display: none;
+}
+
+.dashboard aside.side-nav ul li a {
+  visibility: hidden;
+}
+
+.dashboard aside.side-nav ul li a:hover {
+  background: #031a2e;
+}
+
+.dashboard aside.side-nav ul li a .icon {
+  visibility: visible;
+}
+
+.dashboard aside .logo {
+  height: 60px;
+  border-bottom: 1px solid #295c88;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+.dashboard aside .logo img {
+  height: 40px;
 }
 
 .dashboard aside ul {
   list-style: none;
 }
 
-.dashboard aside a {
+.dashboard aside ul li {
+  width: 100%;
+}
+
+.dashboard aside ul li a {
+  display: block;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #c2c1bd;
+  -webkit-transition: .35s;
+  transition: .35s;
+  overflow: hidden;
+}
+
+.dashboard aside ul li a .icon {
+  font-size: 22px;
+  margin-right: 20px;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.dashboard aside ul li a.active {
+  background: #295c88;
   color: #eee;
 }
 
+.dashboard aside ul li a:hover {
+  background: #031a2e;
+  color: #eee;
+}
+
+.dashboard aside .profile-name {
+  padding: 0px 20px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.2rem;
+}
+
+.dashboard aside ul.extra-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .dashboard .dashboard-header {
-  background: #fff;
+  background: #F6F4F1;
   margin-left: 250px;
   position: fixed;
   top: 0;
   height: 60px;
-  width: calc( 100% - 250px);
+  width: calc(100% - 250px);
   overflow-y: hidden;
   -webkit-box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.05);
           box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.05);
   z-index: 2;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.dashboard .dashboard-header.full-width {
+  width: calc(100% - 70px);
+  margin-left: 70px;
 }
 
 .dashboard .dashboard-header nav {
@@ -58,15 +173,62 @@
   margin: 0 auto;
 }
 
+.dashboard .dashboard-header nav .burger {
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .dashboard-header nav .burger span {
+  height: 2px;
+  width: 30px;
+  display: block;
+  background: #438976;
+}
+
 .dashboard .dashboard-header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
 
 .dashboard .dashboard-header nav ul li {
   margin: 0 7px;
+}
+
+.dashboard .dashboard-header nav ul li a:hover {
+  opacity: .7;
+}
+
+.dashboard .dashboard-header nav ul li.img {
+  margin-right: 0;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #295c88;
+  margin: 5px;
+  background: #F8F9FA;
+}
+
+.dashboard .dashboard-header nav ul li.img img {
+  height: 100%;
+  width: 100%;
 }
 
 .dashboard .main {
@@ -75,9 +237,15 @@
   position: relative;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
-  min-height: calc( 100vh - 70px);
-  margin: 70px 0px 0 260px;
+  min-height: calc(100vh - 70px);
+  margin: 90px 30px 0 280px;
   padding: 50px;
+  -webkit-transition: .35s;
+  transition: .35s;
+}
+
+.dashboard .main.full-width {
+  margin-left: 100px;
 }
 
 .dashboard .main .update-profile {
@@ -97,13 +265,19 @@
           align-items: flex-start;
 }
 
-.dashboard .main .update-profile form input {
+.dashboard .main .update-profile form input,
+.dashboard .main .update-profile form select {
   margin: 10px 0;
   height: 35px;
   width: 300px;
   padding: 0 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.2);
+}
+
+.dashboard .main .update-profile form select option {
+  padding: 5px 0;
+  margin: 5px 0;
 }
 
 .dashboard .main .update-profile form button.btn-primary {

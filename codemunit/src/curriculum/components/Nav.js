@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-// import logo from "../../images/black-logo.png"
-import profile from "../../images/profile.png"
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
 import { FaSearch } from "react-icons/all"
-const MobileNav = ({navProps}) =>  {
+const MobileNav = ({navProps, auth: { isAuthenticated, loading, user }}) =>  {
 
     return (
         <nav className={navProps}>
@@ -23,22 +23,30 @@ const MobileNav = ({navProps}) =>  {
                     <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
                 </ul>
                 <div className="profile user-nav">
-                    <a href="#profile">
+                    <Link to="/dashboard/profile">
                         <div className="profile-menu">
                             <div className="img">
-                                <img src={profile} alt="dp" />
+                                <img src={user.avatar} alt={`${user.firstname} avatar`} />
                             </div>
                             <div className="username">
-                                username
+                                {user.firstname}{" "}{user.secondname}
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </nav>
     );
 }
 
-export default MobileNav;
+const mapStateToProps = state => ({
+    auth: state.auth,
+  });
+  
+ MobileNav.propTypes = {
+    auth: PropTypes.object.isRequired,
+  };
+  
+  export default connect(mapStateToProps, {})(MobileNav);
 
 

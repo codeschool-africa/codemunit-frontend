@@ -1,5 +1,12 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import {
+  IoMdHome,
+  MdGolfCourse,
+  FaUserCircle,
+  FiSettings,
+  FiLogOut
+} from "react-icons/all";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../redux/actions/auth";
@@ -7,7 +14,8 @@ import { getProfile, updateProfile } from "../redux/actions/profile";
 import Alert from "../components/alerts";
 import "../styles/dashboard/style.css";
 
-import logo from "../images/black-logo.png";
+import logo from "../images/logo.png";
+import altLogo from "../images/logo192x192.png";
 
 //components
 // import Header from "./components/header";
@@ -26,22 +34,25 @@ const Dashboard = ({
   updateProfile,
   profile: { profile, loading }
 }) => {
+  const [navOpen, setOpen] = useState(true);
+  const handleNav = () => {
+    setOpen(!navOpen);
+    console.log(navOpen);
+  };
   let { path, url } = useRouteMatch();
   return (
     <>
       <div className='dashboard'>
-        <div className='dashboard-header'>
+        <div
+          className={
+            navOpen ? "dashboard-header" : "dashboard-header full-width"
+          }
+        >
           <nav>
-            <div className='logo'>
-              <Link to={`${url}`}>
-                <img
-                  src={logo}
-                  alt='kodemunit logo'
-                  style={{
-                    height: "40px"
-                  }}
-                />
-              </Link>
+            <div className='burger' onClick={handleNav}>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
             <ul>
               <li>
@@ -53,34 +64,69 @@ const Dashboard = ({
               <li>
                 <Link to={`${url}/edit-profile`}>Edit profile</Link>
               </li>
+              <li className='img'>
+                {user === null ? (
+                  ""
+                ) : (
+                  <img
+                    src={user.avatar}
+                    alt={`${user.avatar} avatar`}
+                  />
+                )}
+              </li>
             </ul>
           </nav>
         </div>
-        <aside className='side-nav'>
+        <aside className={navOpen ? "" : "side-nav"}>
           <div className='logo'>
             <img
-              src={user.avatar}
-              alt={`${user.avatar} avatar`}
-              style={{
-                height: "40px"
-              }}
+              src={navOpen ? logo : altLogo}
+              alt={`kodemunit logo`}
             />
-            <span>
-              {user.firstname} {user.secondname}
-            </span>
-            <ul>
-              <li>
-                <a href='#!' onClick={logout}>
-                  Logout
-                </a>
-              </li>
-            </ul>
           </div>
+          <ul className='navigation'>
+            <div className='profile-name'>
+              {user.firstname} {user.secondname}
+            </div>
+            <li>
+              <Link to='/dashboard' className='active'>
+                <IoMdHome className='icon' /> Home
+              </Link>
+            </li>
+            <li>
+              <Link to='/dashboard/my-courses'>
+                <MdGolfCourse className='icon' />
+                My Courses
+              </Link>
+            </li>
+            <li>
+              <Link to='/dashboard/profile'>
+                {" "}
+                <FaUserCircle className='icon' />
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link to='/dashboard/edit-profile'>
+                {" "}
+                <FiSettings className='icon' />
+                Settings
+              </Link>
+            </li>
+          </ul>
+          <ul className='extra-links'>
+            <li>
+              <a href='#!' onClick={logout}>
+                <FiLogOut className='icon' />
+                Logout
+              </a>
+            </li>
+          </ul>
         </aside>
-        <div className='main'>
+        <div className={navOpen ? "main" : "main full-width"}>
           <Switch>
             <Route exact path={path}>
-              <h1>Hello from home page</h1>
+              <h1>Hello {user.firstname}, welcome to your dashboard</h1>
             </Route>
             <Route exact path={`${path}/profile`}>
               <Profile />
@@ -90,7 +136,8 @@ const Dashboard = ({
             </Route>
             <Route exact path={`${path}/my-courses`}>
               <div>
-               <h1>hello from my courses</h1>
+                <h1>hello from my courses</h1>
+                <Link to='/curriculum'>Curriculum</Link>
               </div>
             </Route>
             <Route component={Error} />>

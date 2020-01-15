@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-input:focus, button:focus, a:focus {
+input:focus, button:focus, a:focus, select:focus {
     outline: none !important;
 }
 

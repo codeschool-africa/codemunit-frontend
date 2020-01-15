@@ -34,6 +34,7 @@ import AuthRoute from "./util/AuthRoute";
 
 //load user data
 import { loadUserData } from "./redux/actions/auth";
+import { logout } from "./redux/actions/auth"
 import setAuthToken from "./util/setAuthToken";
 
 if (localStorage.token) {

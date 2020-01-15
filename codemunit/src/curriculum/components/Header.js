@@ -63,7 +63,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                                             </div>
                                             <div className="account-details">
                                                 <div className="username">
-                                                    {user.firstname}
+                                                    {user.firstname}{" "}{user.secondname}
                                                         </div>
                                                 <div className="email">
                                                     {user.email}
