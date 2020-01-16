@@ -27,10 +27,11 @@ const Home = ({
       <div className='content'>
         <header>
           <div className='container'>
+            <span>Dashboard</span>
             <h2>Hello {user.firstname}, welcome to your dashboard</h2>
           </div>
         </header>
-        <div className='main-content'>
+        <div className='main-container'>
           <div className='container'></div>
         </div>
       </div>

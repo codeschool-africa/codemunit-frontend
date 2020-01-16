@@ -42,7 +42,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                         <li><Link to='/mentorship'>Mentorship</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/faq'>FAQ</Link></li>
-                        <li><Link to={`/dashboard/${user._id}`} className='btn'>Dashboard</Link></li>
+                        <li><Link to={`/dashboard`} className='btn'>Dashboard</Link></li>
                     </ul>
                     <div className="user-nav">
                         <div className="profile-img dropdown">
@@ -81,7 +81,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                                             <Link to="/">History</Link>
                                         </li>
                                         <li>
-                                            <Link to="/">Account</Link>
+                                            <Link to={`/dashboard/${user._id}/profile`}>Account</Link>
                                         </li>
                                     </ul>
                                     <ul>

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 // import { logout } from "../../redux/actions/auth";
 import { getProfile, updateProfile } from "../../redux/actions/profile";
-import { location } from "../../redux/actions/location";
+// import { location } from "../../redux/actions/location";
 import Alert from "../../components/alerts";
 
 //pages
@@ -14,7 +14,7 @@ const UpdateProfile = ({
   getProfile,
   updateProfile,
   history,
-  location: { countries },
+  // location: { countries },
   profile: { profile, loading },
   props
 }) => {
@@ -47,8 +47,12 @@ const UpdateProfile = ({
   const handleSubmit = e => {
     e.preventDefault();
     updateProfile({
-      formData,
-      history
+      location,
+      skills,
+      courses,
+      twitter,
+      linkedin,
+      githubusername
     });
   };
 
@@ -59,7 +63,7 @@ const UpdateProfile = ({
           <h2>Hello please add or edit your profile</h2>
         </div>
       </header>
-      <div className='main-content'>
+      <div className='main-container'>
         <div className='container'>
           <form onSubmit={e => handleSubmit(e)}>
             <Alert />
@@ -126,12 +130,12 @@ const UpdateProfile = ({
 
 const mapStateToProps = state => ({
   auth: state.auth,
-  profile: state.profile,
-  location: state.location
+  profile: state.profile
+  // location: state.location
 });
 
 UpdateProfile.propTypes = {
-  location: PropTypes.object.isRequired,
+  // location: PropTypes.object.isRequired,
   getProfile: PropTypes.func.isRequired,
   updateProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
@@ -140,6 +144,6 @@ UpdateProfile.propTypes = {
 
 export default connect(mapStateToProps, {
   getProfile,
-  updateProfile,
-  location
+  updateProfile
+  // location
 })(withRouter(UpdateProfile));

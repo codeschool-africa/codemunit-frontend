@@ -19,6 +19,7 @@ export const loadUserData = () => async dispatch => {
   }
   try {
     const res = await axios.get("/api/auth");
+    //try to set if token===null, isAuthenticated === false
     dispatch({
       type: USERDATA_LOADED,
       payload: res.data

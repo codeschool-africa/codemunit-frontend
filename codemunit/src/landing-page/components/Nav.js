@@ -68,7 +68,7 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading, user }}) => {
               {isAuthenticated === true ? (
                 <>
                   <Link
-                    to={`/dashboard/${user._id}`}
+                    to={`/dashboard`}
                     className='btn-primary'
                     onClick={handleToggle}
                   >

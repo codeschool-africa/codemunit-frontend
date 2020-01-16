@@ -25,6 +25,7 @@
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "sass-lint": "^1.13.1",
     "thunk": "^0.0.1",
     "uuid": "^3.3.3"
   },

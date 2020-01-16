@@ -1,6 +1,5 @@
 form {
   width: 300px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -9,7 +8,9 @@ form label {
   margin: 10px 0;
 }
 
-form label input, form label select, form label button.btn-primary {
+form label input,
+form label select,
+form label button.btn-primary {
   height: 35px;
   width: 100%;
   padding: 0 10px;

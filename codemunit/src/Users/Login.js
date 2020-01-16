@@ -8,12 +8,9 @@ import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
 import { login } from "../redux/actions/auth";
 
-const Login = ({
-  onClick,
-  login,
-  setAlert,
-  auth: { isAuthenticated, loading }
-}) => {
+import "../styles/users/style.css";
+
+const Login = ({ login, setAlert, auth: { isAuthenticated, loading } }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -32,7 +29,11 @@ const Login = ({
   };
 
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    if (loading) {
+      setAlert("please wait...", "secondary");
+    } else {
+      return <Redirect to='/dashboard' />;
+    }
   }
 
   const onOpenModal = () => {
@@ -45,49 +46,75 @@ const Login = ({
   };
 
   return (
-    <div className='form-container sign-in-container'>
-      <form onSubmit={e => handleSubmit(e)}>
-        <h1>Sign in to your account</h1>
-        <Alert />
-        <label htmlFor='login-email'>Email</label>
-        <input
-          type='email'
-          name='email'
-          id='login-email'
-          value={email}
-          onChange={e => handleChange(e)}
-        />
-        <label htmlFor='login-password'>Password</label>
-        <input
-          type='password'
-          name='password'
-          id='login-password'
-          value={password}
-          onChange={e => handleChange(e)}
-          autoComplete='current-password'
-        />
-        <button
-          className='btn-primary'
-          disabled={loading}
-          style={{
-            pointer: "cursor"
-          }}
-        >
-          Log In
-        </button>
-        <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
-          Forgot your password?
-        </Link>
-        <Modal open={OpenModal} onClose={onCloseModal} center>
-          <Passwordrec />
-        </Modal>
-        <div className='shift shift-signup'>
-          <span>Don't have an account yet?</span>
-          <button className='ghost' id='signUp' onClick={onClick} type='button'>
-            Sign up
-          </button>
+    <div className='user-registration'>
+      <div className='container'>
+        <div className='form-container sign-in-container'>
+          <form onSubmit={e => handleSubmit(e)}>
+            <h1>Sign in to your account</h1>
+            <Alert />
+            <label htmlFor='login-email'>Email</label>
+            <input
+              type='email'
+              name='email'
+              id='login-email'
+              value={email}
+              onChange={e => handleChange(e)}
+            />
+            <label htmlFor='login-password'>Password</label>
+            <input
+              type='password'
+              name='password'
+              id='login-password'
+              value={password}
+              onChange={e => handleChange(e)}
+              autoComplete='current-password'
+            />
+            <button
+              className='btn-primary'
+              disabled={loading}
+              style={{
+                pointer: "cursor"
+              }}
+            >
+              Log In
+            </button>
+            <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
+              Forgot your password?
+            </Link>
+            <Modal open={OpenModal} onClose={onCloseModal} center>
+              <Passwordrec />
+            </Modal>
+            <div className='shift shift-signup'>
+              <span>Don't have an account yet?</span>
+              {/* <button
+                className='ghost'
+                id='signUp'
+                onClick={onClick}
+                type='button'
+              >
+                Sign up
+              </button> */}
+              <Link to='/register' className='ghost' id='signIn'>
+                Log in
+              </Link>
+            </div>
+          </form>
         </div>
-      </form>
+        <div className='overlay-container'>
+          <div className='overlay'>
+            <div className='overlay-panel overlay-left'>
+              <h1>Hello Learner!</h1>
+              <p>Enter your personal details to start your journey with us</p>
+            </div>
+            <div className='overlay-panel overlay-right'>
+              <h1>Welcome back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

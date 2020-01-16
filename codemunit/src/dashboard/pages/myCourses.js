@@ -10,7 +10,7 @@ const MyCourses = () => {
               <h2>Hello from all courses page user ;)</h2>
           </div>
       </header>
-      <div className="main-content">
+      <div className="main-container">
         <div className="container"></div>
       </div>
     </div>

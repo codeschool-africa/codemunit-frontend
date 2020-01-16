@@ -24,30 +24,44 @@ const Profile = ({
           </h2>
         </div>
       </header>
-      <div className='main-content'>
+      <div className='main-container'>
         <div className='container'>
           {profile === null ? (
             "You haven't set your profile yet..."
           ) : (
             <ul>
               <h2>Courses</h2>
+              {profile.courses.length > 0 ? (
+                <ul>
+                  {profile.courses.map(course => (
+                    <li key={course}>{course}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>No registered courses</p>
+              )}
               <h2>Social media</h2>
-              <a href={profile.social.linkedin}>
-                <FaLinkedinIn />
-              </a>
-              <br />
-              <a href={profile.social.twitter}>
-                <FaTwitter />
-              </a>
-              <h2>Github</h2>
-              <span>
-                <a href={`http://www.github.com/${profile.githubusername}`}>
-                  <FaGithub />
+              <div className='social-media'>
+                {profile.social.linkedin === null ? null : (
+                  <a href={`http://www.linkedin/in/${profile.social.linkedin}`}>
+                    <FaLinkedinIn />
+                  </a>
+                )}
+                <a href={`http://www.twitter.com/${profile.social.twitter}`}>
+                  <FaTwitter />
                 </a>
-              </span>
+                {profile.social.githubusername === null ? null : (
+                  <a href={`http://www.linkedin/in/${profile.githubusername}`}>
+                    <FaLinkedinIn />
+                  </a>
+                )}
+              </div>
             </ul>
           )}
         </div>
+        {profile.githubusername === null ? <>Register to github website and get everything</> : <>
+          hello user
+        </>}
       </div>
     </div>
   );

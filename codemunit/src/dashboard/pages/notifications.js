@@ -10,7 +10,7 @@ const Notifications = () => {
           <h2>Hello from notification page</h2>
         </div>
       </header>
-      <div className="main-content">
+      <div className="main-container">
         <div className="container"></div>
       </div>
     </div>

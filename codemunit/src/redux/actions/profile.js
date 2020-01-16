@@ -30,68 +30,35 @@ export const getProfile = () => async dispatch => {
   }
 };
 
-//update user profile
-// export const updateProfile = ({
-//   location,
-//   skills,
-//   courses,
-//   twitter,
-//   linkedin,
-//   githubusername
-// }) => async dispatch => {
-//   const config = {
-//     headers: {
-//       "Content-Type": "application/json"
-//     }
-//   };
-//   const newProfile = {
-//     location,
-//     skills,
-//     courses,
-//     twitter,
-//     linkedin,
-//     githubusername
-//   };
-//   const body = JSON.stringify(newProfile);
-//   try {
-//     const res = await axios.post("/api/profile", body, config);
-//     dispatch({
-//       type: PROFILE_UPDATED,
-//       payload: res.data
-//     });
-//   } catch (err) {
-//     const errors = err.response.data.errors;
-//     if (errors) {
-//       errors.forEach(error => {
-//         dispatch(setAlert(error.msg, "error"));
-//       });
-//     }
-//     dispatch({
-//       type: PROFILEUPDATE_FAIL
-//     });
-//   }
-// };
-
-export const updateProfile = (
-  history,
-  formData,
-  edit = false
-) => async dispatch => {
+// update user profile
+export const updateProfile = ({
+  location,
+  skills,
+  courses,
+  twitter,
+  linkedin,
+  githubusername
+}) => async dispatch => {
   const config = {
     headers: {
       "Content-Type": "application/json"
     }
   };
+  const newProfile = {
+    location,
+    skills,
+    courses,
+    twitter,
+    linkedin,
+    githubusername
+  };
+  const body = JSON.stringify(newProfile);
   try {
-    const res = await axios.post("/api/profile", formData, config);
+    const res = await axios.post("/api/profile", body, config);
     dispatch({
       type: PROFILE_UPDATED,
       payload: res.data
     });
-    dispatch(setAlert(edit ? "Profile Updated" : "Profile created", "success"));
-    if (!edit) {
-      history.push("/dashboard");
-    }
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
@@ -100,8 +67,41 @@ export const updateProfile = (
       });
     }
     dispatch({
-      type: PROFILEUPDATE_FAIL,
-      payload: { msg: err.response.statusText, status: err.response.status }
+      type: PROFILEUPDATE_FAIL
     });
   }
 };
+
+// export const updateProfile = (
+//   history,
+//   formData,
+//   edit = false
+// ) => async dispatch => {
+//   const config = {
+//     headers: {
+//       "Content-Type": "application/json"
+//     }
+//   };
+//   try {
+//     const res = await axios.post("/api/profile", formData, config);
+//     dispatch({
+//       type: PROFILE_UPDATED,
+//       payload: res.data
+//     });
+//     dispatch(setAlert(edit ? "Profile Updated" : "Profile created", "success"));
+//     if (!edit) {
+//       history.push("/dashboard");
+//     }
+//   } catch (err) {
+//     const errors = err.response.data.errors;
+//     if (errors) {
+//       errors.forEach(error => {
+//         dispatch(setAlert(error.msg, "error"));
+//       });
+//     }
+//     dispatch({
+//       type: PROFILEUPDATE_FAIL,
+//       payload: { msg: err.response.statusText, status: err.response.status }
+//     });
+//   }
+// };

@@ -19,7 +19,8 @@ import About from "./landing-page/pages/About";
 import Mentorship from "./landing-page/pages/Mentorship";
 import Faq from "./landing-page/pages/Faq";
 import Contact from "./landing-page/pages/Contact";
-import User from "./Users/User";
+import Login from "./Users/Login";
+import Signup from "./Users/Signup";
 import Blog from "./blog/Blog";
 import Post from "./blog/Post";
 import Error from "./components/Error";
@@ -41,21 +42,7 @@ if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-const callFakeAPI = delay =>
-  new Promise(resolve => {
-    setTimeout(resolve, delay);
-  });
-
-const App = ({ auth: { isAuthenticated, user } }) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    (async () => {
-      await callFakeAPI(3000);
-      setLoading(false);
-    })();
-  }, []);
-
+const App = ({ auth: { isAuthenticated, user, loading } }) => {
   useEffect(() => {
     store.dispatch(loadUserData());
   }, []);
@@ -78,7 +65,8 @@ const App = ({ auth: { isAuthenticated, user } }) => {
         <Switch>
           <Route exact path='/' component={Home} key='home' />
           <Route exact path='/about' component={About} key='about' />
-          <Route exact path='/account' component={User} key='user' />
+          <Route exact path='/signin' component={Login} key='login' />
+          <Route exact path='/register' component={Signup} key='signup' />
           <Route exact path='/blog' component={Blog} key='blog' />
           <Route exact path='/blog/post' component={Post} key='post' />
           <AuthRoute
