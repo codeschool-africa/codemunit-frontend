@@ -74,6 +74,20 @@ p {
   font-size: 1.125em;
 }
 
+.error {
+  background: #dd4040;
+  padding: 10px 10px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.success {
+  background: #40ddbb;
+  padding: 10px 10px;
+  margin: 5px 0;
+  color: #fff;
+}
+
 @media (max-width: 992px) {
   h1.header {
     display: inline-block;

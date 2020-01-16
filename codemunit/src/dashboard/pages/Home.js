@@ -15,6 +15,8 @@ import { logout } from "../../redux/actions/auth";
 import { getProfile, updateProfile } from "../../redux/actions/profile";
 import Alert from "../../components/alerts";
 
+import Time from "../components/time";
+
 const Home = ({
   auth: { isAuthenticated, user },
   logout,
@@ -27,8 +29,11 @@ const Home = ({
       <div className='content'>
         <header>
           <div className='container'>
-            <span>Dashboard</span>
-            <h2>Hello {user.firstname}, welcome to your dashboard</h2>
+            <span>
+              <h2>Dashboard </h2>&nbsp;&nbsp;/&nbsp;&nbsp;
+              <a href='#!'>{user.firstname}</a>
+            </span>
+            <span><Time/></span>
           </div>
         </header>
         <div className='main-container'>

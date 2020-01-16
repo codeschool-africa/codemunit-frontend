@@ -1,13 +1,6 @@
-.errors {
-  background: #be1414;
-  padding: 10px 0;
-  margin: 5px 0;
-}
-
 .dashboard {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  max-height: 100vh;
 }
 
 .dashboard a {
@@ -227,8 +220,8 @@
 
 .dashboard .dashboard-header nav .burger {
   cursor: pointer;
-  width: 30px;
-  height: 20px;
+  width: 20px;
+  height: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +236,7 @@
 
 .dashboard .dashboard-header nav .burger span {
   height: 2px;
-  width: 30px;
+  width: 20px;
   display: block;
   background: #438976;
 }
@@ -291,8 +284,6 @@
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
   min-height: calc(100vh - 70px);
   margin: 70px 0 0 260px;
-  overflow-y: auto;
-  height: 130vh;
   -webkit-transition: .35s;
   transition: .35s;
 }
@@ -307,18 +298,42 @@
 }
 
 .dashboard .main header {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #eee;
 }
 
 .dashboard .main header .container {
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem;
   background: #F6F4F1;
   color: #295c88;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .main header .container span {
+  line-height: 100%;
+}
+
+.dashboard .main header .container span a {
+  color: #295c88;
+}
+
+.dashboard .main header .container span.time {
+  color: #1a2e3f;
 }
 
 .dashboard .main header .container h2 {
   font-weight: lighter;
+  display: inline-block;
+  color: #1a2e3f;
 }
 
 .dashboard .main .main-container {
@@ -373,11 +388,43 @@
   margin: 10px 0;
 }
 
-.dashboard .main .main-container .container form label input,
-.dashboard .main .main-container .container form label select,
-.dashboard .main .main-container .container form label button.btn-primary {
+.dashboard .main .main-container .container form input,
+.dashboard .main .main-container .container form select,
+.dashboard .main .main-container .container form button.btn-primary {
   height: 35px;
   width: 100%;
   padding: 0 10px;
+}
+
+.dashboard .main .main-container .container form button.btn-primary {
+  background: #438976 !important;
+}
+
+.dashboard .main .main-container .container form button.btn-primary:hover {
+  background: #295c88 !important;
+  border: 5px solid #295c88;
+}
+
+.dashboard .main .main-container .container .profile-header {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .main .main-container .container .profile-header img {
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+  border: 1px solid #295c88;
+  background: #F8F9FA;
+  margin-right: 20px;
+}
+
+.dashboard .main .main-container .container .profile-header .profile-details p {
+  line-height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

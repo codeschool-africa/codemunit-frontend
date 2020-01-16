@@ -34,7 +34,7 @@ const Home = ({ auth: { isAuthenticated, loading, user } }) => {
             {isAuthenticated ? (
               null
             ) : (
-              <Link to='/account' className='btn-primary'>
+              <Link to='/signin' className='btn-primary'>
                 Join Now
               </Link>
             )}

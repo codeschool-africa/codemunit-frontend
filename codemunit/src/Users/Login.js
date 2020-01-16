@@ -10,7 +10,11 @@ import { login } from "../redux/actions/auth";
 
 import "../styles/users/style.css";
 
-const Login = ({ login, setAlert, auth: { isAuthenticated, loading } }) => {
+const Login = ({
+  login,
+  setAlert,
+  auth: { isAuthenticated, loading, user }
+}) => {
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -73,7 +77,7 @@ const Login = ({ login, setAlert, auth: { isAuthenticated, loading } }) => {
               className='btn-primary'
               disabled={loading}
               style={{
-                pointer: "cursor"
+                cursor: "pointer"
               }}
             >
               Log In

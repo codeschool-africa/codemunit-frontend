@@ -1,13 +1,12 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-// import { logout } from "../../redux/actions/auth";
 import { getProfile, updateProfile } from "../../redux/actions/profile";
 // import { location } from "../../redux/actions/location";
 import Alert from "../../components/alerts";
 
-//pages
+import Time from "../components/time";
 
 const UpdateProfile = ({
   auth: { isAuthenticated, user },
@@ -60,7 +59,12 @@ const UpdateProfile = ({
     <div className='content'>
       <header>
         <div className='container'>
-          <h2>Hello please add or edit your profile</h2>
+          <span>
+            <h2>Dashboard </h2>&nbsp;&nbsp;/&nbsp;&nbsp;
+            <Link to='/dashboard'>{user.firstname}</Link>
+            &nbsp;&nbsp;/&nbsp;&nbsp;edit-profile
+          </span>
+          <Time />
         </div>
       </header>
       <div className='main-container'>
@@ -145,5 +149,4 @@ UpdateProfile.propTypes = {
 export default connect(mapStateToProps, {
   getProfile,
   updateProfile
-  // location
 })(withRouter(UpdateProfile));

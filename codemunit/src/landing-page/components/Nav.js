@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-const Nav = ({ navProps, auth: { isAuthenticated, loading, user }}) => {
+const Nav = ({ navProps, auth: { isAuthenticated, loading, user } }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleToggle = () => {
@@ -77,7 +77,7 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading, user }}) => {
                 </>
               ) : (
                 <Link
-                  to='/account'
+                  to='/signin'
                   className='btn-primary'
                   onClick={handleToggle}
                 >
@@ -93,11 +93,11 @@ const Nav = ({ navProps, auth: { isAuthenticated, loading, user }}) => {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth,
+  auth: state.auth
 });
 
 Nav.propTypes = {
-  auth: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, {  })(Nav);
+export default connect(mapStateToProps, {})(Nav);

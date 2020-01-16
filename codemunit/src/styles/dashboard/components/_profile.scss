@@ -1,0 +1,20 @@
+.profile-header {
+    padding: 20px;
+    // background: $cleanColor;
+    display: flex;
+    align-items: center;
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+        border: 1px solid $tertiaryColor;
+        background: #F8F9FA;
+        margin-right: 20px;
+    }
+    .profile-details {
+        p {
+            line-height: 100%;
+        }
+    }
+
+}

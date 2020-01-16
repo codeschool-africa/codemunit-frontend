@@ -8,10 +8,14 @@ form label {
   margin: 10px 0;
 }
 
-form label input,
-form label select,
-form label button.btn-primary {
+form input,
+form select,
+form button.btn-primary {
   height: 35px;
   width: 100%;
   padding: 0 10px;
+}
+
+form button.btn-primary {
+  background: #438976 !important;
 }
