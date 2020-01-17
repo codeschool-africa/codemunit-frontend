@@ -35,7 +35,7 @@ const Login = ({
   if (isAuthenticated) {
     if (loading) {
       setAlert("please wait...", "secondary");
-    } else if(user !== null) {
+    } else if(user.token !== null) {
       return <Redirect to='/dashboard' />;
     }
   }
