@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import {
   IoMdHome,
@@ -13,14 +13,14 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../redux/actions/auth";
 import { getProfile, updateProfile } from "../redux/actions/profile";
-import Alert from "../components/alerts";
+// import Alert from "../components/alerts";
 import "../styles/dashboard/style.css";
 
-import logo from "../images/logo.png";
+import logo from "../images/logo12.png";
 import altLogo from "../images/logo192x192.png";
 
 //pages
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 import Profile from "./pages/User-profile";
 import UpdateProfile from "./pages/updateProfile";
 import AllCourses from "./pages/allCourses";
@@ -30,11 +30,11 @@ import Notifications from "./pages/notifications";
 const Error = () => {
   return (
     <header>
-      <div className="container">
+      <div className='container'>
         <h2>Oooopss!!! page not found, check your url and try again</h2>
       </div>
     </header>
-  )
+  );
 };
 
 const Dashboard = ({
@@ -44,6 +44,7 @@ const Dashboard = ({
   updateProfile,
   profile: { profile, loading }
 }) => {
+  const ref = useRef();
   const [navOpen, setOpen] = useState(true);
 
   const [isHome, setHome] = useState(true);
@@ -52,6 +53,22 @@ const Dashboard = ({
   const [isNotification, setNotification] = useState(false);
   const [isCourses, setCourses] = useState(false);
   const [isMyCourses, setMyCourses] = useState(false);
+
+  const [isNotifications, setNotifications] = useState(false);
+
+  // window.onclick = event => {
+  //   // if (!event.target.contains(ref)) {
+  //   //   if (isNotifications) {
+  //   //     setNotifications(false);
+  //   //   }
+  //   // }
+  //   console.log(isNotifications);
+  // };
+
+  const showNotifications = () => {
+    setNotifications(!isNotifications);
+    console.log(isNotifications);
+  };
 
   const homeToggle = () => {
     setHome(true);
@@ -111,6 +128,7 @@ const Dashboard = ({
     setOpen(!navOpen);
     console.log(navOpen);
   };
+
   let { path, url } = useRouteMatch();
   return (
     <>
@@ -128,19 +146,46 @@ const Dashboard = ({
             </div>
             <ul>
               <li>
-                <Link to={`${url}/my-courses`} onClick={myCoursesToggle}>
-                  My Courses
+                <Link to={`/faq`} onClick={myCoursesToggle}>
+                  FAQ
                 </Link>
               </li>
-              <li>
-                <Link to={`${url}/profile`} onClick={profileToggle}>
-                  Profile
-                </Link>
-              </li>
-              <li>
-                <Link to={`${url}/edit-profile`} onClick={settingToggle}>
-                  Edit profile
-                </Link>
+              <li className='dropdown' ref={ref}>
+                <a href='#!' onClick={showNotifications} className='drpbtn'>
+                  <MdNotifications className='icon' />
+                  <span className='notify'></span>
+                </a>
+                {isNotifications && (
+                  <div className={"notifications shown"}>
+                    <div className='container'>
+                      <h2>Notifications</h2>
+                      <ul>
+                        <li>
+                          <Link to="">
+                            Lorem ipsum donor el chase tor top, les...
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit...
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="">
+                            Eos iusto quam explicabo, distinctio commodi...
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="">
+                            .....
+                          </Link>
+                        </li>
+                      </ul>
+                      <Link to={`${url}/notifications`}>View All</Link>
+                    </div>
+                  </div>
+                )}
               </li>
               <li className='img'>
                 {user === null ? (
@@ -234,7 +279,7 @@ const Dashboard = ({
         <div className={navOpen ? "main" : "main full-width"}>
           <Switch>
             <Route exact path={path}>
-              <Home/>
+              <Home />
             </Route>
             <Route exact path={`${path}/profile`}>
               <Profile />
@@ -253,6 +298,7 @@ const Dashboard = ({
             </Route>
             <Route component={Error} />>
           </Switch>
+          {/* <footer>hello world</footer> */}
         </div>
       </div>
     </>

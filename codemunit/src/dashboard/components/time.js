@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useEffect } from "react";
+// import PropTypes from "prop-types";
 
 const Time = () => {
   const months = [
@@ -16,7 +16,7 @@ const Time = () => {
     "November",
     "December"
   ];
-  var days = [
+  const days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -25,11 +25,17 @@ const Time = () => {
     "Friday",
     "Saturday"
   ];
-  const today = new Date(),
-    date = `${days[today.getDay()]}, ${
+  const Today = () => {
+    const today = new Date();
+    const date = `${days[today.getDay()]}, ${
       months[today.getMonth()]
     } ${today.getDate()}, ${today.getFullYear()}`;
-  return <span className="time">{date}</span>;
+    return date;
+  };
+  useEffect(() => {
+    Today();
+  });
+  return <span className='time'>{Today()}</span>;
 };
 
 Time.propTypes = {};

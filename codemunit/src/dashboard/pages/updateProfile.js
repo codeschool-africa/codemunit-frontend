@@ -11,10 +11,10 @@ import Time from "../components/time";
 const UpdateProfile = ({
   auth: { isAuthenticated, user },
   getProfile,
-  updateProfile,
+  updateProfile: { loading },
   history,
   // location: { countries },
-  profile: { profile, loading },
+  profile: { profile },
   props
 }) => {
   const [formData, setFormData] = useState({
@@ -35,9 +35,9 @@ const UpdateProfile = ({
     githubusername
   } = formData;
 
-  useEffect(() => {
-    getProfile();
-  }, []);
+  // useEffect(() => {
+  //   getProfile();
+  // }, []);
 
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -77,6 +77,8 @@ const UpdateProfile = ({
                 <option value='Tanzania'>Tanzania</option>
                 <option value='Kenya'>Kenya</option>
                 <option value='Uganda'>Uganda</option>
+                <option value='Rwanda'>Rwanda</option>
+                <option value='Burundi'>Burundi</option>
               </select>
             </label>
             <label htmlFor='skills'>
@@ -124,7 +126,9 @@ const UpdateProfile = ({
                 onChange={e => handleChange(e)}
               />
             </label>
-            <button className='btn-primary'>Submit</button>
+            <button className='btn-primary' type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </div>

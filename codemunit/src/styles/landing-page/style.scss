@@ -60,6 +60,22 @@ input:focus, button:focus, a:focus, select:focus {
     }
 }
 
+.btn-secondary {
+    display: inline-block;
+    margin: 0 !important;
+    padding: 4px 20px;
+    background: rgba(67, 137, 118, 1);
+    border: 5px solid $fancyColor;
+    transition: .25s;
+    color: $secondaryColor !important;
+    text-decoration: none;
+    &:hover {
+        color: $secondaryColor !important;
+        background: $tertiaryColor;
+        border: 5px solid $tertiaryColor;
+    }
+}
+
 .btn {
     a {
         margin-right: 20px !important;

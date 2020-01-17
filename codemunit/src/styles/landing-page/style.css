@@ -39,6 +39,24 @@ input:focus, button:focus, a:focus, select:focus {
   background: rgba(67, 137, 118, 0.2);
 }
 
+.btn-secondary {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 4px 20px;
+  background: #438976;
+  border: 5px solid #438976;
+  -webkit-transition: .25s;
+  transition: .25s;
+  color: #eee !important;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  color: #eee !important;
+  background: #295c88;
+  border: 5px solid #295c88;
+}
+
 .btn a {
   margin-right: 20px !important;
   padding: 7px 25px !important;

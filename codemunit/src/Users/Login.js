@@ -35,7 +35,7 @@ const Login = ({
   if (isAuthenticated) {
     if (loading) {
       setAlert("please wait...", "secondary");
-    } else {
+    } else if(user !== null) {
       return <Redirect to='/dashboard' />;
     }
   }
@@ -80,7 +80,7 @@ const Login = ({
                 cursor: "pointer"
               }}
             >
-              Log In
+              Log In{loading?"...": "" }
             </button>
             <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
               Forgot your password?
@@ -89,7 +89,7 @@ const Login = ({
               <Passwordrec />
             </Modal>
             <div className='shift shift-signup'>
-              <span>Don't have an account yet?</span>
+              <span>Don't have an account yet? </span>
               {/* <button
                 className='ghost'
                 id='signUp'
@@ -99,7 +99,7 @@ const Login = ({
                 Sign up
               </button> */}
               <Link to='/register' className='ghost' id='signIn'>
-                Log in
+                Register
               </Link>
             </div>
           </form>

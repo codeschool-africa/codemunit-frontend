@@ -1,3 +1,26 @@
 .profile-header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.profile-header .img-container {
   padding: 20px;
+  height: 150px;
+  width: 150px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.profile-header .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-header .profile-details {
+  width: calc( 100% - 200px);
+}
+
+.profile-header .profile-details p {
+  line-height: 100%;
 }

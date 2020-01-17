@@ -15,6 +15,9 @@ const Profile = ({
   useEffect(() => {
     getProfile();
   }, []);
+  useEffect(() => {
+    document.title = `${user.firstname} profile - Kodemunit`;
+  }, []);
   return (
     <div className='content'>
       <header>
@@ -30,72 +33,85 @@ const Profile = ({
       <div className='main-container'>
         <div className='container'>
           <div className='profile-header'>
-            <img src={user.avatar} alt={`${user.firstname} avatar`} />
+            <div className='img-container'>
+              <img src={user.avatar} alt={`${user.firstname} avatar`} />
+            </div>
             <div className='profile-details'>
               <div className='name'>
                 {user.firstname} {user.secondname}
               </div>
-              <p className='bio'>Frontend web developer</p>
-              <p className='about-user'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                iusto quam explicabo, distinctio commodi sequi repellat rerum
-                necessitatibus, fugit laborum doloremque reprehenderit beatae
-                nemo, quos deserunt? Ut iste accusantium cupiditate.
-              </p>
-
+              <div className='user-description'>
+                <h3>Bio</h3>
+                <p className='bio'>Frontend web developer</p>
+                <h3>About {user.firstname}</h3>
+                <p className='about-user'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  iusto quam explicabo, distinctio commodi sequi repellat rerum
+                  necessitatibus, fugit laborum doloremque reprehenderit beatae
+                  nemo, quos deserunt? Ut iste accusantium cupiditate.
+                </p>
+              </div>
+              <div className='social-media'>
+                {loading ? (
+                  <>Loading...</>
+                ) : (
+                  <>
+                    {" "}
+                    {profile === null ? (
+                      ""
+                    ) : (
+                      <>
+                        {profile.social.linkedin === null ? null : (
+                          <a
+                            href={`http://www.linkedin/in/${profile.social.linkedin}`}
+                          >
+                            <FaLinkedinIn />
+                          </a>
+                        )}
+                        <a
+                          href={`http://www.twitter.com/${profile.social.twitter}`}
+                        >
+                          <FaTwitter />
+                        </a>
+                        {profile.social.githubusername === null ? null : (
+                          <a
+                            href={`http://www.github.com/${profile.githubusername}`}
+                          >
+                            <FaGithub />
+                          </a>
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </div>
             </div>
           </div>
           <div className='user-details'>
-            {loading ? (
+            {/* {loading ? (
               <>Loading...</>
             ) : (
               <>
                 {profile === null ? (
                   "You haven't set your profile yet..."
                 ) : (
-                  <ul>
+                  <ul> */}
+                    {/* <span>{profile.location}</span>
                     <h2>Courses</h2>
-                    {profile.courses[2]}
-                    {profile.courses.length > 0 ? (
+                    {/* {profile.courses[2]} */}
+                    {/* {profile.courses.length > 0 ? (
                       <ul>
                         {profile.courses.map(course => (
                           <li key={course}>{course}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p>No registered courses</p>
-                    )}
-                    <h2>Social media</h2>
-                    <div className='social-media'>
-                      {profile.social.linkedin === null ? null : (
-                        <a
-                          href={`http://www.linkedin/in/${profile.social.linkedin}`}
-                        >
-                          <FaLinkedinIn />
-                        </a>
-                      )}
-                      <a
-                        href={`http://www.twitter.com/${profile.social.twitter}`}
-                      >
-                        <FaTwitter />
-                      </a>
-                      {profile.social.githubusername === null ? null : (
-                        <a
-                          href={`http://www.github.com/${profile.githubusername}`}
-                        >
-                          <FaGithub />
-                        </a>
-                      )}
-                    </div>
-                  </ul>
-                )}
-                {profile.githubusername === null ? (
-                  <>Register to github website and get everything</>
-                ) : (
-                  <>hello user</>
-                )}
-              </>
-            )}
+                      <p>No registered courses</p> */}
+                    {/* )} */}
+                  {/* </ul>
+                )} */}
+              {/* </> */}
+            {/* )} */}
           </div>
         </div>
       </div>

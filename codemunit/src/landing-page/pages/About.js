@@ -17,10 +17,6 @@ class About extends React.Component{
     }
 
     async componentDidMount(){
-        // await callFakeAPI(3000)
-        // this.setState(() => ({
-        //     isLoading: false
-        // }))
         document.title = "Codemunit - The Team"
       }
       render() {

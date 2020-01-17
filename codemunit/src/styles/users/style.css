@@ -32,6 +32,9 @@
 
 .user-registration h1 {
   font-weight: bold;
+  color: #438976;
+  text-align: left;
+  padding: 20px 0;
 }
 
 .user-registration p {
@@ -88,6 +91,7 @@
   height: 40px;
   padding: 10px;
   border-radius: 20px;
+  margin-left: 10px;
   background: transparent;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -172,11 +176,11 @@
   width: 100%;
 }
 
-.user-registration .container .form-container form .name .name-name {
+.user-registration .container .form-container form .name .first-name {
   margin-right: 2px;
 }
 
-.user-registration .container .form-container form .name .name-username {
+.user-registration .container .form-container form .name .second-name {
   margin-left: 2px;
 }
 
@@ -230,6 +234,11 @@
   transition: -webkit-transform .6s ease-in-out;
   transition: transform .6s ease-in-out;
   transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.user-registration .container .overlay-container h1 {
+  color: #eee;
+  text-align: center;
 }
 
 .user-registration .container .overlay-container .overlay {

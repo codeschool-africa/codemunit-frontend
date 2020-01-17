@@ -71,7 +71,7 @@ const Signup = ({
                   noValidate
                 />
               </div>
-              <div className='secondname'>
+              <div className='second-name'>
                 <label htmlFor='secondname'>Last Name:</label>
                 <input
                   type='text'
@@ -116,10 +116,10 @@ const Signup = ({
               <Link to='/'>terms and conditions</Link>
             </span>
             <button className='btn-primary' type='submit' disabled={loading}>
-              Register
+              Register{loading?"...": "" }
             </button>
             <div className='shift shift-signin'>
-              <span>Already have an account?</span>
+              <span>Already have an account? </span>
               {/* <button
                 className='ghost'
                 id='signIn'
