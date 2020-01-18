@@ -7,13 +7,13 @@ const AuthRoute = ({ component: Component, auth: { isAuthenticated, token}, ...r
     <Route
         {...rest}
         render={(props) =>
-            token === null ? <Redirect to="/signin" /> : <Component {...props} />
+            !isAuthenticated ? <Redirect to="/signin" /> : <Component {...props} />
         }
     />
 );
 
 const mapStateToProps = (state) => ({
-    // isAuthenticated: state.auth.isAuthenticated,
+    isAuthenticated: state.auth.isAuthenticated,
     auth: state.auth
 });
 
