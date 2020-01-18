@@ -68,12 +68,14 @@ const Profile = ({
                             <FaLinkedinIn />
                           </a>
                         )}
+                        {profile.social.twitter === null ? null : (
                         <a
                           href={`http://www.twitter.com/${profile.social.twitter}`}
                         >
                           <FaTwitter />
                         </a>
-                        {profile.social.githubusername === null ? null : (
+                        )}
+                        {profile.githubusername === null ? null : (
                           <a
                             href={`http://www.github.com/${profile.githubusername}`}
                           >

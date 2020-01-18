@@ -8,13 +8,17 @@ import Alert from "../../components/alerts";
 
 import Time from "../components/time";
 
+//ckeditor
+import CKEditor from "ckeditor4-react";
+
+import { setAlert } from "../../redux/actions/alert";
+
 const UpdateProfile = ({
   auth: { isAuthenticated, user },
   getProfile,
-  updateProfile: { loading },
+  updateProfile,
   history,
-  // location: { countries },
-  profile: { profile },
+  profile: { profile, loading },
   props
 }) => {
   const [formData, setFormData] = useState({
@@ -25,6 +29,9 @@ const UpdateProfile = ({
     linkedin: "",
     githubusername: ""
   });
+  if (!loading) {
+    setAlert("loading...", "secondary");
+  }
 
   const {
     location,
@@ -69,67 +76,70 @@ const UpdateProfile = ({
       </header>
       <div className='main-container'>
         <div className='container'>
-          <form onSubmit={e => handleSubmit(e)}>
-            <Alert />
-            <label htmlFor='location'>
-              <select name='location' onChange={e => handleChange(e)}>
-                <option value=''>Choose country</option>
-                <option value='Tanzania'>Tanzania</option>
-                <option value='Kenya'>Kenya</option>
-                <option value='Uganda'>Uganda</option>
-                <option value='Rwanda'>Rwanda</option>
-                <option value='Burundi'>Burundi</option>
-              </select>
-            </label>
-            <label htmlFor='skills'>
-              <input
-                type='text'
-                placeholder='skills'
-                name='skills'
-                value={skills}
-                onChange={e => handleChange(e)}
-              />
-            </label>
-            <label htmlFor='courses'>
-              <input
-                type='text'
-                placeholder='courses'
-                name='courses'
-                value={courses}
-                onChange={e => handleChange(e)}
-              />
-            </label>
-            <label htmlFor='twitter'>
-              <input
-                type='text'
-                placeholder='twitter'
-                name='twitter'
-                value={twitter}
-                onChange={e => handleChange(e)}
-              />
-            </label>
-            <label htmlFor='linkedin'>
-              <input
-                type='text'
-                placeholder='linkedin'
-                name='linkedin'
-                value={linkedin}
-                onChange={e => handleChange(e)}
-              />
-            </label>
-            <label htmlFor='githubusername'>
-              <input
-                type='text'
-                placeholder='github username'
-                name='githubusername'
-                value={githubusername}
-                onChange={e => handleChange(e)}
-              />
-            </label>
-            <button className='btn-primary' type="submit">
-              Submit
-            </button>
-          </form>
+          <div>
+            <form onSubmit={e => handleSubmit(e)}>
+              <Alert />
+              <label htmlFor='location'>
+                <select name='location' onChange={e => handleChange(e)}>
+                  <option value=''>Choose country</option>
+                  <option value='Tanzania'>Tanzania</option>
+                  <option value='Kenya'>Kenya</option>
+                  <option value='Uganda'>Uganda</option>
+                  <option value='Rwanda'>Rwanda</option>
+                  <option value='Burundi'>Burundi</option>
+                </select>
+              </label>
+              <label htmlFor='skills'>
+                <input
+                  type='text'
+                  placeholder='skills'
+                  name='skills'
+                  value={skills}
+                  onChange={e => handleChange(e)}
+                />
+              </label>
+              <label htmlFor='courses'>
+                <input
+                  type='text'
+                  placeholder='courses'
+                  name='courses'
+                  value={courses}
+                  onChange={e => handleChange(e)}
+                />
+              </label>
+              <label htmlFor='twitter'>
+                <input
+                  type='text'
+                  placeholder='twitter'
+                  name='twitter'
+                  value={twitter}
+                  onChange={e => handleChange(e)}
+                />
+              </label>
+              <label htmlFor='linkedin'>
+                <input
+                  type='text'
+                  placeholder='linkedin'
+                  name='linkedin'
+                  value={linkedin}
+                  onChange={e => handleChange(e)}
+                />
+              </label>
+              <label htmlFor='githubusername'>
+                <input
+                  type='text'
+                  placeholder='github username'
+                  name='githubusername'
+                  value={githubusername}
+                  onChange={e => handleChange(e)}
+                />
+              </label>
+              <button className='btn-primary'>Submit</button>
+            </form>
+            <div className='text-editor'>
+              <CKEditor data='<p>Write something</p>' type='classic' />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  USERDATA_LOADED,
+  USER_LOADED,
   AUTH_ERROR,
   CLEAR_PROFILE
 } from "../types/types";
@@ -19,9 +19,8 @@ export const loadUserData = () => async dispatch => {
   }
   try {
     const res = await axios.get("/api/auth");
-    //try to set if token===null, isAuthenticated === false
     dispatch({
-      type: USERDATA_LOADED,
+      type: USER_LOADED,
       payload: res.data
     });
   } catch (err) {
@@ -57,6 +56,7 @@ export const signupUser = ({
       payload: res.data
     });
     dispatch(loadUserData());
+    // dispatch
   } catch (err) {
     const errors = err.response.data.errors;
     if (errors) {
