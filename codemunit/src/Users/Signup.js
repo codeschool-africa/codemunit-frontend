@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { FaEye } from "react-icons/all";
 import { connect } from "react-redux";
 import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
@@ -16,8 +17,13 @@ const passwordReg = RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*)[0-9a-zA-Z]{6,}$/);
 const Signup = ({
   setAlert,
   signupUser,
-  auth: { isAuthenticated, loading }
+  auth: { isAuthenticated, loading, user }
 }) => {
+  const [showPassword, setPassword] = useState(false);
+
+  const changePasswordType = () => {
+    setPassword(!showPassword);
+  };
   const [formData, setFormData] = useState({
     firstname: "",
     secondname: "",
@@ -44,10 +50,12 @@ const Signup = ({
     } else if (password !== confirmPassword) {
       setAlert("password do not match", "error");
     } else {
-      setAlert(
-        `Your account was created successful, check your email for verification`,
-        "success"
-      );
+      if (isAuthenticated) {
+        setAlert(
+          `Your account was created successful, check your email for verification`,
+          "success"
+        );
+      }
       signupUser({ firstname, secondname, email, password });
     }
   };
@@ -95,7 +103,7 @@ const Signup = ({
             />
             <label htmlFor='password'>Password:</label>
             <input
-              type='password'
+              type={showPassword ? "text" : "password"}
               name='password'
               id='password'
               minLength='6'
@@ -104,19 +112,30 @@ const Signup = ({
             />
             <label htmlFor='confirmPassword'>Confirm password:</label>
             <input
-              type='password'
+              type={showPassword ? "text" : "password"}
               name='confirmPassword'
               id='confirmPassword'
               minLength='6'
               value={confirmPassword}
               onChange={e => handleChange(e)}
             />
+            <span
+              className={
+                showPassword
+                  ? "password show-password"
+                  : "password hide-password"
+              }
+              onClick={changePasswordType}
+            >
+              {" "}
+              show password
+            </span>
             <span>
               by registering you agree with our{" "}
               <Link to='/'>terms and conditions</Link>
             </span>
             <button className='btn-primary' type='submit' disabled={loading}>
-              Register{loading?"...": "" }
+              Register{loading ? "..." : ""}
             </button>
             <div className='shift shift-signin'>
               <span>Already have an account? </span>

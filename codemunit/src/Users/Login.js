@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Passwordrec from "./Passwordrec";
 import { Link, Redirect } from "react-router-dom";
+import { FaEye } from "react-icons/all";
 import Modal from "react-responsive-modal";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -20,6 +21,12 @@ const Login = ({
     password: ""
   });
 
+  const [showPassword, setPassword] = useState(false);
+
+  const changePasswordType = () => {
+    setPassword(!showPassword);
+  };
+
   const [OpenModal, setOpenModal] = useState(false);
 
   const { email, password } = formData;
@@ -35,7 +42,7 @@ const Login = ({
   if (isAuthenticated) {
     if (loading) {
       setAlert("please wait...", "secondary");
-    } else if(user.token !== null) {
+    } else if (user !== null) {
       return <Redirect to='/dashboard' />;
     }
   }
@@ -66,13 +73,16 @@ const Login = ({
             />
             <label htmlFor='login-password'>Password</label>
             <input
-              type='password'
+              type={showPassword ? "text" : "password"}
               name='password'
               id='login-password'
               value={password}
               onChange={e => handleChange(e)}
               autoComplete='current-password'
             />
+            <span className={showPassword ? "password show-password" : "password hide-password"} onClick={changePasswordType}>
+              {/* <FaEye /> */} show password
+            </span>
             <button
               className='btn-primary'
               disabled={loading}
@@ -80,7 +90,7 @@ const Login = ({
                 cursor: "pointer"
               }}
             >
-              Log In{loading?"...": "" }
+              Log In{loading ? "..." : ""}
             </button>
             <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
               Forgot your password?

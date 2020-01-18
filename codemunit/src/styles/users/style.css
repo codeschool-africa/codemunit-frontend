@@ -16,6 +16,32 @@
           align-items: center;
 }
 
+.user-registration .password {
+  position: relative;
+  padding: 0 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.user-registration .password::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 7px;
+  width: 7px;
+  border: 2px solid #438976;
+  border-radius: 4px;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.user-registration .password.show-password::before {
+  background: #438976;
+}
+
 .user-registration button.btn-primary {
   letter-spacing: 1px;
   text-transform: uppercase;
