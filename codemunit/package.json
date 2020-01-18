@@ -50,5 +50,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://kodemunit.herokuapp.com"
+  "proxy": "https://kodemunit.herokuapp.com"
 }
