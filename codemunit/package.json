@@ -24,6 +24,7 @@
     "react-router-transition": "^1.3.0",
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "sass-lint": "^1.13.1",
     "thunk": "^0.0.1",
