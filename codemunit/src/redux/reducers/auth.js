@@ -35,6 +35,7 @@ export default function(state = initialState, action) {
         ...payload,
         isAuthenticated: true,
         loading: false,
+        user: payload,
         // isAdmin: true
       };
     case REGISTER_FAIL:
@@ -47,6 +48,7 @@ export default function(state = initialState, action) {
         token: null,
         isAuthenticated: false,
         loading: false,
+        user: null,
         isAdmin: false
       };
     default:
