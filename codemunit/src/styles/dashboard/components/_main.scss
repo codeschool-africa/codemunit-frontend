@@ -2,7 +2,46 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    align-content: flex-start;
+    .btn-secondary {
+        margin-top: 20px !important;
+    }
+    &.numbers {
+        .sect-one {
+            width: 23%;
+            .showcase {
+                ul {
+                    li {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    &.new-courses {
+        justify-content: flex-start;
+        .sect-one {
+            min-width: 300px;
+            max-width: 30%;
+            margin-right: 30px; 
+            header h2 {
+                font-size: 1.2rem;
+                color: $fancyColor;
+            }   
+            .showcase {
+                padding: 20px;
+               p {
+                   font-size: 1rem;
+                   margin: 0;
+                    padding-bottom: 15px;
+                    color: $faintPrimary;
+               }
+               .btn-secondary {
+                   margin: 0 !important;
+               }
+            }
+        }
+    }
     .sect-one {
         // height: 300px;
         width: 49%;
@@ -28,10 +67,31 @@
             width: 100%;
             background: white;
             padding: 0 20px;
+            .courses-showcase {
+                padding: 0 0 20px 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .section-one {
+                    min-width: 300px;
+                    max-width: 20%;
+                    margin-right: 30px;
+                    margin-bottom: 30px;
+                    h2 {
+                        color: $fancyColor;
+                        font-size: 1.3rem;
+                        font-weight: 100;
+                    }
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
 
             ul {
                 list-style: none;
-                padding: 20px 0 0 0;
+                padding: 20px 0 20px 0;
                 width: 100%;
 
                 &.courses-showcase {
@@ -42,9 +102,10 @@
                     color: $primaryColor;
                     font-size: 1.2rem;
                     border-bottom: 2px solid $secondaryColor;
+                    padding: 20px 0 0 0;
                 }
                 .btn-secondary {
-                    margin: 20px 0 !important;
+                    margin-top: 20px !important;
                 }
 
                 li {

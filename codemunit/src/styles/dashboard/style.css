@@ -452,6 +452,52 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.main .container .btn-secondary {
+  margin-top: 20px !important;
+}
+
+.main .container.numbers .sect-one {
+  width: 23%;
+}
+
+.main .container.numbers .sect-one .showcase ul li {
+  border: none;
+}
+
+.main .container.new-courses {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .container.new-courses .sect-one {
+  min-width: 300px;
+  max-width: 30%;
+  margin-right: 30px;
+}
+
+.main .container.new-courses .sect-one header h2 {
+  font-size: 1.2rem;
+  color: #438976;
+}
+
+.main .container.new-courses .sect-one .showcase {
+  padding: 20px;
+}
+
+.main .container.new-courses .sect-one .showcase p {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 15px;
+  color: #031a2e;
+}
+
+.main .container.new-courses .sect-one .showcase .btn-secondary {
+  margin: 0 !important;
 }
 
 .main .container .sect-one {
@@ -479,9 +525,41 @@
   padding: 0 20px;
 }
 
+.main .container .sect-one .showcase .courses-showcase {
+  padding: 0 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .container .sect-one .showcase .courses-showcase .section-one {
+  min-width: 300px;
+  max-width: 20%;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.main .container .sect-one .showcase .courses-showcase .section-one h2 {
+  color: #438976;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.main .container .sect-one .showcase .courses-showcase .section-one p {
+  font-size: 1rem;
+}
+
 .main .container .sect-one .showcase ul {
   list-style: none;
-  padding: 20px 0 0 0;
+  padding: 20px 0 20px 0;
   width: 100%;
 }
 
@@ -493,10 +571,11 @@
   color: #1a2e3f;
   font-size: 1.2rem;
   border-bottom: 2px solid #eee;
+  padding: 20px 0 0 0;
 }
 
 .main .container .sect-one .showcase ul .btn-secondary {
-  margin: 20px 0 !important;
+  margin-top: 20px !important;
 }
 
 .main .container .sect-one .showcase ul li {

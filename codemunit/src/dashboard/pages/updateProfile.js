@@ -93,9 +93,7 @@ const UpdateProfile = ({
                 <input
                   type='text'
                   placeholder='skills'
-                  name='skills'
-                  value={skills}
-                  onChange={e => handleChange(e)}
+                  
                 />
               </label>
               <label htmlFor='courses'>

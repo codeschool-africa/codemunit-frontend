@@ -64,6 +64,21 @@ const Dashboard = ({
       id: 1,
       post: "Lorem ipsum donor el chase tor top, les...",
       url: "/"
+    },
+    {
+      id: 2,
+      post: "Lorem ipsum donor el chase tor top, les...",
+      url: "/"
+    },
+    {
+      id: 3,
+      post: "Lorem ipsum donor el chase tor top, les...",
+      url: "/"
+    },
+    {
+      id: 4,
+      post: "Lorem ipsum donor el chase tor top, les...",
+      url: "/"
     }
   ];
 
@@ -175,25 +190,13 @@ const Dashboard = ({
                       {notifications.length > 0 ? (
                         <>
                           <ul>
-                            <li>
-                              <Link to=''>
-                                Lorem ipsum donor el chase tor top, les...
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to=''>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit...
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to=''>
-                                Eos iusto quam explicabo, distinctio commodi...
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to=''>.....</Link>
-                            </li>
+                            {notifications.map(notification => (
+                              <li key={notification.id}>
+                                <Link to={`/${notification.link}`}>
+                                  {notification.post}
+                                </Link>
+                              </li>
+                            ))}
                           </ul>
                           <Link to={`${url}/notifications`}>View All</Link>
                         </>
