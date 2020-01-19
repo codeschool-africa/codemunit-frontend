@@ -57,9 +57,9 @@ const Home = ({
       link: "mobile-app-development"
     }
   ]);
-  useEffect(() => {
-    getProfile();
-  }, []);
+  // useEffect(() => {
+  //   getProfile();
+  // }, []);
   useEffect(() => {
     document.title = `${user.firstname} dashboard - Kodemunit`;
   });
