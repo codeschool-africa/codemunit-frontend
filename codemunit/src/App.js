@@ -28,11 +28,15 @@ import Error from "./components/Error";
 //curriculum pages
 import Curriculum from "./curriculum/curriculum";
 
+//admin-panel
+import AdminPanel from "./Auth/"
+
+//dashboard
 import Dashboard from "./dashboard/";
-import DashboardAuth from "./components/dashboard";
 
 //protected routes
 import AuthRoute from "./util/AuthRoute";
+import AdminRoute from "./util/adminRoute"
 
 //load user data
 import { loadUserData } from "./redux/actions/auth";
@@ -88,14 +92,14 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
             key='contact-us'
           />
           <AuthRoute
-            path='/dashboard/:_id'
+            path='/dashboard'
             component={Dashboard}
             key='dashboard'
           />
-          <AuthRoute
-            path={`/dashboard/`}
-            component={DashboardAuth}
-            key='dashboardauth'
+          <AdminRoute
+            path='/admin-panel'
+            component={AdminPanel}
+            key='dashboard'
           />
           <Route component={Error} />
         </Switch>

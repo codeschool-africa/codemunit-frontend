@@ -22,7 +22,7 @@ const MobileNav = ({navProps, auth: { isAuthenticated, loading, user }}) =>  {
                     <li><Link to='/en/dashboard' className='btn'>Dashboard</Link></li>
                 </ul>
                 <div className="profile user-nav">
-                    <Link to={`/dashboard/${user._id}/profile`}>
+                    <Link to={`/dashboard/profile`}>
                         <div className="profile-menu">
                             <div className="img">
                                 <img src={user.avatar} alt={`${user.firstname} avatar`} />

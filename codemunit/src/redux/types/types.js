@@ -25,3 +25,6 @@ export const CLEAR_PROFILE = "CLEAR_PROFILE";
 //get location
 export const LOCATION = "LOCATION";
 export const LOCATION_ERROR = "LOCATION_ERROR";
+
+//admins
+export const ADMIN = "ADMIN";

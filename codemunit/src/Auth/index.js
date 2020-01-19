@@ -19,16 +19,15 @@ import "../styles/dashboard/style.css";
 import logo from "../images/logo12.png";
 import altLogo from "../images/logo192x192.png";
 
-import AdminRoute from "../util/adminRoute";
+// import AdminRoute from "../util/adminRoute";
 
 //pages
-import Home from "./pages/Home";
-import Profile from "./pages/User-profile";
-import UpdateProfile from "./pages/updateProfile";
-import AllCourses from "./pages/allCourses";
-import MyCourses from "./pages/myCourses";
-import Notifications from "./pages/notifications";
-// import AdminPanel from "./pages/admin";
+// import Home from "./pages/Home";
+// import Profile from "./pages/User-profile";
+// import UpdateProfile from "./pages/updateProfile";
+// import AllCourses from "./pages/allCourses";
+// import MyCourses from "./pages/myCourses";
+// import Notifications from "./pages/notifications";
 
 const Error = () => {
   return (
@@ -40,7 +39,7 @@ const Error = () => {
   );
 };
 
-const Dashboard = ({
+const AdminPanel = ({
   auth: { isAuthenticated, user, isAdmin },
   logout,
   getProfile,
@@ -304,25 +303,22 @@ const Dashboard = ({
         <div className={navOpen ? "main" : "main full-width"}>
           <Switch>
             <Route exact path={path}>
-              <Home />
+              {/* <Home /> */}hello
             </Route>
             <Route exact path={`${path}/profile`}>
-              <Profile />
+              {/* <Profile /> */}hello
             </Route>
             <Route exact path={`${path}/edit-profile`}>
-              <UpdateProfile />
+              {/* <UpdateProfile /> */}hello
             </Route>
             <Route exact path={`${path}/my-courses`}>
-              <MyCourses />
+              {/* <MyCourses /> */}hello
             </Route>
-            {/* <AdminRoute exact path={`${path}/admin-panel`}>
-              <AdminPanel />
-            </AdminRoute> */}
             <Route exact path={`${path}/notifications`}>
-              <Notifications />
+              {/* <Notifications /> */} hello
             </Route>
             <Route exact path={`${path}/all-courses`}>
-              <AllCourses />
+              {/* <AllCourses /> */} hello
             </Route>
             <Route component={Error} />>
           </Switch>
@@ -338,7 +334,7 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-Dashboard.propTypes = {
+AdminPanel.propTypes = {
   logout: PropTypes.func.isRequired,
   getProfile: PropTypes.func.isRequired,
   updateProfile: PropTypes.func.isRequired,
@@ -347,5 +343,5 @@ Dashboard.propTypes = {
 };
 
 export default connect(mapStateToProps, { logout, getProfile, updateProfile })(
-  Dashboard
+  AdminPanel
 );

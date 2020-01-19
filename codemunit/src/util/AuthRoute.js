@@ -3,11 +3,11 @@ import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const AuthRoute = ({ component: Component, auth: { isAuthenticated, token}, ...rest }) => (
+const AuthRoute = ({ component: Component, auth: { isAuthenticated, token, isAdmin }, ...rest }) => (
     <Route
         {...rest}
         render={(props) =>
-            !isAuthenticated ? <Redirect to="/signin" /> : <Component {...props} />
+            !isAuthenticated ? <Redirect to="/signin" /> : isAdmin ? <Redirect to="admin-panel"/> : <Component {...props} />
         }
     />
 );
