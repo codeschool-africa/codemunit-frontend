@@ -11,7 +11,7 @@ import {
 //get user profile
 export const getProfile = () => async dispatch => {
   try {
-    const res = await axios.get("/api/profile/me");
+    const res = await axios.get("https://kodemunit.herokuapp.com/api/profile/me");
     dispatch({
       type: GET_PROFILE,
       payload: res.data
@@ -54,7 +54,7 @@ export const updateProfile = ({
   };
   const body = JSON.stringify(newProfile);
   try {
-    const res = await axios.post("/api/profile", body, config);
+    const res = await axios.post("https://kodemunit.herokuapp.com/api/profile", body, config);
     dispatch({
       type: PROFILE_UPDATED,
       payload: res.data
