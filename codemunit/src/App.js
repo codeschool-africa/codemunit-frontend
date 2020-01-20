@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -29,18 +30,20 @@ import Error from "./components/Error";
 import Curriculum from "./curriculum/curriculum";
 
 //admin-panel
-import AdminPanel from "./Auth/"
+import AdminPanel from "./Auth/";
 
 //dashboard
 import Dashboard from "./dashboard/";
 
 //protected routes
 import AuthRoute from "./util/AuthRoute";
-import AdminRoute from "./util/adminRoute"
+import AdminRoute from "./util/adminRoute";
 
 //load user data
 import { loadUserData } from "./redux/actions/auth";
 import setAuthToken from "./util/setAuthToken";
+
+axios.defaults.baseURL = "https://kodemunit.herokuapp.com";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -91,11 +94,7 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
             component={Contact}
             key='contact-us'
           />
-          <AuthRoute
-            path='/dashboard'
-            component={Dashboard}
-            key='dashboard'
-          />
+          <AuthRoute path='/dashboard' component={Dashboard} key='dashboard' />
           <AdminRoute
             path='/admin-panel'
             component={AdminPanel}
