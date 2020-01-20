@@ -47,9 +47,9 @@ if (localStorage.token) {
 }
 
 const App = ({ auth: { isAuthenticated, user, loading } }) => {
-  useEffect(() => {
-    store.dispatch(loadUserData());
-  }, []);
+  // useEffect(() => {
+  //   store.dispatch(loadUserData());
+  // }, []);
   return (
     <Router>
       <NProgress isAnimating={loading}>

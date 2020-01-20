@@ -18,7 +18,7 @@ export const loadUserData = () => async dispatch => {
     setAuthToken(localStorage.token);
   }
   try {
-    const res = await axios.get("https://kodemunit.herokuapp.com/api/auth");
+    const res = await axios.get("/api/auth");
     dispatch({
       type: USER_LOADED,
       payload: res.data
@@ -50,7 +50,7 @@ export const signupUser = ({
   };
   const body = JSON.stringify(newUser);
   try {
-    const res = await axios.post("https://kodemunit.herokuapp.com/api/users", body, config);
+    const res = await axios.post("/api/users", body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
@@ -83,7 +83,7 @@ export const login = ({ email, password }) => async dispatch => {
   };
   const body = JSON.stringify(newUser);
   try {
-    const res = await axios.post("https://kodemunit.herokuapp.com/api/auth", body, config);
+    const res = await axios.post("/api/auth", body, config);
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data
