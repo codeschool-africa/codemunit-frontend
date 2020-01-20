@@ -52,7 +52,7 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
   // }, []);
   return (
     <Router>
-      <NProgress isAnimating={loading}>
+      {/* <NProgress isAnimating={loading}>
         {({ isFinished, progress, animationDuration }) => (
           <Container
             isFinished={isFinished}
@@ -65,7 +65,7 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
       </NProgress>
       {loading ? (
         ""
-      ) : (
+      ) : ( */}
         <Switch>
           <Route exact path='/' component={Home} key='home' />
           <Route exact path='/about' component={About} key='about' />
@@ -103,7 +103,7 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
           />
           <Route component={Error} />
         </Switch>
-      )}
+      {/* )} */}
     </Router>
   );
 };
