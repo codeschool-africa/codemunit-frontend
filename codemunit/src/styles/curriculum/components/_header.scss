@@ -1,6 +1,6 @@
 .curriculum-container {
     header {
-        background: $cleanColor;
+        background: #fff;
         height: 70px;
         box-shadow: 0 0 20px rgba(0,0,0,.2);
         position: fixed;
@@ -9,7 +9,7 @@
         z-index: 2;
         .container {
             color: $primaryColor;
-            width: 90%;
+            width: 95%;
             max-width: 1600px;
             margin: 0 auto;
             height: 100%;
@@ -41,24 +41,48 @@
                     }
                 }
                 .search-bar {
-                    background: #fff;
+                    background: $cleanColor;
                     display: flex;
                     align-items: center;
+                    border-radius: 5px;
+                    position: relative;
                     label {
                         input {
                             border: none;
                             background: none;
                             height: 45px;
                             width: 28vw;
-                            padding: 0 10px;
+                            padding: 0 15px;
+                            // border-radius: 22.5px;
+                            border-radius: 5px;
+                            border: 1px solid $secondaryColor;
+                            transition: .25s;
+                            &:focus {
+                                background: #fff;
+                                border: 1px solid $fancyColor;
+                                outline: none !important;
+                            }
                         }
                     }
                     button {
+                        position: absolute;
+                        right: 0;
                         height: 45px;
-                        width: 45px;
+                        width: 60px;
                         background: none;
                         border: none;
                         cursor: pointer;
+                        transition: .25s;
+                        border-radius: 5px;
+                        &:focus {
+                            outline: none !important;
+                        }
+                        &:hover {
+                            background: $tertiaryColor;
+                            .icon {
+                                color: #fff;
+                            }
+                        }
                         .icon {
                             color: #999;
                             font-size: 18px;
@@ -132,13 +156,14 @@
                                 }
                             }
                             .icon {
-                                color: $primaryColor;
+                                color: $fancyColor
                             }
                         }
                         .dropdown-profile-menu {
                             position: absolute;
                             top: 70px;
                             right: 0%;
+                            min-width: 280px;
                             background: #fff;
                             padding: 15px 0;
                             box-shadow: 0 0 8px 0 rgba(1,2,2,.04), 0 4px 8px 0 rgba(1,2,2,.04), 0 8px 16px 0 rgba(1,2,2,.04);
@@ -149,7 +174,7 @@
                                 content: "";
                                 position: absolute;
                                 top: -15px;
-                                right: 15%;
+                                right: 5%;
                                 border-style: solid;
                                 filter: drop-shadow(-1px -1px 0px rgba(0,0,0,.2));
                                 height: 0px;
@@ -169,7 +194,7 @@
                                     align-items: flex-start;
                                     border-bottom: 1px solid rgba(0,0,0,.05);
                                     li {
-                                        margin: 10px 0;
+                                        margin: 10px 10px;
                                         width: 100%;
                                         a {
                                             text-transform: capitalize;
@@ -180,7 +205,8 @@
                                                 // margin-top: -10px;
                                                 width: 25px;
                                                 border-radius: 50%;
-                                                display: inline-flex;
+                                                // display: inline-flex;
+                                                display: none;
                                                 justify-content: center;
                                                 align-items: center;
                                                 font-size: 10px;
@@ -250,7 +276,7 @@
 @media (max-width: 1200px) {
     .curriculum-container {
     header {
-        background: $secondaryColor;
+        // background: $secondaryColor;
         height: 70px;
         .container {
             color: $primaryColor;
@@ -282,24 +308,24 @@
                     }
                 }
                 .search-bar {
-                    background: #fff;
+                    // background: #fff;
                     label {
                         input {
-                            border: none;
-                            background: none;
+                            // border: none;
+                            // background: none;
                             height: 40px;
-                            width: 20vw;
-                            padding: 0 10px;
+                            width: 22vw;
+                            // padding: 0 10px;
                         }
                     }
                     button {
                         height: 40px;
                         width: 40px;
-                        background: none;
-                        border: none;
-                        cursor: pointer;
+                        // background: none;
+                        // border: none;
+                        // cursor: pointer;
                         .icon {
-                            color: #999;
+                            // color: #999;
                             font-size: 18px;
                         }
                     }
@@ -316,6 +342,7 @@
                             text-decoration: none;
                             color: $primaryColor;
                             text-transform: uppercase;
+                            font-size: 0.9rem;
                             &:hover {
                                 color: $fancyColor;
                             }
@@ -340,7 +367,7 @@
 @media (max-width: 900px) {
      .curriculum-container {
     header {
-        background: $secondaryColor;
+        // background: $secondaryColor;
         height: 70px;
         .container {
             color: $primaryColor;
@@ -372,22 +399,24 @@
                     }
                 }
                 .search-bar {
-                    background: #fff;
+                    // background: #fff;
                     // height: 30px;
+                    margin-left: 20px;
                     label {
+                        // overflow: hidden;
                         input {
-                            border: none;
-                            background: none;
+                            // border: none;
+                            // background: none;
                             height: 30px;
-                            width: 15vw;
+                            width: 19vw;
                             padding: 0 10px;
                         }
                     }
                     button {
                         height: 30px;
                         width: 30px;
-                        background: none;
-                        border: none;
+                        // background: none;
+                        // border: none;
                         cursor: pointer;
                         .icon {
                             color: #999;

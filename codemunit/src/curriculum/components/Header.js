@@ -42,7 +42,7 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                         <li><Link to='/mentorship'>Mentorship</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/faq'>FAQ</Link></li>
-                        <li><Link to={`/dashboard`} className='btn'>Dashboard</Link></li>
+                        <li><Link to={`/dashboard`} className='btn btn-secondary'>Dashboard</Link></li>
                     </ul>
                     <div className="user-nav">
                         <div className="profile-img dropdown">
@@ -92,7 +92,6 @@ const Header = ({ auth: { isAuthenticated, loading, user }, logout }) => {
                                             <a href="#!" onClick={logout}>Log out</a>
                                         </li>
                                     </ul>
-
                                 </nav>
                                 <div className="mentor-div">
                                     <Link to="/">Become a mentor</Link>

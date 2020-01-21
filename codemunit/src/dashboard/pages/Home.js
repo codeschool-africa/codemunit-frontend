@@ -62,7 +62,7 @@ const Home = ({
   }, []);
   useEffect(() => {
     document.title = `${user.firstname} dashboard - Kodemunit`;
-  });
+  },[]);
   return (
     <>
       <div className='content'>
@@ -80,51 +80,57 @@ const Home = ({
         <div className='main-container'>
           <div className='container numbers'>
             {loading ? (
-              <>Loading...</>
+              <>loading...</>
             ) : (
               <>
-                <section className='sect-one'>
-                  <header>
-                    <h2>
-                      {profile.courses.length > 0 && profile.courses.length}
-                    </h2>
-                  </header>
-                  <div className='showcase'>
-                    <ul>
-                      <li>Followed courses</li>
-                    </ul>
-                  </div>
-                </section>
-                <section className='sect-one'>
-                  <header>
-                    <h2>0</h2>
-                  </header>
-                  <div className='showcase'>
-                    <ul>
-                      <li>Completed courses</li>
-                    </ul>
-                  </div>
-                </section>
-                <section className='sect-one'>
-                  <header>
-                    <h2>0</h2>
-                  </header>
-                  <div className='showcase'>
-                    <ul>
-                      <li>Completed projects</li>
-                    </ul>
-                  </div>
-                </section>
-                <section className='sect-one'>
-                  <header>
-                    <h2>0</h2>
-                  </header>
-                  <div className='showcase'>
-                    <ul>
-                      <li>Achievements on the courses</li>
-                    </ul>
-                  </div>
-                </section>
+                {profile === null ? (
+                  <>No profile found</>
+                ) : (
+                  <>
+                    <section className='sect-one'>
+                      <header>
+                        <h2>
+                          {profile.courses.length > 0 && profile.courses.length}
+                        </h2>
+                      </header>
+                      <div className='showcase'>
+                        <ul>
+                          <li>Followed courses</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section className='sect-one'>
+                      <header>
+                        <h2>0</h2>
+                      </header>
+                      <div className='showcase'>
+                        <ul>
+                          <li>Completed courses</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section className='sect-one'>
+                      <header>
+                        <h2>0</h2>
+                      </header>
+                      <div className='showcase'>
+                        <ul>
+                          <li>Completed projects</li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section className='sect-one'>
+                      <header>
+                        <h2>0</h2>
+                      </header>
+                      <div className='showcase'>
+                        <ul>
+                          <li>Achievements on the courses</li>
+                        </ul>
+                      </div>
+                    </section>
+                  </>
+                )}
               </>
             )}
           </div>

@@ -12,64 +12,55 @@ import "../styles/curriculum/style.css";
 
 //images
 import CurriculumImage from "../images/curriculum-intro.jpg";
-
-const callFakeAPI = delay =>
-  new Promise(resolve => {
-    setTimeout(resolve, delay);
-  });
+import Dev_Icon from "../images/dev_icon.png";
 
 const Curriculum = () => {
-  const [courses, setCourses] = useState([
-    {
-      title: "Introduction to Programming",
-      content:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      link: "introduction-to-programming"
-    },
-    {
-      title: "Frontend Web Development",
-      content:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      link: "frontend-web-development"
-    },
-    {
-      title: "Backend Web Development",
-      content:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      link: "backend-web-development"
-    },
-    {
-      title: "UI/UX Design",
-      content:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      link: "ui-ux-design"
-    },
-    {
-      title: "Mobile APP Development",
-      content:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti, quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
-      link: "mobile-app-development"
-    }
-  ]);
+    const [courses, setCourses] = useState([
+      {
+        title: "Introduction to Programming",
+        content:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti",
+        description:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ar quo molestisoluta veniam cum vero  ",
+        link: "introduction-to-programming"
+      },
+      {
+        title: "Frontend Web Development",
+        content:
+          "Lorem ipsum dolor, sit amet consectetur adipisitempore corrupti, quo molestias quae lias",
+        description:
+          "quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam alias",
+        link: "frontend-web-development"
+      },
+      {
+        title: "Backend Web Development",
+        content:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto tempore corrupti",
+        description:
+          " quo molestias quae eum soluta veniam cum vero officia asperiores. Minima nesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "backend-web-development"
+      },
+      {
+        title: "UI/UX Design",
+        content:
+          "Lomolestias quae eum soluta veniam cum vero ont placatione cum alias",
+        description:
+          "Lore quae eumnesciunt placeat accusantium veritatis veniam ratione cum alias",
+        link: "ui-ux-design"
+      },
+      {
+        title: "Mobile APP Development",
+        content:
+          " quae eum soluta veniam cum vero officia asperiores. eritatis veniam ratione cum alias",
+        description:
+          " veniam cum vero officia asperiores. Minima veritatis veniam ratione cum alias",
+        link: "mobile-app-development"
+      }
+    ]);
 
-  // const [isLoading, setLoading] = useState(true)
-
-  // useEffect(() => {
-  //     ;(async () => {
-  //       await callFakeAPI(3000)
-  //       setLoading(false)
-  //     })()
-  //   }, [])
+  useEffect(() => {
+    document.title = `Curriculum - Kodemunit`;
+  });
 
   let { path, url } = useRouteMatch();
   return (
@@ -89,7 +80,9 @@ const Curriculum = () => {
                         </div>
                         <div className='title-container'>
                           <h2>
-                            <span>Learn today, build your tomorrow</span>
+                            <img src={Dev_Icon} alt='dev-icon' />
+                            <span>Learn today, build your tomorrow. </span>
+                            {/* <br /> */}
                             <span className='left'>
                               it is fun and it is worth
                             </span>
@@ -115,16 +108,11 @@ const Curriculum = () => {
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Architecto tempore corrupti, quo molestias
-                            quae eum soluta veniam cum vero officia asperiores.
-                            Minima nesciunt placeat accusantium veritatis veniam
-                            ratione cum alias?
+                            quae eum soluta veniam cum 
                           </p>
                           <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Architecto tempore corrupti, quo molestias
-                            quae eum soluta veniam cum vero officia asperiores.
-                            Minima nesciunt placeat accusantium veritatis veniam
-                            ratione cum alias?
+                            elit. Architecto 
                           </p>
                           <Link
                             to={`${url}/get-started`}

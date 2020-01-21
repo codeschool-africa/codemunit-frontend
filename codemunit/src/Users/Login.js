@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Passwordrec from "./Passwordrec";
-import { Link, Redirect } from "react-router-dom";
-import { FaEye } from "react-icons/all";
+import { Link, useHistory, useLocation } from "react-router-dom";
+// import { FaEye } from "react-icons/all";
 import Modal from "react-responsive-modal";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -16,6 +16,9 @@ const Login = ({
   setAlert,
   auth: { isAuthenticated, loading, user }
 }) => {
+  let history = useHistory();
+  let location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
   const [formData, setFormData] = useState({
     email: "",
     password: ""
@@ -42,8 +45,13 @@ const Login = ({
   if (isAuthenticated) {
     if (loading) {
       setAlert("please wait...", "secondary");
-    } else if (user !== null) {
-      return <Redirect to='/dashboard' />;
+    } else if (user === null) {
+      setAlert(
+        "Couldn't load the data, plz refresh the page or check your internet connection",
+        "errors"
+      );
+    } else {
+      history.replace(from);
     }
   }
 
@@ -56,10 +64,15 @@ const Login = ({
     setOpenModal(false);
   };
 
+  useEffect(() => {
+    document.title = `Sign In - Kodemunit`;
+  });
+
   return (
     <div className='user-registration'>
       <div className='container'>
         <div className='form-container sign-in-container'>
+          {/* <p>You must log in to view the page at {from.pathname}</p> */}
           <form onSubmit={e => handleSubmit(e)}>
             <h1>Sign in to your account</h1>
             <Alert />
@@ -80,7 +93,14 @@ const Login = ({
               onChange={e => handleChange(e)}
               autoComplete='current-password'
             />
-            <span className={showPassword ? "password show-password" : "password hide-password"} onClick={changePasswordType}>
+            <span
+              className={
+                showPassword
+                  ? "password show-password"
+                  : "password hide-password"
+              }
+              onClick={changePasswordType}
+            >
               {/* <FaEye /> */} show password
             </span>
             <button

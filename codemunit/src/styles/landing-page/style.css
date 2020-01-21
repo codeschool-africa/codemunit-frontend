@@ -9,17 +9,22 @@
           box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background: #fff;
   overflow-x: hidden;
+  margin: 0 !important;
 }
 
-input:focus, button:focus, a:focus, select:focus {
+input:focus,
+button:focus,
+a:focus,
+select:focus {
   outline: none !important;
 }
 
@@ -28,10 +33,11 @@ input:focus, button:focus, a:focus, select:focus {
   padding: 7px 20px;
   background: rgba(67, 137, 118, 0.8);
   border: 5px solid #438976;
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   color: #eee !important;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
@@ -45,8 +51,9 @@ input:focus, button:focus, a:focus, select:focus {
   padding: 4px 20px;
   background: #438976;
   border: 5px solid #438976;
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 4px;
   color: #eee !important;
   text-decoration: none;
 }

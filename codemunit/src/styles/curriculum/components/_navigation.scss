@@ -6,8 +6,8 @@
     position: absolute;
     display: block;
     width: 100%;
-    // background: #fff;
-    background: #F8F9FA;
+    background: #fff;
+    // background: #F8F9FA;
     box-shadow: 0 2px 0 rgba(0,0,0,.2), 0px 0px 20px rgba(0,0,0,.2) inset;
     overflow: hidden;
     height: 0;
@@ -23,30 +23,29 @@
         width: 90%;
         height: 100%;
         .search-bar {
+            // background: #F8F9FA;
             width: 100%;
             margin: 8px 0;
-            border: 1px solid #eee;
+            // border: 1px solid #eee;
             display: flex;
             align-items: center;
             label {
                 width: 100%;
                 input {
-                    width: calc( 100% - 0px );
+                    width: 100%;
                     padding: 0 10px;
                     height: 35px;
-                    background: none;
-                    border: none;
                     opacity: .7;
                 }
             }
             button {
                 width: 45px;
                 height: 35px;
-                background: none;
-                border: none;
-                cursor: pointer;
+                // background: none;
+                // border: none;
+                // cursor: pointer;
                 .icon {
-                    opacity: .5;
+                    opacity: .7;
                 }
             }
         }

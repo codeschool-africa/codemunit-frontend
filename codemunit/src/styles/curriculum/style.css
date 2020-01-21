@@ -1,5 +1,5 @@
 .curriculum-container header {
-  background: #F6F4F1;
+  background: #fff;
   height: 70px;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -11,7 +11,7 @@
 
 .curriculum-container header .container {
   color: #1a2e3f;
-  width: 90%;
+  width: 95%;
   max-width: 1600px;
   margin: 0 auto;
   height: 100%;
@@ -64,13 +64,15 @@
 }
 
 .curriculum-container header .container nav .search-bar {
-  background: #fff;
+  background: #F6F4F1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 5px;
+  position: relative;
 }
 
 .curriculum-container header .container nav .search-bar label input {
@@ -78,15 +80,42 @@
   background: none;
   height: 45px;
   width: 28vw;
-  padding: 0 10px;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.curriculum-container header .container nav .search-bar label input:focus {
+  background: #fff;
+  border: 1px solid #438976;
+  outline: none !important;
 }
 
 .curriculum-container header .container nav .search-bar button {
+  position: absolute;
+  right: 0;
   height: 45px;
-  width: 45px;
+  width: 60px;
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-transition: .25s;
+  transition: .25s;
+  border-radius: 5px;
+}
+
+.curriculum-container header .container nav .search-bar button:focus {
+  outline: none !important;
+}
+
+.curriculum-container header .container nav .search-bar button:hover {
+  background: #295c88;
+}
+
+.curriculum-container header .container nav .search-bar button:hover .icon {
+  color: #fff;
 }
 
 .curriculum-container header .container nav .search-bar button .icon {
@@ -192,13 +221,14 @@
 }
 
 .curriculum-container header .container nav .user-nav .profile-img .profile-menu .icon {
-  color: #1a2e3f;
+  color: #438976;
 }
 
 .curriculum-container header .container nav .user-nav .profile-img .dropdown-profile-menu {
   position: absolute;
   top: 70px;
   right: 0%;
+  min-width: 280px;
   background: #fff;
   padding: 15px 0;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
@@ -213,7 +243,7 @@
   content: "";
   position: absolute;
   top: -15px;
-  right: 15%;
+  right: 5%;
   border-style: solid;
   -webkit-filter: drop-shadow(-1px -1px 0px rgba(0, 0, 0, 0.2));
           filter: drop-shadow(-1px -1px 0px rgba(0, 0, 0, 0.2));
@@ -249,7 +279,7 @@
 }
 
 .curriculum-container header .container nav .user-nav .profile-img .dropdown-profile-menu nav ul li {
-  margin: 10px 0;
+  margin: 10px 10px;
   width: 100%;
 }
 
@@ -263,9 +293,7 @@
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -346,7 +374,6 @@
 
 @media (max-width: 1200px) {
   .curriculum-container header {
-    background: #eee;
     height: 70px;
   }
   .curriculum-container header .container {
@@ -392,25 +419,15 @@
   .curriculum-container header .container nav .dropdown input {
     display: none;
   }
-  .curriculum-container header .container nav .search-bar {
-    background: #fff;
-  }
   .curriculum-container header .container nav .search-bar label input {
-    border: none;
-    background: none;
     height: 40px;
-    width: 20vw;
-    padding: 0 10px;
+    width: 22vw;
   }
   .curriculum-container header .container nav .search-bar button {
     height: 40px;
     width: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
   }
   .curriculum-container header .container nav .search-bar button .icon {
-    color: #999;
     font-size: 18px;
   }
   .curriculum-container header .container nav ul {
@@ -433,6 +450,7 @@
     text-decoration: none;
     color: #1a2e3f;
     text-transform: uppercase;
+    font-size: 0.9rem;
   }
   .curriculum-container header .container nav ul li a:hover {
     color: #438976;
@@ -449,7 +467,6 @@
 
 @media (max-width: 900px) {
   .curriculum-container header {
-    background: #eee;
     height: 70px;
   }
   .curriculum-container header .container {
@@ -496,20 +513,16 @@
     display: none;
   }
   .curriculum-container header .container nav .search-bar {
-    background: #fff;
+    margin-left: 20px;
   }
   .curriculum-container header .container nav .search-bar label input {
-    border: none;
-    background: none;
     height: 30px;
-    width: 15vw;
+    width: 19vw;
     padding: 0 10px;
   }
   .curriculum-container header .container nav .search-bar button {
     height: 30px;
     width: 30px;
-    background: none;
-    border: none;
     cursor: pointer;
   }
   .curriculum-container header .container nav .search-bar button .icon {
@@ -581,7 +594,7 @@
     position: absolute;
     display: block;
     width: 100%;
-    background: #F8F9FA;
+    background: #fff;
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2) inset;
     overflow: hidden;
@@ -607,7 +620,6 @@
   .curriculum-container header .container .mobile-navigation .mobile-nav .container .search-bar {
     width: 100%;
     margin: 8px 0;
-    border: 1px solid #eee;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -619,22 +631,17 @@
     width: 100%;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav .container .search-bar label input {
-    width: calc( 100% - 0px);
+    width: 100%;
     padding: 0 10px;
     height: 35px;
-    background: none;
-    border: none;
     opacity: .7;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav .container .search-bar button {
     width: 45px;
     height: 35px;
-    background: none;
-    border: none;
-    cursor: pointer;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav .container .search-bar button .icon {
-    opacity: .5;
+    opacity: .7;
   }
   .curriculum-container header .container .mobile-navigation .mobile-nav .container ul {
     height: 100%;
@@ -807,6 +814,7 @@
 
 .main-content .navigation {
   display: none;
+  background: #fff;
 }
 
 .main-content .container {
@@ -970,7 +978,6 @@
   min-height: calc( 100vh - 180px);
   position: relative;
   height: 100%;
-  background: #fff;
   margin-right: 10px;
   -webkit-box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
           box-shadow: 0 0 8px 0 rgba(1, 2, 2, 0.04), 0 4px 8px 0 rgba(1, 2, 2, 0.04), 0 8px 16px 0 rgba(1, 2, 2, 0.04);
@@ -981,7 +988,7 @@
 }
 
 .main-content .container .curriculum-showcase .div .main .main-container {
-  padding: 100px 100px;
+  padding: 70px 100px;
   text-align: center;
   margin-top: 60px;
 }
@@ -1004,7 +1011,7 @@
 }
 
 .main-content .container .curriculum-showcase .div .main .main-container .showcase section {
-  width: 40%;
+  width: 70%;
   margin: 30px;
   padding: 30px;
   display: -webkit-box;
@@ -1063,8 +1070,8 @@
 
 .main-content .container .curriculum-showcase .div .main .bg-container {
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 2, 2, 0.5)), to(#000)), url(../../images/library.jpg);
-  background: linear-gradient(90deg, rgba(2, 2, 2, 0.5), #000), url(../../images/library.jpg);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 2, 2, 0.01)), to(rgba(2, 2, 2, 0.2))), url(../../images/library.jpg);
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.01), rgba(2, 2, 2, 0.2)), url(../../images/library.jpg);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1084,9 +1091,9 @@
 }
 
 .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container {
+  background: rgba(1, 2, 2, 0.6);
   color: #fff;
-  width: 50%;
-  height: 100%;
+  width: 52%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,29 +1107,30 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-right: 100px;
+  padding: 0 30px;
+  margin: 30px;
 }
 
 .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 {
-  display: inline-block;
+  width: 100%;
   font-weight: 100;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  position: relative;
 }
 
-.main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span {
-  background: #438976;
-  padding: 5px 20px;
-}
-
-.main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 span.left {
-  margin-left: 300px;
+.main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container h2 img {
+  position: absolute;
+  left: -110px;
+  height: 60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .main-content .container .curriculum-showcase .div .main .bg-container .bg-color .title-container p {
-  clear: both;
-  display: inline-block;
+  margin-top: 0px;
   width: 100%;
   width: 100%;
   font-weight: 100;

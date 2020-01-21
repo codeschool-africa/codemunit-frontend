@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { FaEye } from "react-icons/all";
+// import { FaEye } from "react-icons/all";
 import { connect } from "react-redux";
 import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
@@ -59,6 +59,9 @@ const Signup = ({
       signupUser({ firstname, secondname, email, password });
     }
   };
+  useEffect(() => {
+    document.title = `Register - Kodemunit`;
+  });
 
   return (
     <div className='user-registration'>
