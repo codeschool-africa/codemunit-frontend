@@ -43,7 +43,7 @@ import AdminRoute from "./util/adminRoute";
 import { loadUserData } from "./redux/actions/auth";
 import setAuthToken from "./util/setAuthToken";
 
-axios.defaults.baseURL = "https://kodemunit.herokuapp.com";
+// axios.defaults.baseURL = "https://kodemunit.herokuapp.com";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);

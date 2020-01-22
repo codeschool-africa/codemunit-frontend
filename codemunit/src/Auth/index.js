@@ -21,13 +21,13 @@ import altLogo from "../images/logo192x192.png";
 
 // import AdminRoute from "../util/adminRoute";
 
-//pages
-// import Home from "./pages/Home";
-// import Profile from "./pages/User-profile";
-// import UpdateProfile from "./pages/updateProfile";
+// pages
+import Home from "./pages/Home";
+import Profile from "./pages/User-profile";
+import AddPost from "./pages/AddPost";
 // import AllCourses from "./pages/allCourses";
-// import MyCourses from "./pages/myCourses";
-// import Notifications from "./pages/notifications";
+import AddCourse from "./pages/AddCourses";
+import Notifications from "./pages/notifications";
 
 const Error = () => {
   return (
@@ -155,9 +155,9 @@ const AdminPanel = ({
               <span></span>
             </div>
             <ul>
-              <li>
+              {/* <li>
                 <Link to={`/faq`}>FAQ</Link>
-              </li>
+              </li> */}
               <li className='dropdown' ref={ref}>
                 <a href='#!' onClick={showNotifications} className='drpbtn'>
                   <MdNotifications className='icon' />
@@ -243,33 +243,33 @@ const AdminPanel = ({
                   <span>Notifications</span>
                 </Link>
               </li>
-              {isAdmin ? (
+              {/* {isAdmin ? (
                 <></>
-              ) : (
-                <>
+              ) : ( */}
+                {/* <> */}
                   <li>
                     <Link
-                      to={`${url}/my-courses`}
+                      to={`${url}/add-course`}
                       className={isMyCourses ? "active" : ""}
                       onClick={myCoursesToggle}
                     >
                       <MdGolfCourse className='icon' />
-                      <span>My Courses</span>
+                      <span>Add Courses</span>
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to={`${url}/all-courses`}
+                      to={`${url}/create-post`}
                       className={isCourses ? "active" : ""}
                       onClick={coursesToggle}
                     >
                       <FaProjectDiagram className='icon' />
-                      <span>All Courses</span>
+                      <span>Create Post</span>
                     </Link>
                   </li>
-                </>
-              )}
-              <li>
+                {/* </>
+              )} */}
+              {/* <li>
                 <Link
                   to={`${url}/profile`}
                   className={isProfile ? "active" : ""}
@@ -278,8 +278,8 @@ const AdminPanel = ({
                   <FaUserCircle className='icon' />
                   <span>Profile</span>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   to={`${url}/edit-profile`}
                   className={isSetting ? "active" : ""}
@@ -288,7 +288,7 @@ const AdminPanel = ({
                   <FiSettings className='icon' />
                   <span>Settings</span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <ul className='extra-links'>
               <li>
@@ -303,23 +303,23 @@ const AdminPanel = ({
         <div className={navOpen ? "main" : "main full-width"}>
           <Switch>
             <Route exact path={path}>
-              {/* <Home /> */}hello
+              <Home />
             </Route>
-            <Route exact path={`${path}/profile`}>
-              {/* <Profile /> */}hello
+            {/* <Route exact path={`${path}/profile`}>
+              <Profile />
+            </Route> */}
+            <Route exact path={`${path}/add-course`}>
+              <AddCourse />
             </Route>
-            <Route exact path={`${path}/edit-profile`}>
-              {/* <UpdateProfile /> */}hello
-            </Route>
-            <Route exact path={`${path}/my-courses`}>
-              {/* <MyCourses /> */}hello
+            <Route exact path={`${path}/create-post`}>
+              <AddPost />
             </Route>
             <Route exact path={`${path}/notifications`}>
-              {/* <Notifications /> */} hello
+              <Notifications />
             </Route>
-            <Route exact path={`${path}/all-courses`}>
-              {/* <AllCourses /> */} hello
-            </Route>
+            {/* <Route exact path={`${path}/all-courses`}>
+              {/* <AllCourses /> */}
+            {/* </Route> */} */}
             <Route component={Error} />>
           </Switch>
           {/* <footer>hello world</footer> */}

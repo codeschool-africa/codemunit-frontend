@@ -9,7 +9,7 @@ import Alert from "../../components/alerts";
 import Time from "../components/time";
 
 //ckeditor
-import CKEditor from "ckeditor4-react";
+// import CKEditor from "ckeditor4-react";
 
 import { setAlert } from "../../redux/actions/alert";
 
@@ -135,7 +135,7 @@ const UpdateProfile = ({
               <button className='btn-primary'>Submit</button>
             </form>
             <div className='text-editor'>
-              <CKEditor data='<p>Write something</p>' type='classic' />
+              
             </div>
           </div>
         </div>
