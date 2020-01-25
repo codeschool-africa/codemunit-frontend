@@ -273,7 +273,7 @@ const Home = ({
                 <ul>Loading...</ul>
               ) : (
                 <>
-                  {profile.courses === null ? (
+                  {profile && profile.courses === null ? (
                     <ul>
                       No new courses{" "}
                       <Link to='/curriculum'>Check the existing courses</Link>

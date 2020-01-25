@@ -44,6 +44,7 @@ import { loadUserData } from "./redux/actions/auth";
 import setAuthToken from "./util/setAuthToken";
 
 axios.defaults.baseURL = "https://kodemunit.herokuapp.com";
+// axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
