@@ -42,12 +42,14 @@ const Signup = ({
     e.preventDefault();
     if (!email.match(emailReg)) {
       setAlert("email is not valid", "error");
-    } else if (!password.match(passwordReg)) {
-      setAlert(
-        `password isn't strong, please include symbols or numbers`,
-        "error"
-      );
-    } else if (password !== confirmPassword) {
+    }
+    //  else if (!password.match(passwordReg)) {
+    //   setAlert(
+    //     `password isn't strong, please include symbols or numbers`,
+    //     "error"
+    //   );
+    // } 
+    else if (password !== confirmPassword) {
       setAlert("password do not match", "error");
     } else {
       if (isAuthenticated) {
