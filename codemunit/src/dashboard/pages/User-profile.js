@@ -63,17 +63,17 @@ const Profile = ({
                       <>
                         {profile.social.linkedin === null ? null : (
                           <a
-                            href={`http://www.linkedin/in/${profile.social.linkedin}`}
+                            href={`http://www.linkedin.com/in/${profile.social.linkedin}`}
                           >
                             <FaLinkedinIn />
                           </a>
                         )}
                         {profile.social.twitter === null ? null : (
-                        <a
-                          href={`http://www.twitter.com/${profile.social.twitter}`}
-                        >
-                          <FaTwitter />
-                        </a>
+                          <a
+                            href={`http://www.twitter.com/${profile.social.twitter}`}
+                          >
+                            <FaTwitter />
+                          </a>
                         )}
                         {profile.githubusername === null ? null : (
                           <a
@@ -98,10 +98,10 @@ const Profile = ({
                   "You haven't set your profile yet..."
                 ) : (
                   <ul> */}
-                    {/* <span>{profile.location}</span>
+            {/* <span>{profile.location}</span>
                     <h2>Courses</h2>
                     {/* {profile.courses[2]} */}
-                    {/* {profile.courses.length > 0 ? (
+            {/* {profile.courses.length > 0 ? (
                       <ul>
                         {profile.courses.map(course => (
                           <li key={course}>{course}</li>
@@ -109,10 +109,10 @@ const Profile = ({
                       </ul>
                     ) : (
                       <p>No registered courses</p> */}
-                    {/* )} */}
-                  {/* </ul>
+            {/* )} */}
+            {/* </ul>
                 )} */}
-              {/* </> */}
+            {/* </> */}
             {/* )} */}
           </div>
         </div>
