@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: #121111;
+  overflow-x: hidden;
+  height: 200vh;
+}
+
+input:focus, button:focus, a:focus, select:focus {
+  outline: none !important;
+}
+
+.btn {
+  border-radius: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 35px;
+  -webkit-box-shadow: 5px 5px 7px #070707, -5px -5px 7px #383535;
+          box-shadow: 5px 5px 7px #070707, -5px -5px 7px #383535;
+  color: #F6F4F1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.btn:hover {
+  -webkit-box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #494949;
+          box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #494949;
+}
+/*# sourceMappingURL=styles.css.map */
