@@ -1,9 +1,11 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import logo from "../../images/logo.png";
 
-const Nav = ({ routes, navProps }) => {
+const Nav = ({ routes, navProps, auth: { isAuthenticated, user } }) => {
   const location = useLocation();
   const activeRoute = routeName => {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
@@ -35,10 +37,22 @@ const Nav = ({ routes, navProps }) => {
             })}
           </ul>
         </div>
-        <Link className='btn btn-primary'>signup/login</Link>
+        {isAuthenticated ? (
+          <Link className='btn btn-primary' to="dashboard">Dashboard</Link>
+        ) : (
+          <Link className='btn btn-primary' to="signin">signup/login</Link>
+        )}
       </div>
     </nav>
   );
 };
 
-export default Nav;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+Nav.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+export default connect(mapStateToProps, {})(Nav);
