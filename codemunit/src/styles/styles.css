@@ -22,13 +22,10 @@ input:focus, button:focus, a:focus, select:focus {
 
 .btn {
   border-radius: 10px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   padding: 10px 35px;
   -webkit-box-shadow: 5px 5px 7px #070707, -5px -5px 7px #383535;
           box-shadow: 5px 5px 7px #070707, -5px -5px 7px #383535;
-  color: #F6F4F1;
+  color: #c2c0bd;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;

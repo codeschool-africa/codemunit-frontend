@@ -31,6 +31,10 @@ import Faq from "./pages/faq";
 import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 
+//user
+import Signup from "./users/register"
+import Login from "./users/signin"
+
 //history
 import { createBrowserHistory } from "history";
 
@@ -55,6 +59,8 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
         <Route exact path='/contact' component={Contact} />
         <Route exact path='/hire' component={Hire} />
         <Route exact path='/mentorship' component={Mentorship} />
+        <Route exact path='/register' component={Signup} />
+        <Route exact path='/signin' component={Login} />
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/learn' component={Curriculum} />
         <Route exact path='/faq' component={Faq} />

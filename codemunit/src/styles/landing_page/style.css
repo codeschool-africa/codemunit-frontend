@@ -75,7 +75,7 @@
 }
 
 .home.header nav .container .navigation ul li a:hover::before {
-  width: 100%;
+  width: 70%;
 }
 
 .home.header nav .container .navigation ul li a.active {
@@ -136,5 +136,18 @@
   background-clip: text;
   background-color: #fff;
   color: #fff;
+}
+
+.banner .container .right__section p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+.banner .container .right__section .btn {
+  margin: 20px 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 /*# sourceMappingURL=style.css.map */

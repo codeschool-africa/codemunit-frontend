@@ -6,7 +6,7 @@ const About = ({ ...rest }) => {
   return (
     <div id='landing-page'>
       <Header />
-      <main>Hello from main</main>
+      {/* <main>Hello from main</main> */}
     </div>
   );
 };
