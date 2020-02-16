@@ -9,13 +9,16 @@ body, html
     scroll-behavior: smooth
 
 body
-    font-family: "Nunito", sans-serif
+    font-family: 'Roboto', sans-serif
     background: $dark-background
     overflow-x: hidden
-    height: 200vh
+    min-height: 100vh
 
 input:focus, button:focus, a:focus, select:focus 
     outline: none !important
+
+#app
+    height: 100%
 
 .btn
     border-radius: 10px
@@ -30,3 +33,9 @@ input:focus, button:focus, a:focus, select:focus
     transition: box-shadow .2s
     &:hover
         box-shadow: inset 5px 5px 10px #070707, inset -5px -5px 10px #494949
+
+.error
+    background: #dc3545
+    border-radius: 5px
+    margin: 20px 0
+    padding: 15px

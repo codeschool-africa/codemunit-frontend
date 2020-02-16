@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
 import { signupUser } from "../redux/actions/auth";
-import { FaEye } from "react-icons/all";
-
-import logoIcon from "../images/logo-icon.png";
 
 import "../styles/users/style.css";
 
@@ -42,7 +39,6 @@ const Signup = ({
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log(loading);
     if (!email.match(emailReg)) {
       setAlert("email is not valid", "error");
     }
@@ -64,83 +60,60 @@ const Signup = ({
       signupUser({ firstname, secondname, email, password });
     }
   };
-
   useEffect(() => {
     document.title = `Register - Kodemunit`;
   });
 
   return (
-    <div className='user__registration'>
-      <div className='panel left__panel'>
-        <div className='container'>
-          <h1>Hello Learner!</h1>
-          <p>Enter your personal details to start your journey with us</p>
-        </div>
-      </div>
-      <div className='panel right__panel'>
-        <form onSubmit={e => handleSubmit(e)}>
-          <h1>
-            <img src={logoIcon} alt='' /> Create an account
-          </h1>
-          <div className='field-group'>
-            <label htmlFor='firstname'>First Name:</label>
-            <input
-              id='firstname'
-              placeholder='First Name'
-              type='text'
-              value={firstname}
-              onChange={e => handleChange(e)}
-              name='firstname'
-              noValidate
-            />
-          </div>
-          <div className='field-group'>
-            <label htmlFor='secondname'>First Name:</label>
-            <input
-              id='secondname'
-              type='text'
-              name='secondname'
-              noValidate
-              value={secondname}
-              onChange={e => handleChange(e)}
-              placeholder='Last Name'
-            />
-          </div>
-          <div className='field-group'>
-            <label htmlFor='email'>Email</label>
+    <div className='user-registration'>
+      <div className='container right-panel-active'>
+        <div className='form-container sign-up-container'>
+          <form onSubmit={e => handleSubmit(e)}>
+            <h1>Create an account</h1>
+            <div className='name'>
+              <div className='first-name'>
+                <label htmlFor='firstname'>First Name:</label>
+                <input
+                  placeholder='First Name'
+                  type='text'
+                  value={firstname}
+                  onChange={e => handleChange(e)}
+                  name='firstname'
+                  noValidate
+                />
+              </div>
+              <div className='second-name'>
+                <label htmlFor='secondname'>Last Name:</label>
+                <input
+                  type='text'
+                  name='secondname'
+                  noValidate
+                  value={secondname}
+                  onChange={e => handleChange(e)}
+                  placeholder='Last Name'
+                />
+              </div>
+            </div>
+            <label htmlFor='email'>Email Address:</label>
             <input
               type='email'
               name='email'
               id='email'
               value={email}
               onChange={e => handleChange(e)}
-              placeholder='Email address'
+              noValidate
+              placeholder='Email'
             />
-          </div>
-          <div className='field-group'>
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>Password:</label>
             <input
               type={showPassword ? "text" : "password"}
               name='password'
               id='password'
+              minLength='6'
               value={password}
               onChange={e => handleChange(e)}
-              autoComplete='new-password'
-              placeholder={showPassword ? "password" : "********"}
             />
-            <span
-              className={
-                showPassword
-                  ? "password show-password"
-                  : "password hide-password"
-              }
-              onClick={changePasswordType}
-            >
-              <FaEye className='icon' />
-            </span>
-          </div>
-          <div className='field-group'>
-            <label htmlFor='confirmPassword'>Confirm Password:</label>
+            <label htmlFor='confirmPassword'>Confirm password:</label>
             <input
               type={showPassword ? "text" : "password"}
               name='confirmPassword'
@@ -148,8 +121,6 @@ const Signup = ({
               minLength='6'
               value={confirmPassword}
               onChange={e => handleChange(e)}
-              autoComplete='new-password'
-              placeholder={showPassword ? "password" : "********"}
             />
             <span
               className={
@@ -159,28 +130,25 @@ const Signup = ({
               }
               onClick={changePasswordType}
             >
-              <FaEye className='icon' />
+              {" "}
+              show password
             </span>
-          </div>
-          <Alert />
-          <p>
-            By signing up you agree with our <Link>terms and conditions</Link>
-          </p>
-          <button
-            className={loading ? "btn-disabled btn-primary" : "btn-primary"}
-            disabled={loading}
-          >
-            Sign In
-          </button>
-          <div className='extra-info'>
-            <div className='shift shift-signup'>
-              <span>Already in kodemunit? </span>
+            <span>
+              by registering you agree with our{" "}
+              <Link to='/'>terms and conditions</Link>
+            </span>
+            <Alert />
+            <button className='btn-primary' type='submit' disabled={loading}>
+              Register{loading ? "..." : ""}
+            </button>
+            <div className='shift shift-signin'>
+              <span>Already have an account? </span>
               <Link to='/signin' className='ghost' id='signIn'>
-                Sign in
+                Log in
               </Link>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );

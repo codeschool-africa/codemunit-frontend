@@ -7,6 +7,11 @@ import PropTypes from "prop-types";
 import { setAlert } from "../redux/actions/alert";
 import Alert from "../components/alerts";
 import { login } from "../redux/actions/auth";
+import { FaEye } from "react-icons/all"
+
+import logoIcon from "../images/logo-icon.png";
+
+import "../styles/users/style.css";
 
 const Login = ({
   login,
@@ -40,11 +45,11 @@ const Login = ({
   };
 
   if (isAuthenticated) {
-    if (loading) {
+    if (loading === true) {
       setAlert("please wait...", "secondary");
-    } else if (user === null) {
+    } else if (loading === false && user === null) {
       setAlert(
-        "Couldn't load the data, plz refresh the page or check your internet connection",
+        "Couldn't load the data, please refresh the page or check your internet connection",
         "errors"
       );
     } else {
@@ -54,7 +59,6 @@ const Login = ({
 
   const onOpenModal = () => {
     setOpenModal(true);
-    console.log(OpenModal);
   };
 
   const onCloseModal = () => {
@@ -66,11 +70,19 @@ const Login = ({
   });
 
   return (
-    <div className='user-registration'>
-      <div className='container'>
-        <div className='form-container sign-in-container'>
-          <form onSubmit={e => handleSubmit(e)}>
-            <h1>Sign in to your account</h1>
+    <div className='user__registration'>
+      <div className='panel left__panel'>
+        <div className='container'>
+          <h1>Welcome back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+        </div>
+      </div>
+      <div className='panel right__panel'>
+        <form onSubmit={e => handleSubmit(e)}>
+          <h1>
+            <img src={logoIcon} alt='' /> Sign in to your account
+          </h1>
+          <div className='field-group'>
             <label htmlFor='login-email'>Email</label>
             <input
               type='email'
@@ -78,7 +90,10 @@ const Login = ({
               id='login-email'
               value={email}
               onChange={e => handleChange(e)}
+              placeholder='Email address'
             />
+          </div>
+          <div className='field-group'>
             <label htmlFor='login-password'>Password</label>
             <input
               type={showPassword ? "text" : "password"}
@@ -87,6 +102,7 @@ const Login = ({
               value={password}
               onChange={e => handleChange(e)}
               autoComplete='current-password'
+              placeholder={showPassword ? "password" : "********"}
             />
             <span
               className={
@@ -96,19 +112,13 @@ const Login = ({
               }
               onClick={changePasswordType}
             >
-              {/* <FaEye /> */} show password
+              <FaEye className="icon"/>
             </span>
-            <Alert />
-            <button
-              className='btn-primary'
-              disabled={loading}
-              style={{
-                cursor: "pointer"
-              }}
-            >
-              Log In{loading ? "..." : ""}
-            </button>
-            <Link to='#' onClick={onOpenModal} className='btn-forgot-password'>
+          </div>
+          <Alert />
+          <button className='btn-primary'>Sign In</button>
+          <div className='extra-info'>
+            <Link to='#' onClick={onOpenModal} className='forgot-password'>
               Forgot your password?
             </Link>
             <Modal open={OpenModal} onClose={onCloseModal} center>
@@ -120,8 +130,8 @@ const Login = ({
                 Register
               </Link>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   );

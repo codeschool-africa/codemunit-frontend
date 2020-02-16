@@ -14,7 +14,7 @@ const Home = ({ ...rest }) => {
     <div id='landing-page'>
       <Header />
       <main>
-        {/* <Services/> */}
+        <Services/>
       </main>
     </div>
   );

@@ -143,6 +143,7 @@
   color: rgba(255, 255, 255, 0.65);
   font-size: 1.1rem;
   line-height: 1.7rem;
+  letter-spacing: 1px;
 }
 
 .banner .container .right__section .btn {
