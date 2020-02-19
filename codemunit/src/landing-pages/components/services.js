@@ -52,6 +52,7 @@ const Services = () => {
             return (
               <article
                 key={index}
+                className="service"
               >
                 <div className='front-face'>
                   {item.icon}
@@ -60,7 +61,7 @@ const Services = () => {
                 <div className='hovered-face'>
                   <h3>{item.subtitle}</h3>
                   <p>{item.description}</p>
-                  <Link to='/'>Learn more</Link>
+                  <Link to={item.link}>Learn more</Link>
                 </div>
               </article>
             );

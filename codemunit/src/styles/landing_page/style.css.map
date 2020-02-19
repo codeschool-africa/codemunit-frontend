@@ -5,7 +5,8 @@
         "style.sass",
         "../_variables.sass",
         "components/_nav.sass",
-        "components/_banner.sass"
+        "components/_banner.sass",
+        "components/_services.sass"
     ],
     "names": [],
     "file": "style.css"
