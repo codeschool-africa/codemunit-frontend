@@ -8,7 +8,7 @@
 }
 
 .why:hover {
-  transform: translateY(-20px);
+  transform: translateY(-10px);
 }
 
 .why .container {
@@ -26,6 +26,31 @@
 
 .why .container .col-reasons .col1 {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.why .container .col-reasons .col1 .row {
+  margin: 20px 0;
+}
+
+.why .container .col-reasons .col1 .row h4 {
+  color: #d94c48;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.why .container .col-reasons .col1 .row h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fdf9f9d9;
+  margin-bottom: 20px;
+}
+
+.why .container .col-reasons .col1 .row p {
+  color: #fdf9f9a6;
+  font-size: .95rem;
+  line-height: 1.3rem;
 }
 
 .why .container .col-reasons .col3 {
@@ -57,8 +82,15 @@
 }
 
 .why .container .col-reasons .col-reasons__col.col2 .circle span {
+  display: inline-block;
+  border-radius: 50%;
   position: absolute;
   height: 15px;
   width: 15px;
-  color: rgba(217, 76, 72, 0.5);
+  color: #d94c4880;
+}
+
+.why .container .col-reasons .col-reasons__col.col2 .circle span .one {
+  left: 0;
+  top: 70px;
 }

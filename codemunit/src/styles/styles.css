@@ -51,7 +51,7 @@ input:focus, button:focus, a:focus, select:focus {
 }
 
 h1.header {
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline-block;
   color: white;
   padding: 25px 0;
