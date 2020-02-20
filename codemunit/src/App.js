@@ -15,6 +15,7 @@ import "./styles/styles.css";
 
 //load user data
 import { loadUserData } from "./redux/actions/auth";
+import { logout } from "./redux/actions/auth";
 import setAuthToken from "./util/setAuthToken";
 
 //pages
@@ -32,8 +33,8 @@ import Privacy from "./pages/privacy";
 import Terms from "./pages/terms";
 
 //user
-import Signup from "./users/register"
-import Login from "./users/signin"
+import Signup from "./users/register";
+import Login from "./users/signin";
 
 //history
 import { createBrowserHistory } from "history";
@@ -47,7 +48,7 @@ if (localStorage.token) {
 
 const hist = createBrowserHistory();
 
-const App = ({ auth: { isAuthenticated, user, loading } }) => {
+const App = ({ auth: { isAuthenticated, user, loading }, logout }) => {
   useEffect(() => {
     store.dispatch(loadUserData());
   }, []);
@@ -67,6 +68,9 @@ const App = ({ auth: { isAuthenticated, user, loading } }) => {
         <Route exact path='/terms-and-conditions' component={Terms} />
         <Route exact path='/privacy-policy' component={Privacy} />
       </Switch>
+      {/* <a href='#!' onClick={logout}>
+        logout
+      </a> */}
     </Router>
   );
 };
@@ -79,4 +83,4 @@ App.propTypes = {
   auth: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, { logout })(App);

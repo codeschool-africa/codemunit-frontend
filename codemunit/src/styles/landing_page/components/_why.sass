@@ -1,0 +1,46 @@
+.why
+    background: #050505
+    margin-top: 50px
+    padding: 50px 0 0 0
+    width: 90%
+    margin: 0 auto
+    transition: .2s
+    &:hover
+        transform: translateY(-20px)
+    .container
+        width: 80%
+        margin: 0 auto
+        text-align: center
+        color: white
+        .col-reasons
+            padding: 70px 0
+            display: grid
+            grid-template-columns: 1fr 1.5fr 1fr
+            .col1
+                text-align: right
+            .col3
+                text-align: left
+            .col-reasons__col.col2
+                padding: 0 40px
+                .circle
+                    position: relative
+                    height: 100%
+                    width: 100%
+                    border: 1px solid white
+                    border-radius: 50%
+                    padding: 20px
+                    &::before
+                        content: ""
+                        position: absolute
+                        top: 20px
+                        left: 20px
+                        right: 20px
+                        bottom: 20px
+                        border: 1px solid white
+                        border-radius: 50%
+                    span
+                        position: absolute
+                        height: 15px
+                        width: 15px
+                        color: rgba(217, 76, 72, .5)
+

@@ -8,7 +8,7 @@ import {
 } from "react-icons/all";
 
 const Services = () => {
-  const [services, setServices] = useState([
+  const [services] = useState([
     {
       index: 0,
       icon: <FaNetworkWired className='service-icon' />,
@@ -16,7 +16,7 @@ const Services = () => {
       subtitle: "Learn anywhere, anytime, at your own pace",
       description:
         "We offer free courses but one can opt to join premium membership to get more resources on the course.",
-      link: "/service1"
+      link: "/blog/post_id?12345678"
     },
     {
       index: 1,
@@ -24,7 +24,7 @@ const Services = () => {
       title: "Projects",
       subtitle: "subservice 2",
       description: "description for service 2... a whole bunch of paragraph",
-      link: "/service1"
+      link: "//blog/post_id?12345678"
     },
     {
       index: 2,
@@ -32,7 +32,7 @@ const Services = () => {
       title: "Mentorship",
       subtitle: "subservice 3",
       description: "description for service 3... a whole bunch of paragraph",
-      link: "/service1"
+      link: "/blog/post_id?12345678"
     },
     {
       index: 3,
@@ -40,7 +40,7 @@ const Services = () => {
       title: "Community hub",
       subtitle: "subservice 4",
       description: "description for service 4... a whole bunch of paragraph",
-      link: "/service1"
+      link: "//blog/post_id?12345678"
     }
   ]);
   return (
@@ -54,15 +54,15 @@ const Services = () => {
                 key={index}
                 className="service"
               >
-                <div className='front-face'>
+                <section className='front-face'>
                   {item.icon}
                   <h2>{item.title}</h2>
-                </div>
-                <div className='hovered-face'>
+                </section>
+                <section className='hovered-face'>
                   <h3>{item.subtitle}</h3>
                   <p>{item.description}</p>
                   <Link to={item.link}>Learn more</Link>
-                </div>
+                </section>
               </article>
             );
           })}
