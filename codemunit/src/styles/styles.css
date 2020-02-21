@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-input:focus, button:focus, a:focus, select:focus {
+input:focus, button:focus, a:focus, select:focus, textarea:focus {
   outline: none !important;
 }
 

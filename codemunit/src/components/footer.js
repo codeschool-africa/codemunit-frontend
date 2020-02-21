@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
@@ -10,7 +12,7 @@ import {
 
 import logo from "../images/bw-logo.png";
 
-const Footer = () => {
+const Footer = ({ auth: { isAuthenticated, user } }) => {
   return (
     <footer>
       <div className='footer-top'>
@@ -22,41 +24,54 @@ const Footer = () => {
                 <Link to='/'>About us</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Jobs</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Become a Mentor</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Hire Developers</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Partnership</Link>
               </li>
             </ul>
           </div>
           <div className='col col-two'>
-            <h2>Company</h2>
+            <h2>Quick links</h2>
             <ul>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Learn</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Blog</Link>
               </li>
-              <li>
-                <Link to='/'>About us</Link>
-              </li>
+              {isAuthenticated ? (
+                <>
+                  <li>
+                    <Link to='/dashboard'>Dashboard</Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to='/register'>Sign Up</Link>
+                  </li>
+                  <li>
+                    <Link to='/signin'>Log In</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <div className='col col-three'>
-            <h2>Company</h2>
+            <h2>Support</h2>
             <ul>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Help and FAQ</Link>
               </li>
               <li>
-                <Link to='/'>About us</Link>
+                <Link to='/'>Subscribe</Link>
               </li>
             </ul>
           </div>
@@ -69,6 +84,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className='bg'></div>
       <div className='footer-bottom'>
         <div className='container'>
           <div className='left'>
@@ -77,19 +93,19 @@ const Footer = () => {
           </div>
           <div className='right'>
             <a href='www.facebook.com'>
-              <FaFacebookF />
+              <FaFacebookF className='icon' />
             </a>
             <a href='www.facebook.com'>
-              <FaTwitter />
+              <FaTwitter className='icon' />
             </a>
             <a href='www.facebook.com'>
-              <FaLinkedinIn />
+              <FaLinkedinIn className='icon' />
             </a>
             <a href='www.facebook.com'>
-              <FaInstagram />
+              <FaInstagram className='icon' />
             </a>
             <a href='www.facebook.com'>
-              <FaYoutube />
+              <FaYoutube className='icon' />
             </a>
           </div>
         </div>
@@ -98,4 +114,12 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+Footer.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+export default connect(mapStateToProps, {})(Footer);

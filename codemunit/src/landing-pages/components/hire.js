@@ -39,7 +39,7 @@ const Hire = () => {
             <label htmlFor=''></label>
             <textarea placeholder='Brief Us'></textarea>
           </div>
-          <button className='btn btn-secondary'>Send</button>
+          <button className='btn btn-primary'>Send</button>
         </form>
       </section>
     </article>
